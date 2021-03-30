@@ -92,6 +92,7 @@ class _ACTState extends State<ACT> {
                               fontSize: 1.15*SizeConfig.textMultiplier,
                               fontFamily: "Robot",
                               height: 1.5,
+                              fontWeight: FontWeight.bold,
                               color: Colors.white,
 
                             ),),
@@ -107,7 +108,8 @@ class _ACTState extends State<ACT> {
 
         ],
       ),
-    ) : Container(
+    ) :
+    Container(
         decoration:   BoxDecoration(
         gradient: LinearGradient(
         begin: Alignment.topLeft,

@@ -37,14 +37,12 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: FittedBox(
-                child:  Image.asset("assets/images/act.png"),
-                fit: BoxFit.fill,
-              ),
-
 
               decoration: BoxDecoration(
-                color: Colors.blue,
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Color(0xffe75e5e), Color(0xff457ea5)])
               ),
             ),
             ListTile(
@@ -103,6 +101,8 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+
+
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.blue),
         backgroundColor: Colors.white,
