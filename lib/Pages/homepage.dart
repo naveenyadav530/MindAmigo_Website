@@ -6,6 +6,7 @@ import 'package:website/Pages/Widgets/act.dart';
 import 'package:website/Pages/Widgets/cbt.dart';
 import 'package:website/Pages/Widgets/gradient_line.dart';
 import 'package:website/Pages/Widgets/navbar.dart';
+import 'package:website/Pages/Widgets/section.dart';
 import 'package:website/Pages/Widgets/title.dart';
 import 'package:website/Pages/Widgets/videoAndDisc.dart';
 
@@ -24,9 +25,11 @@ class _HomePageState extends State<HomePage> {
             NavBar(),
             GradientLine(),
             TitleSection(),
-            ACT(),
-            CBT(),
-            VideoDisc(),
+            Section1(),
+            Section2(),
+            Section3(),
+
+
           ],
         ),
       ),
@@ -37,7 +40,6 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
@@ -109,13 +111,7 @@ class _HomePageState extends State<HomePage> {
 
 
 
-        title: RichText(
-          text: TextSpan(children: <TextSpan>[
-            TextSpan( text: Strings.mindLogo, style: TextStyle(color: Color(0xff41b0e1),fontFamily: "Fredoka", fontSize: 3.2*SizeConfig.textMultiplier),),
-            TextSpan(text: Strings.amigoLogo ,style: TextStyle(fontFamily: "Fredoka",color: Color(0xffe75e5e),fontSize: 3.2*SizeConfig.textMultiplier))
-          ],
-          ),
-        ),
+        title: Image.asset("assets/images/logo.png", height: 3.18*SizeConfig.heightMultiplier,)
       ),
       body: SingleChildScrollView(
         child: Container(

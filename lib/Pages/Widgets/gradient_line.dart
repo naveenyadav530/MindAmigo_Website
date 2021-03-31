@@ -13,9 +13,9 @@ class _GradientLineState extends State<GradientLine> {
       height: 7,
       decoration:   BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [Color(0xffe75e5e), Color(0xff457ea5)])
+              begin: Alignment.topLeft,
+              end: Alignment.topRight,
+              colors: [Color(0xffEC6C83),Color(0xff17B8D9)])
       ),
     );
   }

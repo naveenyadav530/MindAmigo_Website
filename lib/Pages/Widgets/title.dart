@@ -11,83 +11,61 @@ class _TitleSectionState extends State<TitleSection> {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveWidget.isDesktop(context)?Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          child: Container(
+    return ResponsiveWidget.isDesktop(context)?Container(
+      color: Colors.white,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 32),
+                      child: Text(Strings.mindhelp,
+                        style: TextStyle(
+                          decoration: TextDecoration.none,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 3.27*SizeConfig.textMultiplier,
+                          color: Color(0xffEC6C83),
+                        ),),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 32,),
+                      child: Text(Strings.therapist,
+                        style: TextStyle(
+                          decoration: TextDecoration.none,
+                          fontWeight: FontWeight.bold,
 
-              child:Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(32, 72, 0, 0),
-                    child: Text(Strings.mindhelp,
+                          fontSize: 3.25*SizeConfig.textMultiplier,
+                          color: Color(0xff707070),
+                        ),),
+                    ),
 
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 3.27*SizeConfig.textMultiplier,
-                        color: Color(0xffe75e5e),
-                      ),),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 32,),
-                    child: Text(Strings.therapist,
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontWeight: FontWeight.bold,
-
-                        fontSize: 3.25*SizeConfig.textMultiplier,
-                        color: Colors.black45,
-                      ),),
-                  ),
-
-                  //text
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(32, 30, 40, 30),
-                    child: Text(Strings.title1,
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontSize: 1.6*SizeConfig.textMultiplier,
-                        fontFamily: "Robot",
-                        fontWeight: FontWeight.bold,
-                        color: Colors.cyan,
-
-                      ),),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(32, 30, 40, 105),
-                    child: Text(Strings.title2,
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontSize: 1.6*SizeConfig.textMultiplier,
-                        fontFamily: "Robot",
-                        color: Colors.cyan,
-
-                      ),),
-                  ),
+                    //text
 
 
-
-                ],
-              )
-        ),
-
-        ),
-        Expanded(
-          child:
-          Image.asset("assets/images/frame.png",
-            height: 35.15*SizeConfig.heightMultiplier,
-
+                  ],
+                )
           ),
 
-        )
+          Expanded(
+            child:
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Image.asset("assets/images/frame.png",
+                height: 26.15*SizeConfig.heightMultiplier,
 
-      ],
-    ) : Column(
+              ),
+            ),
+
+          )
+
+        ],
+      ),
+    ) :
+    Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -49,7 +49,7 @@ flutter:
      - assets/images/frame.png
      - assets/images/act.png
      - assets/images/cbt.png
-     - assets/images/youLogo.png
+     - assets/images/logo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
