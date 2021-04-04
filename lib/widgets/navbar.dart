@@ -26,9 +26,14 @@ class _NavBarState extends State<NavBar> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(Strings.meetAdam,
-                    style: TextStyle(fontSize:2.27*SizeConfig.textMultiplier,color: Color(0xff17B8D9),
-                        fontFamily: "Robot",decoration: TextDecoration.none),) ,
+                  FlatButton(
+                    onPressed: (){
+                      Navigator.pushNamed(context, TermsConditionRoute);
+                    },
+                    child: Text(Strings.meetAdam,
+                      style: TextStyle(fontSize:2.27*SizeConfig.textMultiplier,color: Color(0xff17B8D9),
+                          fontFamily: "Robot",decoration: TextDecoration.none),),
+                  ) ,
                   SizedBox(width: 7.16*SizeConfig.heightMultiplier,),
                   Text("About",
                     style: TextStyle(fontSize:2.27*SizeConfig.textMultiplier,color: Color(0xff17B8D9),

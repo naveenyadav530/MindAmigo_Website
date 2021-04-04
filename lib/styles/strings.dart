@@ -29,5 +29,14 @@ class Strings {
   static const String homeSection2 = '''Tune in the ACT and CBT therapy\ncourse library along with\nmindfulness meditation''';
   static const String homeSection3 = '''Explore an array of techniques\ndesigned to improve mental\nwell being and resilience''';
   static const String homeSection4 = '''Keep a personal diary of your mood\nto help understand your mental\nhealth better''';
+  static const String videDesc = '''Think of Mindamigo as a bit like an all-you-can-eat buffet of different techniques and insights that you can apply to your own mental health…''';
+  static const String downloadMindAmigo = '''Download the mindamigo app''';
+
+
 
 }
+//routes name
+const String HomeRoute  = '/';
+const String TermsConditionRoute = '/terms_and_conditions';
+const String PrivacyPolicyRoute = '/privacy_policy';
+

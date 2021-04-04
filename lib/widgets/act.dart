@@ -4,12 +4,8 @@ import 'package:website/styles/size_config.dart';
 import 'package:website/styles/strings.dart';
 import 'package:website/utils/responsive_widget.dart';
 
-class ACT extends StatefulWidget {
-  @override
-  _ACTState createState() => _ACTState();
-}
 
-class _ACTState extends State<ACT> {
+class ACT extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget.isDesktop(context)? Container(
@@ -111,74 +107,69 @@ class _ACTState extends State<ACT> {
     ) :
     Container(
         decoration:   BoxDecoration(
-        gradient: LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomLeft,
-        colors: [Color(0xff5bbed9),Color(0xff62c1b1), Color(0xff72c77e),Color(0xff72c77e)])
-    ),
-    width: MediaQuery.of(context).size.width,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              child: Text("ACT",
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomLeft,
+                colors: [Color(0xff5bbed9),Color(0xff62c1b1), Color(0xff72c77e),Color(0xff72c77e)])
+        ),
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                child: Text("ACT",
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: "Fredoka",
+                    decoration: TextDecoration.none,
+                    fontSize: 7*SizeConfig.textMultiplier,
+                    color: Colors.white,
+                  ),),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Text(Strings.act1,
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontFamily: "Fredoka",
                   decoration: TextDecoration.none,
-                  fontSize: 7*SizeConfig.textMultiplier,
+                  fontSize: 2.5*SizeConfig.textMultiplier,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Robot",
+                ),),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+              child: Text(Strings.act2,
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  fontSize: 2.5*SizeConfig.textMultiplier,
+                  fontFamily: "Robot",
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+
+                ),),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(15, 10, 15, 30),
+              child: Text(Strings.act3,
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  fontSize: 2.5*SizeConfig.textMultiplier,
+                  fontFamily: "Robot",
+                  fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: Text(Strings.act1,
-              textAlign: TextAlign.justify,
-              style: TextStyle(
-                decoration: TextDecoration.none,
-                fontSize: 2.5*SizeConfig.textMultiplier,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Robot",
-              ),),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-            child: Text(Strings.act2,
-              textAlign: TextAlign.justify,
-              style: TextStyle(
-                decoration: TextDecoration.none,
-                fontSize: 2.5*SizeConfig.textMultiplier,
-                fontFamily: "Robot",
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
 
-              ),),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(15, 10, 15, 30),
-            child: Text(Strings.act3,
-              textAlign: TextAlign.justify,
-              style: TextStyle(
-                decoration: TextDecoration.none,
-                fontSize: 2.5*SizeConfig.textMultiplier,
-                fontFamily: "Robot",
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),),
-          ),
-
-        ],
-      )
+          ],
+        )
     );
-
-
-
-
-
   }
 }

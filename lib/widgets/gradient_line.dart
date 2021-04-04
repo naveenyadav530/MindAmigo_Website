@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class GradientLine extends StatefulWidget {
-  @override
-  _GradientLineState createState() => _GradientLineState();
-}
 
-class _GradientLineState extends State<GradientLine> {
+class GradientLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

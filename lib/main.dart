@@ -1,13 +1,16 @@
-// Copyright 2018 The Flutter team. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'package:website/pages/homepage.dart';
+import 'package:website/pages/privacyPolicy.dart';
+import 'package:website/pages/termsConditions.dart';
 import 'package:website/styles/size_config.dart';
+import 'package:website/styles/strings.dart';
 
-void main() => runApp(MyApp());
+void main(){
+  setPathUrlStrategy();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -19,9 +22,13 @@ class MyApp extends StatelessWidget {
                 SizeConfig().init(constraints, orientation);
                 return MaterialApp(
                   title: 'Welcome to Flutter',
-                  home: Scaffold(
-                      body: HomePage()
-                  ),
+                  initialRoute: HomeRoute,
+                  routes: {
+                    HomeRoute: (context) => Scaffold(body: HomePage(),),
+                    PrivacyPolicyRoute: (context) => Scaffold(body: PrivacyPolicy(),),
+                    TermsConditionRoute: (context)=>Scaffold(body: TermsConditions(),),
+                  },
+
                 );
               });
         });

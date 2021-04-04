@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:website/styles/size_config.dart';
 import 'package:website/styles/strings.dart';
 import 'package:website/utils/responsive_widget.dart';
+import 'package:website/widgets/bottombar.dart';
 import 'package:website/widgets/gradient_line.dart';
 import 'package:website/widgets/navbar.dart';
 import 'package:website/widgets/section.dart';
@@ -29,39 +30,40 @@ class _HomePageState extends State<HomePage> {
               sectionHeight: 26.15*SizeConfig.heightMultiplier,
               sectionColor: Color(0xffFDF2E4),
               sectionAlign: Alignment.centerLeft,
-              sectionPositionLeft: 120,
+              sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
               sectionText: Strings.homeSection1,
               sectionTextColor: Color(0xff707070),
-              sectionFontSize: 37,
+              sectionFontSize: 2.4*SizeConfig.textMultiplier,
             ),
             HomeSection(
               sectionHeight: 26.15*SizeConfig.heightMultiplier,
               sectionColor: Colors.white,
               sectionAlign: Alignment.centerRight,
-              sectionPositionRight: 140,
+              sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
               sectionText: Strings.homeSection2,
               sectionTextColor: Color(0xff707070),
-              sectionFontSize: 37,
+              sectionFontSize: 2.4*SizeConfig.textMultiplier,
             ),
             HomeSection(
               sectionHeight: 26.15*SizeConfig.heightMultiplier,
               sectionColor: Color(0xffFDF2E4),
               sectionAlign: Alignment.centerLeft,
-              sectionPositionLeft: 120,
+              sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
               sectionText: Strings.homeSection3,
               sectionTextColor: Color(0xff707070),
-              sectionFontSize: 37,
+              sectionFontSize: 2.4*SizeConfig.textMultiplier,
             ),
             HomeSection(
               sectionHeight: 26.15*SizeConfig.heightMultiplier,
               sectionColor: Colors.white,
               sectionAlign: Alignment.centerRight,
-              sectionPositionRight: 140,
+              sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
               sectionText: Strings.homeSection4,
               sectionTextColor: Color(0xff707070),
-              sectionFontSize: 37,
+              sectionFontSize: 2.4*SizeConfig.textMultiplier,
             ),
             VideoDisc(),
+            BottomNav(),
 
 
 
@@ -69,8 +71,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-    ):
-    Scaffold(
+    ):Scaffold(
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -85,7 +86,6 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.person, color: Color(0xff41b0e1),),
-
               title: Text('Meet Adam',
                 style: TextStyle(
                     fontSize:2.27*SizeConfig.textMultiplier,
@@ -96,10 +96,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                 ),
               onTap: () {
+
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                Navigator.pushNamed(context, TermsConditionRoute);
               },
             ),
             ListTile(
@@ -144,9 +145,6 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.blue),
         backgroundColor: Colors.white,
-
-
-
         title: Image.asset("assets/images/logo.png", height: 3.18*SizeConfig.heightMultiplier,)
       ),
       body: SingleChildScrollView(
@@ -155,6 +153,36 @@ class _HomePageState extends State<HomePage> {
             children: [
               GradientLine(),
               TitleSection(),
+              MobileHomeSection(
+                sectionTextColor: Color(0xff707070),
+                sectionHeight: 20.02*SizeConfig.heightMultiplier,
+                sectionFontSize: 2.82*SizeConfig.textMultiplier,
+                sectionText: Strings.homeSection1,
+                sectionColor:Color(0xffFDF2E4) ,
+              ),
+              MobileHomeSection(
+                sectionTextColor: Color(0xff707070),
+                sectionHeight: 20.02*SizeConfig.heightMultiplier,
+                sectionFontSize: 2.82*SizeConfig.textMultiplier,
+                sectionText: Strings.homeSection2,
+                sectionColor:Colors.white ,
+              ),
+              MobileHomeSection(
+                sectionTextColor: Color(0xff707070),
+                sectionHeight: 20.02*SizeConfig.heightMultiplier,
+                sectionFontSize: 2.82*SizeConfig.textMultiplier,
+                sectionText: Strings.homeSection3,
+                sectionColor:Color(0xffFDF2E4) ,
+              ),
+              MobileHomeSection(
+                sectionTextColor: Color(0xff707070),
+                sectionHeight: 20.02*SizeConfig.heightMultiplier,
+                sectionFontSize: 2.82*SizeConfig.textMultiplier,
+                sectionText: Strings.homeSection4,
+                sectionColor:Colors.white ,
+              ),
+              VideoDisc(),
+              MobileBottomNav(),
 
             ],
           ),

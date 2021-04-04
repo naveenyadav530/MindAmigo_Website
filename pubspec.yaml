@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  url_strategy: ^0.2.0
   flutter:
     sdk: flutter
 
@@ -51,6 +52,12 @@ flutter:
      - assets/images/cbt.png
      - assets/images/logo.png
      - assets/images/youtube.png
+     - assets/images/app_store.png
+     - assets/images/play_store.png
+     - assets/images/instagram.png
+     - assets/images/facebook.png
+     - assets/images/youicon.png
+     - assets/images/bottom_image.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -65,6 +72,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/helvetica.otf
     - family: Fredoka
       fonts:
         - asset: assets/fonts/fredoka.ttf
