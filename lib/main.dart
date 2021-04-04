@@ -3,8 +3,9 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:website/Config/size_config.dart';
-import 'package:website/Pages/homepage.dart';
+
+import 'package:website/pages/homepage.dart';
+import 'package:website/styles/size_config.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:website/Config/responsive_widget.dart';
-import 'package:website/Config/size_config.dart';
-import 'package:website/Config/strings.dart';
-import 'package:website/Pages/Widgets/act.dart';
-import 'package:website/Pages/Widgets/cbt.dart';
-import 'package:website/Pages/Widgets/gradient_line.dart';
-import 'package:website/Pages/Widgets/navbar.dart';
-import 'package:website/Pages/Widgets/section.dart';
-import 'package:website/Pages/Widgets/title.dart';
-import 'package:website/Pages/Widgets/videoAndDisc.dart';
+import 'package:website/styles/size_config.dart';
+import 'package:website/styles/strings.dart';
+import 'package:website/utils/responsive_widget.dart';
+import 'package:website/widgets/gradient_line.dart';
+import 'package:website/widgets/navbar.dart';
+import 'package:website/widgets/section.dart';
+import 'package:website/widgets/title.dart';
+import 'package:website/widgets/videoAndDisc.dart';
+
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -25,10 +25,45 @@ class _HomePageState extends State<HomePage> {
             NavBar(),
             GradientLine(),
             TitleSection(),
-            Section1(),
-            Section2(),
-            Section3(),
-            Section(),
+            HomeSection(
+              sectionHeight: 26.15*SizeConfig.heightMultiplier,
+              sectionColor: Color(0xffFDF2E4),
+              sectionAlign: Alignment.centerLeft,
+              sectionPositionLeft: 120,
+              sectionText: Strings.homeSection1,
+              sectionTextColor: Color(0xff707070),
+              sectionFontSize: 37,
+            ),
+            HomeSection(
+              sectionHeight: 26.15*SizeConfig.heightMultiplier,
+              sectionColor: Colors.white,
+              sectionAlign: Alignment.centerRight,
+              sectionPositionRight: 140,
+              sectionText: Strings.homeSection2,
+              sectionTextColor: Color(0xff707070),
+              sectionFontSize: 37,
+            ),
+            HomeSection(
+              sectionHeight: 26.15*SizeConfig.heightMultiplier,
+              sectionColor: Color(0xffFDF2E4),
+              sectionAlign: Alignment.centerLeft,
+              sectionPositionLeft: 120,
+              sectionText: Strings.homeSection3,
+              sectionTextColor: Color(0xff707070),
+              sectionFontSize: 37,
+            ),
+            HomeSection(
+              sectionHeight: 26.15*SizeConfig.heightMultiplier,
+              sectionColor: Colors.white,
+              sectionAlign: Alignment.centerRight,
+              sectionPositionRight: 140,
+              sectionText: Strings.homeSection4,
+              sectionTextColor: Color(0xff707070),
+              sectionFontSize: 37,
+            ),
+            VideoDisc(),
+
+
 
 
           ],
@@ -120,8 +155,6 @@ class _HomePageState extends State<HomePage> {
             children: [
               GradientLine(),
               TitleSection(),
-              ACT(),
-              CBT(),
 
             ],
           ),
