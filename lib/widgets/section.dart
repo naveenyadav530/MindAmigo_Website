@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:website/styles/constants.dart';
+import 'package:website/widgets/circles.dart';
 
 
 class HomeSection extends StatelessWidget {
@@ -53,7 +55,6 @@ class MobileHomeSection extends StatelessWidget {
   final String sectionText;
   final Color sectionTextColor;
   final double sectionFontSize;
-  //final CircleAmigo sectionCircles;
 
   MobileHomeSection({
     this.sectionHeight,
@@ -61,9 +62,9 @@ class MobileHomeSection extends StatelessWidget {
     this.sectionText,
     this.sectionTextColor,
     this.sectionFontSize,
-    //this.sectionCircles,
 
   });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -71,10 +72,17 @@ class MobileHomeSection extends StatelessWidget {
       color: sectionColor,
       alignment: Alignment.center,
       width: MediaQuery.of(context).size.width,
-      child:  Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Text(sectionText,textAlign: TextAlign.justify, style: TextStyle(color: sectionTextColor, fontSize: sectionFontSize),),
-      ),
+      child:  Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text(sectionText, style: TextStyle(color: sectionTextColor, fontSize: sectionFontSize, fontFamily: robot, fontWeight: FontWeight.bold),),
+          ),
+          CircleAmigo(
+
+          )
+        ],
+      )
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:website/styles/size_config.dart';
 import 'package:website/utils/responsive_widget.dart';
@@ -19,6 +20,51 @@ class _TermsConditionsState extends State<TermsConditions> {
           children: [
             NavBar(),
             GradientLine(),
+            Container(
+              alignment:Alignment.topLeft ,
+              height: 1200,
+              margin: EdgeInsets.symmetric(vertical: 50),
+              width: MediaQuery.of(context).size.width/1.5,
+              color: Colors.blue,
+              child: Column(
+                children: [
+                  Text("Terms and Conditions",style:TextStyle(fontSize: 37, color: Color(0xffED8000))),
+                  //head
+                  Row(
+                    children: [
+                      Text("1.", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+                      SizedBox(width: 20,),
+                      Text("These Terms", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),)
+                    ],
+                  ),
+
+                  //info
+                  Row(
+                    children: [
+                      Text("1.1.",style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+                      SizedBox(width: 20,),
+                      RichText(
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: 'What these terms cover.',
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                          children: <TextSpan>[
+                            TextSpan(text: 'These are the terms and conditions on which we supply products in the form of the Mindamigo app (the App) to you.',style: TextStyle(fontSize: 25)),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text("1."),
+                      SizedBox(width: 20,),
+                      Text("These Terms", )
+                    ],
+                  )
+
+                ],
+              ),),
             BottomNav(),
 
 
@@ -27,7 +73,8 @@ class _TermsConditionsState extends State<TermsConditions> {
           ],
         ),
       ),
-    ):Scaffold(
+    ):
+    Scaffold(
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,

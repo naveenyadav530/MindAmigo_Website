@@ -1,6 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:website/styles/colorsAmigo.dart';
+import 'package:website/styles/constants.dart';
 import 'package:website/styles/size_config.dart';
 import 'package:website/styles/strings.dart';
 import 'package:website/utils/responsive_widget.dart';
@@ -44,8 +46,7 @@ class VideoDisc extends StatelessWidget {
                     Positioned(
                       bottom: 0,
                       right: 0,
-                      child: Container(
-                        color: Colors.black,
+                      child: Image.asset("assets/images/bottom_comma.png",
                         height: 6.5*SizeConfig.heightMultiplier,
                         width: 3.25*SizeConfig.heightMultiplier,
                       ),
@@ -53,8 +54,7 @@ class VideoDisc extends StatelessWidget {
                     Positioned(
                       left: 0,
                       top: 0,
-                      child: Container(
-                        color: Colors.pink,
+                      child: Image.asset("assets/images/top_comma.png",
                         height: 6.5*SizeConfig.heightMultiplier,
                         width: 3.25*SizeConfig.heightMultiplier,
                       ),
@@ -63,7 +63,7 @@ class VideoDisc extends StatelessWidget {
                       padding: const EdgeInsets.all(20.0),
                       child: Container(
 
-                        child: Text(Strings.videDesc,style:TextStyle(fontFamily: "Helvetica", fontSize: 2.0*SizeConfig.heightMultiplier, color: Color(0xff5D535C)) , ),
+                        child: Text(Strings.videDesc,style:TextStyle(fontFamily:robot, fontSize: 2.0*SizeConfig.heightMultiplier,fontWeight: FontWeight.bold,color: AmigoColors.lightBrown) , ),
                       ),
                     ),
                   ],
@@ -75,7 +75,7 @@ class VideoDisc extends StatelessWidget {
       ),
     ):
     Container(
-      color: Color(0xffF6EAEC),
+      color: AmigoColors.lightPink3,
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
@@ -95,7 +95,6 @@ class VideoDisc extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-                color: Color(0xffF6EAEC),
                 width: MediaQuery.of(context).size.width,
               child: Stack(
                 alignment: Alignment.center,
@@ -107,10 +106,9 @@ class VideoDisc extends StatelessWidget {
                       alignment: Alignment.center,
                       children: [
                         Positioned(
-                          bottom: 0,
+                          bottom: 10,
                           right: 0,
-                          child: Container(
-                            color: Colors.black,
+                          child: Image.asset("assets/images/bottom_comma.png",
                             height: 6.5*SizeConfig.heightMultiplier,
                             width: 3.25*SizeConfig.heightMultiplier,
                           ),
@@ -118,8 +116,8 @@ class VideoDisc extends StatelessWidget {
                         Positioned(
                           left: 0,
                           top: 0,
-                          child: Container(
-                            color: Colors.pink,
+                          child: Image.asset("assets/images/top_comma.png",
+
                             height: 6.5*SizeConfig.heightMultiplier,
                             width: 3.25*SizeConfig.heightMultiplier,
                           ),
@@ -127,8 +125,7 @@ class VideoDisc extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(20.0),
                           child: Container(
-
-                            child: Text(Strings.videDesc,style:TextStyle(fontFamily: "Helvetica", fontSize: 2.0*SizeConfig.heightMultiplier, color: Color(0xff5D535C)) , ),
+                            child: Text(Strings.videDesc,style:TextStyle(fontFamily: robot, fontSize: 2.0*SizeConfig.heightMultiplier, color: AmigoColors.lightBrown) , ),
                           ),
                         ),
                       ],

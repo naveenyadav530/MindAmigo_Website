@@ -58,6 +58,11 @@ flutter:
      - assets/images/facebook.png
      - assets/images/youicon.png
      - assets/images/bottom_image.png
+     - assets/images/bottom_comma.png
+     - assets/images/top_comma.png
+     - assets/images/doll1.png
+     - assets/images/doll2.png
+     -
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -72,13 +77,6 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Helvetica
-      fonts:
-        - asset: assets/fonts/helvetica.otf
-    - family: Fredoka
-      fonts:
-        - asset: assets/fonts/fredoka.ttf
-
     - family: Robot
       fonts:
         - asset: assets/fonts/robot.ttf

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:website/styles/colorsAmigo.dart';
+import 'package:website/styles/constants.dart';
 import 'package:website/styles/size_config.dart';
 import 'package:website/styles/strings.dart';
 import 'package:website/utils/responsive_widget.dart';
@@ -28,11 +30,11 @@ class _HomePageState extends State<HomePage> {
             TitleSection(),
             HomeSection(
               sectionHeight: 26.15*SizeConfig.heightMultiplier,
-              sectionColor: Color(0xffFDF2E4),
+              sectionColor: AmigoColors.cream,
               sectionAlign: Alignment.centerLeft,
               sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
               sectionText: Strings.homeSection1,
-              sectionTextColor: Color(0xff707070),
+              sectionTextColor: AmigoColors.lightBlack,
               sectionFontSize: 2.4*SizeConfig.textMultiplier,
             ),
             HomeSection(
@@ -41,16 +43,16 @@ class _HomePageState extends State<HomePage> {
               sectionAlign: Alignment.centerRight,
               sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
               sectionText: Strings.homeSection2,
-              sectionTextColor: Color(0xff707070),
+              sectionTextColor: AmigoColors.lightBlack,
               sectionFontSize: 2.4*SizeConfig.textMultiplier,
             ),
             HomeSection(
               sectionHeight: 26.15*SizeConfig.heightMultiplier,
-              sectionColor: Color(0xffFDF2E4),
+              sectionColor: AmigoColors.cream,
               sectionAlign: Alignment.centerLeft,
               sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
               sectionText: Strings.homeSection3,
-              sectionTextColor: Color(0xff707070),
+              sectionTextColor: AmigoColors.lightBlack,
               sectionFontSize: 2.4*SizeConfig.textMultiplier,
             ),
             HomeSection(
@@ -59,7 +61,7 @@ class _HomePageState extends State<HomePage> {
               sectionAlign: Alignment.centerRight,
               sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
               sectionText: Strings.homeSection4,
-              sectionTextColor: Color(0xff707070),
+              sectionTextColor: AmigoColors.lightBlack,
               sectionFontSize: 2.4*SizeConfig.textMultiplier,
             ),
             VideoDisc(),
@@ -71,7 +73,8 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-    ):Scaffold(
+    ):
+    Scaffold(
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -81,16 +84,16 @@ class _HomePageState extends State<HomePage> {
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Color(0xffe75e5e), Color(0xff457ea5)])
-              ),
+                      colors: [AmigoColors.lightRed,AmigoColors.lightBlue])
+              ), child: null,
             ),
             ListTile(
-              leading: Icon(Icons.person, color: Color(0xff41b0e1),),
+              leading: Icon(Icons.person, color: AmigoColors.lightBlue,),
               title: Text('Meet Adam',
                 style: TextStyle(
                     fontSize:2.27*SizeConfig.textMultiplier,
-                    color: Color(0xff41b0e1),
-                    fontFamily: "Robot",
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
                     ),
@@ -104,12 +107,12 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.mic, color: Color(0xff41b0e1),),
+              leading: Icon(Icons.mic, color: AmigoColors.lightBlue,),
               title: Text('PodCast',
                   style: TextStyle(
                   fontSize:2.27*SizeConfig.textMultiplier,
-                  color: Color(0xff41b0e1),
-                  fontFamily: "Robot",
+                  color: AmigoColors.lightBlue,
+                  fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold
               ),),
@@ -121,12 +124,12 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.article_outlined,color: Color(0xff41b0e1),),
+              leading: Icon(Icons.article_outlined,color: AmigoColors.lightBlue,),
               title: Text('Blog',
                 style: TextStyle(
                     fontSize:2.27*SizeConfig.textMultiplier,
-                    color: Color(0xff41b0e1),
-                    fontFamily: "Robot",
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
                 ),),
@@ -143,7 +146,7 @@ class _HomePageState extends State<HomePage> {
 
 
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.blue),
+        iconTheme: IconThemeData(color: AmigoColors.lightBlue),
         backgroundColor: Colors.white,
         title: Image.asset("assets/images/logo.png", height: 3.18*SizeConfig.heightMultiplier,)
       ),
@@ -154,28 +157,28 @@ class _HomePageState extends State<HomePage> {
               GradientLine(),
               TitleSection(),
               MobileHomeSection(
-                sectionTextColor: Color(0xff707070),
+                sectionTextColor: AmigoColors.lightBlack,
                 sectionHeight: 20.02*SizeConfig.heightMultiplier,
                 sectionFontSize: 2.82*SizeConfig.textMultiplier,
                 sectionText: Strings.homeSection1,
-                sectionColor:Color(0xffFDF2E4) ,
+                sectionColor:AmigoColors.cream ,
               ),
               MobileHomeSection(
-                sectionTextColor: Color(0xff707070),
+                sectionTextColor:AmigoColors.lightBlack,
                 sectionHeight: 20.02*SizeConfig.heightMultiplier,
                 sectionFontSize: 2.82*SizeConfig.textMultiplier,
                 sectionText: Strings.homeSection2,
                 sectionColor:Colors.white ,
               ),
               MobileHomeSection(
-                sectionTextColor: Color(0xff707070),
+                sectionTextColor: AmigoColors.lightBlack,
                 sectionHeight: 20.02*SizeConfig.heightMultiplier,
                 sectionFontSize: 2.82*SizeConfig.textMultiplier,
                 sectionText: Strings.homeSection3,
-                sectionColor:Color(0xffFDF2E4) ,
+                sectionColor:AmigoColors.cream ,
               ),
               MobileHomeSection(
-                sectionTextColor: Color(0xff707070),
+                sectionTextColor: AmigoColors.lightBlack,
                 sectionHeight: 20.02*SizeConfig.heightMultiplier,
                 sectionFontSize: 2.82*SizeConfig.textMultiplier,
                 sectionText: Strings.homeSection4,

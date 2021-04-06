@@ -3,6 +3,7 @@ import 'package:website/styles/size_config.dart';
 import 'package:website/styles/strings.dart';
 import 'package:website/utils/responsive_widget.dart';
 
+
 class TitleSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

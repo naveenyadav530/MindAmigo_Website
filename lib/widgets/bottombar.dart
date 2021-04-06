@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:website/styles/colorsAmigo.dart';
+import 'package:website/styles/constants.dart';
 import 'package:website/styles/size_config.dart';
-import 'package:website/styles/strings.dart';
 
 
 class BottomNav extends StatelessWidget {
@@ -8,7 +9,7 @@ class BottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 19.53*SizeConfig.heightMultiplier,
-      color: Color(0xff5D535C),
+      color: AmigoColors.lightBrown,
       child: Stack(
         alignment: Alignment.topLeft,
         children: [
@@ -30,7 +31,7 @@ class BottomNav extends StatelessWidget {
           Positioned(
               left: 26.04*SizeConfig.heightMultiplier,
               top: 6.4*SizeConfig.heightMultiplier,
-              child: Text("Contact details", style: TextStyle(color: Color(0xffEC6C83), fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold),)
+              child: Text("Contact details", style: TextStyle(color: AmigoColors.lightRed2, fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold),)
           ),
           Positioned(
               left: 26.04*SizeConfig.heightMultiplier,
@@ -64,7 +65,7 @@ class BottomNav extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, PrivacyPolicyRoute);
                   },
-                  child: Text("Privacy Policy",style: TextStyle(fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, color: Color(0xffEC6C83))))
+                  child: Text("Privacy Policy",style: TextStyle(fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, color: AmigoColors.lightRed2)))
           ),
           Positioned(
               left: 35.80*SizeConfig.heightMultiplier,
@@ -73,7 +74,7 @@ class BottomNav extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, TermsConditionRoute);
                   },
-                  child: Text("Terms & Conditions",style: TextStyle(fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, color: Color(0xffEC6C83))))
+                  child: Text("Terms & Conditions",style: TextStyle(fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, color: AmigoColors.lightRed2)))
           ),
           Positioned(
               right: 19.53*SizeConfig.heightMultiplier,
@@ -81,19 +82,19 @@ class BottomNav extends StatelessWidget {
               child: Image.asset("assets/images/bottom_image.png", fit: BoxFit.fill, width: 18.22*SizeConfig.heightMultiplier, height:18.22*SizeConfig.heightMultiplier ,)
           ),
 
-
-
         ],
       ),
     );
   }
 }
+
+
 class MobileBottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 19.53*SizeConfig.heightMultiplier,
-      color: Color(0xff5D535C),
+      color: AmigoColors.lightBrown,
       child: Stack(
         alignment: Alignment.topLeft,
         children: [
@@ -115,7 +116,7 @@ class MobileBottomNav extends StatelessWidget {
           Positioned(
               left: 26.04*SizeConfig.heightMultiplier,
               top: 6.4*SizeConfig.heightMultiplier,
-              child: Text("Contact details", style: TextStyle(color: Color(0xffEC6C83), fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold),)
+              child: Text("Contact details", style: TextStyle(color: AmigoColors.lightRed2, fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold),)
           ),
           Positioned(
               left: 26.04*SizeConfig.heightMultiplier,
@@ -149,7 +150,7 @@ class MobileBottomNav extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, PrivacyPolicyRoute);
                   },
-                  child: Text("Privacy Policy",style: TextStyle(fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, color: Color(0xffEC6C83))))
+                  child: Text("Privacy Policy",style: TextStyle(fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, color:AmigoColors.lightRed2)))
           ),
           Positioned(
               left: 35.80*SizeConfig.heightMultiplier,
@@ -158,7 +159,7 @@ class MobileBottomNav extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, TermsConditionRoute);
                   },
-                  child: Text("Terms & Conditions",style: TextStyle(fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, color: Color(0xffEC6C83)))),
+                  child: Text("Terms & Conditions",style: TextStyle(fontSize: 1.10*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, color: AmigoColors.lightRed2))),
 
 
           ),

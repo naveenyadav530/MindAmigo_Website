@@ -1,6 +1,5 @@
 class Strings {
   Strings._();
-
   static const String mindhelp = '''Mindamgio is here to help you''';
   static const String therapist = '''become your own therapist.''';
   static const String title1 = '''This is by helping you explore and apply the key lessons from two of the world's leading therapies: Acceptance and Commitment Therapy (ACT) andCognitive Behavioural therapy (CBT).''';
@@ -25,18 +24,29 @@ class Strings {
 
 
   //new design
-  static const String homeSection1 = '''Be empowered to take back control\nof your mental health by learning\nwhat the therapists know.''';
-  static const String homeSection2 = '''Tune in the ACT and CBT therapy\ncourse library along with\nmindfulness meditation''';
-  static const String homeSection3 = '''Explore an array of techniques\ndesigned to improve mental\nwell being and resilience''';
-  static const String homeSection4 = '''Keep a personal diary of your mood\nto help understand your mental\nhealth better''';
+  static const String homeSection1 = '''Be empowered to take back control
+of your mental health by learning
+what the therapists know.''';
+  static const String homeSection2 = '''Tune in the ACT and CBT therapy
+course library along with
+mindfulness meditation''';
+  static const String homeSection3 = '''Explore an array of techniques
+designed to improve mental
+well being and resilience''';
+  static const String homeSection4 = '''Keep a personal diary of your mood
+to help understand your mental
+health better''';
   static const String videDesc = '''Think of Mindamigo as a bit like an all-you-can-eat buffet of different techniques and insights that you can apply to your own mental health…''';
   static const String downloadMindAmigo = '''Download the mindamigo app''';
 
-
-
+  static const String aboutus = '''Mindamigo is here to guide you through the key lessons from two of the world’s leading therapies: Acceptance and Commitment Therapy (ACT) and Cognitive Behavioural therapy (CBT).
+  
+Discover their techniques and insights to put you back in control of your life and ultimately, help you move steadily, but surely, to a more calm, centred and happier state of mind.
+''';
+  static const String join ='''Join the mindamigo newsletter''';
+  static const String join_msg = '''You’ll receive monthly updates on the latest podcasts and blogs filled with insights to help improve mental wellbeing ''';
+  static const String podcastCenter ='''Sound Cloud podcast widget embedded here''';
+  static const String podcastBottom = '''Available to listen on Spotify,  Apple Podcasts,  Google Podcasts  and  RSS Feed''';
 }
-//routes name
-const String HomeRoute  = '/';
-const String TermsConditionRoute = '/terms_and_conditions';
-const String PrivacyPolicyRoute = '/privacy_policy';
+
 
