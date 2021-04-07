@@ -57,18 +57,19 @@ class NewsLetter extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 1.3*SizeConfig.heightMultiplier,),
-                      SizedBox(width: 6.5*SizeConfig.heightMultiplier, height: 2.6*SizeConfig.heightMultiplier,child:  ElevatedButton(
-                        child: Text("Sign Up" ,style: TextStyle(fontSize: 1.3*SizeConfig.textMultiplier),),
-                        onPressed: () => print("it's pressed"),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.red,
-
-                          onPrimary: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0),
+                      SizedBox(width: 6.5*SizeConfig.heightMultiplier, height: 2.6*SizeConfig.heightMultiplier,
+                        child:  ElevatedButton(
+                          child: Text("Sign Up" ,style: TextStyle(fontSize: 1.3*SizeConfig.textMultiplier),),
+                          onPressed: () => print("it's pressed"),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.red,
+                            onPrimary: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
                           ),
                         ),
-                      ),),
+                      ),
 
                     ],
                   )
