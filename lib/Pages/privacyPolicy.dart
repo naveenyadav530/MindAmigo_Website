@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:website/styles/constants.dart';
 import 'package:website/styles/size_config.dart';
+import 'package:website/styles/strings.dart';
 import 'package:website/utils/responsive_widget.dart';
 import 'package:website/widgets/bottombar.dart';
 import 'package:website/widgets/gradient_line.dart';
@@ -19,7 +21,26 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
           children: [
             NavBar(),
             GradientLine(),
+            Container(
+                margin: EdgeInsets.only(top: 100),
+                width: MediaQuery.of(context).size.width/1.5,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Text("Privacy Policy", style: TextStyle(fontSize: 37, color: Colors.orange, fontFamily: robot, fontWeight: FontWeight.bold),),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 50),
+                      child:
+                      Text(Strings.privacyPolicy1, style: TextStyle(fontFamily: robot, fontSize: 25),),
+                    )
 
+
+                  ],
+                )
+            ),
             BottomNav(),
 
 

@@ -10,6 +10,7 @@ class AmigoColors{
   static const Color cream = Color(0xffFDF2E4);
   static const Color lightBlue = Color(0xff457ea5);
   static const Color lightBrown = Color(0xff5D535C);
+
   static const Color lightblue1 = Color(0xff17B8D9);
   static const Color green = Color(0xff73D373);
   static const Color orange = Color(0xffED8000);

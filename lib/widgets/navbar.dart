@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/pages/meetadam.dart';
 import 'package:website/styles/constants.dart';
 import 'package:website/styles/size_config.dart';
 import 'package:website/styles/strings.dart';
@@ -29,7 +30,7 @@ class _NavBarState extends State<NavBar> {
                 children: [
                   InkWell(
                     onTap: (){
-                      Navigator.pushNamed(context, TermsConditionRoute);
+                      Navigator.pushNamed(context, MeetAdamRoute);
                     },
                     child: Text(Strings.meetAdam,
                       style: TextStyle(fontSize:2.27*SizeConfig.textMultiplier,color: Color(0xff17B8D9),

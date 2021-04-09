@@ -3,6 +3,7 @@ import 'package:url_strategy/url_strategy.dart';
 import 'package:website/pages/aboutUs.dart';
 
 import 'package:website/pages/homepage.dart';
+import 'package:website/pages/meetadam.dart';
 import 'package:website/pages/podcast.dart';
 import 'package:website/pages/privacyPolicy.dart';
 import 'package:website/pages/termsConditions.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
                     TermsConditionRoute: (context)=>Scaffold(body: TermsConditions(),),
                     AboutUsRoute: (context)=>Scaffold(body: AboutUs(),),
                     PodcastRoute: (context)=>Scaffold(body:PodCast()),
+                    MeetAdamRoute: (context)=>Scaffold(body: MeetAdam(),)
                   },
 
                 );

@@ -100,7 +100,7 @@ class _PodCastState extends State<PodCast> {
 
             //Get In Touch
             Container(
-              height: 22.78*SizeConfig.heightMultiplier,
+             // height: //22.78*SizeConfig.heightMultiplier,
               width: MediaQuery.of(context).size.width,
               color: AmigoColors.lightWhite,
               child: Stack(
@@ -142,32 +142,33 @@ class _PodCastState extends State<PodCast> {
                               Positioned(
                                   left:20,
                                   child: Text("Name")),
-                              Positioned(right:230,child: Text("Email")),
+                              Positioned(
+                                  right:230,
+                                  child: Text("Email")),
                               Positioned(
                                 left: 0,
                                 bottom: 0,
                                 child: Container(
                                   width: 280,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      isDense: true,
-                                      filled: true,
-                                      fillColor: Colors.white,
-                                      enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(color: Colors.black26),
-                                          borderRadius: BorderRadius.all(Radius.circular(10)
-                                          )
-                                      ),
-                                      focusedBorder:OutlineInputBorder(
-                                          borderSide: BorderSide(color: Colors.transparent),
-                                          borderRadius: BorderRadius.all(Radius.circular(10)
-                                          )
-                                      ),
-                                      hintText: 'Adam Chadwick',
+                                    child:TextField(
+                                  decoration: InputDecoration(
+                                    isDense: true,
+                                    filled: true,
+                                    fillColor: Colors.white,
+                                    enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(color: Colors.black26),
+                                        borderRadius: BorderRadius.all(Radius.circular(10)
+                                        )
                                     ),
+                                    focusedBorder:OutlineInputBorder(
+                                        borderSide: BorderSide(color: Colors.transparent),
+                                        borderRadius: BorderRadius.all(Radius.circular(10)
+                                        )
+                                    ),
+                                    hintText: 'Adam Chadwick',
                                   ),
                                 ),
-                              ),
+                              ),),
                               Positioned(
                                 bottom: 0,
                                 right: 0,
