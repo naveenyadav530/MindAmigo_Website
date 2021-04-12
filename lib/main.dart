@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:website/pages/aboutUs.dart';
+import 'package:website/pages/blogArticle.dart';
+import 'package:website/pages/blogpage.dart';
 
 import 'package:website/pages/homepage.dart';
 import 'package:website/pages/meetadam.dart';
@@ -33,7 +35,9 @@ class MyApp extends StatelessWidget {
                     TermsConditionRoute: (context)=>Scaffold(body: TermsConditions(),),
                     AboutUsRoute: (context)=>Scaffold(body: AboutUs(),),
                     PodcastRoute: (context)=>Scaffold(body:PodCast()),
-                    MeetAdamRoute: (context)=>Scaffold(body: MeetAdam(),)
+                    MeetAdamRoute: (context)=>Scaffold(body: MeetAdam(),),
+                    BlogPageRoute: (context)=>Scaffold(body: BlogPage(),),
+                    BlogArticleRoute: (context)=>Scaffold(body: BlogArticle(),)
                   },
 
                 );

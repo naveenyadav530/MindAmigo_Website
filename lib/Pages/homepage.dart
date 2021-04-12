@@ -10,6 +10,7 @@ import 'package:website/widgets/navbar.dart';
 import 'package:website/widgets/section.dart';
 import 'package:website/widgets/title.dart';
 import 'package:website/widgets/videoAndDisc.dart';
+import 'package:flutter_web_scrollbar/flutter_web_scrollbar.dart';
 
 
 
@@ -19,60 +20,95 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  ScrollController _controller;
+  @override
+  void initState() {
+    //Initialize the  scrollController
+    _controller = ScrollController();
+    super.initState();
+  }
+
+  void scrollCallBack(DragUpdateDetails dragUpdate) {
+    setState(() {
+      // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
+      _controller.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
+    });
+  }
   @override
   Widget build(BuildContext context) {
-    return ResponsiveWidget.isDesktop(context)?SingleChildScrollView(
-      child: Container(
-        child: Column(
-          children: [
-            NavBar(),
-            GradientLine(),
-            TitleSection(),
-            HomeSection(
-              sectionHeight: 26.15*SizeConfig.heightMultiplier,
-              sectionColor: AmigoColors.cream,
-              sectionAlign: Alignment.centerLeft,
-              sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
-              sectionText: Strings.homeSection1,
-              sectionTextColor: AmigoColors.lightBlack,
-              sectionFontSize: 2.4*SizeConfig.textMultiplier,
-            ),
-            HomeSection(
-              sectionHeight: 26.15*SizeConfig.heightMultiplier,
-              sectionColor: Colors.white,
-              sectionAlign: Alignment.centerRight,
-              sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
-              sectionText: Strings.homeSection2,
-              sectionTextColor: AmigoColors.lightBlack,
-              sectionFontSize: 2.4*SizeConfig.textMultiplier,
-            ),
-            HomeSection(
-              sectionHeight: 26.15*SizeConfig.heightMultiplier,
-              sectionColor: AmigoColors.cream,
-              sectionAlign: Alignment.centerLeft,
-              sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
-              sectionText: Strings.homeSection3,
-              sectionTextColor: AmigoColors.lightBlack,
-              sectionFontSize: 2.4*SizeConfig.textMultiplier,
-            ),
-            HomeSection(
-              sectionHeight: 26.15*SizeConfig.heightMultiplier,
-              sectionColor: Colors.white,
-              sectionAlign: Alignment.centerRight,
-              sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
-              sectionText: Strings.homeSection4,
-              sectionTextColor: AmigoColors.lightBlack,
-              sectionFontSize: 2.4*SizeConfig.textMultiplier,
-            ),
-            VideoDisc(),
-            BottomNav(),
+    return ResponsiveWidget.isDesktop(context)?
+    Stack(
+      children: [
+        Container(
+          child: SingleChildScrollView(
+            controller: _controller,
+            child: Container(
+              child: Column(
+                children: [
+                  NavBar(),
+                  GradientLine(),
+                  TitleSection(),
+                  HomeSection(
+                    sectionHeight: 26.15*SizeConfig.heightMultiplier,
+                    sectionColor: AmigoColors.cream,
+                    sectionAlign: Alignment.centerLeft,
+                    sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
+                    sectionText: Strings.homeSection1,
+                    sectionTextColor: AmigoColors.lightBlack,
+                    sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                  ),
+                  HomeSection(
+                    sectionHeight: 26.15*SizeConfig.heightMultiplier,
+                    sectionColor: Colors.white,
+                    sectionAlign: Alignment.centerRight,
+                    sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
+                    sectionText: Strings.homeSection2,
+                    sectionTextColor: AmigoColors.lightBlack,
+                    sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                  ),
+                  HomeSection(
+                    sectionHeight: 26.15*SizeConfig.heightMultiplier,
+                    sectionColor: AmigoColors.cream,
+                    sectionAlign: Alignment.centerLeft,
+                    sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
+                    sectionText: Strings.homeSection3,
+                    sectionTextColor: AmigoColors.lightBlack,
+                    sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                  ),
+                  HomeSection(
+                    sectionHeight: 26.15*SizeConfig.heightMultiplier,
+                    sectionColor: Colors.white,
+                    sectionAlign: Alignment.centerRight,
+                    sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
+                    sectionText: Strings.homeSection4,
+                    sectionTextColor: AmigoColors.lightBlack,
+                    sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                  ),
+                  VideoDisc(),
+                  BottomNav(),
 
 
 
 
-          ],
+                ],
+              ),
+            ),
+          ),
         ),
-      ),
+        FlutterWebScroller(
+          //Pass a reference to the ScrollCallBack function into the scrollbar
+          scrollCallBack,
+
+          //Add optional values
+          scrollBarBackgroundColor: Colors.white,
+          scrollBarWidth: 20.0,
+          dragHandleColor: AmigoColors.lightblue1,
+          dragHandleBorderRadius: 2.0,
+          dragHandleHeight: 40.0,
+          dragHandleWidth: 15.0,
+        ),
+      ],
+
     ):
     Scaffold(
       endDrawer: Drawer(

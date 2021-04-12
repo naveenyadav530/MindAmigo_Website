@@ -106,8 +106,8 @@ class _MeetAdamState extends State<MeetAdam> {
                           Text("Description", style: TextStyle(fontSize: 2.08*SizeConfig.textMultiplier,),),
                         ],
                       )
-                     
-                      
+
+
                     ],
                   ),
                   SizedBox(height: 19.53*SizeConfig.heightMultiplier,)
@@ -120,7 +120,8 @@ class _MeetAdamState extends State<MeetAdam> {
           ],
         ),
       ),
-    ):Scaffold(
+    ):
+    Scaffold(
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,

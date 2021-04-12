@@ -86,13 +86,19 @@ Some things will work for you and some things might not, but that’s okay, ever
 As I said previously, Mindamigo is not a magic bullet, but I guarantee there will be something 
 here that can help you get back on track and to focus on what really matters most to you.
 ''';
-  static const String privacyPolicy1 = '''Under data protection laws, we are required to provide you with certain information about who we are, how we process your personal data and for what purposes, and your rights in relation to your personal data. This information is provided in the policy and it is important that you read that information.
-Before installation of this App, please indicate your consent to our processing of your personal data (including your name, contact details and device information) as described in the policy
-YES I consent to the installation of the App for the purposes of personal use.
-NO I do not consent to the installation of the App.
-How you can withdraw consent
-Once you provide consent by selecting “YES”, you may change your mind and withdraw consent at any time by contacting us but that will not affect the lawfulness of any processing carried out before you withdraw your consent.
-''';
+  static const String privacyPolicy1 = '''Under data protection laws, we are required to provide you with certain information about who we are, how we process your personal data and for what purposes, and your rights in relation to your personal data. This information is provided in the ''';
+
+  static const String privacyPolicy2 = '''Before installation of this App, please indicate your consent to our processing of your personal data (including your name, contact details and device information) as described in the ''';
+  static const String privacyPolicy3 ='''Once you provide consent by selecting “YES”, you may change your mind and withdraw consent at any time by contacting us but that will not affect the lawfulness of any processing carried out before you withdraw your consent.''';
+
+  static const String blogContent = '''This is especially hard when you’re starting out. Once you begin to see the benefits of meditation, it’s easier to stay with it. The simple practice of noticing and sensing what is happening in a non-judgmental way makes a big difference in how you respond to the whole of life. You can notice in just a few conscious breaths that it’s possible to create a gap between the stimulation and.''';
+
+
+  static const String blogContentMain = ''' may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. 
+
+To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. 
+
+To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other, back to normality.''';
 
 }
 

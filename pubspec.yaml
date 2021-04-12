@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   url_strategy: ^0.2.0
+  flutter_web_scrollbar: ^0.0.3
   flutter:
     sdk: flutter
 
@@ -63,7 +64,13 @@ flutter:
      - assets/images/doll1.png
      - assets/images/doll2.png
      - assets/images/adam.png
-     -
+     - assets/images/blogImage1.png
+     - assets/images/blogImage2.png
+     - assets/images/blogImage3.png
+     - assets/images/dropDown.png
+     - assets/images/blogImage4.png
+     - assets/images/mail.png
+     - assets/images/twitter.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

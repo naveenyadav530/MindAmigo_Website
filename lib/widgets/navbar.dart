@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/meetadam.dart';
 import 'package:website/styles/constants.dart';
 import 'package:website/styles/size_config.dart';
 import 'package:website/styles/strings.dart';
@@ -37,6 +36,7 @@ class _NavBarState extends State<NavBar> {
                           fontFamily: "Robot",decoration: TextDecoration.none),),
                   ) ,
                   SizedBox(width: 7.16*SizeConfig.heightMultiplier,),
+
                   InkWell(
                     onTap: () {
                       Navigator.pushNamed(context, AboutUsRoute);
@@ -46,11 +46,26 @@ class _NavBarState extends State<NavBar> {
                           fontFamily: "Robot",decoration: TextDecoration.none),),
                   ) ,
                   SizedBox(width: 7.16*SizeConfig.heightMultiplier,),
-                  FittedBox(child: InkWell(onTap: (){
+
+                  InkWell(onTap: (){
                     Navigator.pushNamed(context, PodcastRoute);
-                  },child: Text(Strings.podcast, style: TextStyle(fontSize: 2.27*SizeConfig.textMultiplier,color: Color(0xff17B8D9), fontFamily: "Robot",decoration: TextDecoration.none),))),
+                  },child: Text(Strings.podcast, style: TextStyle(fontSize: 2.27*SizeConfig.textMultiplier,color: Color(0xff17B8D9), fontFamily: "Robot",decoration: TextDecoration.none),)),
                   SizedBox(width: 7.16*SizeConfig.heightMultiplier,),
-                  Text(Strings.blog,style: TextStyle(color: Color(0xff17B8D9),fontFamily: "Robot", fontSize: 2.27*SizeConfig.textMultiplier,decoration: TextDecoration.none),),
+
+                  InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, BlogPageRoute);
+                      },
+                      child: Text(
+                        Strings.blog,
+                        style: TextStyle(
+                            color: Color(0xff17B8D9),
+                            fontFamily: "Robot",
+                            fontSize: 2.7*SizeConfig.textMultiplier,
+                            decoration: TextDecoration.none
+                        ),
+                      )
+                  ),
 
                 ],
               ),
