@@ -1,4 +1,4 @@
-package com.example.website
+package com.solitera.mindamigo
 
 import io.flutter.embedding.android.FlutterActivity
 

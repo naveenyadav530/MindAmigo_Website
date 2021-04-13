@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:mindamigo/styles/colors.dart';
 
 
 
@@ -11,7 +12,7 @@ class GradientLine extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.topRight,
-              colors: [Color(0xffEC6C83),Color(0xff17B8D9)])
+              colors: [AmigoColors.lightRed2,AmigoColors.lightBlue])
       ),
     );
   }

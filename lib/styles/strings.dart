@@ -1,14 +1,20 @@
 class Strings {
   Strings._();
+
+  //navbar
+  static const String meetAdam = 'Meet Adam';
+  static const String about = 'About';
+  static const String podcast = 'Podcast';
+  static const String blog = 'Blog';
+
+
+
+
   static const String mindhelp = '''Mindamgio is here to help you''';
   static const String therapist = '''become your own therapist.''';
   static const String title1 = '''This is by helping you explore and apply the key lessons from two of the world's leading therapies: Acceptance and Commitment Therapy (ACT) andCognitive Behavioural therapy (CBT).''';
   static const String title2 = 'Discover their techniques  and insights to help put you back in control of your life and ultimately, move steadily, but surely, to a more calm centred and happier state of mind.';
-  static const String mindLogo = 'mind';
-  static const String amigoLogo = 'amigo';
-  static const String meetAdam = 'Meet Adam';
-  static const String podcast = 'Podcast';
-  static const String blog = 'Blog';
+
 
   static const String act1 = '''Acceptance and Commitment Therapy was developed by Steven C. Hayes and it's about how to open up and reconcile ourselves to difficult thoughts and emotions''';
 
@@ -48,9 +54,9 @@ Discover their techniques and insights to put you back in control of your life a
   static const String podcastCenter ='''Sound Cloud podcast widget embedded here''';
   static const String podcastBottom = '''Available to listen on Spotify,  Apple Podcasts,  Google Podcasts  and  RSS Feed''';
 
-  static const String myNameIsAdam='''My name’s Adam, the voice behind everything Mindamigo.''';
-  static const String manyPeopleAsk= '''Many people ask me, what qualifies you to talk about mental health? ''';
-  static const String meetAdamPara = '''The short answer is I’m not medically qualified and I don’t claim to be a psychologist, a psychiatrist or a neuroscientist, I’m just somebody who’s experienced poor mental health and come out the other end, having learnt a lot about myself along the way.
+  static const String adamTitle='''My name’s Adam, the voice behind everything Mindamigo.''';
+  static const String adamSubTitle= '''Many people ask me, what qualifies you to talk about mental health? ''';
+  static const String adamPara = '''The short answer is I’m not medically qualified and I don’t claim to be a psychologist, a psychiatrist or a neuroscientist, I’m just somebody who’s experienced poor mental health and come out the other end, having learnt a lot about myself along the way.
 
 My struggles with mental health all started in my teens and lasted into my early twenties. A lot of it was poor self esteem, where I criticised myself for not being good enough and that led to depression and anxiety.
 
@@ -86,6 +92,8 @@ Some things will work for you and some things might not, but that’s okay, ever
 As I said previously, Mindamigo is not a magic bullet, but I guarantee there will be something 
 here that can help you get back on track and to focus on what really matters most to you.
 ''';
+
+  static const String adamDiscription1= '''Description''';
   static const String privacyPolicy1 = '''Under data protection laws, we are required to provide you with certain information about who we are, how we process your personal data and for what purposes, and your rights in relation to your personal data. This information is provided in the ''';
 
   static const String privacyPolicy2 = '''Before installation of this App, please indicate your consent to our processing of your personal data (including your name, contact details and device information) as described in the ''';

@@ -1,11 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:website/styles/colorsAmigo.dart';
-import 'package:website/styles/constants.dart';
-import 'package:website/styles/size_config.dart';
+import 'package:mindamigo/styles/colors.dart';
+import 'package:mindamigo/styles/constants.dart';
+import 'package:mindamigo/styles/strings.dart';
+import 'package:mindamigo/utils/responsiveLayout.dart';
+import 'package:mindamigo/utils/size_config.dart';
 
-import 'package:website/styles/strings.dart';
+import 'circles.dart';
+
 
 class NewsLetter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveLayout(
+        webBody:WebNewsLetter(),
+      tabletBody: TabNewsLetter(),
+      mobileBody: MobileNewsLetter(),
+    );
+  }
+}
+
+class WebNewsLetter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +28,6 @@ class NewsLetter extends StatelessWidget {
       color: AmigoColors.lightRed3,
       child: Stack(
         alignment: Alignment.center,
-
         children: [
           Container(
               height: 16.27*SizeConfig.heightMultiplier,
@@ -24,7 +37,7 @@ class NewsLetter extends StatelessWidget {
                   Align(alignment: Alignment.topLeft,
                       child: Text(Strings.join, style: TextStyle(fontSize: 2.27*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),)),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.only(top: 1.30*SizeConfig.heightMultiplier),
                     child: Text(Strings.join_msg, style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot),),
                   ),
                   Align(
@@ -57,7 +70,7 @@ class NewsLetter extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 1.3*SizeConfig.heightMultiplier,),
-                      SizedBox(width: 6.5*SizeConfig.heightMultiplier, height: 2.6*SizeConfig.heightMultiplier,
+                      SizedBox(width: 6.5*SizeConfig.heightMultiplier, height: 40,
                         child:  ElevatedButton(
                           child: Text("Sign Up" ,style: TextStyle(fontSize: 1.3*SizeConfig.textMultiplier),),
                           onPressed: () => print("it's pressed"),
@@ -76,9 +89,57 @@ class NewsLetter extends StatelessWidget {
                 ],
               )
           ),
+          //left
+          CircleAmigo(
+            topCircleAmigoPosition: -6.0*SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -10.16*SizeConfig.heightMultiplier,
+            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
+            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1,0.1],
+
+          ),
+          CircleAmigo(
+            topCircleAmigoPosition: -9*SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -13.41*SizeConfig.heightMultiplier,
+            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
+            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1,0.1],
+
+          ),
+          CircleAmigo(
+            topCircleAmigoPosition: -12.0*SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -16.67*SizeConfig.heightMultiplier,
+            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
+            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1,0.1],
+
+          ),
+
 
         ],
       ),
     );
   }
 }
+
+class TabNewsLetter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class MobileNewsLetter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+
+
+
+

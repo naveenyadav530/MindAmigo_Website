@@ -1,17 +1,30 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:website/styles/colorsAmigo.dart';
-import 'package:website/styles/constants.dart';
-import 'package:website/styles/size_config.dart';
-import 'package:website/styles/strings.dart';
-import 'package:website/utils/responsive_widget.dart';
+import 'package:mindamigo/styles/colors.dart';
+import 'package:mindamigo/styles/constants.dart';
+import 'package:mindamigo/styles/strings.dart';
+import 'package:mindamigo/utils/responsiveLayout.dart';
+import 'package:mindamigo/utils/size_config.dart';
+
 
 class VideoDisc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ResponsiveWidget.isDesktop(context)?Container(
-      color: Color(0xffF6EAEC),
+    return ResponsiveLayout(
+      webBody: WebVideoDisc(),
+      tabletBody: TabVideoDisc(),
+      mobileBody: MobileVideoDisc(),
+    );
+  }
+}
+
+
+class WebVideoDisc extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: AmigoColors.lightPink3,
       height: 32.55*SizeConfig.heightMultiplier,
       child: Stack(
         alignment: Alignment.center,
@@ -24,7 +37,7 @@ class VideoDisc extends StatelessWidget {
                 alignment: Alignment.center,
                 height: 26.04*SizeConfig.heightMultiplier,
                 width: 39.06*SizeConfig.heightMultiplier,
-                decoration: BoxDecoration(color: Color(0xffE6E6E6),
+                decoration: BoxDecoration(color: AmigoColors.gray,
                     borderRadius: BorderRadius.all(Radius.circular(20))
                 ),
                 child: Image.asset("assets/images/youtube.png", fit: BoxFit.fill, height: 6.51*SizeConfig.heightMultiplier, width: 6.51*SizeConfig.heightMultiplier,),
@@ -73,73 +86,75 @@ class VideoDisc extends StatelessWidget {
 
         ],
       ),
-    ):
-    Container(
+    );
+  }
+}
+
+class TabVideoDisc extends StatelessWidget  {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
       color: AmigoColors.lightPink3,
       width: MediaQuery.of(context).size.width,
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
-            child: Container(
-              alignment: Alignment.center,
-              height: 26.04*SizeConfig.heightMultiplier,
-              width: 39.06*SizeConfig.heightMultiplier,
-              decoration: BoxDecoration(color: Color(0xffE6E6E6),
-                  borderRadius: BorderRadius.all(Radius.circular(20))
-              ),
-              child: Image.asset("assets/images/youtube.png", fit: BoxFit.fill, height: 6.51*SizeConfig.heightMultiplier, width: 6.51*SizeConfig.heightMultiplier,),
 
+      padding: EdgeInsets.symmetric(vertical: 50),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            alignment: Alignment.center,
+            height: 26.04*SizeConfig.heightMultiplier,
+            width: 39.06*SizeConfig.heightMultiplier,
+            decoration: BoxDecoration(color: AmigoColors.gray,
+                borderRadius: BorderRadius.all(Radius.circular(20))
+            ),
+            child: Image.asset("assets/images/youtube.png", fit: BoxFit.fill, height: 6.51*SizeConfig.heightMultiplier, width: 6.51*SizeConfig.heightMultiplier,),
+
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 40),
+            height: 26.04*SizeConfig.heightMultiplier,
+            width: 39.06*SizeConfig.heightMultiplier,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: Image.asset("assets/images/bottom_comma.png",
+                    height: 6.5*SizeConfig.heightMultiplier,
+                    width: 3.25*SizeConfig.heightMultiplier,
+                  ),
+                ),
+                Positioned(
+                  left: 0,
+                  top: 0,
+                  child: Image.asset("assets/images/top_comma.png",
+                    height: 6.5*SizeConfig.heightMultiplier,
+                    width: 3.25*SizeConfig.heightMultiplier,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Container(
+
+                    child: Text(Strings.videDesc,style:TextStyle(fontFamily:robot, fontSize: 2.0*SizeConfig.heightMultiplier,fontWeight: FontWeight.bold,color: AmigoColors.lightBrown) , ),
+                  ),
+                ),
+              ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-                width: MediaQuery.of(context).size.width,
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Container(
-                    height: 26.04*SizeConfig.heightMultiplier,
-                    width: 39.06*SizeConfig.heightMultiplier,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Positioned(
-                          bottom: 10,
-                          right: 0,
-                          child: Image.asset("assets/images/bottom_comma.png",
-                            height: 6.5*SizeConfig.heightMultiplier,
-                            width: 3.25*SizeConfig.heightMultiplier,
-                          ),
-                        ),
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Image.asset("assets/images/top_comma.png",
-
-                            height: 6.5*SizeConfig.heightMultiplier,
-                            width: 3.25*SizeConfig.heightMultiplier,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Container(
-                            child: Text(Strings.videDesc,style:TextStyle(fontFamily: robot, fontSize: 2.0*SizeConfig.heightMultiplier, color: AmigoColors.lightBrown) , ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-
-              ),
-            ),
-          )
-
-
         ],
       ),
     );
   }
 }
+
+class MobileVideoDisc extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+

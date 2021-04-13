@@ -1,6 +1,6 @@
-# website
+# mindamigo
 
-A new Flutter project.
+Mindamigo Website
 
 ## Getting Started
 
