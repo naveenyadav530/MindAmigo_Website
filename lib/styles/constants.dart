@@ -18,3 +18,33 @@ const String BlogPageRoute = '/blog_page';
 const String BlogArticleRoute = '/blog_article';
 
 
+//images
+final String websiteLogo ="assets/images/logo.png";
+final String youtubeHome = "assets/images/youtube.png";
+final String commaUpper = "assets/images/bottom_comma.png";
+final String commaLower ="assets/images/top_comma.png";
+
+final String bottomNavImage = "assets/images/bottom_image.png";
+final String bottomAppStore = "assets/images/app_store.png";
+final String bottomPlayStore ="assets/images/play_store.png";
+final String bottomInstagram ="assets/images/instagram.png";
+final String bottomFacebook ="assets/images/facebook.png";
+final String bottomYoutube ="assets/images/youicon.png";
+
+final String adamImage = "assets/images/adam.png";
+final String advisoryImage = "";
+
+final String aboutActDoll = "assets/images/doll1.png";
+final String aboutActPhone = "assets/images/act.png";
+final String aboutCbtDoll = "assets/images/doll2.png";
+final String aboutCbtPhone = "assets/images/cbt.png";
+
+
+final String blogImage1 ="assets/images/blogImage1.png";
+final String blogImage2="assets/images/blogImage2.png";
+final String blogImage3 ="assets/images/blogImage3.png";
+final String blogDropDown ="assets/images/dropDown.png";
+final String blogImage4 = "assets/images/blogImage4.png";
+final String facebookShare = "assets/images/facebook.png";
+final String twitterShare = "assets/images/twitter.png";
+final String mailShare = "assets/images/mail.png";

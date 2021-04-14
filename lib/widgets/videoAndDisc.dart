@@ -40,7 +40,7 @@ class WebVideoDisc extends StatelessWidget {
                 decoration: BoxDecoration(color: AmigoColors.gray,
                     borderRadius: BorderRadius.all(Radius.circular(20))
                 ),
-                child: Image.asset("assets/images/youtube.png", fit: BoxFit.fill, height: 6.51*SizeConfig.heightMultiplier, width: 6.51*SizeConfig.heightMultiplier,),
+                child: Image.asset(youtubeHome, fit: BoxFit.fill, height: 6.51*SizeConfig.heightMultiplier, width: 6.51*SizeConfig.heightMultiplier,),
 
               )),
 
@@ -59,7 +59,7 @@ class WebVideoDisc extends StatelessWidget {
                     Positioned(
                       bottom: 0,
                       right: 0,
-                      child: Image.asset("assets/images/bottom_comma.png",
+                      child: Image.asset(commaUpper,
                         height: 6.5*SizeConfig.heightMultiplier,
                         width: 3.25*SizeConfig.heightMultiplier,
                       ),
@@ -67,7 +67,7 @@ class WebVideoDisc extends StatelessWidget {
                     Positioned(
                       left: 0,
                       top: 0,
-                      child: Image.asset("assets/images/top_comma.png",
+                      child: Image.asset(commaLower,
                         height: 6.5*SizeConfig.heightMultiplier,
                         width: 3.25*SizeConfig.heightMultiplier,
                       ),
@@ -75,7 +75,6 @@ class WebVideoDisc extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Container(
-
                         child: Text(Strings.videDesc,style:TextStyle(fontFamily:robot, fontSize: 2.0*SizeConfig.heightMultiplier,fontWeight: FontWeight.bold,color: AmigoColors.lightBrown) , ),
                       ),
                     ),

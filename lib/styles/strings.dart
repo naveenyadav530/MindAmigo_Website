@@ -12,8 +12,6 @@ class Strings {
 
   static const String mindhelp = '''Mindamgio is here to help you''';
   static const String therapist = '''become your own therapist.''';
-  static const String title1 = '''This is by helping you explore and apply the key lessons from two of the world's leading therapies: Acceptance and Commitment Therapy (ACT) andCognitive Behavioural therapy (CBT).''';
-  static const String title2 = 'Discover their techniques  and insights to help put you back in control of your life and ultimately, move steadily, but surely, to a more calm centred and happier state of mind.';
 
 
   static const String act1 = '''Acceptance and Commitment Therapy was developed by Steven C. Hayes and it's about how to open up and reconcile ourselves to difficult thoughts and emotions''';
@@ -30,33 +28,33 @@ class Strings {
 
 
   //new design
-  static const String homeSection1 = '''Be empowered to take back control
+  static String homeSection1 = '''Be empowered to take back control
 of your mental health by learning
 what the therapists know.''';
-  static const String homeSection2 = '''Tune in the ACT and CBT therapy
+  static  String homeSection2 = '''Tune in the ACT and CBT therapy
 course library along with
 mindfulness meditation''';
-  static const String homeSection3 = '''Explore an array of techniques
+  static  String homeSection3 = '''Explore an array of techniques
 designed to improve mental
 well being and resilience''';
-  static const String homeSection4 = '''Keep a personal diary of your mood
+  static  String homeSection4 = '''Keep a personal diary of your mood
 to help understand your mental
 health better''';
-  static const String videDesc = '''Think of Mindamigo as a bit like an all-you-can-eat buffet of different techniques and insights that you can apply to your own mental health…''';
-  static const String downloadMindAmigo = '''Download the mindamigo app''';
+  static  String videDesc = '''Think of Mindamigo as a bit like an all-you-can-eat buffet of different techniques and insights that you can apply to your own mental health…''';
 
-  static const String aboutus = '''Mindamigo is here to guide you through the key lessons from two of the world’s leading therapies: Acceptance and Commitment Therapy (ACT) and Cognitive Behavioural therapy (CBT).
+
+  static  String aboutus = '''Mindamigo is here to guide you through the key lessons from two of the world’s leading therapies: Acceptance and Commitment Therapy (ACT) and Cognitive Behavioural therapy (CBT).
   
 Discover their techniques and insights to put you back in control of your life and ultimately, help you move steadily, but surely, to a more calm, centred and happier state of mind.
 ''';
-  static const String join ='''Join the mindamigo newsletter''';
-  static const String join_msg = '''You’ll receive monthly updates on the latest podcasts and blogs filled with insights to help improve mental wellbeing ''';
-  static const String podcastCenter ='''Sound Cloud podcast widget embedded here''';
-  static const String podcastBottom = '''Available to listen on Spotify,  Apple Podcasts,  Google Podcasts  and  RSS Feed''';
+  static  String join ='''Join the mindamigo newsletter''';
+  static  String join_msg = '''You’ll receive monthly updates on the latest podcasts and blogs filled with insights to help improve mental wellbeing ''';
+  static  String podcastCenter ='''Sound Cloud podcast widget embedded here''';
+  static  String podcastBottom = '''Available to listen on Spotify,  Apple Podcasts,  Google Podcasts  and  RSS Feed''';
 
-  static const String adamTitle='''My name’s Adam, the voice behind everything Mindamigo.''';
-  static const String adamSubTitle= '''Many people ask me, what qualifies you to talk about mental health? ''';
-  static const String adamPara = '''The short answer is I’m not medically qualified and I don’t claim to be a psychologist, a psychiatrist or a neuroscientist, I’m just somebody who’s experienced poor mental health and come out the other end, having learnt a lot about myself along the way.
+  static  String adamTitle='''My name’s Adam, the voice behind everything Mindamigo.''';
+  static  String adamSubTitle= '''Many people ask me, what qualifies you to talk about mental health? ''';
+  static  String adamPara = '''The short answer is I’m not medically qualified and I don’t claim to be a psychologist, a psychiatrist or a neuroscientist, I’m just somebody who’s experienced poor mental health and come out the other end, having learnt a lot about myself along the way.
 
 My struggles with mental health all started in my teens and lasted into my early twenties. A lot of it was poor self esteem, where I criticised myself for not being good enough and that led to depression and anxiety.
 
@@ -93,21 +91,27 @@ As I said previously, Mindamigo is not a magic bullet, but I guarantee there wil
 here that can help you get back on track and to focus on what really matters most to you.
 ''';
 
-  static const String adamDiscription1= '''Description''';
-  static const String privacyPolicy1 = '''Under data protection laws, we are required to provide you with certain information about who we are, how we process your personal data and for what purposes, and your rights in relation to your personal data. This information is provided in the ''';
+  static String adamDiscription1= '''Description''';
+  static  String privacyPolicy1 = '''Under data protection laws, we are required to provide you with certain information about who we are, how we process your personal data and for what purposes, and your rights in relation to your personal data. This information is provided in the ''';
 
-  static const String privacyPolicy2 = '''Before installation of this App, please indicate your consent to our processing of your personal data (including your name, contact details and device information) as described in the ''';
-  static const String privacyPolicy3 ='''Once you provide consent by selecting “YES”, you may change your mind and withdraw consent at any time by contacting us but that will not affect the lawfulness of any processing carried out before you withdraw your consent.''';
-
-  static const String blogContent = '''This is especially hard when you’re starting out. Once you begin to see the benefits of meditation, it’s easier to stay with it. The simple practice of noticing and sensing what is happening in a non-judgmental way makes a big difference in how you respond to the whole of life. You can notice in just a few conscious breaths that it’s possible to create a gap between the stimulation and.''';
+  static  String privacyPolicy2 = '''Before installation of this App, please indicate your consent to our processing of your personal data (including your name, contact details and device information) as described in the ''';
+  static  String privacyPolicy3 ='''Once you provide consent by selecting “YES”, you may change your mind and withdraw consent at any time by contacting us but that will not affect the lawfulness of any processing carried out before you withdraw your consent.''';
 
 
-  static const String blogContentMain = ''' may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. 
 
-To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. 
 
+  static  String blogTitle = '''What to do when anxiety strikes''';
+  static  String blogDate = '''14/04/2021''';
+  static String blogContent = '''This is especially hard when  you’re starting out. Once you begin to see the benefits of meditation, it’s easier to stay with it.
+The simple practice of noticing and sensing what is happening in a non-judgmental way makes a big difference in how you respond to the whole of life.
+You can notice in just a few conscious breaths that it’s possible to create a gap between the stimulation and.
+
+MindAmigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life
+To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do,
+is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other,
+back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control
+of your life. 
 To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other, back to normality.''';
-
 }
 
 

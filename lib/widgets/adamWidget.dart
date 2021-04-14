@@ -34,7 +34,7 @@ class WebBlog extends StatelessWidget {
                     margin: EdgeInsets.only(top: 3.55*SizeConfig.heightMultiplier),
                     child:CircleAvatar(
                       radius:5.55*SizeConfig.heightMultiplier,
-                      backgroundImage: AssetImage("assets/images/adam.png"),
+                      backgroundImage: AssetImage(adamImage),
                     )
                 ),
                 Container(

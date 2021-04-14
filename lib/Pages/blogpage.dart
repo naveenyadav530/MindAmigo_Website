@@ -50,33 +50,42 @@ class _WebBlogPageState extends State<WebBlogPage> {
                     Column(
                       children: [
                         BlogContent(
-                          title1: "What to do when anxiety strikes",
-                          title2: "What to do when anxiety strikes",
-                          title3: "What to do when anxiety strikes",
-                          image1: Image.asset("assets/images/blogImage1.png"),
-                          image2: Image.asset("assets/images/blogImage2.png"),
-                          image3: Image.asset("assets/images/blogImage3.png"),
-                          content1: Strings.blogContent,
-                          content2: Strings.blogContent,
-                          content3: Strings.blogContent,
-                          date1: "21/8/19",
-                          date2: "21/8/19",
-                          date3: "21/8/19",
+                          title: [
+                            Strings.blogTitle,
+                            Strings.blogTitle,
+                            Strings.blogTitle,
+                          ],
+                          image: [
+                            Image.asset(blogImage1),
+                            Image.asset(blogImage2),
+                            Image.asset(blogImage3),
+                          ],
+                          date: [Strings.blogDate,Strings.blogDate,Strings.blogDate,],
+                          content: [
+                            Strings.blogContent,
+                            Strings.blogContent,
+                            Strings.blogContent,
+                          ],
                         ),
                         BlogContent(
-                          title1: "What to do when anxiety strikes",
-                          title2: "What to do when anxiety strikes",
-                          title3: "What to do when anxiety strikes",
-                          image1: Image.asset("assets/images/blogImage1.png"),
-                          image2: Image.asset("assets/images/blogImage2.png"),
-                          image3: Image.asset("assets/images/blogImage3.png"),
-                          content1: Strings.blogContent,
-                          content2: Strings.blogContent,
-                          content3: Strings.blogContent,
-                          date1: "21/8/19",
-                          date2: "21/8/19",
-                          date3: "21/8/19",
+                          title: [
+                            Strings.blogTitle,
+                            Strings.blogTitle,
+                            Strings.blogTitle,
+                          ],
+                          image: [
+                            Image.asset(blogImage1),
+                            Image.asset(blogImage2),
+                            Image.asset(blogImage3),
+                          ],
+                          date: [Strings.blogDate,Strings.blogDate,Strings.blogDate,],
+                          content: [
+                            Strings.blogContent,
+                            Strings.blogContent,
+                            Strings.blogContent,
+                          ],
                         ),
+
 
                         //more posts
                         Container(
@@ -98,7 +107,7 @@ class _WebBlogPageState extends State<WebBlogPage> {
                                     Navigator.pushNamed(context, BlogArticleRoute);
                                   },
                                   child: Image.asset(
-                                    "assets/images/dropDown.png",
+                                    blogDropDown,
                                     height: 3.25*SizeConfig.heightMultiplier,
                                     width: 3.25*SizeConfig.heightMultiplier,
                                   )

@@ -13,7 +13,7 @@ class NewsLetter extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveLayout(
         webBody:WebNewsLetter(),
-      tabletBody: TabNewsLetter(),
+
       mobileBody: MobileNewsLetter(),
     );
   }
@@ -30,7 +30,7 @@ class WebNewsLetter extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Container(
-              height: 16.27*SizeConfig.heightMultiplier,
+              height: 18.27*SizeConfig.heightMultiplier,
               width: MediaQuery.of(context).size.width/2,
               child: Column(
                 children: [
@@ -43,13 +43,15 @@ class WebNewsLetter extends StatelessWidget {
                   Align(
                       alignment: Alignment.bottomLeft,
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: FittedBox(fit: BoxFit.fill,child: Text("Email")),
+                        padding: EdgeInsets.fromLTRB(0.5*SizeConfig.heightMultiplier,0,0, 0.5*SizeConfig.heightMultiplier),
+                        child: FittedBox(fit: BoxFit.fill,child: Text("Email",style:TextStyle(fontSize: 1.4*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot))),
                       )),
                   Row(
                     children: [
                       Container(
+                        height: 3.60*SizeConfig.heightMultiplier,
                         width: 19.53*SizeConfig.heightMultiplier,
+                        alignment: Alignment.center,
                         child: TextField(
                           decoration: InputDecoration(
                             isDense: true,
@@ -57,20 +59,22 @@ class WebNewsLetter extends StatelessWidget {
                             fillColor: Colors.white,
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black26),
-                                borderRadius: BorderRadius.all(Radius.circular(10)
+                                borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
                                 )
                             ),
                             focusedBorder:OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.transparent),
-                                borderRadius: BorderRadius.all(Radius.circular(10)
+                                borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
                                 )
                             ),
                             hintText: 'adam.chadwick221@gmail.com',
+                              hintStyle: TextStyle(fontSize: 1.5*SizeConfig.textMultiplier,fontFamily: robot,fontWeight: FontWeight.bold)
+
                           ),
                         ),
                       ),
                       SizedBox(width: 1.3*SizeConfig.heightMultiplier,),
-                      SizedBox(width: 6.5*SizeConfig.heightMultiplier, height: 40,
+                      SizedBox(width: 6.9*SizeConfig.heightMultiplier, height:2.9*SizeConfig.heightMultiplier,
                         child:  ElevatedButton(
                           child: Text("Sign Up" ,style: TextStyle(fontSize: 1.3*SizeConfig.textMultiplier),),
                           onPressed: () => print("it's pressed"),
@@ -78,7 +82,7 @@ class WebNewsLetter extends StatelessWidget {
                             primary: Colors.red,
                             onPrimary: Colors.white,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(0.65*SizeConfig.heightMultiplier),
                             ),
                           ),
                         ),
@@ -125,12 +129,6 @@ class WebNewsLetter extends StatelessWidget {
   }
 }
 
-class TabNewsLetter extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
 
 class MobileNewsLetter extends StatelessWidget {
   @override

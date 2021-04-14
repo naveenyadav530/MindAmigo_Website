@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/colors.dart';
+import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
+import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
 
 import 'circles.dart';
@@ -9,6 +11,17 @@ import 'circles.dart';
 
 
 class ACT extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveLayout(
+      webBody: webAct(),
+      tabletBody: tabAct(),
+      mobileBody: mobileAct(),
+    );
+  }
+}
+
+class webAct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -91,9 +104,9 @@ class ACT extends StatelessWidget {
             ),
             Positioned(
                 bottom: 0,
-                child: Image.asset("assets/images/act.png",height: 37.74*SizeConfig.heightMultiplier,)
+                child: Image.asset(aboutActPhone,height: 37.74*SizeConfig.heightMultiplier,)
             ),
-            Image.asset("assets/images/doll1.png"),
+            Image.asset(aboutActDoll),
             //left circle
             CircleAmigo(
               leftCircleAmigoPosition: -7.8*SizeConfig.heightMultiplier,
@@ -144,3 +157,113 @@ class ACT extends StatelessWidget {
     );
   }
 }
+class tabAct extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: MediaQuery.of(context).size.width,
+        decoration:   BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomLeft,
+                colors: [AmigoColors.lightblue1,AmigoColors.green])
+        ),
+        child:Stack(
+          alignment: Alignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Container(
+                width: MediaQuery.of(context).size.width/1.3,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      child: Text("ACT",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 4.6*SizeConfig.textMultiplier,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Fredoka"
+                        ),
+                      ),
+                    ),
+                    Text(Strings.act1,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 1.55*SizeConfig.textMultiplier,
+                          height: 1.5,
+                          fontFamily: "Robot"
+                      ),
+                    ),
+                    Text(Strings.act2,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 1.55*SizeConfig.textMultiplier,
+                          height: 1.5,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Robot"
+                      ),
+                    ),
+                    Padding(
+                      padding:EdgeInsets.only(bottom: 10),
+                      child: Text(Strings.act3,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 1.55*SizeConfig.textMultiplier,
+                            height: 1.5,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                            fontFamily: "Robot"
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            /*Positioned(
+                bottom: 0,
+                child: Image.asset(aboutActPhone,height: 37.74*SizeConfig.heightMultiplier,)
+            ),
+            Image.asset(aboutActDoll),*/
+
+            //corner circle
+            CircleAmigo(
+              rightCircleAmigoPosition: -3.51*SizeConfig.heightMultiplier,
+              topCircleAmigoPosition: -6.25*SizeConfig.heightMultiplier,
+              circleAmigoWidth: 15.7*SizeConfig.heightMultiplier,
+              circleAmigoHeight: 15.7*SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
+              circleAmigoOpacity: [0.8, 0.7],
+            ),
+            CircleAmigo(
+              rightCircleAmigoPosition: -5.81*SizeConfig.heightMultiplier,
+              topCircleAmigoPosition: -8.55*SizeConfig.heightMultiplier,
+              circleAmigoWidth: 22.02*SizeConfig.heightMultiplier,
+              circleAmigoHeight: 22.02*SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
+              circleAmigoOpacity: [0.5, 0.7],
+            ),
+
+
+          ],
+        )
+    );
+  }
+}
+
+class mobileAct extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+
+

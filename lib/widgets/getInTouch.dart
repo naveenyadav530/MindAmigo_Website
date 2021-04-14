@@ -15,7 +15,7 @@ class GetInTouch extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveLayout(
       webBody: WebGetInTouch(),
-      tabletBody: TabGetInTouch(),
+
     );
   }
 }
@@ -26,16 +26,15 @@ class WebGetInTouch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: //22.78*SizeConfig.heightMultiplier,
       width: MediaQuery.of(context).size.width,
       color: AmigoColors.lightWhite,
       child: Stack(
         alignment: Alignment.center,
         children: [
           Container(
-            margin: EdgeInsets.symmetric(vertical: 3.25*SizeConfig.heightMultiplier),
-            height: 20*SizeConfig.heightMultiplier,
-            width: MediaQuery.of(context).size.width/2,
+            margin: EdgeInsets.symmetric(vertical: 3*SizeConfig.heightMultiplier),
+            height: 25*SizeConfig.heightMultiplier,
+            width: MediaQuery.of(context).size.width/1.8,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,120 +67,143 @@ class WebGetInTouch extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 8.0),
                   width: MediaQuery.of(context).size.width/2.5,
-                  height: 4.55*SizeConfig.textMultiplier,
-                  child: Stack(
-                    alignment: Alignment.topCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Positioned(
-                          left:20,
-                          child: Text("Name")),
-                      Positioned(
-                          right:230,
-                          child: Text("Email")),
-                      Positioned(
-                        left: 0,
-                        bottom: 0,
+                      Expanded(
                         child: Container(
-                          width: 18.22*SizeConfig.heightMultiplier,
-                          child:TextField(
-                            decoration: InputDecoration(
-                              isDense: true,
-                              filled: true,
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black26),
-                                  borderRadius: BorderRadius.all(Radius.circular(10)
-                                  )
+                            alignment: Alignment.topLeft,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding:  EdgeInsets.only(left:0.65*SizeConfig.heightMultiplier),
+                                child: Text("Name",style:TextStyle(fontSize: 1.2*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot)),
                               ),
-                              focusedBorder:OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.transparent),
-                                  borderRadius: BorderRadius.all(Radius.circular(10)
-                                  )
-                              ),
-                              hintText: 'Adam Chadwick',
+                              Container(
+                                height: 3.60*SizeConfig.heightMultiplier,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                  isDense: true,
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                  enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(color: Colors.black26),
+                                      borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
+                                      )
+                                  ),
+                                  focusedBorder:OutlineInputBorder(
+                                      borderSide: BorderSide(color: Colors.transparent),
+                                      borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
+                                      )
+                                  ),
+                                  hintText: 'Adam Chadwick',
+                                  hintStyle: TextStyle(fontSize: 1.1*SizeConfig.textMultiplier,fontFamily: robot,fontWeight: FontWeight.bold)
+
                             ),
                           ),
-                        ),),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Container(
-                          width: 18.22*SizeConfig.heightMultiplier,
-                          child: TextField(
-                            decoration: InputDecoration(
-                              isDense: true,
-                              filled: true,
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black26),
-                                  borderRadius: BorderRadius.all(Radius.circular(10)
-                                  )
-                              ),
-                              focusedBorder:OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.transparent),
-                                  borderRadius: BorderRadius.all(Radius.circular(10)
-                                  )
-                              ),
-                              hintText: 'adam.chadwick221@gmail.com',
-                            ),
-                          ),
+                              )
+                            ],
+                          )
                         ),
+
                       ),
+                      SizedBox(width: 1.5*SizeConfig.heightMultiplier,),
+                      Expanded(
+                          child: Container(
+                              alignment: Alignment.topLeft,
+
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 0.65*SizeConfig.heightMultiplier),
+                                    child: Text("Email",style:TextStyle(fontSize: 1.2*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot)),
+                                  ),
+                                  Container(
+                                    height: 3.60*SizeConfig.heightMultiplier,
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                          isDense: true,
+                                          filled: true,
+                                          fillColor: Colors.white,
+                                          enabledBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(color: Colors.black26),
+                                              borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
+                                              )
+                                          ),
+                                          focusedBorder:OutlineInputBorder(
+                                              borderSide: BorderSide(color: Colors.transparent),
+                                              borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
+                                              )
+                                          ),
+                                          hintText: 'Adam Chadwick',
+                                          hintStyle: TextStyle(fontSize: 1.1*SizeConfig.textMultiplier,fontFamily: robot,fontWeight: FontWeight.bold)
+
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              )
+                          ),
+                      )
 
                     ],
-                  ),
+                  )
+
                 ),
-                //message
+
                 Container(
-                    margin: EdgeInsets.only(left: 20),
-                    child: Text("Message")),
-                //message edit text with button
+                    margin: EdgeInsets.only(left: 0.65*SizeConfig.heightMultiplier),
+                    child: Text("Message",style:TextStyle(fontSize: 1.2*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot))),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 8.0),
-                  width: MediaQuery.of(context).size.width/2,
-                  height: 3.25*SizeConfig.heightMultiplier,
                   child: Row(
                     children: [
                       Expanded(
+                      child: Container(
+                        height: 3.60*SizeConfig.heightMultiplier,
+                        width: MediaQuery.of(context).size.width/2.5,
+                        alignment: Alignment.center,
                         child: TextField(
-                          decoration: InputDecoration(
-                            isDense: true,
-                            filled: true,
-                            fillColor: Colors.white,
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black26),
-                                borderRadius: BorderRadius.all(Radius.circular(10)
-                                )
+                            decoration: InputDecoration(
+                              isDense: true,
+                              filled: true,
+                              fillColor: Colors.white,
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black26),
+                                  borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
+                                  )
+                              ),
+                              focusedBorder:OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.transparent),
+                                  borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
+                                  )
+                              ),
+                              hintText: 'I would like to get in touch...',
+                                hintStyle: TextStyle(fontSize: 1.1*SizeConfig.textMultiplier,fontFamily: robot,fontWeight: FontWeight.bold)
+                            )
+                        ),
+                  )
+                  ),
+                      SizedBox(width: 1.3*SizeConfig.heightMultiplier,),
+                      Container(
+                        height: 2.90*SizeConfig.heightMultiplier,
+                        width: 8.65*SizeConfig.heightMultiplier,
+                        child: ElevatedButton(
+                          child: Text("Send" ,style: TextStyle(fontSize: 1.3*SizeConfig.textMultiplier),),
+                          onPressed: () => print("it's pressed"),
+                          style: ElevatedButton.styleFrom(
+                            primary: AmigoColors.lightBlack,
+                            onPrimary: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(0.65*SizeConfig.heightMultiplier),
                             ),
-                            focusedBorder:OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.transparent),
-                                borderRadius: BorderRadius.all(Radius.circular(10)
-                                )
-                            ),
-                            hintText: 'Adam Chadwick',
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: 15),
-                        height: 40,
-                        width: 7.81*SizeConfig.heightMultiplier,
-                        child: ElevatedButton(
-
-                          child: Text("Send" ,style: TextStyle(fontSize: 1.3*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.bold),),
-                          onPressed: () => print("it's pressed"),
-                          style: ElevatedButton.styleFrom(
-                            primary: AmigoColors.lightBrown,
-                            onPrimary: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                          ),
-                        ),
-                      )
                     ],
                   ),
-                ),
+                )
 
               ],
             ),

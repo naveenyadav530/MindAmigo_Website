@@ -19,7 +19,7 @@ class NavBar extends StatelessWidget {
               onTap: (){
                 Navigator.pushNamed(context, HomeRoute);
               },
-              child: Image.asset("assets/images/logo.png", height: 3.25*SizeConfig.heightMultiplier,)),
+              child: Image.asset(websiteLogo, height: 3.25*SizeConfig.heightMultiplier,)),
         ),
         Expanded(
             child: Padding(
