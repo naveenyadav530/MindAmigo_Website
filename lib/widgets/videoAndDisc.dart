@@ -6,6 +6,7 @@ import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
+import 'package:mindamigo/widgets/indexVideoPlayer.dart';
 
 
 class VideoDisc extends StatelessWidget {
@@ -37,10 +38,8 @@ class WebVideoDisc extends StatelessWidget {
                 alignment: Alignment.center,
                 height: 26.04*SizeConfig.heightMultiplier,
                 width: 39.06*SizeConfig.heightMultiplier,
-                decoration: BoxDecoration(color: AmigoColors.gray,
-                    borderRadius: BorderRadius.all(Radius.circular(20))
-                ),
-                child: Image.asset(youtubeHome, fit: BoxFit.fill, height: 6.51*SizeConfig.heightMultiplier, width: 6.51*SizeConfig.heightMultiplier,),
+
+                child: IndexVideoPlayer(MediaQuery.of(context).size)
 
               )),
 
@@ -104,10 +103,8 @@ class TabVideoDisc extends StatelessWidget  {
             alignment: Alignment.center,
             height: 26.04*SizeConfig.heightMultiplier,
             width: 39.06*SizeConfig.heightMultiplier,
-            decoration: BoxDecoration(color: AmigoColors.gray,
-                borderRadius: BorderRadius.all(Radius.circular(20))
-            ),
-            child: Image.asset("assets/images/youtube.png", fit: BoxFit.fill, height: 6.51*SizeConfig.heightMultiplier, width: 6.51*SizeConfig.heightMultiplier,),
+
+            child:IndexVideoPlayer(MediaQuery.of(context).size)
 
           ),
           Container(
@@ -164,10 +161,8 @@ class MobileVideoDisc extends StatelessWidget {
             alignment: Alignment.center,
             height: 26.04*SizeConfig.heightMultiplier,
             width: 39.06*SizeConfig.heightMultiplier,
-            decoration: BoxDecoration(color: AmigoColors.gray,
-                borderRadius: BorderRadius.all(Radius.circular(20))
-            ),
-            child: Image.asset("assets/images/youtube.png", fit: BoxFit.fill, height: 6.51*SizeConfig.heightMultiplier, width: 6.51*SizeConfig.heightMultiplier,),
+
+            child: IndexVideoPlayer(MediaQuery.of(context).size)
 
           ),
           Container(
