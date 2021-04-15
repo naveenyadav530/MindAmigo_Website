@@ -39,6 +39,11 @@ final String aboutActPhone = "assets/images/act.png";
 final String aboutCbtDoll = "assets/images/doll2.png";
 final String aboutCbtPhone = "assets/images/cbt.png";
 
+final String homeImage1 = "assets/images/homeSection1.png";
+final String homeImage2 = "assets/images/homeSection2.png";
+final String homeImage3 = "assets/images/homeSection3.png";
+final String homeImage4 = "assets/images/homeSection4.png";
+
 
 final String blogImage1 ="assets/images/blogImage1.png";
 final String blogImage2="assets/images/blogImage2.png";

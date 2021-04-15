@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
+import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
 import 'package:mindamigo/widgets/bottombar.dart';
@@ -14,6 +15,7 @@ class TermsConditions extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveLayout(
       webBody: WebTermsConditions(),
+      mobileBody: mobileTermsConditions(),
 
     );
   }
@@ -49,22 +51,22 @@ class _WebTermsConditionsState extends State<WebTermsConditions> {
                         padding: EdgeInsets.symmetric(vertical: 0.52*SizeConfig.heightMultiplier),
                         children: [
                           ListTile(
-                            title: Text("Terms and Conditions", style: TextStyle(fontSize: 2.40*SizeConfig.heightMultiplier, color: Colors.orange, fontFamily: robot, fontWeight: FontWeight.bold),),
+                            title: Text("Terms and Conditions", style: TextStyle(fontSize: 2.40*SizeConfig.heightMultiplier, color: Colors.orange, fontFamily: robot, fontWeight: FontWeight.bold,),),
                           ),
                           ListTile(
                             leading: ExcludeSemantics(
-                              child: Text("1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
+                              child: Text("1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                             ),
-                            title: Text("These Terms ",style: TextStyle(fontSize:1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
+                            title: Text("These Terms ",style: TextStyle(fontSize:1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                           ),
                           ListTile(
                               leading: ExcludeSemantics(
-                                child: Text("1.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
+                                child: Text("1.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                               ),
                               title: RichText(
                                 text: TextSpan(
                                   text: 'What These terms Cover. ',
-                                  style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),
+                                  style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),
                                   children: <TextSpan>[
                                     TextSpan(text: 'These are the terms and conditions on which we supply products in the form of the Mindamigo app (the App) to you.',
                                         style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal)),
@@ -77,12 +79,12 @@ class _WebTermsConditionsState extends State<WebTermsConditions> {
                             padding: EdgeInsets.only(bottom: 3*SizeConfig.heightMultiplier),
                             child: ListTile(
                                 leading: ExcludeSemantics(
-                                  child: Text("1.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
+                                  child: Text("1.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                                 ),
                                 title: RichText(
                                   text: TextSpan(
                                     text: 'Why you should read them. ',
-                                    style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),
+                                    style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),
                                     children: <TextSpan>[
                                       TextSpan(text: 'Please read these terms carefully before you download the App. These terms tell you who we are, how we will provide the App to you, how you and we may change or end the contract, what to do if there is a problem and other important information. If you think that there is a mistake in these terms, please contact us to discuss.',
                                           style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal)),
@@ -95,18 +97,18 @@ class _WebTermsConditionsState extends State<WebTermsConditions> {
 
                           ListTile(
                             leading: ExcludeSemantics(
-                              child: Text("2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
+                              child: Text("2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                             ),
-                            title: Text("These Terms ",style: TextStyle(fontSize:1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
+                            title: Text("These Terms ",style: TextStyle(fontSize:1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                           ),
                           ListTile(
                               leading: ExcludeSemantics(
-                                child: Text("2.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
+                                child: Text("2.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                               ),
                               title: RichText(
                                 text: TextSpan(
                                   text: 'What These terms Cover. ',
-                                  style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),
+                                  style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),
                                   children: <TextSpan>[
                                     TextSpan(text: 'These are the terms and conditions on which we supply products in the form of the Mindamigo app (the App) to you.',
                                         style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal)),
@@ -119,12 +121,12 @@ class _WebTermsConditionsState extends State<WebTermsConditions> {
                             padding: EdgeInsets.only(bottom: 3*SizeConfig.heightMultiplier),
                             child: ListTile(
                                 leading: ExcludeSemantics(
-                                  child: Text("2.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
+                                  child: Text("2.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                                 ),
                                 title: RichText(
                                   text: TextSpan(
                                     text: 'Why you should read them. ',
-                                    style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),
+                                    style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),
                                     children: <TextSpan>[
                                       TextSpan(text: 'Please read these terms carefully before you download the App. These terms tell you who we are, how we will provide the App to you, how you and we may change or end the contract, what to do if there is a problem and other important information. If you think that there is a mistake in these terms, please contact us to discuss.',
                                           style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal)),
@@ -135,44 +137,7 @@ class _WebTermsConditionsState extends State<WebTermsConditions> {
                             ),
                           ),
 
-                          ListTile(
-                            leading: ExcludeSemantics(
-                              child: Text("1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
-                            ),
-                            title: Text("These Terms ",style: TextStyle(fontSize:1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
-                          ),
-                          ListTile(
-                              leading: ExcludeSemantics(
-                                child: Text("1.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
-                              ),
-                              title: RichText(
-                                text: TextSpan(
-                                  text: 'What These terms Cover. ',
-                                  style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),
-                                  children: <TextSpan>[
-                                    TextSpan(text: 'These are the terms and conditions on which we supply products in the form of the Mindamigo app (the App) to you.',
-                                        style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal)),
 
-                                  ],
-                                ),
-                              )
-                          ),
-                          ListTile(
-                              leading: ExcludeSemantics(
-                                child: Text("1.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),),
-                              ),
-                              title: RichText(
-                                text: TextSpan(
-                                  text: 'Why you should read them. ',
-                                  style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot),
-                                  children: <TextSpan>[
-                                    TextSpan(text: 'Please read these terms carefully before you download the App. These terms tell you who we are, how we will provide the App to you, how you and we may change or end the contract, what to do if there is a problem and other important information. If you think that there is a mistake in these terms, please contact us to discuss.',
-                                        style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal)),
-
-                                  ],
-                                ),
-                              )
-                          ),
                         ],
                       ),
                     ),
@@ -246,16 +211,288 @@ class _WebTermsConditionsState extends State<WebTermsConditions> {
   }
 }
 
-class TabTermsConditions extends StatefulWidget {
+class mobileTermsConditions extends StatefulWidget {
   @override
-  _TabTermsConditionsState createState() => _TabTermsConditionsState();
+  _mobileTermsConditionsState createState() => _mobileTermsConditionsState();
 }
 
-class _TabTermsConditionsState extends State<TabTermsConditions> {
+class _mobileTermsConditionsState extends State<mobileTermsConditions> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      endDrawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [AmigoColors.lightRed,AmigoColors.lightBlue])
+              ), child: null,
+            ),
+            //meet adam
+            ListTile(
+              leading: Icon(Icons.person, color: AmigoColors.lightBlue,),
+              title: Text('Meet Adam',
+                style: TextStyle(
+                    fontSize:2.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+              onTap: () {
+
+                Navigator.pushNamed(context, MeetAdamRoute);
+              },
+            ),
+            //about us
+            ListTile(
+              leading: Icon(Icons.people ,color: AmigoColors.lightBlue,),
+              title: Text('About Us',
+                style: TextStyle(
+                    fontSize:2.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold
+                ),),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pushNamed(context, AboutUsRoute);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.mic, color: AmigoColors.lightBlue,),
+              title: Text('PodCast',
+                style: TextStyle(
+                    fontSize:2.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold
+                ),),
+              onTap: () {
+
+                Navigator.pushNamed(context, PodcastRoute);
+              },
+            ),
+            //podcast
+            ListTile(
+              leading: Icon(Icons.article_outlined,color: AmigoColors.lightBlue,),
+              title: Text('Blog',
+                style: TextStyle(
+                    fontSize:2.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold
+                ),),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pushNamed(context, BlogPageRoute);
+              },
+            ),
+          ],
+        ),
+      ),
+
+      appBar: AppBar(
+          iconTheme: IconThemeData(color: AmigoColors.lightBlue),
+          backgroundColor: Colors.white,
+          title: InkWell(
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pushNamed(context, HomeRoute);
+              },
+              child: Image.asset("assets/images/logo.png", height: 3.18*SizeConfig.heightMultiplier,))
+      ),
+
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              GradientLine(),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 3.25*SizeConfig.heightMultiplier),
+                      height: 75.10*SizeConfig.heightMultiplier,
+                      width: MediaQuery.of(context).size.width/1.2,
+
+                      child: ListView(
+                        padding: EdgeInsets.symmetric(vertical: 0.52*SizeConfig.heightMultiplier),
+                        children: [
+                          ListTile(
+                            title: Text("Terms and Conditions", style: TextStyle(fontSize: 2.40*SizeConfig.heightMultiplier, color: Colors.orange, fontFamily: robot, fontWeight: FontWeight.bold,),),
+                          ),
+                          ListTile(
+                            leading: ExcludeSemantics(
+                              child: Text("1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
+                            ),
+                            title: Text("These Terms ",style: TextStyle(fontSize:1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
+                          ),
+                          ListTile(
+                              leading: ExcludeSemantics(
+                                child: Text("1.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
+                              ),
+                              title: RichText(
+                                text: TextSpan(
+                                  text: 'What These terms Cover. ',
+                                  style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),
+                                  children: <TextSpan>[
+                                    TextSpan(text: 'These are the terms and conditions on which we supply products in the form of the Mindamigo app (the App) to you.',
+                                        style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal, color: AmigoColors.lightBlack)),
+
+                                  ],
+                                ),
+                              )
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 3*SizeConfig.heightMultiplier),
+                            child: ListTile(
+                                leading: ExcludeSemantics(
+                                  child: Text("1.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
+                                ),
+                                title: RichText(
+                                  text: TextSpan(
+                                    text: 'Why you should read them. ',
+                                    style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),
+                                    children: <TextSpan>[
+                                      TextSpan(text: 'Please read these terms carefully before you download the App. These terms tell you who we are, how we will provide the App to you, how you and we may change or end the contract, what to do if there is a problem and other important information. If you think that there is a mistake in these terms, please contact us to discuss.',
+                                          style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal)),
+
+                                    ],
+                                  ),
+                                )
+                            ),
+                          ),
+
+                          ListTile(
+                            leading: ExcludeSemantics(
+                              child: Text("2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
+                            ),
+                            title: Text("These Terms ",style: TextStyle(fontSize:1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
+                          ),
+                          ListTile(
+                              leading: ExcludeSemantics(
+                                child: Text("2.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
+                              ),
+                              title: RichText(
+                                text: TextSpan(
+                                  text: 'What These terms Cover. ',
+                                  style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),
+                                  children: <TextSpan>[
+                                    TextSpan(text: 'These are the terms and conditions on which we supply products in the form of the Mindamigo app (the App) to you.',
+                                        style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal, color: AmigoColors.lightBlack)),
+
+                                  ],
+                                ),
+                              )
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 3*SizeConfig.heightMultiplier),
+                            child: ListTile(
+                                leading: ExcludeSemantics(
+                                  child: Text("2.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
+                                ),
+                                title: RichText(
+                                  text: TextSpan(
+                                    text: 'Why you should read them. ',
+                                    style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),
+                                    children: <TextSpan>[
+                                      TextSpan(text: 'Please read these terms carefully before you download the App. These terms tell you who we are, how we will provide the App to you, how you and we may change or end the contract, what to do if there is a problem and other important information. If you think that there is a mistake in these terms, please contact us to discuss.',
+                                          style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontFamily: robot, fontWeight: FontWeight.normal)),
+
+                                    ],
+                                  ),
+                                )
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    //left
+                    CircleAmigo(
+                      bottomCircleAmigoPosition: 18.2*SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition: -6.16*SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 8.02*SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 8.02*SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                      circleAmigoOpacity: [0.1,0.1],
+
+                    ),
+                    CircleAmigo(
+                      bottomCircleAmigoPosition: 15*SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition: -11.41*SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 14.53*SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 14.53*SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                      circleAmigoOpacity: [0.1,0.1],
+
+                    ),
+                    CircleAmigo(
+                      bottomCircleAmigoPosition: 11.71*SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition: -14.67*SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 21.04*SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 21.04*SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                      circleAmigoOpacity: [0.1,0.1],
+
+                    ),
+
+                    //right
+                    CircleAmigo(
+                      topCircleAmigoPosition: -2.20*SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 10.02*SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 10.02*SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                      circleAmigoOpacity: [0.1,0.1],
+
+                    ),
+                    CircleAmigo(
+                      topCircleAmigoPosition: -5.46*SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 18.53*SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 18.53*SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                      circleAmigoOpacity: [0.1,0.1],
+
+                    ),
+                    CircleAmigo(
+                      topCircleAmigoPosition: -8.71*SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 25.04*SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 25.04*SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                      circleAmigoOpacity: [0.1,0.1],
+
+                    ),
+                  ],
+                ),
+              ),
+              BottomNav(),
+
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
+
 
 
