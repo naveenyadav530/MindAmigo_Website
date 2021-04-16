@@ -62,23 +62,23 @@ class webCbt extends StatelessWidget {
             //left circle
             CircleAmigo(
               leftCircleAmigoPosition: -4.6 * SizeConfig.heightMultiplier,
-              topCircleAmigoPosition: 5.2 * SizeConfig.heightMultiplier,
+              bottomCircleAmigoPosition: -5.2 * SizeConfig.heightMultiplier,
               circleAmigoWidth: 8.7 * SizeConfig.heightMultiplier,
               circleAmigoHeight: 8.7 * SizeConfig.heightMultiplier,
               circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed],
               circleAmigoOpacity: [0.1, 0.5],
             ),
             CircleAmigo(
-              leftCircleAmigoPosition: -6.25 * SizeConfig.heightMultiplier,
-              topCircleAmigoPosition: 3.25 * SizeConfig.heightMultiplier,
+              leftCircleAmigoPosition: -6.85 * SizeConfig.heightMultiplier,
+              bottomCircleAmigoPosition: -6.25 * SizeConfig.heightMultiplier,
               circleAmigoWidth: 13.06 * SizeConfig.heightMultiplier,
               circleAmigoHeight: 13.06 * SizeConfig.heightMultiplier,
               circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed],
               circleAmigoOpacity: [0.5, 0.5],
             ),
             CircleAmigo(
-              leftCircleAmigoPosition: -9.9 * SizeConfig.heightMultiplier,
-              topCircleAmigoPosition: 0.2 * SizeConfig.heightMultiplier,
+              leftCircleAmigoPosition: -10.9 * SizeConfig.heightMultiplier,
+              bottomCircleAmigoPosition: -9.2 * SizeConfig.heightMultiplier,
               circleAmigoWidth: 20.32 * SizeConfig.heightMultiplier,
               circleAmigoHeight: 20.32 * SizeConfig.heightMultiplier,
               circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed],

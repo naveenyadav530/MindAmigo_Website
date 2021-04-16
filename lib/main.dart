@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:mindamigo/pages/about.dart';
 import 'package:mindamigo/pages/blogArticle.dart';
@@ -12,7 +14,6 @@ import 'package:mindamigo/utils/size_config.dart';
 //to remove # from url
 import 'package:url_strategy/url_strategy.dart';
 
-
 void main() {
   setPathUrlStrategy();
   runApp(MyApp());
@@ -22,30 +23,39 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-        builder: (context, constraints){
-          return OrientationBuilder(
-              builder: (context, orientation){
-                SizeConfig().init(constraints, orientation);
-                return MaterialApp(
-                  debugShowCheckedModeBanner: false,
-                  title: 'Mindamigo',
-                  initialRoute: HomeRoute,
-                  routes: {
-                    HomeRoute: (context) => Scaffold(body: HomePage(),),
-                    PrivacyPolicyRoute: (context) => Scaffold(body: PrivacyPolicy(),),
-                    TermsConditionRoute: (context)=>Scaffold(body: TermsConditions(),),
-                    AboutUsRoute: (context)=>Scaffold(body: AboutUs(),),
-                    PodcastRoute: (context)=>Scaffold(body:PodCast()),
-                    MeetAdamRoute: (context)=>Scaffold(body: MeetAdam(),),
-                    BlogPageRoute: (context)=>Scaffold(body: BlogPage(),),
-                    BlogArticleRoute: (context)=>Scaffold(body: BlogArticle(),)
-                  },
-                );
-              });
-        });
-
-
-
+    return LayoutBuilder(builder: (context, constraints) {
+      return OrientationBuilder(builder: (context, orientation) {
+        SizeConfig().init(constraints, orientation);
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Mindamigo',
+          initialRoute: HomeRoute,
+          routes: {
+            HomeRoute: (context) => Scaffold(
+                  body: HomePage(),
+                ),
+            PrivacyPolicyRoute: (context) => Scaffold(
+                  body: PrivacyPolicy(),
+                ),
+            TermsConditionRoute: (context) => Scaffold(
+                  body: TermsConditions(),
+                ),
+            AboutUsRoute: (context) => Scaffold(
+                  body: AboutUs(),
+                ),
+            PodcastRoute: (context) => Scaffold(body: PodCast()),
+            MeetAdamRoute: (context) => Scaffold(
+                  body: MeetAdam(),
+                ),
+            BlogPageRoute: (context) => Scaffold(
+                  body: BlogPage(),
+                ),
+            BlogArticleRoute: (context) => Scaffold(
+                  body: BlogArticle(),
+                )
+          },
+        );
+      });
+    });
   }
 }

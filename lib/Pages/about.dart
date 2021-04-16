@@ -30,6 +30,7 @@ class WebAbout extends StatefulWidget {
 
 class _WebAboutState extends State<WebAbout> {
   ScrollController _controller;
+  double _offset = 3.5;
 
   @override
   void initState() {
@@ -41,7 +42,13 @@ class _WebAboutState extends State<WebAbout> {
   void scrollCallBack(DragUpdateDetails dragUpdate) {
     setState(() {
       // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
-      _controller.position.moveTo(dragUpdate.globalPosition.dy * 2);
+
+      if (dragUpdate.globalPosition.dy >= 0) {
+        _offset = dragUpdate.globalPosition.dy;
+        _controller.position.moveTo(_offset);
+
+        print(_offset);
+      }
     });
   }
 
@@ -233,9 +240,6 @@ class _MobileAboutState extends State<MobileAbout> {
                     fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 Navigator.pushNamed(context, AboutUsRoute);
               },
             ),
