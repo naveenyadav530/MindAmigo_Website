@@ -13,7 +13,6 @@ import 'package:mindamigo/widgets/gradientLine.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/newsletter.dart';
 
-
 class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -42,119 +41,141 @@ class _WebAboutState extends State<WebAbout> {
   void scrollCallBack(DragUpdateDetails dragUpdate) {
     setState(() {
       // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
-      _controller.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
+      _controller.position.moveTo(dragUpdate.globalPosition.dy * 2);
     });
   }
 
-
-
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children:[
-        Container(
-          child: SingleChildScrollView(
-            controller: _controller,
-            child: Container(
-              child: Column(
-                children: [
-                  NavBar(),
-                  GradientLine(),
-                  Container(
-                      color: AmigoColors.cream,
-                      height: 32.55*SizeConfig.heightMultiplier,
-                      width: MediaQuery.of(context).size.width,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width/2,
-                            child: Text(Strings.aboutus, style: TextStyle(fontWeight: FontWeight.bold, fontFamily: robot, fontSize: 2.08*SizeConfig.textMultiplier),),
+    return Stack(children: [
+      Container(
+        child: SingleChildScrollView(
+          controller: _controller,
+          child: Container(
+            child: Column(
+              children: [
+                NavBar(),
+                GradientLine(),
+                Container(
+                    color: AmigoColors.cream,
+                    height: 32.55 * SizeConfig.heightMultiplier,
+                    width: MediaQuery.of(context).size.width,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          child: Text(
+                            Strings.aboutus,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: robot,
+                                fontSize: 2.08 * SizeConfig.textMultiplier),
                           ),
-                          //left circle
-                          CircleAmigo(
-                            leftCircleAmigoPosition: -6.51*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 10.7*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 10.7*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.5, 0.5],
-                          ),
-                          CircleAmigo(
-                            leftCircleAmigoPosition: -8.81*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 17.02*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 17.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.4, 0.4],
-                          ),
-                          CircleAmigo(
-                            leftCircleAmigoPosition: -12.11*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 25.27*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 25.27*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.3, 0.3],
-                          ),
-                          //corner circle
-                          CircleAmigo(
-                            rightCircleAmigoPosition: -6.51*SizeConfig.heightMultiplier,
-                            topCircleAmigoPosition: -3.25*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 10.7*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 10.7*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.3, 0.3],
-                          ),
-                          CircleAmigo(
-                            rightCircleAmigoPosition: -7.81*SizeConfig.heightMultiplier,
-                            topCircleAmigoPosition: -4.55*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 15.02*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 15.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.3, 0.3],
-                          ),
-                          CircleAmigo(
-                            rightCircleAmigoPosition: -9.11*SizeConfig.heightMultiplier,
-                            topCircleAmigoPosition: -5.85*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.27*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.27*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.3, 0.3],
-                          )
-                        ],
-                      )
-                  ),
-                  ACT(),
-                  CBT(),
-                  NewsLetter(),
-                  BottomNav(),
-
-                ],
-              ),
+                        ),
+                        //left circle
+                        CircleAmigo(
+                          leftCircleAmigoPosition:
+                              -6.51 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 8.7 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight: 8.7 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.5, 0.5],
+                        ),
+                        CircleAmigo(
+                          leftCircleAmigoPosition:
+                              -8.81 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 14.02 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight:
+                              14.02 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.4, 0.4],
+                        ),
+                        CircleAmigo(
+                          leftCircleAmigoPosition:
+                              -12.11 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 20.27 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight:
+                              20.27 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.3, 0.3],
+                        ),
+                        //corner circle
+                        CircleAmigo(
+                          rightCircleAmigoPosition:
+                              -6.51 * SizeConfig.heightMultiplier,
+                          topCircleAmigoPosition:
+                              -3.25 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 10.7 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight: 10.7 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.3, 0.3],
+                        ),
+                        CircleAmigo(
+                          rightCircleAmigoPosition:
+                              -7.81 * SizeConfig.heightMultiplier,
+                          topCircleAmigoPosition:
+                              -4.55 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 15.02 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight:
+                              15.02 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.3, 0.3],
+                        ),
+                        CircleAmigo(
+                          rightCircleAmigoPosition:
+                              -9.11 * SizeConfig.heightMultiplier,
+                          topCircleAmigoPosition:
+                              -5.85 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 19.27 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight:
+                              19.27 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.3, 0.3],
+                        )
+                      ],
+                    )),
+                ACT(),
+                CBT(),
+                NewsLetter(),
+                BottomNav(),
+              ],
             ),
           ),
         ),
-
-        FlutterWebScroller(
-          //Pass a reference to the ScrollCallBack function into the scrollbar
-          scrollCallBack,
-          //Add optional values
-          scrollBarBackgroundColor: Colors.white,
-          scrollBarWidth: 20.0,
-          dragHandleColor: AmigoColors.lightblue1,
-          dragHandleBorderRadius: 2.0,
-          dragHandleHeight: 40.0,
-          dragHandleWidth: 15.0,
-        ),
-      ]
-
-    );
+      ),
+      FlutterWebScroller(
+        //Pass a reference to the ScrollCallBack function into the scrollbar
+        scrollCallBack,
+        //Add optional values
+        scrollBarBackgroundColor: Colors.white,
+        scrollBarWidth: 20.0,
+        dragHandleColor: AmigoColors.lightblue1,
+        dragHandleBorderRadius: 2.0,
+        dragHandleHeight: 40.0,
+        dragHandleWidth: 15.0,
+      ),
+    ]);
   }
 }
-
-
-
-
-
-
-
 
 class MobileAbout extends StatefulWidget {
   @override
@@ -162,8 +183,6 @@ class MobileAbout extends StatefulWidget {
 }
 
 class _MobileAboutState extends State<MobileAbout> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -176,37 +195,43 @@ class _MobileAboutState extends State<MobileAbout> {
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [AmigoColors.lightRed,AmigoColors.lightBlue])
-              ), child: null,
+                      colors: [AmigoColors.lightRed, AmigoColors.lightBlue])),
+              child: null,
             ),
             //meet adam
             ListTile(
-              leading: Icon(Icons.person, color: AmigoColors.lightBlue,),
-              title: Text('Meet Adam',
+              leading: Icon(
+                Icons.person,
+                color: AmigoColors.lightBlue,
+              ),
+              title: Text(
+                'Meet Adam',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
+                    fontSize: 2.27 * SizeConfig.textMultiplier,
                     color: AmigoColors.lightBlue,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),
+                    fontWeight: FontWeight.bold),
               ),
               onTap: () {
-
                 Navigator.pushNamed(context, MeetAdamRoute);
               },
             ),
             //about us
             ListTile(
-              leading: Icon(Icons.people ,color: AmigoColors.lightBlue,),
-              title: Text('About Us',
+              leading: Icon(
+                Icons.people,
+                color: AmigoColors.lightBlue,
+              ),
+              title: Text(
+                'About Us',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
+                    fontSize: 2.27 * SizeConfig.textMultiplier,
                     color: AmigoColors.lightBlue,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
+                    fontWeight: FontWeight.bold),
+              ),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -215,31 +240,38 @@ class _MobileAboutState extends State<MobileAbout> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.mic, color: AmigoColors.lightBlue,),
-              title: Text('PodCast',
+              leading: Icon(
+                Icons.mic,
+                color: AmigoColors.lightBlue,
+              ),
+              title: Text(
+                'PodCast',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
+                    fontSize: 2.27 * SizeConfig.textMultiplier,
                     color: AmigoColors.lightBlue,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
+                    fontWeight: FontWeight.bold),
+              ),
               onTap: () {
-
                 Navigator.pushNamed(context, PodcastRoute);
               },
             ),
             //podcast
             ListTile(
-              leading: Icon(Icons.article_outlined,color: AmigoColors.lightBlue,),
-              title: Text('Blog',
+              leading: Icon(
+                Icons.article_outlined,
+                color: AmigoColors.lightBlue,
+              ),
+              title: Text(
+                'Blog',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
+                    fontSize: 2.27 * SizeConfig.textMultiplier,
                     color: AmigoColors.lightBlue,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
+                    fontWeight: FontWeight.bold),
+              ),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -247,24 +279,20 @@ class _MobileAboutState extends State<MobileAbout> {
                 Navigator.pushNamed(context, BlogPageRoute);
               },
             ),
-            //blog
-
           ],
         ),
       ),
-
       appBar: AppBar(
           iconTheme: IconThemeData(color: AmigoColors.lightBlue),
           backgroundColor: Colors.white,
           title: InkWell(
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 Navigator.pushNamed(context, HomeRoute);
               },
-              child: Image.asset("assets/images/logo.png", height: 3.18*SizeConfig.heightMultiplier,))
-      ),
+              child: Image.asset(
+                "assets/images/logo.png",
+                height: 3.18 * SizeConfig.heightMultiplier,
+              ))),
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -272,7 +300,7 @@ class _MobileAboutState extends State<MobileAbout> {
               GradientLine(),
               Container(
                   color: AmigoColors.cream,
-                  height: 32.55*SizeConfig.heightMultiplier,
+                  height: 32.55 * SizeConfig.heightMultiplier,
                   width: MediaQuery.of(context).size.width,
                   child: Stack(
                     alignment: Alignment.center,
@@ -280,74 +308,101 @@ class _MobileAboutState extends State<MobileAbout> {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 10),
                         child: Container(
-                          width: MediaQuery.of(context).size.width/2,
-                          child: Text(Strings.aboutus,
+                          width: MediaQuery.of(context).size.width / 2,
+                          child: Text(
+                            Strings.aboutus,
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontWeight: FontWeight.bold, fontFamily: robot, fontSize: 2.08*SizeConfig.textMultiplier),),
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: robot,
+                                fontSize: 2.08 * SizeConfig.textMultiplier),
+                          ),
                         ),
                       ),
                       //left circle
                       CircleAmigo(
-                        leftCircleAmigoPosition: -6.51*SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 7.7*SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 7.7*SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                        leftCircleAmigoPosition:
+                            -6.51 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 7.7 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 7.7 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
                         circleAmigoOpacity: [0.5, 0.5],
                       ),
                       CircleAmigo(
-                        leftCircleAmigoPosition: -8.81*SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 14.02*SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 14.02*SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                        leftCircleAmigoPosition:
+                            -8.81 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 14.02 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 14.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
                         circleAmigoOpacity: [0.4, 0.4],
                       ),
                       CircleAmigo(
-                        leftCircleAmigoPosition: -12.11*SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 22.27*SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 22.27*SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                        leftCircleAmigoPosition:
+                            -12.11 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 22.27 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 22.27 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
                         circleAmigoOpacity: [0.3, 0.3],
                       ),
                       //corner circle
                       CircleAmigo(
-                        rightCircleAmigoPosition: -6.51*SizeConfig.heightMultiplier,
-                        topCircleAmigoPosition: -3.25*SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 10.7*SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 10.7*SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                        rightCircleAmigoPosition:
+                            -6.51 * SizeConfig.heightMultiplier,
+                        topCircleAmigoPosition:
+                            -3.25 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 10.7 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 10.7 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
                         circleAmigoOpacity: [0.3, 0.3],
                       ),
                       CircleAmigo(
-                        rightCircleAmigoPosition: -7.81*SizeConfig.heightMultiplier,
-                        topCircleAmigoPosition: -4.55*SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 15.02*SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 15.02*SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                        rightCircleAmigoPosition:
+                            -7.81 * SizeConfig.heightMultiplier,
+                        topCircleAmigoPosition:
+                            -4.55 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 15.02 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 15.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
                         circleAmigoOpacity: [0.3, 0.3],
                       ),
                       CircleAmigo(
-                        rightCircleAmigoPosition: -9.11*SizeConfig.heightMultiplier,
-                        topCircleAmigoPosition: -5.85*SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 19.27*SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 19.27*SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                        rightCircleAmigoPosition:
+                            -9.11 * SizeConfig.heightMultiplier,
+                        topCircleAmigoPosition:
+                            -5.85 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 19.27 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 19.27 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
                         circleAmigoOpacity: [0.3, 0.3],
                       )
                     ],
-                  )
-              ),
+                  )),
               ACT(),
               CBT(),
               NewsLetter(),
               BottomNav(),
-
             ],
           ),
         ),
       ),
     );
-
   }
 }
-
-

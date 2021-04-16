@@ -12,6 +12,11 @@ import 'package:mindamigo/widgets/gradientLine.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/newsletter.dart';
 
+
+//for podcast
+import 'dart:ui' as ui;
+import 'dart:html';
+
 class PodCast extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,6 +26,7 @@ class PodCast extends StatelessWidget {
     );
   }
 }
+
 
 class WebPodCast extends StatefulWidget {
   @override
@@ -42,6 +48,15 @@ class _WebPodCastState extends State<WebPodCast> {
       // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
       _controller.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
     });
+  }
+
+
+  createScriptElement() {
+    /// Create a new JS element
+    ScriptElement script = ScriptElement();
+    script.src = "https://www.buzzsprout.com/1324327.js?container_id=buzzsprout-large-player-1324327&player=large";
+    script.id = "buzzsprout-large-player-1324327";
+    document.head.append(script);
   }
   @override
   Widget build(BuildContext context) {
@@ -75,13 +90,7 @@ class _WebPodCastState extends State<WebPodCast> {
                             alignment: Alignment.center,
                             height: 39.06*SizeConfig.heightMultiplier,
                             width: MediaQuery.of(context).size.width/1.5,
-                            child: Text(Strings.podcastCenter,
-                              style: TextStyle(
-                                  fontSize: 1.69*SizeConfig.heightMultiplier,
-                                  fontFamily: robot,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            ),
+                            child: createScriptElement(),
                           ),
                         ),
                         Positioned(

@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
               builder: (context, orientation){
                 SizeConfig().init(constraints, orientation);
                 return MaterialApp(
+                  debugShowCheckedModeBanner: false,
                   title: 'Mindamigo',
                   initialRoute: HomeRoute,
                   routes: {
