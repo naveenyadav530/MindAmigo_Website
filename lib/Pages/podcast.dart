@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_web_scrollbar/flutter_web_scrollbar.dart';
 import 'package:mindamigo/styles/colors.dart';
@@ -13,7 +15,8 @@ import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/newsletter.dart';
 
 //for podcast
-import 'package:http/http.dart' as http;
+import 'dart:js' as js;
+import 'package:flutter_html/flutter_html.dart';
 
 class PodCast extends StatelessWidget {
   @override
@@ -31,19 +34,13 @@ class WebPodCast extends StatefulWidget {
 }
 
 class _WebPodCastState extends State<WebPodCast> {
-  Future<void> getdate() async {
-    var res = await http.get(
-        "https://www.buzzsprout.com/1324327.js?container_id=buzzsprout-large-player-1324327&player=large");
-    print(res.body);
-  }
-
   ScrollController _controller;
 
   @override
   void initState() {
     //Initialize the  scrollController
     _controller = ScrollController();
-    getdate();
+
     super.initState();
   }
 
@@ -81,7 +78,11 @@ class _WebPodCastState extends State<WebPodCast> {
                           alignment: Alignment.center,
                           height: 39.06 * SizeConfig.heightMultiplier,
                           width: MediaQuery.of(context).size.width / 1.5,
-                          child: Text("Hello"),
+                          child: Container(
+                            child: Html(
+                                data: js.context
+                                    .callMethod('renderBuzzsproutPlayerHTML')),
+                          ),
                         ),
                       ),
                       Positioned(

@@ -25,6 +25,7 @@ dependencies:
   flutter_web_scrollbar: ^0.0.3
   video_player: ^2.1.1
   http: ^0.12.1
+  flutter_html: ^0.8.2 
   flutter:
     sdk: flutter
 
