@@ -35,12 +35,12 @@ class WebPodCast extends StatefulWidget {
 
 class _WebPodCastState extends State<WebPodCast> {
   ScrollController _controller;
+  String podcastContent = js.context.callMethod('renderBuzzsproutPlayerHTML');
 
   @override
   void initState() {
     //Initialize the  scrollController
     _controller = ScrollController();
-
     super.initState();
   }
 
@@ -79,9 +79,7 @@ class _WebPodCastState extends State<WebPodCast> {
                           height: 39.06 * SizeConfig.heightMultiplier,
                           width: MediaQuery.of(context).size.width / 1.5,
                           child: Container(
-                            child: Html(
-                                data: js.context
-                                    .callMethod('renderBuzzsproutPlayerHTML')),
+                            child: Html(data: podcastContent),
                           ),
                         ),
                       ),
