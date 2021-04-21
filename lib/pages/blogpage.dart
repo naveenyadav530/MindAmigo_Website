@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_scrollbar/flutter_web_scrollbar.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
@@ -42,212 +41,205 @@ class _WebBlogPageState extends State<WebBlogPage> {
     super.initState();
   }
 
-  void scrollCallBack(DragUpdateDetails dragUpdate) {
-    setState(() {
-      // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
-      _controller.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
-    });
-  }
+
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
-          child: SingleChildScrollView(
-            controller: _controller,
-            child: Container(
-              child: Column(
-                children: [
-                  NavBar(),
-                  GradientLine(),
+          child: SafeArea(
+            child: RawScrollbar(
+              radius:Radius.circular(15),
+              controller: _controller,
+              thickness: 15,
+              thumbColor: Colors.lightBlueAccent.shade100,
+              isAlwaysShown: true,
+              child: SingleChildScrollView(
+                controller: _controller,
+                child: Container(
+                  child: Column(
+                    children: [
+                      NavBar(),
+                      GradientLine(),
 
-                  Container(
-                      color: AmigoColors.lightWhite,
-                      width: MediaQuery.of(context).size.width,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Column(
+                      Container(
+                          color: AmigoColors.lightWhite,
+                          width: MediaQuery.of(context).size.width,
+                          child: Stack(
+                            alignment: Alignment.center,
                             children: [
-                              BlogContent(
-                                title: [
-                                  Strings.blogTitle,
-                                  Strings.blogTitle,
-                                  Strings.blogTitle,
-                                ],
-                                image: [
-                                  Image.asset(blogImage1),
-                                  Image.asset(blogImage2),
-                                  Image.asset(blogImage3),
-                                ],
-                                date: [Strings.blogDate,Strings.blogDate,Strings.blogDate,],
-                                content: [
-                                  Strings.blogContent,
-                                  Strings.blogContent,
-                                  Strings.blogContent,
+                              Column(
+                                children: [
+                                  BlogContent(
+                                    title: [
+                                      Strings.blogTitle,
+                                      Strings.blogTitle,
+                                      Strings.blogTitle,
+                                    ],
+                                    image: [
+                                      Image.asset(blogImage1),
+                                      Image.asset(blogImage2),
+                                      Image.asset(blogImage3),
+                                    ],
+                                    date: [Strings.blogDate,Strings.blogDate,Strings.blogDate,],
+                                    content: [
+                                      Strings.blogContent,
+                                      Strings.blogContent,
+                                      Strings.blogContent,
+                                    ],
+                                  ),
+                                  BlogContent(
+                                    title: [
+                                      Strings.blogTitle,
+                                      Strings.blogTitle,
+                                      Strings.blogTitle,
+                                    ],
+                                    image: [
+                                      Image.asset(blogImage1),
+                                      Image.asset(blogImage2),
+                                      Image.asset(blogImage3),
+                                    ],
+                                    date: [Strings.blogDate,Strings.blogDate,Strings.blogDate,],
+                                    content: [
+                                      Strings.blogContent,
+                                      Strings.blogContent,
+                                      Strings.blogContent,
+                                    ],
+                                  ),
+
+                                  //more posts
+                                  Container(
+                                    margin: EdgeInsets.fromLTRB(0, 1.30*SizeConfig.heightMultiplier, 0, 5.20*SizeConfig.heightMultiplier),
+
+                                    width: 19.53*SizeConfig.heightMultiplier,
+                                    child:Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text("More recent posts",
+                                          style: TextStyle(
+                                              fontSize: 1.95*SizeConfig.textMultiplier,
+                                              fontFamily: robot,
+                                              fontWeight: FontWeight.bold
+                                          ),
+                                        ),
+                                        InkWell(
+                                            onTap: (){
+                                              Navigator.pushNamed(context, BlogArticleRoute);
+                                            },
+                                            child: Image.asset(
+                                              blogDropDown,
+                                              height: 3.25*SizeConfig.heightMultiplier,
+                                              width: 3.25*SizeConfig.heightMultiplier,
+                                            )
+                                        ),
+                                      ],
+                                    ),
+                                  )
+
+
                                 ],
                               ),
-                              BlogContent(
-                                title: [
-                                  Strings.blogTitle,
-                                  Strings.blogTitle,
-                                  Strings.blogTitle,
-                                ],
-                                image: [
-                                  Image.asset(blogImage1),
-                                  Image.asset(blogImage2),
-                                  Image.asset(blogImage3),
-                                ],
-                                date: [Strings.blogDate,Strings.blogDate,Strings.blogDate,],
-                                content: [
-                                  Strings.blogContent,
-                                  Strings.blogContent,
-                                  Strings.blogContent,
-                                ],
+                              //left
+                              CircleAmigo(
+                                topCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition: -10.16*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 15.02*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 15.02*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.1,0.1],
+
+                              ),
+                              CircleAmigo(
+                                topCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition: -13.41*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 21.53*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 21.53*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.1,0.1],
+
+                              ),
+                              CircleAmigo(
+                                topCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition: -16.67*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 28.04*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 28.04*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.1,0.1],
+
                               ),
 
-                              //more posts
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 1.30*SizeConfig.heightMultiplier, 0, 5.20*SizeConfig.heightMultiplier),
+                              //left
+                              CircleAmigo(
+                                topCircleAmigoPosition: 42.2*SizeConfig.heightMultiplier,
+                                leftCircleAmigoPosition: -10.16*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.1,0.1],
 
-                                width: 19.53*SizeConfig.heightMultiplier,
-                                child:Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text("More recent posts",
-                                      style: TextStyle(
-                                          fontSize: 1.95*SizeConfig.textMultiplier,
-                                          fontFamily: robot,
-                                          fontWeight: FontWeight.bold
-                                      ),
-                                    ),
-                                    InkWell(
-                                        onTap: (){
-                                          Navigator.pushNamed(context, BlogArticleRoute);
-                                        },
-                                        child: Image.asset(
-                                          blogDropDown,
-                                          height: 3.25*SizeConfig.heightMultiplier,
-                                          width: 3.25*SizeConfig.heightMultiplier,
-                                        )
-                                    ),
-                                  ],
-                                ),
-                              )
+                              ),
+                              CircleAmigo(
+                                topCircleAmigoPosition: 38*SizeConfig.heightMultiplier,
+                                leftCircleAmigoPosition: -13.41*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.1,0.1],
 
+                              ),
+                              CircleAmigo(
+                                topCircleAmigoPosition: 34.71*SizeConfig.heightMultiplier,
+                                leftCircleAmigoPosition: -16.67*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.1,0.1],
 
+                              ),
+
+                              //right
+                              CircleAmigo(
+                                bottomCircleAmigoPosition: -2.20*SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.4,0.1],
+
+                              ),
+                              CircleAmigo(
+                                bottomCircleAmigoPosition: -5.46*SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.4,0.1],
+
+                              ),
+                              CircleAmigo(
+                                bottomCircleAmigoPosition: -8.71*SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
+                                circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
+                                circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+                                circleAmigoOpacity: [0.4,0.1],
+
+                              ),
                             ],
-                          ),
-                          //left
-                          CircleAmigo(
-                            topCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -10.16*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 15.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 15.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
+                          )
+                      ),
 
-                          ),
-                          CircleAmigo(
-                            topCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -13.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 21.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 21.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
 
-                          ),
-                          CircleAmigo(
-                            topCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -16.67*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 28.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 28.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
+                      NewsLetter(),
+                      BottomNav(),
 
-                          ),
-
-                          //left
-                          CircleAmigo(
-                            topCircleAmigoPosition: 42.2*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -10.16*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
-                          ),
-                          CircleAmigo(
-                            topCircleAmigoPosition: 38*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -13.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
-                          ),
-                          CircleAmigo(
-                            topCircleAmigoPosition: 34.71*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -16.67*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
-                          ),
-
-                          //right
-                          CircleAmigo(
-                            bottomCircleAmigoPosition: -2.20*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.4,0.1],
-
-                          ),
-                          CircleAmigo(
-                            bottomCircleAmigoPosition: -5.46*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.4,0.1],
-
-                          ),
-                          CircleAmigo(
-                            bottomCircleAmigoPosition: -8.71*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.4,0.1],
-
-                          ),
-                        ],
-                      )
+                    ],
                   ),
-
-
-                  NewsLetter(),
-                  BottomNav(),
-
-                ],
+                ),
               ),
             ),
           ),
-        ),
-        FlutterWebScroller(
-          //Pass a reference to the ScrollCallBack function into the scrollbar
-          scrollCallBack,
-          //Add optional values
-          scrollBarBackgroundColor: Colors.white,
-          scrollBarWidth: 20.0,
-          dragHandleColor: AmigoColors.lightblue1,
-          dragHandleBorderRadius: 2.0,
-          dragHandleHeight: 40.0,
-          dragHandleWidth: 15.0,
         ),
       ],
     );

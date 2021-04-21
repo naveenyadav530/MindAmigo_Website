@@ -2,16 +2,7 @@
 <html>
 
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    Fore more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
+  
   <base href="/">
 
   <meta charset="UTF-8">
@@ -28,13 +19,22 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>mindamigo</title>
+  <style>
+    
+    #episode_playlist{
+      background:red !important;
+      height:500px !important;
+    }
+
+  </style>
   <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
+  
   <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+      application. For more information, see:
+      https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
@@ -42,10 +42,9 @@
       });
     }
   </script>
-  <script type='text/javascript' charset='utf-8'
-    src='https://www.buzzsprout.com/1324327.js?container_id=buzzsprout-large-player-1324327&player=large' defer></script>
-  <script src="main.dart.js" type="application/javascript"></script>
- 
+  
+    <script src="main.dart.js" type="application/javascript"></script>
+
 </body>
 
 </html>

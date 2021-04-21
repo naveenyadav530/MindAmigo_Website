@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_scrollbar/flutter_web_scrollbar.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
@@ -39,146 +38,132 @@ class _WebAboutState extends State<WebAbout> {
     super.initState();
   }
 
-  void scrollCallBack(DragUpdateDetails dragUpdate) {
-    setState(() {
-      // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
-
-      if (dragUpdate.globalPosition.dy >= 0) {
-        _offset = dragUpdate.globalPosition.dy;
-        _controller.position.moveTo(_offset);
-
-        print(_offset);
-      }
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
       Container(
-        child: SingleChildScrollView(
-          controller: _controller,
-          child: Container(
-            child: Column(
-              children: [
-                NavBar(),
-                GradientLine(),
-                Container(
-                    color: AmigoColors.cream,
-                    height: 32.55 * SizeConfig.heightMultiplier,
-                    width: MediaQuery.of(context).size.width,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width / 2,
-                          child: Text(
-                            Strings.aboutus,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontFamily: robot,
-                                fontSize: 2.08 * SizeConfig.textMultiplier),
-                          ),
-                        ),
-                        //left circle
-                        CircleAmigo(
-                          leftCircleAmigoPosition:
-                              -6.51 * SizeConfig.heightMultiplier,
-                          circleAmigoWidth: 8.7 * SizeConfig.heightMultiplier,
-                          circleAmigoHeight: 8.7 * SizeConfig.heightMultiplier,
-                          circleAmigoGradient: [
-                            AmigoColors.orange,
-                            AmigoColors.lightRed2
+        child: SafeArea(
+          child: RawScrollbar(
+            radius:Radius.circular(15),
+            controller: _controller,
+            thickness: 15,
+            thumbColor: Colors.lightBlueAccent.shade100,
+            isAlwaysShown: true,
+            child: SingleChildScrollView(
+              controller: _controller,
+              child: Container(
+                child: Column(
+                  children: [
+                    NavBar(),
+                    GradientLine(),
+                    Container(
+                        color: AmigoColors.cream,
+                        height: 32.55 * SizeConfig.heightMultiplier,
+                        width: MediaQuery.of(context).size.width,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Text(
+                                Strings.aboutus,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: robot,
+                                    fontSize: 2.08 * SizeConfig.textMultiplier),
+                              ),
+                            ),
+                            //left circle
+                            CircleAmigo(
+                              leftCircleAmigoPosition:
+                                  -6.51 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth: 8.7 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight: 8.7 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.5, 0.5],
+                            ),
+                            CircleAmigo(
+                              leftCircleAmigoPosition:
+                                  -8.81 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth: 14.02 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  14.02 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.4, 0.4],
+                            ),
+                            CircleAmigo(
+                              leftCircleAmigoPosition:
+                                  -12.11 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth: 20.27 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  20.27 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.3, 0.3],
+                            ),
+                            //corner circle
+                            CircleAmigo(
+                              rightCircleAmigoPosition:
+                                  -6.51 * SizeConfig.heightMultiplier,
+                              topCircleAmigoPosition:
+                                  -3.25 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth: 10.7 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight: 10.7 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.3, 0.3],
+                            ),
+                            CircleAmigo(
+                              rightCircleAmigoPosition:
+                                  -7.81 * SizeConfig.heightMultiplier,
+                              topCircleAmigoPosition:
+                                  -4.55 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth: 15.02 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  15.02 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.3, 0.3],
+                            ),
+                            CircleAmigo(
+                              rightCircleAmigoPosition:
+                                  -9.11 * SizeConfig.heightMultiplier,
+                              topCircleAmigoPosition:
+                                  -5.85 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth: 19.27 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  19.27 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.3, 0.3],
+                            )
                           ],
-                          circleAmigoOpacity: [0.5, 0.5],
-                        ),
-                        CircleAmigo(
-                          leftCircleAmigoPosition:
-                              -8.81 * SizeConfig.heightMultiplier,
-                          circleAmigoWidth: 14.02 * SizeConfig.heightMultiplier,
-                          circleAmigoHeight:
-                              14.02 * SizeConfig.heightMultiplier,
-                          circleAmigoGradient: [
-                            AmigoColors.orange,
-                            AmigoColors.lightRed2
-                          ],
-                          circleAmigoOpacity: [0.4, 0.4],
-                        ),
-                        CircleAmigo(
-                          leftCircleAmigoPosition:
-                              -12.11 * SizeConfig.heightMultiplier,
-                          circleAmigoWidth: 20.27 * SizeConfig.heightMultiplier,
-                          circleAmigoHeight:
-                              20.27 * SizeConfig.heightMultiplier,
-                          circleAmigoGradient: [
-                            AmigoColors.orange,
-                            AmigoColors.lightRed2
-                          ],
-                          circleAmigoOpacity: [0.3, 0.3],
-                        ),
-                        //corner circle
-                        CircleAmigo(
-                          rightCircleAmigoPosition:
-                              -6.51 * SizeConfig.heightMultiplier,
-                          topCircleAmigoPosition:
-                              -3.25 * SizeConfig.heightMultiplier,
-                          circleAmigoWidth: 10.7 * SizeConfig.heightMultiplier,
-                          circleAmigoHeight: 10.7 * SizeConfig.heightMultiplier,
-                          circleAmigoGradient: [
-                            AmigoColors.orange,
-                            AmigoColors.lightRed2
-                          ],
-                          circleAmigoOpacity: [0.3, 0.3],
-                        ),
-                        CircleAmigo(
-                          rightCircleAmigoPosition:
-                              -7.81 * SizeConfig.heightMultiplier,
-                          topCircleAmigoPosition:
-                              -4.55 * SizeConfig.heightMultiplier,
-                          circleAmigoWidth: 15.02 * SizeConfig.heightMultiplier,
-                          circleAmigoHeight:
-                              15.02 * SizeConfig.heightMultiplier,
-                          circleAmigoGradient: [
-                            AmigoColors.orange,
-                            AmigoColors.lightRed2
-                          ],
-                          circleAmigoOpacity: [0.3, 0.3],
-                        ),
-                        CircleAmigo(
-                          rightCircleAmigoPosition:
-                              -9.11 * SizeConfig.heightMultiplier,
-                          topCircleAmigoPosition:
-                              -5.85 * SizeConfig.heightMultiplier,
-                          circleAmigoWidth: 19.27 * SizeConfig.heightMultiplier,
-                          circleAmigoHeight:
-                              19.27 * SizeConfig.heightMultiplier,
-                          circleAmigoGradient: [
-                            AmigoColors.orange,
-                            AmigoColors.lightRed2
-                          ],
-                          circleAmigoOpacity: [0.3, 0.3],
-                        )
-                      ],
-                    )),
-                ACT(),
-                CBT(),
-                NewsLetter(),
-                BottomNav(),
-              ],
+                        )),
+                    ACT(),
+                    CBT(),
+                    NewsLetter(),
+                    BottomNav(),
+                  ],
+                ),
+              ),
             ),
           ),
         ),
-      ),
-      FlutterWebScroller(
-        //Pass a reference to the ScrollCallBack function into the scrollbar
-        scrollCallBack,
-        //Add optional values
-        scrollBarBackgroundColor: Colors.white,
-        scrollBarWidth: 20.0,
-        dragHandleColor: AmigoColors.lightblue1,
-        dragHandleBorderRadius: 2.0,
-        dragHandleHeight: 40.0,
-        dragHandleWidth: 15.0,
       ),
     ]);
   }

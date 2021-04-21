@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_scrollbar/flutter_web_scrollbar.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
@@ -45,42 +44,35 @@ class _WebMeetAdamState extends State<WebMeetAdam> {
     super.initState();
   }
 
-  void scrollCallBack(DragUpdateDetails dragUpdate) {
-    setState(() {
-      // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
-      _controller.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
-    });
-  }
+
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children:
           [
-            SingleChildScrollView(
-              controller: _controller,
-              child: Container(
-                child: Column(
-                  children: [
-                    NavBar(),
-                    GradientLine(),
-                    AdamBlog(),
-                    AdamAdvisory(),
-                    BottomNav(),
-                  ],
+            SafeArea(
+              child: RawScrollbar(
+                radius:Radius.circular(15),
+                controller: _controller,
+                thickness: 15,
+                thumbColor: Colors.lightBlueAccent.shade100,
+                isAlwaysShown: true,
+                child: SingleChildScrollView(
+                  controller: _controller,
+                  child: Container(
+                    child: Column(
+                      children: [
+                        NavBar(),
+                        GradientLine(),
+                        AdamBlog(),
+                        AdamAdvisory(),
+                        BottomNav(),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-            FlutterWebScroller(
-              //Pass a reference to the ScrollCallBack function into the scrollbar
-              scrollCallBack,
-              //Add optional values
-              scrollBarBackgroundColor: Colors.white,
-              scrollBarWidth: 20.0,
-              dragHandleColor: AmigoColors.lightblue1,
-              dragHandleBorderRadius: 2.0,
-              dragHandleHeight: 40.0,
-              dragHandleWidth: 15.0,
             ),
           ]
 
