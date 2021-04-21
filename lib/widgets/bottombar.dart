@@ -60,8 +60,8 @@ class WebBottom extends StatelessWidget {
             top: 6.4 * SizeConfig.heightMultiplier,
             child: Container(
               alignment: Alignment.center,
-              height: 100,
-              width: 160,
+              height: 7.32 * SizeConfig.heightMultiplier,
+              width: 11.71 * SizeConfig.heightMultiplier,
               color: AmigoColors.lightBrown.withOpacity(0.9),
               child: Text(
                 "Coming soon",
