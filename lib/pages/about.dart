@@ -29,7 +29,7 @@ class WebAbout extends StatefulWidget {
 
 class _WebAboutState extends State<WebAbout> {
   ScrollController _controller;
-  double _offset = 3.5;
+
 
   @override
   void initState() {
@@ -68,6 +68,7 @@ class _WebAboutState extends State<WebAbout> {
                               width: MediaQuery.of(context).size.width / 2,
                               child: Text(
                                 Strings.aboutus,
+                                textAlign:TextAlign.center,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontFamily: robot,

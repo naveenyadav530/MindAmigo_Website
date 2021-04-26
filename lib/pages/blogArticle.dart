@@ -108,7 +108,7 @@ class _WebArticleState extends State<WebArticle> {
                             ),
                             Container(
                               color: Colors.white,
-                              width: MediaQuery.of(context).size.width / 1.5,
+                              width: MediaQuery.of(context).size.width / 2,
                               child: Column(
                                 children: [
                                   //title

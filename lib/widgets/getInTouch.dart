@@ -78,7 +78,7 @@ class WebGetInTouch extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding:  EdgeInsets.only(left:0.65*SizeConfig.heightMultiplier),
+                                padding:  EdgeInsets.fromLTRB(0.65*SizeConfig.heightMultiplier, 0.65*SizeConfig.heightMultiplier, 0, 0.4*SizeConfig.heightMultiplier),
                                 child: Text("Name",style:TextStyle(fontSize: 1.2*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot)),
                               ),
                               Container(
@@ -99,7 +99,7 @@ class WebGetInTouch extends StatelessWidget {
                                       )
                                   ),
                                   hintText: 'Adam Chadwick',
-                                  hintStyle: TextStyle(fontSize: 1.1*SizeConfig.textMultiplier,fontFamily: robot,fontWeight: FontWeight.bold)
+                                  hintStyle: TextStyle(fontSize: 1.1*SizeConfig.textMultiplier,fontFamily: robot, color: Colors.black)
 
                             ),
                           ),
@@ -118,7 +118,7 @@ class WebGetInTouch extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.only(left: 0.65*SizeConfig.heightMultiplier),
+                                    padding: EdgeInsets.fromLTRB(0.65*SizeConfig.heightMultiplier, 0.65*SizeConfig.heightMultiplier, 0, 0.4*SizeConfig.heightMultiplier),
                                     child: Text("Email",style:TextStyle(fontSize: 1.2*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot)),
                                   ),
                                   Container(
@@ -138,8 +138,8 @@ class WebGetInTouch extends StatelessWidget {
                                               borderRadius: BorderRadius.all(Radius.circular(0.65*SizeConfig.heightMultiplier)
                                               )
                                           ),
-                                          hintText: 'Adam Chadwick',
-                                          hintStyle: TextStyle(fontSize: 1.1*SizeConfig.textMultiplier,fontFamily: robot,fontWeight: FontWeight.bold)
+                                          hintText: 'adam.chadwick221@gmail.com',
+                                          hintStyle: TextStyle(fontSize: 1.1*SizeConfig.textMultiplier,fontFamily: robot, color: Colors.black)
 
                                       ),
                                     ),
@@ -155,7 +155,7 @@ class WebGetInTouch extends StatelessWidget {
                 ),
 
                 Container(
-                    margin: EdgeInsets.only(left: 0.65*SizeConfig.heightMultiplier),
+                    margin: EdgeInsets.fromLTRB(0.65*SizeConfig.heightMultiplier, 0,0, 0.4*SizeConfig.heightMultiplier),
                     child: Text("Message",style:TextStyle(fontSize: 1.2*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot))),
                 Container(
                   child: Row(

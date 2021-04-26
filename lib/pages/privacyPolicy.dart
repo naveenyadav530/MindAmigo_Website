@@ -184,7 +184,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                           crossAxisAlignment:CrossAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsets.all(1.30*SizeConfig.heightMultiplier),
+                                              padding: EdgeInsets.fromLTRB(1.2*SizeConfig.heightMultiplier, 0.5*SizeConfig.heightMultiplier, 1.62*SizeConfig.heightMultiplier, 0),
                                               child: MyBullet(),
                                             ),
                                             Expanded(
@@ -210,7 +210,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                           crossAxisAlignment:CrossAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsets.all(1.62*SizeConfig.heightMultiplier),
+                                              padding: EdgeInsets.fromLTRB(1.2*SizeConfig.heightMultiplier, 0.5*SizeConfig.heightMultiplier, 1.62*SizeConfig.heightMultiplier, 0),
                                               child: MyBullet(),
                                             ),
                                             Expanded(child: RichText(
@@ -750,8 +750,8 @@ class MyBullet extends StatelessWidget{
   Widget build(BuildContext context) {
     return new Container(
       alignment: Alignment.center,
-      height: 8.0,
-      width: 8.0,
+      height: 0.52*SizeConfig.heightMultiplier,
+      width: 0.52*SizeConfig.heightMultiplier,
       decoration: new BoxDecoration(
         color: Colors.black,
         shape: BoxShape.circle,

@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
-import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
 import 'package:mindamigo/widgets/adamAdvisory.dart';
