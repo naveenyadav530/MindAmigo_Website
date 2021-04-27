@@ -183,85 +183,67 @@ class _MobileAboutState extends State<MobileAbout> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [AmigoColors.lightRed, AmigoColors.lightBlue])),
-              child: null,
-            ),
+            
             //meet adam
             ListTile(
-              leading: Icon(
-                Icons.person,
-                color: AmigoColors.lightBlue,
-              ),
-              title: Text(
-                'Meet Adam',
+              
+              title: Text('Meet Adam',
                 style: TextStyle(
-                    fontSize: 2.27 * SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color:AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.bold
+                ),
               ),
               onTap: () {
+
                 Navigator.pushNamed(context, MeetAdamRoute);
               },
             ),
             //about us
             ListTile(
-              leading: Icon(
-                Icons.people,
-                color: AmigoColors.lightBlue,
-              ),
-              title: Text(
-                'About Us',
+              
+              title: Text('About Us',
                 style: TextStyle(
-                    fontSize: 2.27 * SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold),
-              ),
+                    fontWeight: FontWeight.bold
+                ),),
               onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
                 Navigator.pushNamed(context, AboutUsRoute);
               },
             ),
             ListTile(
-              leading: Icon(
-                Icons.mic,
-                color: AmigoColors.lightBlue,
-              ),
-              title: Text(
-                'PodCast',
+              
+              title: Text('PodCast',
                 style: TextStyle(
-                    fontSize: 2.27 * SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold),
-              ),
+                    fontWeight: FontWeight.bold
+                ),),
               onTap: () {
+
                 Navigator.pushNamed(context, PodcastRoute);
               },
             ),
             //podcast
             ListTile(
-              leading: Icon(
-                Icons.article_outlined,
-                color: AmigoColors.lightBlue,
-              ),
-              title: Text(
-                'Blog',
+              title: Text('Blog',
                 style: TextStyle(
-                    fontSize: 2.27 * SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold),
-              ),
+                    fontWeight: FontWeight.bold
+                ),),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -271,8 +253,7 @@ class _MobileAboutState extends State<MobileAbout> {
             ),
           ],
         ),
-      ),
-      appBar: AppBar(
+      ),appBar: AppBar(
           iconTheme: IconThemeData(color: AmigoColors.lightBlue),
           backgroundColor: Colors.white,
           title: InkWell(

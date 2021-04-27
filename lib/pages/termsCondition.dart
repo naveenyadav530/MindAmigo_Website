@@ -247,21 +247,14 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [AmigoColors.lightRed,AmigoColors.lightBlue])
-              ), child: null,
-            ),
+            
             //meet adam
             ListTile(
-              leading: Icon(Icons.person, color: AmigoColors.lightBlue,),
+              
               title: Text('Meet Adam',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color:AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
@@ -274,11 +267,11 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
             ),
             //about us
             ListTile(
-              leading: Icon(Icons.people ,color: AmigoColors.lightBlue,),
+              
               title: Text('About Us',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
@@ -291,11 +284,11 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.mic, color: AmigoColors.lightBlue,),
+              
               title: Text('PodCast',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
@@ -307,11 +300,10 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
             ),
             //podcast
             ListTile(
-              leading: Icon(Icons.article_outlined,color: AmigoColors.lightBlue,),
               title: Text('Blog',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
@@ -326,7 +318,6 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
           ],
         ),
       ),
-
       appBar: AppBar(
           iconTheme: IconThemeData(color: AmigoColors.lightBlue),
           backgroundColor: Colors.white,
