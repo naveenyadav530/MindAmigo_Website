@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/size_config.dart';
 
-import '../styles/constants.dart';
-import '../styles/constants.dart';
+import '../styles/constants.dart';  
 
 class TitleSection extends StatelessWidget {
   @override
@@ -73,12 +72,7 @@ class TitleSection extends StatelessWidget {
                                     Colors.white12.withOpacity(0.8),
                                     BlendMode.srcOver))),
 
-                        // child: Image.asset(
-                        //   bottomAppStore,
-                        //   fit: BoxFit.fill,
-                        //   width: 9.6 * SizeConfig.heightMultiplier,
-                        //   height: 3.2 * SizeConfig.heightMultiplier,
-                        // ),
+                       
                       ),
                       Container(
                         width: 11.06 * SizeConfig.heightMultiplier,

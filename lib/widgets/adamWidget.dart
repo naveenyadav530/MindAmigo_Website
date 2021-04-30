@@ -38,12 +38,12 @@ class WebBlog extends StatelessWidget {
                     )
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width/2,
+                  width: MediaQuery.of(context).size.width/1.5,
                   margin: EdgeInsets.only(top: 3.90*SizeConfig.heightMultiplier),
-                  child: Text(Strings.adamTitle, textAlign: TextAlign.center, style: TextStyle(color: AmigoColors.orange, fontFamily: robot, fontSize: 2.40*SizeConfig.textMultiplier),),
+                  child: Text(Strings.adamTitle, textAlign: TextAlign.center, style: TextStyle(color: AmigoColors.orange, fontFamily: robot, fontSize: 2.30*SizeConfig.textMultiplier),),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width/2,
+                  width: MediaQuery.of(context).size.width/1.5,
                   margin: EdgeInsets.only(top: 0.65*SizeConfig.heightMultiplier),
                   child: Text(Strings.adamSubTitle,textAlign: TextAlign.center, style: TextStyle(color: AmigoColors.orange, fontFamily: robot, fontSize: 2.40*SizeConfig.textMultiplier, fontWeight: FontWeight.bold),),
                 ),
