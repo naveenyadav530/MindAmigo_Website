@@ -57,11 +57,11 @@ class WebBottom extends StatelessWidget {
               )),
           Positioned(
             left: 14 * SizeConfig.heightMultiplier,
-            top: 6.4 * SizeConfig.heightMultiplier,
+            top: 6 * SizeConfig.heightMultiplier,
             child: Container(
               alignment: Alignment.center,
-              height: 7.32 * SizeConfig.heightMultiplier,
-              width: 11.71 * SizeConfig.heightMultiplier,
+              height: 8.13*SizeConfig.heightMultiplier,
+              width: 11.71*SizeConfig.heightMultiplier,
               color: AmigoColors.lightBrown.withOpacity(0.9),
               child: Text(
                 "Coming soon",
@@ -88,7 +88,7 @@ class WebBottom extends StatelessWidget {
               left: 26.04 * SizeConfig.heightMultiplier,
               top: 7.9 * SizeConfig.heightMultiplier,
               child: Text(
-                "support@mindamigo.com",
+                "info@mindamigo.com",
                 style: TextStyle(
                     color: AmigoColors.white,
                     fontSize: 1.10 * SizeConfig.textMultiplier,
@@ -205,6 +205,26 @@ class TabBottom extends StatelessWidget {
                 width: 11.06 * SizeConfig.heightMultiplier,
                 height: 4.5 * SizeConfig.heightMultiplier,
               )),
+           Positioned(
+            left: 14 * SizeConfig.heightMultiplier,
+            top: 6 * SizeConfig.heightMultiplier,
+            child: Container(
+              alignment: Alignment.center,
+              height: 8.13*SizeConfig.heightMultiplier,
+              width: 11.71*SizeConfig.heightMultiplier,
+              color: AmigoColors.lightBrown.withOpacity(0.9),
+              child: Text(
+                "Coming soon",
+                style: TextStyle(
+                  fontFamily: robot,
+                  color: Colors.white,
+                  fontSize: 2 * SizeConfig.textMultiplier,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          
           Positioned(
               left: 26.04 * SizeConfig.heightMultiplier,
               top: 6.4 * SizeConfig.heightMultiplier,
@@ -219,7 +239,7 @@ class TabBottom extends StatelessWidget {
               left: 26.04 * SizeConfig.heightMultiplier,
               top: 7.9 * SizeConfig.heightMultiplier,
               child: Text(
-                "support@mindamigo.com",
+                "info@mindamigo.com",
                 style: TextStyle(
                     color: AmigoColors.white,
                     fontSize: 1.10 * SizeConfig.textMultiplier,
@@ -336,6 +356,26 @@ class MobileBottom extends StatelessWidget {
                 width: 11.06 * SizeConfig.heightMultiplier,
                 height: 4.5 * SizeConfig.heightMultiplier,
               )),
+           Positioned(
+            left: 10 * SizeConfig.heightMultiplier,
+            top: 6 * SizeConfig.heightMultiplier,
+            child: Container(
+              alignment: Alignment.center,
+              height: 8.13*SizeConfig.heightMultiplier,
+              width: 11.71*SizeConfig.heightMultiplier,
+              color: AmigoColors.lightBrown.withOpacity(0.9),
+              child: Text(
+                "Coming soon",
+                style: TextStyle(
+                  fontFamily: robot,
+                  color: Colors.white,
+                  fontSize: 2 * SizeConfig.textMultiplier,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          
           Positioned(
               left: 22.04 * SizeConfig.heightMultiplier,
               top: 6.4 * SizeConfig.heightMultiplier,
@@ -350,7 +390,7 @@ class MobileBottom extends StatelessWidget {
               left: 22.04 * SizeConfig.heightMultiplier,
               top: 7.9 * SizeConfig.heightMultiplier,
               child: Text(
-                "support@mindamigo.com",
+                "info@mindamigo.com",
                 style: TextStyle(
                     color: AmigoColors.white,
                     fontSize: 1.10 * SizeConfig.textMultiplier,

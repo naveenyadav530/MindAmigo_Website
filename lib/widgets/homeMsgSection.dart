@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/constants.dart';
-import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/size_config.dart';
 
 class HomeSection extends StatelessWidget {

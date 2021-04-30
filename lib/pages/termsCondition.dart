@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
-import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
 import 'package:mindamigo/widgets/bottombar.dart';
@@ -63,26 +62,28 @@ class _WebTermsConditionsState extends State<WebTermsConditions> {
                         alignment: Alignment.center,
                         children: [
                           Container(
-                            margin: EdgeInsets.symmetric(vertical: 3.25*SizeConfig.heightMultiplier),
+                            margin: EdgeInsets.symmetric(vertical: 4.25*SizeConfig.heightMultiplier),
                             height: 65.10*SizeConfig.heightMultiplier,
                             width: MediaQuery.of(context).size.width/1.5,
-
+                           
                             child: ListView(
-                              padding: EdgeInsets.symmetric(vertical: 0.52*SizeConfig.heightMultiplier),
+                              
                               children: [
-                                ListTile(
-                                  title: Text("Terms and Conditions", style: TextStyle(fontSize: 2.40*SizeConfig.heightMultiplier, color: Colors.orange, fontFamily: robot, fontWeight: FontWeight.bold,),),
+                                Padding(
+                                  padding:  EdgeInsets.only(bottom:2.25*SizeConfig.heightMultiplier ),
+                                  child: ListTile(
+                                    title: Text("Terms and Conditions", style: TextStyle(fontSize: 2.40*SizeConfig.heightMultiplier, color: Colors.orange, fontFamily: robot, fontWeight: FontWeight.bold,),),
+                                  ),
                                 ),
                                 ListTile(
                                   leading: ExcludeSemantics(
+                                    
                                     child: Text("1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                                   ),
                                   title: Text("These Terms ",style: TextStyle(fontSize:1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                                 ),
                                 ListTile(
-                                    leading: ExcludeSemantics(
-                                      child: Text("1.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
-                                    ),
+                                    leading: Text("1.1.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                                     title: RichText(
                                       text: TextSpan(
                                         text: 'What These terms Cover. ',
@@ -98,9 +99,7 @@ class _WebTermsConditionsState extends State<WebTermsConditions> {
                                 Padding(
                                   padding: EdgeInsets.only(bottom: 3*SizeConfig.heightMultiplier),
                                   child: ListTile(
-                                      leading: ExcludeSemantics(
-                                        child: Text("1.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
-                                      ),
+                                      leading: Text("1.2.", style: TextStyle(fontSize: 1.62*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot, color: AmigoColors.lightBlack),),
                                       title: RichText(
                                         text: TextSpan(
                                           text: 'Why you should read them. ',
@@ -248,21 +247,14 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [AmigoColors.lightRed,AmigoColors.lightBlue])
-              ), child: null,
-            ),
+            
             //meet adam
             ListTile(
-              leading: Icon(Icons.person, color: AmigoColors.lightBlue,),
+              
               title: Text('Meet Adam',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color:AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
@@ -275,11 +267,11 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
             ),
             //about us
             ListTile(
-              leading: Icon(Icons.people ,color: AmigoColors.lightBlue,),
+              
               title: Text('About Us',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
@@ -292,11 +284,11 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.mic, color: AmigoColors.lightBlue,),
+              
               title: Text('PodCast',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
@@ -308,11 +300,10 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
             ),
             //podcast
             ListTile(
-              leading: Icon(Icons.article_outlined,color: AmigoColors.lightBlue,),
               title: Text('Blog',
                 style: TextStyle(
-                    fontSize:2.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlue,
+                    fontSize:3.27*SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.bold
@@ -327,7 +318,6 @@ class _MobileTermsConditionsState extends State<MobileTermsConditions> {
           ],
         ),
       ),
-
       appBar: AppBar(
           iconTheme: IconThemeData(color: AmigoColors.lightBlue),
           backgroundColor: Colors.white,

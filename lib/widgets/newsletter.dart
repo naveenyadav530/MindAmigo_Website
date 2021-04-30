@@ -31,7 +31,7 @@ class WebNewsLetter extends StatelessWidget {
         children: [
           Container(
               height: 18.27*SizeConfig.heightMultiplier,
-              width: MediaQuery.of(context).size.width/2,
+              width: MediaQuery.of(context).size.width/1.8,
               child: Column(
                 children: [
                   Align(alignment: Alignment.topLeft,
@@ -43,8 +43,8 @@ class WebNewsLetter extends StatelessWidget {
                   Align(
                       alignment: Alignment.bottomLeft,
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(0.5*SizeConfig.heightMultiplier,0,0, 0.5*SizeConfig.heightMultiplier),
-                        child: FittedBox(fit: BoxFit.fill,child: Text("Email",style:TextStyle(fontSize: 1.4*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot))),
+                        padding: EdgeInsets.fromLTRB(0.5*SizeConfig.heightMultiplier,0.7*SizeConfig.heightMultiplier,0, 0.1*SizeConfig.heightMultiplier),
+                        child: FittedBox(fit: BoxFit.fill,child: Text("Email",style:TextStyle(fontSize: 1.2*SizeConfig.textMultiplier, fontWeight: FontWeight.bold, fontFamily: robot))),
                       )),
                   Row(
                     children: [
@@ -79,7 +79,7 @@ class WebNewsLetter extends StatelessWidget {
                           child: Text("Sign Up" ,style: TextStyle(fontSize: 1.3*SizeConfig.textMultiplier),),
                           onPressed: () => print("it's pressed"),
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.red,
+                            primary:AmigoColors.lightRed2,
                             onPrimary: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(0.65*SizeConfig.heightMultiplier),
