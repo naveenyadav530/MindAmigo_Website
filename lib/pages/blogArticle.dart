@@ -37,8 +37,6 @@ class _WebArticleState extends State<WebArticle> {
     super.initState();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -46,7 +44,7 @@ class _WebArticleState extends State<WebArticle> {
         Container(
           child: SafeArea(
             child: RawScrollbar(
-              radius:Radius.circular(15),
+              radius: Radius.circular(15),
               controller: _controller,
               thickness: 15,
               thumbColor: Colors.lightBlueAccent.shade100,
@@ -71,7 +69,8 @@ class _WebArticleState extends State<WebArticle> {
                                   -4.16 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
                                   13.02 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  13.02 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -85,7 +84,8 @@ class _WebArticleState extends State<WebArticle> {
                                   -7.41 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
                                   19.53 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  19.53 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -99,7 +99,8 @@ class _WebArticleState extends State<WebArticle> {
                                   -10.67 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
                                   26.04 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  26.04 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -141,8 +142,8 @@ class _WebArticleState extends State<WebArticle> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.symmetric(vertical: 30),
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 30),
                                     child: Container(
                                       alignment: Alignment.center,
                                       width: 250,
@@ -336,12 +337,13 @@ class _WebArticleState extends State<WebArticle> {
                                   children: [
                                     Container(
                                       margin: EdgeInsets.only(
-                                          top: 6.51 * SizeConfig.heightMultiplier),
+                                          top: 6.51 *
+                                              SizeConfig.heightMultiplier),
                                       child: Text(
                                         "Related Article",
                                         style: TextStyle(
-                                            fontSize:
-                                                3.25 * SizeConfig.textMultiplier,
+                                            fontSize: 3.25 *
+                                                SizeConfig.textMultiplier,
                                             fontFamily: robot,
                                             color: AmigoColors.lightBlack),
                                       ),
@@ -381,7 +383,6 @@ class _WebArticleState extends State<WebArticle> {
             ),
           ),
         ),
-        
       ],
     );
   }
@@ -718,94 +719,105 @@ class _MobileArticleState extends State<MobileArticle> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            
-            //meet adam
-            ListTile(
-              
-              title: Text('Meet Adam',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color:AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              onTap: () {
-
-                Navigator.pushNamed(context, MeetAdamRoute);
-              },
-            ),
-            //about us
-            ListTile(
-              
-              title: Text('About Us',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, AboutUsRoute);
-              },
-            ),
-            ListTile(
-              
-              title: Text('PodCast',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-
-                Navigator.pushNamed(context, PodcastRoute);
-              },
-            ),
-            //podcast
-            ListTile(
-              title: Text('Blog',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, BlogPageRoute);
-              },
-            ),
-          ],
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: AmigoColors.lightBlue),
+        backgroundColor: Colors.white,
+        title: Image.asset(
+          "assets/images/logo.png",
+          height: 3.18 * SizeConfig.heightMultiplier,
         ),
-      ),appBar: AppBar(
-          iconTheme: IconThemeData(color: AmigoColors.lightBlue),
-          backgroundColor: Colors.white,
-          title: InkWell(
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, HomeRoute);
-              },
-              child: Image.asset(
-                "assets/images/logo.png",
-                height: 3.18 * SizeConfig.heightMultiplier,
-              ))),
+        actions: [
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {
+                  showModalBottomSheet(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20.0),
+                        topRight: Radius.circular(20.0),
+                      )),
+                      context: context,
+                      builder: (context) {
+                        return Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            //meet adam
+                            ListTile(
+                              title: Text(
+                                'Meet Adam',
+                                style: TextStyle(
+                                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                                    color: AmigoColors.lightBlack,
+                                    fontFamily: robot,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                Navigator.pushNamed(context, MeetAdamRoute);
+                              },
+                            ),
+                            //about us
+                            ListTile(
+                              title: Text(
+                                'About Us',
+                                style: TextStyle(
+                                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                                    color: AmigoColors.lightBlack,
+                                    fontFamily: robot,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                // Update the state of the app
+                                // ...
+                                // Then close the drawer
+                                Navigator.pushNamed(context, AboutUsRoute);
+                              },
+                            ),
+                            ListTile(
+                              title: Text(
+                                'PodCast',
+                                style: TextStyle(
+                                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                                    color: AmigoColors.lightBlack,
+                                    fontFamily: robot,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                Navigator.pushNamed(context, PodcastRoute);
+                              },
+                            ),
+                            //podcast
+                            ListTile(
+                              title: Text(
+                                'Blog',
+                                style: TextStyle(
+                                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                                    color: AmigoColors.lightBlack,
+                                    fontFamily: robot,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                // Update the state of the app
+                                // ...
+                                // Then close the drawer
+                                Navigator.pushNamed(context, BlogPageRoute);
+                              },
+                            ),
+                          ],
+                        );
+                      });
+                },
+                child: Icon(
+                  Icons.menu,
+                  size: 26.0,
+                ),
+              )),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(

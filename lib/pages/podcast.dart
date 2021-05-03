@@ -1,9 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
-import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
 import 'package:mindamigo/widgets/bottombar.dart';
@@ -16,7 +13,6 @@ import 'package:mindamigo/widgets/newsletter.dart';
 //for podcast
 
 import 'package:easy_web_view/easy_web_view.dart';
-
 
 class PodCast extends StatelessWidget {
   @override
@@ -34,12 +30,10 @@ class WebPodCast extends StatefulWidget {
 }
 
 class _WebPodCastState extends State<WebPodCast> {
-
   ScrollController _controller;
   static ValueKey key = ValueKey('key_0');
 
-  
-  String  src='''
+  String src = '''
     <html>
     <head>
       
@@ -61,10 +55,8 @@ class _WebPodCastState extends State<WebPodCast> {
   @override
   void initState() {
     super.initState();
-     //Initialize the  scrollController
+    //Initialize the  scrollController
     _controller = ScrollController();
-
-
   }
 
   @override
@@ -72,11 +64,11 @@ class _WebPodCastState extends State<WebPodCast> {
     return Stack(children: [
       SafeArea(
         child: RawScrollbar(
-          radius:Radius.circular(15),
-            controller: _controller,
-            thickness: 15,
-            thumbColor: Colors.lightBlueAccent.shade100,
-            isAlwaysShown: true,
+          radius: Radius.circular(15),
+          controller: _controller,
+          thickness: 15,
+          thumbColor: Colors.lightBlueAccent.shade100,
+          isAlwaysShown: true,
           child: SingleChildScrollView(
             controller: _controller,
             child: Container(
@@ -97,25 +89,25 @@ class _WebPodCastState extends State<WebPodCast> {
                               decoration: BoxDecoration(
                                   color: Colors.transparent,
                                   borderRadius: BorderRadius.all(
-                                    Radius.circular(0.65 * SizeConfig.heightMultiplier))),
+                                      Radius.circular(
+                                          0.65 * SizeConfig.heightMultiplier))),
                               alignment: Alignment.center,
                               height: 25.06 * SizeConfig.heightMultiplier,
                               width: MediaQuery.of(context).size.width / 1.5,
                               child: Container(
-                                height: MediaQuery.of(context).size.height,
-                                child: EasyWebView(
-                                src: src,
-                                onLoaded: () {
-                                  print('LOADED');
-                                },
-                                isHtml: true,
-                                webAllowFullScreen: true,
-                                isMarkdown: false,
-                                convertToWidgets: false,
-                                key: key,
-                                widgetsTextSelectable: false,
-                              )
-                              ),
+                                  height: MediaQuery.of(context).size.height,
+                                  child: EasyWebView(
+                                    src: src,
+                                    onLoaded: () {
+                                      print('LOADED');
+                                    },
+                                    isHtml: true,
+                                    webAllowFullScreen: true,
+                                    isMarkdown: false,
+                                    convertToWidgets: false,
+                                    key: key,
+                                    widgetsTextSelectable: false,
+                                  )),
                             ),
                           ),
                           Positioned(
@@ -186,8 +178,10 @@ class _WebPodCastState extends State<WebPodCast> {
                                 -0.40 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
                                 -13.41 * SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 20.53 * SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 20.53 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                20.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                20.53 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -199,8 +193,10 @@ class _WebPodCastState extends State<WebPodCast> {
                                 -4.41 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
                                 -18.67 * SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 30.04 * SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 30.04 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                30.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                30.04 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -214,8 +210,10 @@ class _WebPodCastState extends State<WebPodCast> {
                                 -2.20 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
                                 -7.16 * SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 12.02 * SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 12.02 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                12.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                12.02 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -227,8 +225,10 @@ class _WebPodCastState extends State<WebPodCast> {
                                 -5.46 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
                                 -10.41 * SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 20.53 * SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 20.53 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                20.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                20.53 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -240,8 +240,10 @@ class _WebPodCastState extends State<WebPodCast> {
                                 -8.71 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
                                 -13.67 * SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 28.04 * SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 28.04 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                28.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                28.04 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -269,97 +271,128 @@ class MobilePodcast extends StatefulWidget {
 }
 
 class _MobilePodcastState extends State<MobilePodcast> {
+  static ValueKey key = ValueKey('key_0');
+
+  String src = '''
+    <html>
+    <head>
+      
+    </head>
+    <body>
+      <div id='buzzsprout-large-player-1324327' class="buzz"></div>
+    </body>
+    <script type='text/javascript' charset='utf-8'  src='https://www.buzzsprout.com/1324327.js?container_id=buzzsprout-large-player-1324327&player=large'></script>
+    <style>
+      #episode_playlist{
+        background:red !important;
+        height:500px !important;
+      }
+      </style>
+    </html>
+  
+  ''';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     endDrawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            
-            //meet adam
-            ListTile(
-              
-              title: Text('Meet Adam',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color:AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              onTap: () {
-
-                Navigator.pushNamed(context, MeetAdamRoute);
-              },
-            ),
-            //about us
-            ListTile(
-              
-              title: Text('About Us',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, AboutUsRoute);
-              },
-            ),
-            ListTile(
-              
-              title: Text('PodCast',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-
-                Navigator.pushNamed(context, PodcastRoute);
-              },
-            ),
-            //podcast
-            ListTile(
-              title: Text('Blog',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, BlogPageRoute);
-              },
-            ),
-          ],
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: AmigoColors.lightBlue),
+        backgroundColor: Colors.white,
+        title: Image.asset(
+          "assets/images/logo.png",
+          height: 3.18 * SizeConfig.heightMultiplier,
         ),
-      ), appBar: AppBar(
-          iconTheme: IconThemeData(color: AmigoColors.lightBlue),
-          backgroundColor: Colors.white,
-          title: InkWell(
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, HomeRoute);
-              },
-              child: Image.asset(
-                "assets/images/logo.png",
-                height: 3.18 * SizeConfig.heightMultiplier,
-              ))),
+        actions: [
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {
+                  showModalBottomSheet(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20.0),
+                        topRight: Radius.circular(20.0),
+                      )),
+                      context: context,
+                      builder: (context) {
+                        return Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            //meet adam
+                            ListTile(
+                              title: Text(
+                                'Meet Adam',
+                                style: TextStyle(
+                                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                                    color: AmigoColors.lightBlack,
+                                    fontFamily: robot,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                Navigator.pushNamed(context, MeetAdamRoute);
+                              },
+                            ),
+                            //about us
+                            ListTile(
+                              title: Text(
+                                'About Us',
+                                style: TextStyle(
+                                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                                    color: AmigoColors.lightBlack,
+                                    fontFamily: robot,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                // Update the state of the app
+                                // ...
+                                // Then close the drawer
+                                Navigator.pushNamed(context, AboutUsRoute);
+                              },
+                            ),
+                            ListTile(
+                              title: Text(
+                                'PodCast',
+                                style: TextStyle(
+                                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                                    color: AmigoColors.lightBlack,
+                                    fontFamily: robot,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                Navigator.pushNamed(context, PodcastRoute);
+                              },
+                            ),
+                            //podcast
+                            ListTile(
+                              title: Text(
+                                'Blog',
+                                style: TextStyle(
+                                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                                    color: AmigoColors.lightBlack,
+                                    fontFamily: robot,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                // Update the state of the app
+                                // ...
+                                // Then close the drawer
+                                Navigator.pushNamed(context, BlogPageRoute);
+                              },
+                            ),
+                          ],
+                        );
+                      });
+                },
+                child: Icon(
+                  Icons.menu,
+                  size: 26.0,
+                ),
+              )),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -376,19 +409,26 @@ class _MobilePodcastState extends State<MobilePodcast> {
                         top: 5.20 * SizeConfig.heightMultiplier,
                         child: Container(
                           decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: Colors.transparent,
                               borderRadius: BorderRadius.all(Radius.circular(
                                   0.65 * SizeConfig.heightMultiplier))),
                           alignment: Alignment.center,
-                          height: 39.06 * SizeConfig.heightMultiplier,
-                          width: MediaQuery.of(context).size.width / 1.5,
-                          child: Text(
-                            Strings.podcastCenter,
-                            style: TextStyle(
-                                fontSize: 1.69 * SizeConfig.heightMultiplier,
-                                fontFamily: robot,
-                                fontWeight: FontWeight.bold),
-                          ),
+                          height: 25.06 * SizeConfig.heightMultiplier,
+                          width: MediaQuery.of(context).size.width / 1,
+                          child: Container(
+                              height: MediaQuery.of(context).size.height,
+                              child: EasyWebView(
+                                src: src,
+                                onLoaded: () {
+                                  print('LOADED');
+                                },
+                                isHtml: true,
+                                webAllowFullScreen: true,
+                                isMarkdown: false,
+                                convertToWidgets: false,
+                                key: key,
+                                widgetsTextSelectable: false,
+                              )),
                         ),
                       ),
                       Positioned(
