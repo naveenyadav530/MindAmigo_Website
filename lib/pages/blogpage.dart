@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mindamigo/models/blogsModel.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
-import 'package:mindamigo/widgets/blogContent.dart';
+import 'package:mindamigo/widgets/blogContentNew.dart';
 import 'package:mindamigo/widgets/bottombar.dart';
 import 'package:mindamigo/widgets/circles.dart';
 import 'package:mindamigo/widgets/gradientLine.dart';
@@ -30,6 +31,49 @@ class WebBlogPage extends StatefulWidget {
 class _WebBlogPageState extends State<WebBlogPage> {
   ScrollController _controller;
   double visiblity = 1;
+
+  List<BlogsModel> blogsModel = [
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent)
+  ];
 
   @override
   void initState() {
@@ -58,7 +102,7 @@ class _WebBlogPageState extends State<WebBlogPage> {
                       NavBar(),
                       GradientLine(),
                       Container(
-                        color: AmigoColors.lightWhite,
+                          color: AmigoColors.lightWhite,
                           width: MediaQuery.of(context).size.width,
                           child: Stack(
                             alignment: Alignment.center,
@@ -66,55 +110,8 @@ class _WebBlogPageState extends State<WebBlogPage> {
                               Column(
                                 children: [
                                   Container(
-                                    child: Column(
-                                      children: [
-                                        BlogContent(
-                                          title: [
-                                            Strings.blogTitle,
-                                            Strings.blogTitle,
-                                            Strings.blogTitle,
-                                          ],
-                                          image: [
-                                            Image.asset(blogImage1),
-                                            Image.asset(blogImage2),
-                                            Image.asset(blogImage3),
-                                          ],
-                                          date: [
-                                            Strings.blogDate,
-                                            Strings.blogDate,
-                                            Strings.blogDate,
-                                          ],
-                                          content: [
-                                            Strings.blogContent,
-                                            Strings.blogContent,
-                                            Strings.blogContent,
-                                          ],
-                                        ),
-                                        BlogContent(
-                                          title: [
-                                            Strings.blogTitle,
-                                            Strings.blogTitle,
-                                            Strings.blogTitle,
-                                          ],
-                                          image: [
-                                            Image.asset(blogImage1),
-                                            Image.asset(blogImage2),
-                                            Image.asset(blogImage3),
-                                          ],
-                                          date: [
-                                            Strings.blogDate,
-                                            Strings.blogDate,
-                                            Strings.blogDate,
-                                          ],
-                                          content: [
-                                            Strings.blogContent,
-                                            Strings.blogContent,
-                                            Strings.blogContent,
-                                          ],
-                                        ),
-
-                                        //more posts
-                                      ],
+                                    child: BlogContent(
+                                      blogsModel: blogsModel,
                                     ),
                                   ),
                                   Opacity(
@@ -298,7 +295,7 @@ class _WebBlogPageState extends State<WebBlogPage> {
                               ),
                             ],
                           )),
-                      
+
                       //for loop with more recent opacity
                       NewsLetter(),
                       BottomNav(),
@@ -558,35 +555,32 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            
             //meet adam
             ListTile(
-              
-              title: Text('Meet Adam',
+              title: Text(
+                'Meet Adam',
                 style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color:AmigoColors.lightBlack,
+                    fontSize: 3.27 * SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),
+                    fontWeight: FontWeight.bold),
               ),
               onTap: () {
-
                 Navigator.pushNamed(context, MeetAdamRoute);
               },
             ),
             //about us
             ListTile(
-              
-              title: Text('About Us',
+              title: Text(
+                'About Us',
                 style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
+                    fontSize: 3.27 * SizeConfig.textMultiplier,
                     color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
+                    fontWeight: FontWeight.bold),
+              ),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -595,30 +589,30 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
               },
             ),
             ListTile(
-              
-              title: Text('PodCast',
+              title: Text(
+                'PodCast',
                 style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
+                    fontSize: 3.27 * SizeConfig.textMultiplier,
                     color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
+                    fontWeight: FontWeight.bold),
+              ),
               onTap: () {
-
                 Navigator.pushNamed(context, PodcastRoute);
               },
             ),
             //podcast
             ListTile(
-              title: Text('Blog',
+              title: Text(
+                'Blog',
                 style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
+                    fontSize: 3.27 * SizeConfig.textMultiplier,
                     color: AmigoColors.lightBlack,
                     fontFamily: robot,
                     decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
+                    fontWeight: FontWeight.bold),
+              ),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -628,7 +622,8 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
             ),
           ],
         ),
-      ),appBar: AppBar(
+      ),
+      appBar: AppBar(
           iconTheme: IconThemeData(color: AmigoColors.lightBlue),
           backgroundColor: Colors.white,
           title: InkWell(
