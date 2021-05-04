@@ -5,7 +5,7 @@ import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
-import 'package:mindamigo/widgets/blogContent.dart';
+import 'package:mindamigo/widgets/blogContentNew.dart';
 import 'package:mindamigo/widgets/bottombar.dart';
 import 'package:mindamigo/widgets/circles.dart';
 import 'package:mindamigo/widgets/gradientLine.dart';
@@ -23,6 +23,9 @@ class BlogArticle extends StatelessWidget {
 }
 
 class WebArticle extends StatefulWidget {
+  final String blogBody;
+  WebArticle({this.blogBody});
+
   @override
   _WebArticleState createState() => _WebArticleState();
 }
@@ -39,6 +42,7 @@ class _WebArticleState extends State<WebArticle> {
 
   @override
   Widget build(BuildContext context) {
+    final Map blogData=ModalRoute.of(context).settings.arguments;
     return Stack(
       children: [
         Container(
@@ -134,7 +138,8 @@ class _WebArticleState extends State<WebArticle> {
                                     child: Container(
                                       padding: EdgeInsets.only(bottom: 100),
                                       child: Text(
-                                        Strings.blogContent,
+                                        // Strings.blogContent,
+                                        blogData["data"],
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 25, fontFamily: robot),
@@ -348,7 +353,7 @@ class _WebArticleState extends State<WebArticle> {
                                             color: AmigoColors.lightBlack),
                                       ),
                                     ),
-                                    BlogContent(
+                                   /* BlogContent(
                                       title: [
                                         Strings.blogTitle,
                                         Strings.blogTitle,
@@ -369,7 +374,7 @@ class _WebArticleState extends State<WebArticle> {
                                         Strings.blogDate,
                                         Strings.blogDate,
                                       ],
-                                    ),
+                                    ),*/
                                   ],
                                 ),
                               ),
@@ -553,7 +558,7 @@ class _TabArticleState extends State<TabArticle> {
                                     color: AmigoColors.lightBlack),
                               ),
                             ),
-                            TabBlogContent(
+                            /*TabBlogContent(
                               title: [
                                 Strings.blogTitle,
                                 Strings.blogTitle,
@@ -574,7 +579,7 @@ class _TabArticleState extends State<TabArticle> {
                                 Strings.blogDate,
                                 Strings.blogDate,
                               ],
-                            ),
+                            ),*/
                           ],
                         ),
                       ),
@@ -1014,7 +1019,7 @@ class _MobileArticleState extends State<MobileArticle> {
                                     color: AmigoColors.lightBlack),
                               ),
                             ),
-                            MobileBlogContent(
+                            /*MobileBlogContent(
                               title: [
                                 Strings.blogTitle,
                                 Strings.blogTitle,
@@ -1031,7 +1036,7 @@ class _MobileArticleState extends State<MobileArticle> {
                                 Strings.blogDate,
                                 Strings.blogDate,
                               ],
-                            ),
+                            ),*/
                           ],
                         ),
                       ),

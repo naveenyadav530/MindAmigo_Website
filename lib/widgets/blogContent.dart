@@ -72,6 +72,7 @@ class BlogContent extends StatelessWidget {
                       EdgeInsets.only(top: 0.65 * SizeConfig.heightMultiplier),
                   child: InkWell(
                     onTap: () {
+                      print("Running HERE");
                       Navigator.pushNamed(context, BlogArticleRoute);
                     },
                     child: Text(

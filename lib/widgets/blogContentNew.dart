@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mindamigo/models/blogsModel.dart';
+import 'package:mindamigo/pages/blogArticle.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/utils/size_config.dart';
@@ -24,7 +25,6 @@ class BlogContent extends StatelessWidget {
           childAspectRatio: 700 / 1370,
           // Generate 100 widgets that display their index in the List.
           children: List.generate(blogsModel.length, (index) {
-
             return Container(
               //color: Colors.blue,
               child: Column(
@@ -77,14 +77,20 @@ class BlogContent extends StatelessWidget {
                         top: 0.65 * SizeConfig.heightMultiplier),
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, BlogArticleRoute);
+                        Navigator.pushNamed(
+                            context, BlogArticleRoute,
+                          arguments: {
+                              'data': blogsModel[index].body["text"]
+                          }
+                        );
                       },
                       child: Text(
                         "Read More>",
                         style: TextStyle(
                             fontFamily: robot,
                             fontWeight: FontWeight.bold,
-                            fontSize: 1.30 * SizeConfig.textMultiplier),
+                            fontSize: 1.30 * SizeConfig.textMultiplier
+                        ),
                       ),
                     ),
                   ),
@@ -199,6 +205,7 @@ class MobileBlogContent extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    print("MAIN CODE EXCUTRE");
     return Container(
       width: MediaQuery.of(context).size.width / 1.2,
       height: 45.57 * SizeConfig.heightMultiplier,
@@ -248,7 +255,7 @@ class MobileBlogContent extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    blogsModel[index].body["text"].toString().trimLeft(),
+                    blogsModel[index].body["text"],
                     overflow: TextOverflow.ellipsis,
 
                     maxLines: 10,
@@ -261,9 +268,25 @@ class MobileBlogContent extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(
                       top: 0.65 * SizeConfig.heightMultiplier),
-                  child: InkWell(
+                  child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, BlogArticleRoute);
+                      print("CODE HERE ");
+                      print("CODE HERE ");
+                      print("CODE HERE ");
+                      print("CODE HERE ");
+                     /* print("INDEX $index");
+                      print("1 #######################");
+                      print(blogsModel[index].body["text"]);
+                      print("2 #######################");
+                      // Navigator.pushNamed(context, BlogArticleRoute);
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context)=>
+                              WebArticle(
+                                blogBody:blogsModel[index].body["text"]
+                                )
+                          )
+                      );
+                      print("3 #######################");*/
                     },
                     child: Text(
                       "Read More>",

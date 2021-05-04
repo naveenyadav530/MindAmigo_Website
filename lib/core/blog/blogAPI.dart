@@ -6,8 +6,6 @@ import 'package:mindamigo/utils/errorPrinter.dart';
 import 'package:mindamigo/utils/httpClient.dart';
 
 
-
-
 class BlogRepository{
   HttpCall _httpCall=new HttpCall();
 

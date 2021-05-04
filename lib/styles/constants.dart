@@ -16,7 +16,7 @@ const String PodcastRoute = '/podcast';
 const String MeetAdamRoute = '/meetAdam';
 const String BlogPageRoute = '/blog_page';
 const String BlogArticleRoute = '/blog_article';
-
+const String CookiePolicyRoute='/cookiePolicy';
 
 //images
 final String websiteLogo ="assets/images/logo.png";
