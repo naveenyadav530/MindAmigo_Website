@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mindamigo/models/blogsModel.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
-import 'package:mindamigo/widgets/blogContent.dart';
+import 'package:mindamigo/widgets/blogContentNew.dart';
 import 'package:mindamigo/widgets/bottombar.dart';
 import 'package:mindamigo/widgets/circles.dart';
 import 'package:mindamigo/widgets/gradientLine.dart';
@@ -30,6 +31,49 @@ class WebBlogPage extends StatefulWidget {
 class _WebBlogPageState extends State<WebBlogPage> {
   ScrollController _controller;
   double visiblity = 1;
+
+  List<BlogsModel> blogsModel = [
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent),
+    new BlogsModel(
+        image: blogImage1,
+        title: Strings.blogTitle,
+        date: Strings.blogDate,
+        content: Strings.blogContent)
+  ];
 
   @override
   void initState() {
@@ -66,55 +110,8 @@ class _WebBlogPageState extends State<WebBlogPage> {
                               Column(
                                 children: [
                                   Container(
-                                    child: Column(
-                                      children: [
-                                        BlogContent(
-                                          title: [
-                                            Strings.blogTitle,
-                                            Strings.blogTitle,
-                                            Strings.blogTitle,
-                                          ],
-                                          image: [
-                                            Image.asset(blogImage1),
-                                            Image.asset(blogImage2),
-                                            Image.asset(blogImage3),
-                                          ],
-                                          date: [
-                                            Strings.blogDate,
-                                            Strings.blogDate,
-                                            Strings.blogDate,
-                                          ],
-                                          content: [
-                                            Strings.blogContent,
-                                            Strings.blogContent,
-                                            Strings.blogContent,
-                                          ],
-                                        ),
-                                        BlogContent(
-                                          title: [
-                                            Strings.blogTitle,
-                                            Strings.blogTitle,
-                                            Strings.blogTitle,
-                                          ],
-                                          image: [
-                                            Image.asset(blogImage1),
-                                            Image.asset(blogImage2),
-                                            Image.asset(blogImage3),
-                                          ],
-                                          date: [
-                                            Strings.blogDate,
-                                            Strings.blogDate,
-                                            Strings.blogDate,
-                                          ],
-                                          content: [
-                                            Strings.blogContent,
-                                            Strings.blogContent,
-                                            Strings.blogContent,
-                                          ],
-                                        ),
-
-                                        //more posts
-                                      ],
+                                    child: BlogContent(
+                                      blogsModel: blogsModel,
                                     ),
                                   ),
                                   Opacity(
