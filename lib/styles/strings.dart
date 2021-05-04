@@ -72,6 +72,7 @@ Discover their techniques and insights to put you back in control of your life a
   static String adamSubTitle = '''Many people ask me, what qualifies you
        to talk about mental health? ''';
   static String adamPara =
+
       '''The short answer is I’m not medically qualified and I don’t claim to be a psychologist, a psychiatrist or a neuroscientist, I’m just somebody who’s experienced poor mental health and come out the other end,
 having learnt a lot about myself along the way.
 
@@ -102,6 +103,7 @@ Some things will work for you and some things might not, but that’s okay, ever
 As I said previously, Mindamigo is not a magic bullet, but I guarantee there will be something
 here that can help you get back on track and to focus on what really matters most to you.
 ''';
+
 
   static String adamDiscription1 = '''Description''';
   static String privacyPolicy1 =
