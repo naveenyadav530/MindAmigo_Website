@@ -214,6 +214,7 @@ class MobileAdvisory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width,
       child: Stack(
         children: [
           Container(
@@ -231,76 +232,117 @@ class MobileAdvisory extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      width: 13.02 * SizeConfig.heightMultiplier,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 3.25 * SizeConfig.heightMultiplier),
-                            child: CircleAvatar(
-                              radius: 6.55 * SizeConfig.heightMultiplier,
-                              backgroundColor: Colors.white,
-                            ),
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        top: 3.25 * SizeConfig.heightMultiplier),
+                    width: MediaQuery.of(context).size.width / 1.2,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 15.7 * SizeConfig.heightMultiplier,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: 2.1 * SizeConfig.heightMultiplier),
+                                child: CircleAvatar(
+                                  radius: 6.55 * SizeConfig.heightMultiplier,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset(
+                                      "assets/images/adamAdvisory.png"),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: 0.5 * SizeConfig.heightMultiplier),
+                                child: Text("Katie Bell",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize:
+                                            1.5 * SizeConfig.textMultiplier,
+                                        fontWeight: FontWeight.bold)),
+                              ),
+                              Text("Forensic Psychologist",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 1.5 * SizeConfig.textMultiplier,
+                                  )),
+                            ],
                           ),
-                          Text(Strings.adamDiscription1,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 2.08 * SizeConfig.textMultiplier,
+                        ),
+                        Expanded(
+                          child: Container(
+                              padding: EdgeInsets.only(
+                                  left: 5.20 * SizeConfig.heightMultiplier),
+                              child: Text(
+                                Strings.katie,
+                                style: TextStyle(
+                                  fontFamily: robot,
+                                  fontSize: 1.80 * SizeConfig.textMultiplier,
+                                ),
+                                textAlign: TextAlign.justify,
                               )),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    Container(
-                      width: 13.02 * SizeConfig.heightMultiplier,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 3.25 * SizeConfig.heightMultiplier),
-                            child: CircleAvatar(
-                              radius: 6.55 * SizeConfig.heightMultiplier,
-                              backgroundColor: Colors.white,
-                            ),
-                          ),
-                          Text(Strings.adamDiscription1,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 2.08 * SizeConfig.textMultiplier,
-                              )),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 13.02 * SizeConfig.heightMultiplier,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 3.25 * SizeConfig.heightMultiplier),
-                            child: CircleAvatar(
-                              radius: 6.55 * SizeConfig.heightMultiplier,
-                              backgroundColor: Colors.white,
-                            ),
-                          ),
-                          Text(
-                            Strings.adamDiscription1,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 2.08 * SizeConfig.textMultiplier,
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
+                  ),
                 ),
-                SizedBox(
-                  height: 19.53 * SizeConfig.heightMultiplier,
-                )
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                        vertical: 3.25 * SizeConfig.heightMultiplier),
+                    width: MediaQuery.of(context).size.width / 1.2,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 15.7 * SizeConfig.heightMultiplier,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: 2.1 * SizeConfig.heightMultiplier),
+                                child: CircleAvatar(
+                                  radius: 6.55 * SizeConfig.heightMultiplier,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset(
+                                      "assets/images/adamAdvisory2.png"),
+                                ),
+                              ),
+                              Text("Bridgitte Calder",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 1.5 * SizeConfig.textMultiplier,
+                                      fontWeight: FontWeight.bold)),
+                              Text("Forensic Psychologist",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 1.5 * SizeConfig.textMultiplier,
+                                  )),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Container(
+                              padding: EdgeInsets.only(
+                                  left: 5.20 * SizeConfig.heightMultiplier),
+                              child: Text(
+                                Strings.Bridgitte,
+                                style: TextStyle(
+                                  fontFamily: robot,
+                                  fontSize: 1.80 * SizeConfig.textMultiplier,
+                                ),
+                                textAlign: TextAlign.justify,
+                              )),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
