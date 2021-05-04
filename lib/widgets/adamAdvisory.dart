@@ -41,9 +41,9 @@ class WebAdvisory extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                    margin: EdgeInsets.only(top: 3.25 * SizeConfig.heightMultiplier),
+                    margin: EdgeInsets.only(
+                        top: 3.25 * SizeConfig.heightMultiplier),
                     width: MediaQuery.of(context).size.width / 1.2,
-                 
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,37 +53,43 @@ class WebAdvisory extends StatelessWidget {
                           child: Column(
                             children: [
                               Padding(
-                                padding: EdgeInsets.only(top: 2.1*SizeConfig.heightMultiplier),
+                                padding: EdgeInsets.only(
+                                    top: 2.1 * SizeConfig.heightMultiplier),
                                 child: CircleAvatar(
                                   radius: 6.55 * SizeConfig.heightMultiplier,
                                   backgroundColor: Colors.white,
-                                  child: Image.asset("assets/images/adamAdvisory.png"),
+                                  child: Image.asset(
+                                      "assets/images/adamAdvisory.png"),
                                 ),
                               ),
                               Padding(
-                                padding:  EdgeInsets.only(top:0.5*SizeConfig.heightMultiplier),
+                                padding: EdgeInsets.only(
+                                    top: 0.5 * SizeConfig.heightMultiplier),
                                 child: Text("Katie Bell",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 1.5 * SizeConfig.textMultiplier,
-                                      fontWeight: FontWeight.bold
-                                    )),
+                                        fontSize:
+                                            1.5 * SizeConfig.textMultiplier,
+                                        fontWeight: FontWeight.bold)),
                               ),
                               Text("Forensic Psychologist",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontSize: 1.5 * SizeConfig.textMultiplier,
                                   )),
-                              
                             ],
                           ),
                         ),
                         Expanded(
                           child: Container(
-                              padding: EdgeInsets.only(left: 5.20*SizeConfig.heightMultiplier),
+                              padding: EdgeInsets.only(
+                                  left: 5.20 * SizeConfig.heightMultiplier),
                               child: Text(
-                                "Katie is a chartered Forensic Psychologist with the British Psychological Society and is also a Registered Practitioner Psychologist with the Health Care and Professionals Council.\n\n Katie worked for the Prison Service from 2010-2019 delivering interventions to prisoners, using ACT and CBT amongst other therapies. She has a range of experience working with offending, substance misuse, thinking skills, relationship skills and emotional management amongst other areas.\n\n In 2019 Katie joined Nottingham Trent University as a researcher and lecturer in Forensic Psychology. Here she teaches on the Forensic Psychology and Forensic Mental Health Master’s programmes amongst other courses.",
-                                style: TextStyle(fontFamily: robot, fontSize: 1.80*SizeConfig.textMultiplier,),
+                                Strings.katie,
+                                style: TextStyle(
+                                  fontFamily: robot,
+                                  fontSize: 1.80 * SizeConfig.textMultiplier,
+                                ),
                                 textAlign: TextAlign.left,
                               )),
                         ),
@@ -91,11 +97,11 @@ class WebAdvisory extends StatelessWidget {
                     ),
                   ),
                 ),
-               Center(
+                Center(
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 3.25 * SizeConfig.heightMultiplier),
+                    margin: EdgeInsets.symmetric(
+                        vertical: 3.25 * SizeConfig.heightMultiplier),
                     width: MediaQuery.of(context).size.width / 1.2,
-                    
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,33 +111,38 @@ class WebAdvisory extends StatelessWidget {
                           child: Column(
                             children: [
                               Padding(
-                                padding: EdgeInsets.only(top: 2.1*SizeConfig.heightMultiplier),
+                                padding: EdgeInsets.only(
+                                    top: 2.1 * SizeConfig.heightMultiplier),
                                 child: CircleAvatar(
                                   radius: 6.55 * SizeConfig.heightMultiplier,
                                   backgroundColor: Colors.white,
+                                  child: Image.asset(
+                                      "assets/images/adamAdvisory2.png"),
                                 ),
                               ),
-                              Text("",
+                              Text("Bridgitte Calder",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 1.5 * SizeConfig.textMultiplier,
+                                      fontWeight: FontWeight.bold)),
+                              Text("Forensic Psychologist",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontSize: 1.5 * SizeConfig.textMultiplier,
-                                    fontWeight: FontWeight.bold
                                   )),
-                              Text("",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 1.5 * SizeConfig.textMultiplier,
-                                  )),
-                              
                             ],
                           ),
                         ),
                         Expanded(
                           child: Container(
-                              padding: EdgeInsets.only(left: 5.20*SizeConfig.heightMultiplier),
+                              padding: EdgeInsets.only(
+                                  left: 5.20 * SizeConfig.heightMultiplier),
                               child: Text(
-                                "Katie is a chartered Forensic Psychologist with the British Psychological Society and is also a Registered Practitioner Psychologist with the Health Care and Professionals Council.\n\n Katie worked for the Prison Service from 2010-2019 delivering interventions to prisoners, using ACT and CBT amongst other therapies. She has a range of experience working with offending, substance misuse, thinking skills, relationship skills and emotional management amongst other areas.\n\n In 2019 Katie joined Nottingham Trent University as a researcher and lecturer in Forensic Psychology. Here she teaches on the Forensic Psychology and Forensic Mental Health Master’s programmes amongst other courses.",
-                                style: TextStyle(fontFamily: robot, fontSize: 1.80*SizeConfig.textMultiplier,),
+                                Strings.Bridgitte,
+                                style: TextStyle(
+                                  fontFamily: robot,
+                                  fontSize: 1.80 * SizeConfig.textMultiplier,
+                                ),
                                 textAlign: TextAlign.left,
                               )),
                         ),
