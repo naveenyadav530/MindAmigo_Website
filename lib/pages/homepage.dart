@@ -13,7 +13,6 @@ import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/titleSection.dart';
 import 'package:mindamigo/widgets/videoAndDisc.dart';
 
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,6 @@ class HomePage extends StatelessWidget {
       webBody: WebHomePage(),
       tabletBody: TabHomePage(),
       mobileBody: MobileHomePage(),
-     
     );
   }
 }
@@ -34,7 +32,6 @@ class WebHomePage extends StatefulWidget {
 
 class _WebHomePageState extends State<WebHomePage> {
   ScrollController _controller;
- 
 
   @override
   void initState() {
@@ -49,7 +46,7 @@ class _WebHomePageState extends State<WebHomePage> {
       children: [
         SafeArea(
           child: RawScrollbar(
-            radius:Radius.circular(15),
+            radius: Radius.circular(15),
             controller: _controller,
             thickness: 15,
             thumbColor: Colors.lightBlueAccent.shade100,
@@ -62,350 +59,513 @@ class _WebHomePageState extends State<WebHomePage> {
                     NavBar(),
                     GradientLine(),
                     TitleSection(),
-
                     Container(
-                      height: 26.15*SizeConfig.heightMultiplier,
+                      height: 26.15 * SizeConfig.heightMultiplier,
                       width: MediaQuery.of(context).size.width,
-
                       child: Stack(
                         children: [
                           HomeSection(
                             sectionColor: AmigoColors.cream,
                             sectionAlign: Alignment.centerLeft,
-                            sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
+                            sectionPositionLeft:
+                                7.8 * SizeConfig.heightMultiplier,
                             sectionText: Strings.homeSection1,
                             sectionTextColor: AmigoColors.lightBlack,
-                            sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                            sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                             image: homeImage1,
-                            imagePositionRight: 15.11*SizeConfig.heightMultiplier,
+                            imagePositionRight:
+                                15.11 * SizeConfig.heightMultiplier,
                           ),
                           //bottom
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -5.20 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -7.16 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -8.46 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -11.71 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -13.67 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
 
                           //top
                           CircleAmigo(
-                            topCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -5.20 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -7.16 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            topCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -8.46 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            topCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -11.71 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -13.67 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
 
                           //red circle
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                            circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [1,1],
-
+                            bottomCircleAmigoPosition:
+                                -1.30 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                MediaQuery.of(context).size.width / 2.1,
+                            circleAmigoHeight:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.lightRed2,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [1, 1],
                           ),
                         ],
                       ),
                     ),
                     Container(
-                      height: 26.15*SizeConfig.heightMultiplier,
+                      height: 26.15 * SizeConfig.heightMultiplier,
                       width: MediaQuery.of(context).size.width,
-
                       child: Stack(
                         children: [
                           HomeSection(
                             sectionColor: Colors.white,
                             sectionAlign: Alignment.centerRight,
-                            sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
+                            sectionPositionRight:
+                                9.11 * SizeConfig.heightMultiplier,
                             sectionText: Strings.homeSection2,
                             sectionTextColor: AmigoColors.lightBlack,
-                            sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                            sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                             image: homeImage2,
-                            imagePositionLeft: 15.11*SizeConfig.heightMultiplier,
+                            imagePositionLeft:
+                                15.11 * SizeConfig.heightMultiplier,
                           ),
                           //top
                           CircleAmigo(
-                            topCircleAmigoPosition: -7.81*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -7.81 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -7.16 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            topCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            topCircleAmigoPosition: -14.32*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -14.32 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -13.67 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
 
                           //top
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -7.16 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -13.67 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -15.62*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -15.62 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -13.67 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
-
 
                           //red circle
                           CircleAmigo(
-                            topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                            circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [1,1],
-
+                            topCircleAmigoPosition:
+                                -1.30 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                MediaQuery.of(context).size.width / 2.1,
+                            circleAmigoHeight:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.lightRed2,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [1, 1],
                           ),
                           //red circle
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                            circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [1,1],
-
+                            bottomCircleAmigoPosition:
+                                -1.30 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                MediaQuery.of(context).size.width / 2.1,
+                            circleAmigoHeight:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.lightRed2,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [1, 1],
                           ),
                         ],
                       ),
                     ),
                     Container(
-                      height: 26.15*SizeConfig.heightMultiplier,
+                      height: 26.15 * SizeConfig.heightMultiplier,
                       width: MediaQuery.of(context).size.width,
-
                       child: Stack(
                         children: [
                           HomeSection(
                             sectionColor: AmigoColors.cream,
                             sectionAlign: Alignment.centerLeft,
-                            sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
+                            sectionPositionLeft:
+                                7.8 * SizeConfig.heightMultiplier,
                             sectionText: Strings.homeSection3,
                             sectionTextColor: AmigoColors.lightBlack,
-                            sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                            sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                             image: homeImage3,
-                            imagePositionRight: 15.11*SizeConfig.heightMultiplier,
+                            imagePositionRight:
+                                15.11 * SizeConfig.heightMultiplier,
                           ),
                           //left
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -11.71 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -7.16 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.lightRed2,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -14.97*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -14.97 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -18.22*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            bottomCircleAmigoPosition:
+                                -18.22 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -13.67 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
 
                           //right
                           CircleAmigo(
-                            topCircleAmigoPosition: -3.25*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -7.48*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -3.25 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -7.48 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            topCircleAmigoPosition: -5.85*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -5.85 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            topCircleAmigoPosition: -9.11*SizeConfig.heightMultiplier,
-                            rightCircleAmigoPosition: -13.34*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -9.11 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -13.34 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
 
                           //red circle
                           CircleAmigo(
-                            bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                            circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [1,1],
-
+                            bottomCircleAmigoPosition:
+                                -1.30 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                MediaQuery.of(context).size.width / 2.1,
+                            circleAmigoHeight:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.lightRed2,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [1, 1],
                           ),
                           //red circle
                           CircleAmigo(
-                            topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                            circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [1,1],
-
+                            topCircleAmigoPosition:
+                                -1.30 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                MediaQuery.of(context).size.width / 2.1,
+                            circleAmigoHeight:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.lightRed2,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [1, 1],
                           ),
                         ],
                       ),
                     ),
                     Container(
-                      height: 26.15*SizeConfig.heightMultiplier,
+                      height: 26.15 * SizeConfig.heightMultiplier,
                       width: MediaQuery.of(context).size.width,
-
                       child: Stack(
                         children: [
                           HomeSection(
                             sectionColor: Colors.white,
                             sectionAlign: Alignment.centerRight,
-                            sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
+                            sectionPositionRight:
+                                9.11 * SizeConfig.heightMultiplier,
                             sectionText: Strings.homeSection4,
                             sectionTextColor: AmigoColors.lightBlack,
-                            sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                            sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                             image: homeImage4,
-                            imagePositionLeft: 15.11*SizeConfig.heightMultiplier,
+                            imagePositionLeft:
+                                15.11 * SizeConfig.heightMultiplier,
                           ),
                           //left
                           CircleAmigo(
-                            topCircleAmigoPosition: -0.65*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -5.85*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -0.65 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -5.85 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            topCircleAmigoPosition: -3.90*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -9.89*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -3.90 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -9.89 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
                           CircleAmigo(
-                            topCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: -13.34*SizeConfig.heightMultiplier,
-                            circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [0.1,0.1],
-
+                            topCircleAmigoPosition:
+                                -7.16 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -13.34 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
                           ),
 
                           //red circle
                           CircleAmigo(
-                            topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                            leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                            circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                            circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                            circleAmigoOpacity: [1,1],
-
+                            topCircleAmigoPosition:
+                                -1.30 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                MediaQuery.of(context).size.width / 2.1,
+                            circleAmigoHeight:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                2.60 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.lightRed2,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [1, 1],
                           ),
                         ],
                       ),
                     ),
                     VideoDisc(),
                     BottomNav(),
-
                   ],
                 ),
               ),
@@ -417,15 +577,11 @@ class _WebHomePageState extends State<WebHomePage> {
   }
 }
 
-
-
-
-
-
 class TabHomePage extends StatefulWidget {
   @override
   _TabHomePageState createState() => _TabHomePageState();
 }
+
 class _TabHomePageState extends State<TabHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -438,347 +594,450 @@ class _TabHomePageState extends State<TabHomePage> {
               GradientLine(),
               TabTitleSection(),
               Container(
-                height: 26.15*SizeConfig.heightMultiplier,
+                height: 26.15 * SizeConfig.heightMultiplier,
                 width: MediaQuery.of(context).size.width,
                 child: Stack(
                   children: [
                     HomeSection(
                       sectionColor: AmigoColors.cream,
                       sectionAlign: Alignment.centerLeft,
-                      sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
+                      sectionPositionLeft: 7.8 * SizeConfig.heightMultiplier,
                       sectionText: Strings.homeSection1,
                       sectionTextColor: AmigoColors.lightBlack,
-                      sectionFontSize: 2*SizeConfig.textMultiplier,
+                      sectionFontSize: 2 * SizeConfig.textMultiplier,
                       image: homeImage1,
-                      imagePositionRight: 2.11*SizeConfig.heightMultiplier,
+                      imagePositionRight: 2.11 * SizeConfig.heightMultiplier,
                     ),
                     //bottom
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //top
                     CircleAmigo(
-                      topCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //red circle
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      bottomCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                   ],
                 ),
               ),
               Container(
-                height: 26.15*SizeConfig.heightMultiplier,
+                height: 26.15 * SizeConfig.heightMultiplier,
                 width: MediaQuery.of(context).size.width,
-
                 child: Stack(
                   children: [
                     HomeSection(
                       sectionColor: Colors.white,
                       sectionAlign: Alignment.centerRight,
-                      sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
+                      sectionPositionRight: 9.11 * SizeConfig.heightMultiplier,
                       sectionText: Strings.homeSection2,
                       sectionTextColor: AmigoColors.lightBlack,
-                      sectionFontSize: 2*SizeConfig.textMultiplier,
+                      sectionFontSize: 2 * SizeConfig.textMultiplier,
                       image: homeImage2,
-                      imagePositionLeft: 2.11*SizeConfig.heightMultiplier,
+                      imagePositionLeft: 2.11 * SizeConfig.heightMultiplier,
                     ),
                     //top
                     CircleAmigo(
-                      topCircleAmigoPosition: -7.81*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -7.81 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -14.32*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -14.32 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //top
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -15.62*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -15.62 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
-
 
                     //red circle
                     CircleAmigo(
-                      topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      topCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                     //red circle
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      bottomCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                   ],
                 ),
               ),
               Container(
-                height: 26.15*SizeConfig.heightMultiplier,
+                height: 26.15 * SizeConfig.heightMultiplier,
                 width: MediaQuery.of(context).size.width,
-
                 child: Stack(
                   children: [
                     HomeSection(
                       sectionColor: AmigoColors.cream,
                       sectionAlign: Alignment.centerLeft,
-                      sectionPositionLeft: 7.8*SizeConfig.heightMultiplier,
+                      sectionPositionLeft: 7.8 * SizeConfig.heightMultiplier,
                       sectionText: Strings.homeSection3,
                       sectionTextColor: AmigoColors.lightBlack,
-                      sectionFontSize: 2*SizeConfig.textMultiplier,
+                      sectionFontSize: 2 * SizeConfig.textMultiplier,
                       image: homeImage3,
-                      imagePositionRight: 2.11*SizeConfig.heightMultiplier,
+                      imagePositionRight: 2.11 * SizeConfig.heightMultiplier,
                     ),
                     //left
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -14.97*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -14.97 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -18.22*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -18.22 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //right
                     CircleAmigo(
-                      topCircleAmigoPosition: -3.25*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -7.48*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -3.25 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -7.48 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -5.85*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -5.85 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -9.11*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -13.34*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -9.11 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -13.34 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //red circle
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      bottomCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                     //red circle
                     CircleAmigo(
-                      topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      topCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                   ],
                 ),
               ),
               Container(
-                height: 26.15*SizeConfig.heightMultiplier,
+                height: 26.15 * SizeConfig.heightMultiplier,
                 width: MediaQuery.of(context).size.width,
-
                 child: Stack(
                   children: [
                     HomeSection(
                       sectionColor: Colors.white,
                       sectionAlign: Alignment.centerRight,
-                      sectionPositionRight: 9.11*SizeConfig.heightMultiplier,
+                      sectionPositionRight: 9.11 * SizeConfig.heightMultiplier,
                       sectionText: Strings.homeSection4,
                       sectionTextColor: AmigoColors.lightBlack,
-                      sectionFontSize: 2*SizeConfig.textMultiplier,
+                      sectionFontSize: 2 * SizeConfig.textMultiplier,
                       image: homeImage4,
-                      imagePositionLeft: 2.11*SizeConfig.heightMultiplier,
+                      imagePositionLeft: 2.11 * SizeConfig.heightMultiplier,
                     ),
                     //left
                     CircleAmigo(
-                      topCircleAmigoPosition: -0.65*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -5.85*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -0.65 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -5.85 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -3.90*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -9.89*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -3.90 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -9.89 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -13.34*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -13.34 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //red circle
                     CircleAmigo(
-                      topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      topCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                   ],
                 ),
               ),
               VideoDisc(),
               BottomNav(),
-
             ],
           ),
         ),
@@ -787,103 +1046,154 @@ class _TabHomePageState extends State<TabHomePage> {
   }
 }
 
-
 //mobile HomePage
 class MobileHomePage extends StatefulWidget {
   @override
   _MobileHomePageState createState() => _MobileHomePageState();
 }
+
 class _MobileHomePageState extends State<MobileHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            
-            //meet adam
-            ListTile(
-              
-              title: Text('Meet Adam',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color:AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              onTap: () {
-
-                Navigator.pushNamed(context, MeetAdamRoute);
-              },
-            ),
-            //about us
-            ListTile(
-              
-              title: Text('About Us',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, AboutUsRoute);
-              },
-            ),
-            ListTile(
-              
-              title: Text('PodCast',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-
-                Navigator.pushNamed(context, PodcastRoute);
-              },
-            ),
-            //podcast
-            ListTile(
-              title: Text('Blog',
-                style: TextStyle(
-                    fontSize:3.27*SizeConfig.textMultiplier,
-                    color: AmigoColors.lightBlack,
-                    fontFamily: robot,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold
-                ),),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, BlogPageRoute);
-              },
-            ),
-          ],
-        ),
-      ),
-
       appBar: AppBar(
-          iconTheme: IconThemeData(color: AmigoColors.lightBlue),
-          backgroundColor: Colors.white,
-          title: InkWell(
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, HomeRoute);
-              },
-              child: Image.asset("assets/images/logo.png", height: 3.18*SizeConfig.heightMultiplier,))
+        iconTheme: IconThemeData(color: AmigoColors.lightBlue),
+        backgroundColor: Colors.white,
+        title: Image.asset(
+          "assets/images/logo.png",
+          height: 3.18 * SizeConfig.heightMultiplier,
+        ),
+        actions: [
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {
+                  showModalBottomSheet(
+                      backgroundColor: Colors.transparent,
+                      context: context,
+                      elevation: 10,
+                      isScrollControlled: true,
+                      isDismissible: true,
+                      builder: (BuildContext context) {
+                        return DraggableScrollableSheet(
+                            initialChildSize: 0.75, //set this as you want
+                            maxChildSize: 0.75, //set this as you want
+                            minChildSize: 0.75, //set this as you want
+                            expand: true,
+                            builder: (context, scrollController) {
+                              return Container(
+                                color: Colors.white,
+                                height: MediaQuery.of(context).size.height,
+                                child: Stack(
+                                  children: [
+                                    Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: InkWell(
+                                            child: Text(
+                                              'Meet Adam',
+                                              style: TextStyle(
+                                                  fontSize: 4.27 *
+                                                      SizeConfig.textMultiplier,
+                                                  color: AmigoColors.lightBlack,
+                                                  fontFamily: robot,
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            onTap: () {
+                                              Navigator.pushNamed(
+                                                  context, MeetAdamRoute);
+                                            },
+                                          ),
+                                        ),
+                                        //meet adam
+                                        Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: InkWell(
+                                            child: Text(
+                                              'About Us',
+                                              style: TextStyle(
+                                                  fontSize: 4.27 *
+                                                      SizeConfig.textMultiplier,
+                                                  color: AmigoColors.lightBlack,
+                                                  fontFamily: robot,
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            onTap: () {
+                                              Navigator.pushNamed(
+                                                  context, AboutUsRoute);
+                                            },
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: InkWell(
+                                            child: Text(
+                                              'Podcast',
+                                              style: TextStyle(
+                                                  fontSize: 4.27 *
+                                                      SizeConfig.textMultiplier,
+                                                  color: AmigoColors.lightBlack,
+                                                  fontFamily: robot,
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            onTap: () {
+                                              Navigator.pushNamed(
+                                                  context, PodcastRoute);
+                                            },
+                                          ),
+                                        ),
+
+                                        Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: InkWell(
+                                            child: Text(
+                                              'Blog',
+                                              style: TextStyle(
+                                                  fontSize: 4.27 *
+                                                      SizeConfig.textMultiplier,
+                                                  color: AmigoColors.lightBlack,
+                                                  fontFamily: robot,
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            onTap: () {
+                                              Navigator.pushNamed(
+                                                  context, BlogPageRoute);
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Positioned(
+                                      right: 0,
+                                      child: FlatButton(
+                                        child: Icon(Icons.close),
+                                        onPressed: () => Navigator.pop(context),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ); //whatever you're returning, does not have to be a Container
+                            });
+                      });
+                },
+                child: Icon(
+                  Icons.menu,
+                  size: 26.0,
+                ),
+              )),
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -892,7 +1202,6 @@ class _MobileHomePageState extends State<MobileHomePage> {
               GradientLine(),
               mobileTitleSection(),
               Container(
-
                 width: MediaQuery.of(context).size.width,
                 color: Colors.blue,
                 child: Stack(
@@ -900,84 +1209,110 @@ class _MobileHomePageState extends State<MobileHomePage> {
                     MobileHomeSection(
                       sectionColor: AmigoColors.cream,
                       sectionText: Strings.homeSection1,
-                      sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                      sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                       sectionTextColor: AmigoColors.lightBlack,
                       image: homeImage1,
                     ),
                     //bottom
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //top
                     CircleAmigo(
-                      topCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //red circle
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      bottomCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                   ],
                 ),
               ),
-
               Container(
-
                 width: MediaQuery.of(context).size.width,
                 color: Colors.blue,
                 child: Stack(
@@ -985,92 +1320,123 @@ class _MobileHomePageState extends State<MobileHomePage> {
                     MobileHomeSection(
                       sectionColor: AmigoColors.cream,
                       sectionText: Strings.homeSection2,
-                      sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                      sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                       sectionTextColor: AmigoColors.lightBlack,
                       image: homeImage2,
                     ),
                     //bottom
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //top
                     CircleAmigo(
-                      topCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //red circle
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      bottomCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      topCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                   ],
                 ),
               ),
               Container(
-
                 width: MediaQuery.of(context).size.width,
                 color: Colors.blue,
                 child: Stack(
@@ -1078,92 +1444,123 @@ class _MobileHomePageState extends State<MobileHomePage> {
                     MobileHomeSection(
                       sectionColor: AmigoColors.cream,
                       sectionText: Strings.homeSection3,
-                      sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                      sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                       sectionTextColor: AmigoColors.lightBlack,
                       image: homeImage3,
                     ),
                     //bottom
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //top
                     CircleAmigo(
-                      topCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //red circle
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      bottomCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      topCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                   ],
                 ),
               ),
               Container(
-
                 width: MediaQuery.of(context).size.width,
                 color: Colors.blue,
                 child: Stack(
@@ -1171,87 +1568,110 @@ class _MobileHomePageState extends State<MobileHomePage> {
                     MobileHomeSection(
                       sectionColor: AmigoColors.cream,
                       sectionText: Strings.homeSection4,
-                      sectionFontSize: 2.4*SizeConfig.textMultiplier,
+                      sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                       sectionTextColor: AmigoColors.lightBlack,
                       image: homeImage4,
                     ),
                     //bottom
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      bottomCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //top
                     CircleAmigo(
-                      topCircleAmigoPosition: -5.20*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -7.16*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -5.20 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -7.16 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -8.46*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -10.41*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -8.46 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -10.41 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition: -11.71*SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition: -13.67*SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [0.1,0.1],
-
+                      topCircleAmigoPosition:
+                          -11.71 * SizeConfig.heightMultiplier,
+                      rightCircleAmigoPosition:
+                          -13.67 * SizeConfig.heightMultiplier,
+                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.orange,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
-
                     CircleAmigo(
-                      topCircleAmigoPosition: -1.30*SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition: MediaQuery.of(context).size.width/2.1,
-                      circleAmigoHeight: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 2.60*SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [AmigoColors.lightRed2, AmigoColors.lightRed2],
-                      circleAmigoOpacity: [1,1],
-
+                      topCircleAmigoPosition:
+                          -1.30 * SizeConfig.heightMultiplier,
+                      leftCircleAmigoPosition:
+                          MediaQuery.of(context).size.width / 2.1,
+                      circleAmigoHeight: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoWidth: 2.60 * SizeConfig.heightMultiplier,
+                      circleAmigoGradient: [
+                        AmigoColors.lightRed2,
+                        AmigoColors.lightRed2
+                      ],
+                      circleAmigoOpacity: [1, 1],
                     ),
                   ],
                 ),
               ),
-
               VideoDisc(),
               BottomNav(),
-
-
-
             ],
           ),
         ),
