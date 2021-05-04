@@ -16,11 +16,11 @@ class TitleSection extends StatelessWidget {
         children: [
           Expanded(
               child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 32),
-                child: Text(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 32),
+                  child: Text(
                   Strings.mindhelp,
                   style: TextStyle(
                     decoration: TextDecoration.none,
@@ -90,7 +90,6 @@ class TitleSection extends StatelessWidget {
                   ],
                 ),
               ),
-
               //text
             ],
           )),

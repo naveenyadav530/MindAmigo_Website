@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:mindamigo/pages/about.dart';
 import 'package:mindamigo/pages/blogArticle.dart';
@@ -12,10 +10,11 @@ import 'package:mindamigo/pages/termsCondition.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/utils/size_config.dart';
 //to remove # from url
-import 'package:url_strategy/url_strategy.dart';
+import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 
 void main() {
-  setPathUrlStrategy();
+  // setPathUrlStrategy();
+  // configureApp();
   runApp(MyApp());
 }
 

@@ -1,24 +1,32 @@
 import 'package:json_annotation/json_annotation.dart';
-
 part 'blogsModel.g.dart';
 
-@JsonSerializable(
-    nullable: true, disallowUnrecognizedKeys: true, includeIfNull: true)
-class BlogsModel {
+@JsonSerializable(nullable: true,
+    disallowUnrecognizedKeys:true,
+    includeIfNull:true)
+
+class BlogModel {
+  String id;
   String image;
   String title;
-  String date;
-  String content;
+  Map body;
+  int status;
+  String createdAt;
+  String updatedAt;
 
-  BlogsModel({
+
+  BlogModel({
+    this.id,
     this.image,
     this.title,
-    this.date,
-    this.content,
+    this.body,
+    this.status,
+    this.createdAt,
+    this.updatedAt
   });
 
-  factory BlogsModel.fromJson(Map<String, dynamic> json) =>
-      _$BlogsModelFromJson(json);
+  factory BlogModel.fromJson(Map<String, dynamic> json) =>
+      _$BlogModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$BlogsModelToJson(this);
+  Map<String, dynamic> toJson() => _$BlogModelToJson(this);
 }
