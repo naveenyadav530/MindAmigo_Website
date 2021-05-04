@@ -6,6 +6,7 @@ import 'package:mindamigo/utils/size_config.dart';
 
 import '../styles/colors.dart';
 import '../styles/constants.dart';
+import 'dart:js' as js;
 
 class BottomNav extends StatelessWidget {
   @override
@@ -60,8 +61,8 @@ class WebBottom extends StatelessWidget {
             top: 6 * SizeConfig.heightMultiplier,
             child: Container(
               alignment: Alignment.center,
-              height: 8.13*SizeConfig.heightMultiplier,
-              width: 11.71*SizeConfig.heightMultiplier,
+              height: 8.13 * SizeConfig.heightMultiplier,
+              width: 11.71 * SizeConfig.heightMultiplier,
               color: AmigoColors.lightBrown.withOpacity(0.9),
               child: Text(
                 "Coming soon",
@@ -97,27 +98,46 @@ class WebBottom extends StatelessWidget {
           Positioned(
               left: 26.04 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(bottomInstagram,
-                  fit: BoxFit.fill,
-                  width: 2.27 * SizeConfig.heightMultiplier,
-                  height: 2.27 * SizeConfig.heightMultiplier)),
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod(
+                      'open', ['https://www.instagram.com/mindamigo/']);
+                },
+                child: Image.asset(bottomInstagram,
+                    fit: BoxFit.fill,
+                    width: 2.27 * SizeConfig.heightMultiplier,
+                    height: 2.27 * SizeConfig.heightMultiplier),
+              )),
           Positioned(
               left: 29.29 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(
-                bottomFacebook,
-                fit: BoxFit.fill,
-                width: 2.27 * SizeConfig.heightMultiplier,
-                height: 2.27 * SizeConfig.heightMultiplier,
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod(
+                      'open', ['https://www.facebook.com/mindamigo']);
+                },
+                child: Image.asset(
+                  bottomFacebook,
+                  fit: BoxFit.fill,
+                  width: 2.27 * SizeConfig.heightMultiplier,
+                  height: 2.27 * SizeConfig.heightMultiplier,
+                ),
               )),
           Positioned(
               left: 32.55 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(
-                bottomYoutube,
-                fit: BoxFit.fill,
-                width: 2.27 * SizeConfig.heightMultiplier,
-                height: 2.27 * SizeConfig.heightMultiplier,
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod('open', [
+                    'https://www.youtube.com/channel/UChxDki9pZDQbbxule7j-IKw'
+                  ]);
+                },
+                child: Image.asset(
+                  bottomYoutube,
+                  fit: BoxFit.fill,
+                  width: 2.27 * SizeConfig.heightMultiplier,
+                  height: 2.27 * SizeConfig.heightMultiplier,
+                ),
               )),
           Positioned(
               left: 14.97 * SizeConfig.heightMultiplier,
@@ -205,13 +225,13 @@ class TabBottom extends StatelessWidget {
                 width: 11.06 * SizeConfig.heightMultiplier,
                 height: 4.5 * SizeConfig.heightMultiplier,
               )),
-           Positioned(
+          Positioned(
             left: 14 * SizeConfig.heightMultiplier,
             top: 6 * SizeConfig.heightMultiplier,
             child: Container(
               alignment: Alignment.center,
-              height: 8.13*SizeConfig.heightMultiplier,
-              width: 11.71*SizeConfig.heightMultiplier,
+              height: 8.13 * SizeConfig.heightMultiplier,
+              width: 11.71 * SizeConfig.heightMultiplier,
               color: AmigoColors.lightBrown.withOpacity(0.9),
               child: Text(
                 "Coming soon",
@@ -224,7 +244,6 @@ class TabBottom extends StatelessWidget {
               ),
             ),
           ),
-          
           Positioned(
               left: 26.04 * SizeConfig.heightMultiplier,
               top: 6.4 * SizeConfig.heightMultiplier,
@@ -248,27 +267,46 @@ class TabBottom extends StatelessWidget {
           Positioned(
               left: 26.04 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(bottomInstagram,
-                  fit: BoxFit.fill,
-                  width: 2.27 * SizeConfig.heightMultiplier,
-                  height: 2.27 * SizeConfig.heightMultiplier)),
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod(
+                      'open', ['https://www.instagram.com/mindamigo/']);
+                },
+                child: Image.asset(bottomInstagram,
+                    fit: BoxFit.fill,
+                    width: 2.27 * SizeConfig.heightMultiplier,
+                    height: 2.27 * SizeConfig.heightMultiplier),
+              )),
           Positioned(
               left: 29.29 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(
-                bottomFacebook,
-                fit: BoxFit.fill,
-                width: 2.27 * SizeConfig.heightMultiplier,
-                height: 2.27 * SizeConfig.heightMultiplier,
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod(
+                      'open', ['https://www.facebook.com/mindamigo']);
+                },
+                child: Image.asset(
+                  bottomFacebook,
+                  fit: BoxFit.fill,
+                  width: 2.27 * SizeConfig.heightMultiplier,
+                  height: 2.27 * SizeConfig.heightMultiplier,
+                ),
               )),
           Positioned(
               left: 32.55 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(
-                bottomYoutube,
-                fit: BoxFit.fill,
-                width: 2.27 * SizeConfig.heightMultiplier,
-                height: 2.27 * SizeConfig.heightMultiplier,
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod('open', [
+                    'https://www.youtube.com/channel/UChxDki9pZDQbbxule7j-IKw'
+                  ]);
+                },
+                child: Image.asset(
+                  bottomYoutube,
+                  fit: BoxFit.fill,
+                  width: 2.27 * SizeConfig.heightMultiplier,
+                  height: 2.27 * SizeConfig.heightMultiplier,
+                ),
               )),
           Positioned(
               left: 14.97 * SizeConfig.heightMultiplier,
@@ -356,13 +394,13 @@ class MobileBottom extends StatelessWidget {
                 width: 11.06 * SizeConfig.heightMultiplier,
                 height: 4.5 * SizeConfig.heightMultiplier,
               )),
-           Positioned(
+          Positioned(
             left: 10 * SizeConfig.heightMultiplier,
             top: 6 * SizeConfig.heightMultiplier,
             child: Container(
               alignment: Alignment.center,
-              height: 8.13*SizeConfig.heightMultiplier,
-              width: 11.71*SizeConfig.heightMultiplier,
+              height: 8.13 * SizeConfig.heightMultiplier,
+              width: 11.71 * SizeConfig.heightMultiplier,
               color: AmigoColors.lightBrown.withOpacity(0.9),
               child: Text(
                 "Coming soon",
@@ -375,7 +413,6 @@ class MobileBottom extends StatelessWidget {
               ),
             ),
           ),
-          
           Positioned(
               left: 22.04 * SizeConfig.heightMultiplier,
               top: 6.4 * SizeConfig.heightMultiplier,
@@ -399,27 +436,46 @@ class MobileBottom extends StatelessWidget {
           Positioned(
               left: 22.04 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(bottomInstagram,
-                  fit: BoxFit.fill,
-                  width: 2.27 * SizeConfig.heightMultiplier,
-                  height: 2.27 * SizeConfig.heightMultiplier)),
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod(
+                      'open', ['https://www.instagram.com/mindamigo/']);
+                },
+                child: Image.asset(bottomInstagram,
+                    fit: BoxFit.fill,
+                    width: 2.27 * SizeConfig.heightMultiplier,
+                    height: 2.27 * SizeConfig.heightMultiplier),
+              )),
           Positioned(
               left: 25.29 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(
-                bottomFacebook,
-                fit: BoxFit.fill,
-                width: 2.27 * SizeConfig.heightMultiplier,
-                height: 2.27 * SizeConfig.heightMultiplier,
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod(
+                      'open', ['https://www.facebook.com/mindamigo']);
+                },
+                child: Image.asset(
+                  bottomFacebook,
+                  fit: BoxFit.fill,
+                  width: 2.27 * SizeConfig.heightMultiplier,
+                  height: 2.27 * SizeConfig.heightMultiplier,
+                ),
               )),
           Positioned(
               left: 28.55 * SizeConfig.heightMultiplier,
               top: 10.93 * SizeConfig.heightMultiplier,
-              child: Image.asset(
-                bottomYoutube,
-                fit: BoxFit.fill,
-                width: 2.27 * SizeConfig.heightMultiplier,
-                height: 2.27 * SizeConfig.heightMultiplier,
+              child: InkWell(
+                onTap: () {
+                  js.context.callMethod('open', [
+                    'https://www.youtube.com/channel/UChxDki9pZDQbbxule7j-IKw'
+                  ]);
+                },
+                child: Image.asset(
+                  bottomYoutube,
+                  fit: BoxFit.fill,
+                  width: 2.27 * SizeConfig.heightMultiplier,
+                  height: 2.27 * SizeConfig.heightMultiplier,
+                ),
               )),
           Positioned(
               left: 10.97 * SizeConfig.heightMultiplier,
