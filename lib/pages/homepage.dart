@@ -45,6 +45,66 @@ class _WebHomePageState extends State<WebHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      showModalBottomSheet(
+        elevation: 0,
+        // isDismissible: true,
+          backgroundColor: Colors.transparent,
+          context: context,
+          isScrollControlled: false,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)
+            ),
+          ),
+
+          builder: (BuildContext context) {
+            return Container(
+              margin: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+                boxShadow: [],
+                color: Colors.white,
+              ),
+              height: 150,
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width:MediaQuery.of(context).size.width*0.6,
+                      child: RichText(
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                            text:"We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store on your device all the technologies described in our Cookie Policy. You can change your cookie settings at any time by clicking “Cookie Preferences.",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Colors.black,
+                                wordSpacing: 3
+                            )
+                        ),
+                      ),
+                    ),
+                   GestureDetector(
+                     onTap: null,
+                     child: Container(
+                       decoration: BoxDecoration(
+                         borderRadius: BorderRadius.all(Radius.circular(5)),
+                         color: Color(0xFF4672FF)
+                       ),
+                       padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                       child: Text('Accept',style: TextStyle(color: Colors.white),),
+                     ),
+                   )
+                    
+                  ],
+                ),
+              ),
+            );
+          }
+      );
+    });
     return Stack(
       children: [
         SafeArea(

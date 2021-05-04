@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/strings.dart';
 import 'package:mindamigo/utils/size_config.dart';
 
-import '../styles/constants.dart';  
+import '../styles/constants.dart';
+import '../styles/constants.dart';
 
 class TitleSection extends StatelessWidget {
   @override
@@ -16,11 +17,11 @@ class TitleSection extends StatelessWidget {
         children: [
           Expanded(
               child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 32),
-                child: Text(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 32),
+                  child: Text(
                   Strings.mindhelp,
                   style: TextStyle(
                     decoration: TextDecoration.none,
@@ -59,32 +60,38 @@ class TitleSection extends StatelessWidget {
 
               Padding(
                   padding: const EdgeInsets.only(left: 50),
-                  child: Row(
+                  child: Stack(
                     children: [
-                      Container(
-                        width: 9.6 * SizeConfig.heightMultiplier,
-                        height: 3.0 * SizeConfig.heightMultiplier,
-                        decoration: BoxDecoration(
-                            image: new DecorationImage(
-                                image: new AssetImage(bottomAppStore),
-                                fit: BoxFit.cover,
-                                colorFilter: ColorFilter.mode(
-                                    Colors.white12.withOpacity(0.8),
-                                    BlendMode.srcOver))),
-
-                       
+                      Row(
+                        children: [
+                          Container(
+                            width: 9.6 * SizeConfig.heightMultiplier,
+                            height: 3.0 * SizeConfig.heightMultiplier,
+                            decoration: BoxDecoration(
+                                image: new DecorationImage(
+                                    image: new AssetImage(bottomAppStore),
+                                    fit: BoxFit.cover,
+                                    colorFilter: ColorFilter.mode(
+                                        Colors.white12.withOpacity(0.8),
+                                        BlendMode.srcOver)
+                                )
+                            ),
+                          ),
+                          Container(
+                            width: 11.06 * SizeConfig.heightMultiplier,
+                            height: 4.5 * SizeConfig.heightMultiplier,
+                            decoration: BoxDecoration(
+                                image: new DecorationImage(
+                                    image: new AssetImage(bottomPlayStore),
+                                    fit: BoxFit.cover,
+                                    colorFilter: ColorFilter.mode(
+                                        Colors.white12.withOpacity(0.8),
+                                        BlendMode.srcOver)
+                                )
+                            ),
+                          )
+                        ],
                       ),
-                      Container(
-                        width: 11.06 * SizeConfig.heightMultiplier,
-                        height: 4.5 * SizeConfig.heightMultiplier,
-                        decoration: BoxDecoration(
-                            image: new DecorationImage(
-                                image: new AssetImage(bottomPlayStore),
-                                fit: BoxFit.cover,
-                                colorFilter: ColorFilter.mode(
-                                    Colors.white12.withOpacity(0.8),
-                                    BlendMode.srcOver))),
-                      )
                     ],
                   )),
 

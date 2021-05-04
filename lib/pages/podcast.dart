@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
@@ -45,15 +43,10 @@ class _WebPodCastState extends State<WebPodCast> {
       
     </head>
     <body>
-      <div id='buzzsprout-large-player-1324327' class="buzz"></div>
+      <div id='buzzsprout-large-player-1324327' ></div>
     </body>
     <script type='text/javascript' charset='utf-8'  src='https://www.buzzsprout.com/1324327.js?container_id=buzzsprout-large-player-1324327&player=large'></script>
-    <style>
-      #episode_playlist{
-        background:red !important;
-        height:500px !important;
-      }
-      </style>
+    
     </html>
   
   ''';
@@ -85,36 +78,40 @@ class _WebPodCastState extends State<WebPodCast> {
                   NavBar(),
                   GradientLine(),
                   Container(
-                      color: AmigoColors.cream,
+                      decoration: BoxDecoration(
+                        // border: Border.all(color: Colors.black),
+                        color: AmigoColors.cream,
+                      ),
                       height: 58.59 * SizeConfig.heightMultiplier,
                       width: MediaQuery.of(context).size.width,
                       child: Stack(
                         alignment: Alignment.topCenter,
                         children: [
                           Positioned(
-                            top: 1 * SizeConfig.heightMultiplier,
+                            top: 5 * SizeConfig.heightMultiplier,
                             child: Container(
                               decoration: BoxDecoration(
                                   color: Colors.transparent,
+                                  // border: Border.all(color: Colors.black),
                                   borderRadius: BorderRadius.all(
-                                    Radius.circular(0.65 * SizeConfig.heightMultiplier))),
+                                    Radius.circular(0.65 * SizeConfig.heightMultiplier)
+                                  )
+                              ),
                               alignment: Alignment.center,
-                              height: 25.06 * SizeConfig.heightMultiplier,
+                              height: 45 * SizeConfig.heightMultiplier,
                               width: MediaQuery.of(context).size.width / 1.5,
-                              child: Container(
-                                height: MediaQuery.of(context).size.height,
-                                child: EasyWebView(
-                                src: src,
-                                onLoaded: () {
-                                  print('LOADED');
-                                },
-                                isHtml: true,
-                                webAllowFullScreen: true,
-                                isMarkdown: false,
-                                convertToWidgets: false,
-                                key: key,
-                                widgetsTextSelectable: false,
-                              )
+                              child: EasyWebView(
+
+                              src: src,
+                              onLoaded: () {
+                                print('LOADED');
+                              },
+                              isHtml: true,
+                              webAllowFullScreen: true,
+                              isMarkdown: false,
+                              convertToWidgets: false,
+                              key: key,
+                              widgetsTextSelectable: false,
                               ),
                             ),
                           ),
