@@ -1,5 +1,5 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
@@ -12,6 +12,7 @@ import 'package:mindamigo/widgets/homeMsgSection.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/titleSection.dart';
 import 'package:mindamigo/widgets/videoAndDisc.dart';
+import 'package:mindamigo/pages/cookiePolicy.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -32,6 +33,7 @@ class WebHomePage extends StatefulWidget {
 
 class _WebHomePageState extends State<WebHomePage> {
   ScrollController _controller;
+  bool isVisible=true;
 
   @override
   void initState() {
@@ -43,7 +45,7 @@ class _WebHomePageState extends State<WebHomePage> {
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      showModalBottomSheet(
+      isVisible==true?showModalBottomSheet(
         elevation: 0,
         // isDismissible: true,
           backgroundColor: Colors.transparent,
@@ -73,34 +75,55 @@ class _WebHomePageState extends State<WebHomePage> {
                       child: RichText(
                         textAlign: TextAlign.justify,
                         text: TextSpan(
-                            text:"We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store on your device all the technologies described in our Cookie Policy. You can change your cookie settings at any time by clicking “Cookie Preferences.",
+                            text:"We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
+                                "on your device all the technologies described in our",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Colors.black,
                                 wordSpacing: 3
+                            ),
+                          children: [
+                            TextSpan(
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                fontWeight: FontWeight.w700
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap=(){
+                                  Navigator.pushNamed(
+                                     context, CookiePolicyRoute,
+                                  );
+                                },
+                                text: " View Cookie Policy.",
                             )
+                          ]
                         ),
                       ),
                     ),
                    GestureDetector(
-                     onTap: null,
+                     onTap: (){
+                       setState(() {
+                         isVisible=false;
+                       });
+                       Navigator.pop(context);
+                     },
                      child: Container(
                        decoration: BoxDecoration(
                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                         color: Color(0xFF4672FF)
+                         color: Colors.green
                        ),
                        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
                        child: Text('Accept',style: TextStyle(color: Colors.white),),
                      ),
                    )
-                    
+
                   ],
                 ),
               ),
             );
           }
-      );
+      ):Container();
     });
     return Stack(
       children: [
@@ -643,8 +666,90 @@ class TabHomePage extends StatefulWidget {
 }
 
 class _TabHomePageState extends State<TabHomePage> {
+  bool isVisible=true;
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      isVisible==true?showModalBottomSheet(
+          elevation: 0,
+          // isDismissible: true,
+          backgroundColor: Colors.transparent,
+          context: context,
+          isScrollControlled: false,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)
+            ),
+          ),
+
+          builder: (BuildContext context) {
+            return Container(
+              margin: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+                boxShadow: [],
+                color: Colors.white,
+              ),
+              height: 150,
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width:MediaQuery.of(context).size.width*0.6,
+                      child: RichText(
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                            text:"We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
+                                "on your device all the technologies described in our",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Colors.black,
+                                wordSpacing: 3
+                            ),
+                            children: [
+                              TextSpan(
+                                style: TextStyle(
+                                    color: Colors.blue,
+                                    fontWeight: FontWeight.w700
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap=(){
+                                    Navigator.pushNamed(
+                                      context, CookiePolicyRoute,
+                                    );
+                                  },
+                                text: " View Cookie Policy.",
+                              )
+                            ]
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          isVisible=false;
+                        });
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                            color: Colors.green
+                        ),
+                        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                        child: Text('Accept',style: TextStyle(color: Colors.white),),
+                      ),
+                    )
+
+                  ],
+                ),
+              ),
+            );
+          }
+      ):Container();
+    });
     return Container(
       child: SingleChildScrollView(
         child: Container(
@@ -1113,8 +1218,90 @@ class MobileHomePage extends StatefulWidget {
 }
 
 class _MobileHomePageState extends State<MobileHomePage> {
+  bool isVisible=true;
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      isVisible==true?showModalBottomSheet(
+          elevation: 0,
+          // isDismissible: true,
+          backgroundColor: Colors.transparent,
+          context: context,
+          isScrollControlled: false,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)
+            ),
+          ),
+
+          builder: (BuildContext context) {
+            return Container(
+              margin: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+                boxShadow: [],
+                color: Colors.white,
+              ),
+              height: 220,
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width:MediaQuery.of(context).size.width*0.6,
+                      child: RichText(
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                            text:"We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
+                                "on your device all the technologies described in our",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Colors.black,
+                                wordSpacing: 3
+                            ),
+                            children: [
+                              TextSpan(
+                                style: TextStyle(
+                                    color: Colors.blue,
+                                    fontWeight: FontWeight.w700
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap=(){
+                                    Navigator.pushNamed(
+                                      context, CookiePolicyRoute,
+                                    );
+                                  },
+                                text: " View Cookie Policy.",
+                              )
+                            ]
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          isVisible=false;
+                        });
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                            color: Colors.green
+                        ),
+                        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                        child: Text('Accept',style: TextStyle(color: Colors.white),),
+                      ),
+                    )
+
+                  ],
+                ),
+              ),
+            );
+          }
+      ):Container();
+    });
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: AmigoColors.lightBlue),

@@ -9,6 +9,8 @@ import 'package:mindamigo/pages/privacyPolicy.dart';
 import 'package:mindamigo/pages/termsCondition.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/utils/size_config.dart';
+import 'package:mindamigo/pages/cookiePolicy.dart';
+
 //to remove # from url
 import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 
@@ -51,7 +53,10 @@ class MyApp extends StatelessWidget {
                 ),
             BlogArticleRoute: (context) => Scaffold(
                   body: BlogArticle(),
-                )
+                ),
+            CookiePolicyRoute:(context)=>Scaffold(
+              body: CookiePolicy(),
+            )
           },
         );
       });

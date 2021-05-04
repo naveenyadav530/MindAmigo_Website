@@ -76,7 +76,10 @@ class TitleSection extends StatelessWidget {
                                     fit: BoxFit.cover,
                                     colorFilter: ColorFilter.mode(
                                         Colors.white12.withOpacity(0.8),
-                                        BlendMode.srcOver))),
+                                        BlendMode.srcOver)
+                                )
+                            ),
+
                           ),
                           Container(
                             width: 11.06 * SizeConfig.heightMultiplier,
