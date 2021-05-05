@@ -237,9 +237,8 @@ class MobileAdvisory extends StatelessWidget {
                     margin: EdgeInsets.only(
                         top: 3.25 * SizeConfig.heightMultiplier),
                     width: MediaQuery.of(context).size.width / 1.2,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           width: 15.7 * SizeConfig.heightMultiplier,
@@ -273,19 +272,17 @@ class MobileAdvisory extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Expanded(
-                          child: Container(
-                              padding: EdgeInsets.only(
-                                  left: 5.20 * SizeConfig.heightMultiplier),
-                              child: Text(
-                                Strings.katie,
-                                style: TextStyle(
-                                  fontFamily: robot,
-                                  fontSize: 1.80 * SizeConfig.textMultiplier,
-                                ),
-                                textAlign: TextAlign.justify,
-                              )),
-                        ),
+                        Container(
+                            padding: EdgeInsets.only(
+                                top: 2.20 * SizeConfig.heightMultiplier),
+                            child: Text(
+                              Strings.katie,
+                              style: TextStyle(
+                                fontFamily: robot,
+                                fontSize: 1.80 * SizeConfig.textMultiplier,
+                              ),
+                              textAlign: TextAlign.justify,
+                            )),
                       ],
                     ),
                   ),
@@ -295,9 +292,8 @@ class MobileAdvisory extends StatelessWidget {
                     margin: EdgeInsets.symmetric(
                         vertical: 3.25 * SizeConfig.heightMultiplier),
                     width: MediaQuery.of(context).size.width / 1.2,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           width: 15.7 * SizeConfig.heightMultiplier,
@@ -326,19 +322,17 @@ class MobileAdvisory extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Expanded(
-                          child: Container(
-                              padding: EdgeInsets.only(
-                                  left: 5.20 * SizeConfig.heightMultiplier),
-                              child: Text(
-                                Strings.Bridgitte,
-                                style: TextStyle(
-                                  fontFamily: robot,
-                                  fontSize: 1.80 * SizeConfig.textMultiplier,
-                                ),
-                                textAlign: TextAlign.justify,
-                              )),
-                        ),
+                        Container(
+                            padding: EdgeInsets.only(
+                                top: 2.20 * SizeConfig.heightMultiplier),
+                            child: Text(
+                              Strings.Bridgitte,
+                              style: TextStyle(
+                                fontFamily: robot,
+                                fontSize: 1.80 * SizeConfig.textMultiplier,
+                              ),
+                              textAlign: TextAlign.justify,
+                            )),
                       ],
                     ),
                   ),

@@ -12,7 +12,6 @@ import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 class CookiePolicy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,6 @@ class CookiePolicy extends StatelessWidget {
 }
 
 class WebCookiePage extends StatefulWidget {
-
   @override
   _WebCookiePageState createState() => _WebCookiePageState();
 }
@@ -39,233 +37,250 @@ class _WebCookiePageState extends State<WebCookiePage> {
     _controller = ScrollController();
     super.initState();
   }
+
   @override
-    Widget build(BuildContext context) {
-      return Stack(
-        children: [
-          SafeArea(
-            child: RawScrollbar(
-              radius: Radius.circular(15),
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        SafeArea(
+          child: RawScrollbar(
+            radius: Radius.circular(15),
+            controller: _controller,
+            thickness: 15,
+            thumbColor: Colors.lightBlueAccent.shade100,
+            isAlwaysShown: true,
+            child: SingleChildScrollView(
               controller: _controller,
-              thickness: 15,
-              thumbColor: Colors.lightBlueAccent.shade100,
-              isAlwaysShown: true,
-              child: SingleChildScrollView(
-                controller: _controller,
-                child: Container(
-                  child: Column(
-                    children: [
-                      NavBar(),
-                      GradientLine(),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            Container(
-                                margin: EdgeInsets.only(
-                                    top: 6.51 * SizeConfig.heightMultiplier),
-                                width: MediaQuery.of(context).size.width / 1.4,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Cookies Policy",
-                                      style: TextStyle(
-                                          fontSize:
-                                          2.40 * SizeConfig.textMultiplier,
-                                          color: Colors.orange,
-                                          fontFamily: robot,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Container(
-                                        margin: EdgeInsets.only(
-                                            top: 1.95 * SizeConfig.heightMultiplier
-                                        ),
-                                        child: RichText(
-                                          text: TextSpan(
-                                            text: Strings.cookiesPolicy,
-                                            style: TextStyle(
+              child: Container(
+                child: Column(
+                  children: [
+                    NavBar(),
+                    GradientLine(),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(
+                                  top: 6.51 * SizeConfig.heightMultiplier),
+                              width: MediaQuery.of(context).size.width / 1.4,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Cookies Policy",
+                                    style: TextStyle(
+                                        fontSize:
+                                            2.40 * SizeConfig.textMultiplier,
+                                        color: Colors.orange,
+                                        fontFamily: robot,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.95 *
+                                              SizeConfig.heightMultiplier),
+                                      child: RichText(
+                                        text: TextSpan(
+                                          text: Strings.cookiesPolicy,
+                                          style: TextStyle(
                                               color: Colors.black,
-                                                fontFamily: robot,
-                                                fontSize: 1.2 *SizeConfig.textMultiplier
-                                            ),
-                                          ),
-                                        )
-                                    ),
-                                    Container(
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        children: [
-                                          Icon(Icons.fiber_manual_record),
-                                          SizedBox(width: 50,),
-                                          RichText(
-                                            text: TextSpan(
-                                                text: "AllAboutCookies:",
+                                              fontFamily: robot,
+                                              fontSize: 1.2 *
+                                                  SizeConfig.textMultiplier),
+                                        ),
+                                      )),
+                                  Container(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Icon(Icons.fiber_manual_record),
+                                        SizedBox(
+                                          width: 50,
+                                        ),
+                                        RichText(
+                                          text: TextSpan(
+                                              text: "AllAboutCookies:",
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontFamily: robot,
-                                                  fontSize: 1.2 *SizeConfig.textMultiplier
-                                              ),
+                                                  fontSize: 1.2 *
+                                                      SizeConfig
+                                                          .textMultiplier),
                                               children: [
-
                                                 TextSpan(
-                                                  text: "http://www.allaboutcookies.org/",
-                                                  style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                                  recognizer: new TapGestureRecognizer()
-                                                    ..onTap = () { launch('http://www.allaboutcookies.org/');
-                                                    },
+                                                  text:
+                                                      "http://www.allaboutcookies.org/",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.blue),
+                                                  recognizer:
+                                                      new TapGestureRecognizer()
+                                                        ..onTap = () {
+                                                          launch(
+                                                              'http://www.allaboutcookies.org/');
+                                                        },
                                                 )
-                                              ]
-                                            ),
-
-                                          )
-                                        ],
-                                      ),
-
+                                              ]),
+                                        )
+                                      ],
                                     ),
-                                Container(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Icon(Icons.fiber_manual_record),
-                                      SizedBox(width: 50,),
-                                      RichText(
-                                        text: TextSpan(
-                                            text: "Network Advertising Initiative:",
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                fontFamily: robot,
-                                                fontSize: 1.2 *SizeConfig.textMultiplier
-                                            ),
-                                            children: [
-                                              TextSpan(
-                                                  text: "http://www.networkadvertising.org/",
-                                                style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                                recognizer: new TapGestureRecognizer()
-                                                  ..onTap = () { launch('http://www.networkadvertising.org/');
-                                                  },
-                                              )
-                                            ]
-                                        ),
-
-                                      )
-                                    ],
                                   ),
-                                ),
-                                    SizedBox(height: 50,),
-                                  ],
-                                )
-                            ),
+                                  Container(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Icon(Icons.fiber_manual_record),
+                                        SizedBox(
+                                          width: 50,
+                                        ),
+                                        RichText(
+                                          text: TextSpan(
+                                              text:
+                                                  "Network Advertising Initiative:",
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontFamily: robot,
+                                                  fontSize: 1.2 *
+                                                      SizeConfig
+                                                          .textMultiplier),
+                                              children: [
+                                                TextSpan(
+                                                  text:
+                                                      "http://www.networkadvertising.org/",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.blue),
+                                                  recognizer:
+                                                      new TapGestureRecognizer()
+                                                        ..onTap = () {
+                                                          launch(
+                                                              'http://www.networkadvertising.org/');
+                                                        },
+                                                )
+                                              ]),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 50,
+                                  ),
+                                ],
+                              )),
 
-                            //left
-                            CircleAmigo(
-                              bottomCircleAmigoPosition:
-                              18.2 * SizeConfig.heightMultiplier,
-                              leftCircleAmigoPosition:
-                              -10.16 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              13.02 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              13.02 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                            CircleAmigo(
-                              bottomCircleAmigoPosition:
-                              15 * SizeConfig.heightMultiplier,
-                              leftCircleAmigoPosition:
-                              -13.41 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              19.53 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              19.53 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                            CircleAmigo(
-                              bottomCircleAmigoPosition:
-                              11.71 * SizeConfig.heightMultiplier,
-                              leftCircleAmigoPosition:
-                              -16.67 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              26.04 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              26.04 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
+                          //left
+                          CircleAmigo(
+                            bottomCircleAmigoPosition:
+                                18.2 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -10.16 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                13.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
+                          ),
+                          CircleAmigo(
+                            bottomCircleAmigoPosition:
+                                15 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -13.41 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                19.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
+                          ),
+                          CircleAmigo(
+                            bottomCircleAmigoPosition:
+                                11.71 * SizeConfig.heightMultiplier,
+                            leftCircleAmigoPosition:
+                                -16.67 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                26.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
+                          ),
 
-                            //right
-                            CircleAmigo(
-                              topCircleAmigoPosition:
-                              -2.20 * SizeConfig.heightMultiplier,
-                              rightCircleAmigoPosition:
-                              -7.16 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              15.02 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              15.02 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                            CircleAmigo(
-                              topCircleAmigoPosition:
-                              -5.46 * SizeConfig.heightMultiplier,
-                              rightCircleAmigoPosition:
-                              -10.41 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              22.53 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              22.53 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                            CircleAmigo(
-                              topCircleAmigoPosition:
-                              -8.71 * SizeConfig.heightMultiplier,
-                              rightCircleAmigoPosition:
-                              -13.67 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              30.04 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              30.04 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                          ],
-                        ),
+                          //right
+                          CircleAmigo(
+                            topCircleAmigoPosition:
+                                -2.20 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -7.16 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                15.02 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                15.02 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
+                          ),
+                          CircleAmigo(
+                            topCircleAmigoPosition:
+                                -5.46 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -10.41 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                22.53 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                22.53 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
+                          ),
+                          CircleAmigo(
+                            topCircleAmigoPosition:
+                                -8.71 * SizeConfig.heightMultiplier,
+                            rightCircleAmigoPosition:
+                                -13.67 * SizeConfig.heightMultiplier,
+                            circleAmigoHeight:
+                                30.04 * SizeConfig.heightMultiplier,
+                            circleAmigoWidth:
+                                30.04 * SizeConfig.heightMultiplier,
+                            circleAmigoGradient: [
+                              AmigoColors.orange,
+                              AmigoColors.lightRed2
+                            ],
+                            circleAmigoOpacity: [0.1, 0.1],
+                          ),
+                        ],
                       ),
-                      BottomNav(),
-                    ],
-                  ),
+                    ),
+                    BottomNav(),
+                  ],
                 ),
               ),
             ),
           ),
-        ],
-      );
-    }
+        ),
+      ],
+    );
+  }
 }
-
 
 class TabCookiePage extends StatefulWidget {
   @override
@@ -316,101 +331,118 @@ class _TabCookiePageState extends State<TabCookiePage> {
                                     "Cookies Policy",
                                     style: TextStyle(
                                         fontSize:
-                                        2.40 * SizeConfig.textMultiplier,
+                                            2.40 * SizeConfig.textMultiplier,
                                         color: Colors.orange,
                                         fontFamily: robot,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Container(
                                       margin: EdgeInsets.only(
-                                          top: 1.95 * SizeConfig.heightMultiplier
-                                      ),
+                                          top: 1.95 *
+                                              SizeConfig.heightMultiplier),
                                       child: RichText(
                                         text: TextSpan(
                                           text: Strings.cookiesPolicy,
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontFamily: robot,
-                                              fontSize: 1.2 *SizeConfig.textMultiplier
-                                          ),
+                                              fontSize: 1.2 *
+                                                  SizeConfig.textMultiplier),
                                         ),
-                                      )
-                                  ),
+                                      )),
                                   Container(
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
                                         Icon(Icons.fiber_manual_record),
-                                        SizedBox(width: 50,),
+                                        SizedBox(
+                                          width: 50,
+                                        ),
                                         RichText(
                                           text: TextSpan(
                                               text: "AllAboutCookies:",
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontFamily: robot,
-                                                  fontSize: 1.2 *SizeConfig.textMultiplier
-                                              ),
+                                                  fontSize: 1.2 *
+                                                      SizeConfig
+                                                          .textMultiplier),
                                               children: [
-
                                                 TextSpan(
-                                                  text: "http://www.allaboutcookies.org/",
-                                                  style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                                  recognizer: new TapGestureRecognizer()
-                                                    ..onTap = () { launch('http://www.allaboutcookies.org/');
-                                                    },
+                                                  text:
+                                                      "http://www.allaboutcookies.org/",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.blue),
+                                                  recognizer:
+                                                      new TapGestureRecognizer()
+                                                        ..onTap = () {
+                                                          launch(
+                                                              'http://www.allaboutcookies.org/');
+                                                        },
                                                 )
-                                              ]
-                                          ),
-
+                                              ]),
                                         )
                                       ],
                                     ),
-
                                   ),
                                   Container(
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
                                         Icon(Icons.fiber_manual_record),
-                                        SizedBox(width: 50,),
+                                        SizedBox(
+                                          width: 50,
+                                        ),
                                         RichText(
                                           text: TextSpan(
-                                              text: "Network Advertising Initiative:",
+                                              text:
+                                                  "Network Advertising Initiative:",
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontFamily: robot,
-                                                  fontSize: 1.2 *SizeConfig.textMultiplier
-                                              ),
+                                                  fontSize: 1.2 *
+                                                      SizeConfig
+                                                          .textMultiplier),
                                               children: [
                                                 TextSpan(
-                                                  text: "http://www.networkadvertising.org/",
-                                                  style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                                  recognizer: new TapGestureRecognizer()
-                                                    ..onTap = () { launch('http://www.networkadvertising.org/');
-                                                    },
+                                                  text:
+                                                      "http://www.networkadvertising.org/",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.blue),
+                                                  recognizer:
+                                                      new TapGestureRecognizer()
+                                                        ..onTap = () {
+                                                          launch(
+                                                              'http://www.networkadvertising.org/');
+                                                        },
                                                 )
-                                              ]
-                                          ),
-
+                                              ]),
                                         )
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 50,),
+                                  SizedBox(
+                                    height: 50,
+                                  ),
                                 ],
-                              )
-                          ),
+                              )),
 
                           //left
                           CircleAmigo(
                             bottomCircleAmigoPosition:
-                            18.2 * SizeConfig.heightMultiplier,
+                                18.2 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -10.16 * SizeConfig.heightMultiplier,
+                                -10.16 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            13.02 * SizeConfig.heightMultiplier,
+                                13.02 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            13.02 * SizeConfig.heightMultiplier,
+                                13.02 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -419,13 +451,13 @@ class _TabCookiePageState extends State<TabCookiePage> {
                           ),
                           CircleAmigo(
                             bottomCircleAmigoPosition:
-                            15 * SizeConfig.heightMultiplier,
+                                15 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -13.41 * SizeConfig.heightMultiplier,
+                                -13.41 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            19.53 * SizeConfig.heightMultiplier,
+                                19.53 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            19.53 * SizeConfig.heightMultiplier,
+                                19.53 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -434,13 +466,13 @@ class _TabCookiePageState extends State<TabCookiePage> {
                           ),
                           CircleAmigo(
                             bottomCircleAmigoPosition:
-                            11.71 * SizeConfig.heightMultiplier,
+                                11.71 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -16.67 * SizeConfig.heightMultiplier,
+                                -16.67 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            26.04 * SizeConfig.heightMultiplier,
+                                26.04 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            26.04 * SizeConfig.heightMultiplier,
+                                26.04 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -451,13 +483,13 @@ class _TabCookiePageState extends State<TabCookiePage> {
                           //right
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -2.20 * SizeConfig.heightMultiplier,
+                                -2.20 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
-                            -7.16 * SizeConfig.heightMultiplier,
+                                -7.16 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            15.02 * SizeConfig.heightMultiplier,
+                                15.02 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            15.02 * SizeConfig.heightMultiplier,
+                                15.02 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -466,13 +498,13 @@ class _TabCookiePageState extends State<TabCookiePage> {
                           ),
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -5.46 * SizeConfig.heightMultiplier,
+                                -5.46 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
-                            -10.41 * SizeConfig.heightMultiplier,
+                                -10.41 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            22.53 * SizeConfig.heightMultiplier,
+                                22.53 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            22.53 * SizeConfig.heightMultiplier,
+                                22.53 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -481,13 +513,13 @@ class _TabCookiePageState extends State<TabCookiePage> {
                           ),
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -8.71 * SizeConfig.heightMultiplier,
+                                -8.71 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
-                            -13.67 * SizeConfig.heightMultiplier,
+                                -13.67 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            30.04 * SizeConfig.heightMultiplier,
+                                30.04 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            30.04 * SizeConfig.heightMultiplier,
+                                30.04 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -508,7 +540,6 @@ class _TabCookiePageState extends State<TabCookiePage> {
     );
   }
 }
-
 
 class MobileHomePage extends StatefulWidget {
   @override
@@ -559,101 +590,118 @@ class _MobileHomePageState extends State<MobileHomePage> {
                                     "Cookies Policy",
                                     style: TextStyle(
                                         fontSize:
-                                        2.40 * SizeConfig.textMultiplier,
+                                            2.40 * SizeConfig.textMultiplier,
                                         color: Colors.orange,
                                         fontFamily: robot,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Container(
                                       margin: EdgeInsets.only(
-                                          top: 1.95 * SizeConfig.heightMultiplier
-                                      ),
+                                          top: 1.95 *
+                                              SizeConfig.heightMultiplier),
                                       child: RichText(
                                         text: TextSpan(
                                           text: Strings.cookiesPolicy,
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontFamily: robot,
-                                              fontSize: 1.2 *SizeConfig.textMultiplier
-                                          ),
+                                              fontSize: 1.2 *
+                                                  SizeConfig.textMultiplier),
                                         ),
-                                      )
-                                  ),
+                                      )),
                                   Container(
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
                                         Icon(Icons.fiber_manual_record),
-                                        SizedBox(width: 50,),
+                                        SizedBox(
+                                          width: 50,
+                                        ),
                                         RichText(
                                           text: TextSpan(
                                               text: "AllAboutCookies:",
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontFamily: robot,
-                                                  fontSize: 1.2 *SizeConfig.textMultiplier
-                                              ),
+                                                  fontSize: 1.2 *
+                                                      SizeConfig
+                                                          .textMultiplier),
                                               children: [
-
                                                 TextSpan(
-                                                  text: "http://www.allaboutcookies.org/",
-                                                  style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                                  recognizer: new TapGestureRecognizer()
-                                                    ..onTap = () { launch('http://www.allaboutcookies.org/');
-                                                    },
+                                                  text:
+                                                      "http://www.allaboutcookies.org/",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.blue),
+                                                  recognizer:
+                                                      new TapGestureRecognizer()
+                                                        ..onTap = () {
+                                                          launch(
+                                                              'http://www.allaboutcookies.org/');
+                                                        },
                                                 )
-                                              ]
-                                          ),
-
+                                              ]),
                                         )
                                       ],
                                     ),
-
                                   ),
                                   Container(
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
                                         Icon(Icons.fiber_manual_record),
-                                        SizedBox(width: 50,),
+                                        SizedBox(
+                                          width: 50,
+                                        ),
                                         RichText(
                                           text: TextSpan(
-                                              text: "Network Advertising Initiative:",
+                                              text:
+                                                  "Network Advertising Initiative:",
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontFamily: robot,
-                                                  fontSize: 1.2 *SizeConfig.textMultiplier
-                                              ),
+                                                  fontSize: 1.2 *
+                                                      SizeConfig
+                                                          .textMultiplier),
                                               children: [
                                                 TextSpan(
-                                                  text: "http://www.networkadvertising.org/",
-                                                  style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                                  recognizer: new TapGestureRecognizer()
-                                                    ..onTap = () { launch('http://www.networkadvertising.org/');
-                                                    },
+                                                  text:
+                                                      "http://www.networkadvertising.org/",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.blue),
+                                                  recognizer:
+                                                      new TapGestureRecognizer()
+                                                        ..onTap = () {
+                                                          launch(
+                                                              'http://www.networkadvertising.org/');
+                                                        },
                                                 )
-                                              ]
-                                          ),
-
+                                              ]),
                                         )
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 50,),
+                                  SizedBox(
+                                    height: 50,
+                                  ),
                                 ],
-                              )
-                          ),
+                              )),
 
                           //left
                           CircleAmigo(
                             bottomCircleAmigoPosition:
-                            18.2 * SizeConfig.heightMultiplier,
+                                18.2 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -10.16 * SizeConfig.heightMultiplier,
+                                -10.16 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            13.02 * SizeConfig.heightMultiplier,
+                                13.02 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            13.02 * SizeConfig.heightMultiplier,
+                                13.02 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -662,13 +710,13 @@ class _MobileHomePageState extends State<MobileHomePage> {
                           ),
                           CircleAmigo(
                             bottomCircleAmigoPosition:
-                            15 * SizeConfig.heightMultiplier,
+                                15 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -13.41 * SizeConfig.heightMultiplier,
+                                -13.41 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            19.53 * SizeConfig.heightMultiplier,
+                                19.53 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            19.53 * SizeConfig.heightMultiplier,
+                                19.53 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -677,13 +725,13 @@ class _MobileHomePageState extends State<MobileHomePage> {
                           ),
                           CircleAmigo(
                             bottomCircleAmigoPosition:
-                            11.71 * SizeConfig.heightMultiplier,
+                                11.71 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -16.67 * SizeConfig.heightMultiplier,
+                                -16.67 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            26.04 * SizeConfig.heightMultiplier,
+                                26.04 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            26.04 * SizeConfig.heightMultiplier,
+                                26.04 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -694,13 +742,13 @@ class _MobileHomePageState extends State<MobileHomePage> {
                           //right
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -2.20 * SizeConfig.heightMultiplier,
+                                -2.20 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
-                            -7.16 * SizeConfig.heightMultiplier,
+                                -7.16 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            15.02 * SizeConfig.heightMultiplier,
+                                15.02 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            15.02 * SizeConfig.heightMultiplier,
+                                15.02 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -709,13 +757,13 @@ class _MobileHomePageState extends State<MobileHomePage> {
                           ),
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -5.46 * SizeConfig.heightMultiplier,
+                                -5.46 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
-                            -10.41 * SizeConfig.heightMultiplier,
+                                -10.41 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            22.53 * SizeConfig.heightMultiplier,
+                                22.53 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            22.53 * SizeConfig.heightMultiplier,
+                                22.53 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -724,13 +772,13 @@ class _MobileHomePageState extends State<MobileHomePage> {
                           ),
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -8.71 * SizeConfig.heightMultiplier,
+                                -8.71 * SizeConfig.heightMultiplier,
                             rightCircleAmigoPosition:
-                            -13.67 * SizeConfig.heightMultiplier,
+                                -13.67 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            30.04 * SizeConfig.heightMultiplier,
+                                30.04 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            30.04 * SizeConfig.heightMultiplier,
+                                30.04 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -752,7 +800,6 @@ class _MobileHomePageState extends State<MobileHomePage> {
   }
 }
 
-
 class MobileCookiePage extends StatefulWidget {
   @override
   _MobileCookiePageState createState() => _MobileCookiePageState();
@@ -767,359 +814,328 @@ class _MobileCookiePageState extends State<MobileCookiePage> {
     _controller = ScrollController();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: AmigoColors.lightBlue),
-        backgroundColor: Colors.white,
-        title: Image.asset(
-          "assets/images/logo.png",
-          height: 3.18 * SizeConfig.heightMultiplier,
-        ),
-        actions: [
-          Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  showModalBottomSheet(
-                      backgroundColor: Colors.transparent,
-                      context: context,
-                      elevation: 10,
-                      isScrollControlled: true,
-                      isDismissible: true,
-                      builder: (BuildContext context) {
-                        return DraggableScrollableSheet(
-                            initialChildSize: 0.75, //set this as you want
-                            maxChildSize: 0.75, //set this as you want
-                            minChildSize: 0.75, //set this as you want
-                            expand: true,
-                            builder: (context, scrollController) {
-                              return Container(
-                                color: Colors.white,
-                                height: MediaQuery.of(context).size.height,
-                                child: Stack(
-                                  children: [
-                                    Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Meet Adam',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                  TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, MeetAdamRoute);
-                                            },
-                                          ),
-                                        ),
-                                        //meet adam
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'About Us',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                  TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, AboutUsRoute);
-                                            },
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Podcast',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                  TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, PodcastRoute);
-                                            },
-                                          ),
-                                        ),
-
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Blog',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                  TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, BlogPageRoute);
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Positioned(
-                                      right: 0,
-                                      child: FlatButton(
-                                        child: Icon(Icons.close),
-                                        onPressed: () => Navigator.pop(context),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ); //whatever you're returning, does not have to be a Container
-                            });
-                      });
-                },
-                child: Icon(
-                  Icons.menu,
-                  size: 26.0,
-                ),
-              )),
-        ],
-      ),
-      body: SingleChildScrollView(
-        controller: _controller,
-        child: Container(
-          child: Column(
-            children: [
-
-              GradientLine(),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Container(
-                        margin: EdgeInsets.only(
-                            top: 6.51 * SizeConfig.heightMultiplier),
-                        width: MediaQuery.of(context).size.width / 1.4,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Cookies Policy",
-                              style: TextStyle(
-                                  fontSize:
-                                  2.40 * SizeConfig.textMultiplier,
-                                  color: Colors.orange,
-                                  fontFamily: robot,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Container(
-                                margin: EdgeInsets.only(
-                                    top: 1.95 * SizeConfig.heightMultiplier
-                                ),
-                                child: RichText(
-                                  text: TextSpan(
-                                    text: Strings.cookiesPolicy,
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: robot,
-                                        fontSize: 1.2 *SizeConfig.textMultiplier
-                                    ),
-                                  ),
-                                )
-                            ),
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Icon(Icons.fiber_manual_record),
-                                  SizedBox(width: 20,),
-                                  RichText(
-                                    text: TextSpan(
-                                        text: "AllAboutCookies:",
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontFamily: robot,
-                                            fontSize: 1.2 *SizeConfig.textMultiplier
-                                        ),
-                                        children: [
-
-                                          TextSpan(
-                                            text: "http://www.allaboutcookies.org/",
-                                            style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                            recognizer: new TapGestureRecognizer()
-                                              ..onTap = () { launch('http://www.allaboutcookies.org/');
-                                              },
-                                          )
-                                        ]
-                                    ),
-
-                                  )
-                                ],
-                              ),
-
-                            ),
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Icon(Icons.fiber_manual_record),
-                                  SizedBox(width: 20,),
-                                  RichText(
-                                    text: TextSpan(
-                                        text: "Network Advertising Initiative:",
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontFamily: robot,
-                                            fontSize: 1.2 *SizeConfig.textMultiplier
-                                        ),
-                                        children: [
-                                          TextSpan(
-                                            text: "http://www.networkadvertising.org/",
-                                            style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                            recognizer: new TapGestureRecognizer()
-                                              ..onTap = () { launch('http://www.networkadvertising.org/');
-                                              },
-                                          )
-                                        ]
-                                    ),
-
-                                  )
-                                ],
-                              ),
-                            ),
-                            SizedBox(height: 50,),
-                          ],
-                        )
-                    ),
-
-                    //left
-                    CircleAmigo(
-                      bottomCircleAmigoPosition:
-                      18.2 * SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition:
-                      -10.16 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight:
-                      13.02 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth:
-                      13.02 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
-                    ),
-                    CircleAmigo(
-                      bottomCircleAmigoPosition:
-                      15 * SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition:
-                      -13.41 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight:
-                      19.53 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth:
-                      19.53 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
-                    ),
-                    CircleAmigo(
-                      bottomCircleAmigoPosition:
-                      11.71 * SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition:
-                      -16.67 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight:
-                      26.04 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth:
-                      26.04 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
-                    ),
-
-                    //right
-                    CircleAmigo(
-                      topCircleAmigoPosition:
-                      -2.20 * SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition:
-                      -7.16 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight:
-                      15.02 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth:
-                      15.02 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
-                    ),
-                    CircleAmigo(
-                      topCircleAmigoPosition:
-                      -5.46 * SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition:
-                      -10.41 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight:
-                      22.53 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth:
-                      22.53 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
-                    ),
-                    CircleAmigo(
-                      topCircleAmigoPosition:
-                      -8.71 * SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition:
-                      -13.67 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight:
-                      30.04 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth:
-                      30.04 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
-                    ),
-                  ],
-                ),
-              ),
-              BottomNav(),
-            ],
+        appBar: AppBar(
+          iconTheme: IconThemeData(color: AmigoColors.lightBlue),
+          backgroundColor: Colors.white,
+          title: Image.asset(
+            "assets/images/logo.png",
+            height: 3.18 * SizeConfig.heightMultiplier,
           ),
         ),
-      )
-    );
+        endDrawer: Container(
+          width: MediaQuery.of(context).size.width,
+          child: Drawer(
+              child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+            ListTile(
+              leading: Icon(
+                Icons.home,
+                color: AmigoColors.lightBlue,
+              ),
+              trailing: FlatButton(
+                child: Icon(
+                  Icons.close,
+                  color: AmigoColors.lightBlue,
+                ),
+                onPressed: () => Navigator.pop(context),
+              ),
+              title: Text(
+                'Mindamigo',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, HomeRoute);
+              },
+            ),
+
+            //meet adam
+            ListTile(
+              leading: Icon(
+                Icons.person,
+                color: AmigoColors.lightBlue,
+              ),
+              title: Text(
+                'Meet Adam',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, MeetAdamRoute);
+              },
+            ),
+            //about us
+            ListTile(
+              leading: Icon(
+                Icons.people,
+                color: AmigoColors.lightBlue,
+              ),
+              title: Text(
+                'About Us',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, AboutUsRoute);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.mic,
+                color: AmigoColors.lightBlue,
+              ),
+              title: Text(
+                'PodCast',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, PodcastRoute);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.article_outlined,
+                color: AmigoColors.lightBlue,
+              ),
+              title: Text(
+                'Blog',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: AmigoColors.lightBlue,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, BlogPageRoute);
+              },
+            ),
+          ])),
+        ),
+        body: SingleChildScrollView(
+          controller: _controller,
+          child: Container(
+            child: Column(
+              children: [
+                GradientLine(),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                          margin: EdgeInsets.only(
+                              top: 6.51 * SizeConfig.heightMultiplier),
+                          width: MediaQuery.of(context).size.width / 1.4,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Cookies Policy",
+                                style: TextStyle(
+                                    fontSize: 2.40 * SizeConfig.textMultiplier,
+                                    color: Colors.orange,
+                                    fontFamily: robot,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Container(
+                                  margin: EdgeInsets.only(
+                                      top: 1.95 * SizeConfig.heightMultiplier),
+                                  child: RichText(
+                                    text: TextSpan(
+                                      text: Strings.cookiesPolicy,
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.2 * SizeConfig.textMultiplier),
+                                    ),
+                                  )),
+                              Container(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Icon(Icons.fiber_manual_record),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    RichText(
+                                      text: TextSpan(
+                                          text: "AllAboutCookies:",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontFamily: robot,
+                                              fontSize: 1.2 *
+                                                  SizeConfig.textMultiplier),
+                                          children: [
+                                            TextSpan(
+                                              text:
+                                                  "http://www.allaboutcookies.org/",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Colors.blue),
+                                              recognizer:
+                                                  new TapGestureRecognizer()
+                                                    ..onTap = () {
+                                                      launch(
+                                                          'http://www.allaboutcookies.org/');
+                                                    },
+                                            )
+                                          ]),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Icon(Icons.fiber_manual_record),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    RichText(
+                                      text: TextSpan(
+                                          text:
+                                              "Network Advertising Initiative:",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontFamily: robot,
+                                              fontSize: 1.2 *
+                                                  SizeConfig.textMultiplier),
+                                          children: [
+                                            TextSpan(
+                                              text:
+                                                  "http://www.networkadvertising.org/",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Colors.blue),
+                                              recognizer:
+                                                  new TapGestureRecognizer()
+                                                    ..onTap = () {
+                                                      launch(
+                                                          'http://www.networkadvertising.org/');
+                                                    },
+                                            )
+                                          ]),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 50,
+                              ),
+                            ],
+                          )),
+
+                      //left
+                      CircleAmigo(
+                        bottomCircleAmigoPosition:
+                            18.2 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                            -10.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        bottomCircleAmigoPosition:
+                            15 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                            -13.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        bottomCircleAmigoPosition:
+                            11.71 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                            -16.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+
+                      //right
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                            -2.20 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                            -7.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 15.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 15.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                            -5.46 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                            -10.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 22.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 22.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                            -8.71 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                            -13.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 30.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 30.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                    ],
+                  ),
+                ),
+                BottomNav(),
+              ],
+            ),
+          ),
+        ));
   }
 }
-
-
