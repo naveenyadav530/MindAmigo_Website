@@ -23,6 +23,7 @@ class BlogContent extends StatelessWidget {
           mainAxisSpacing: 100,
           crossAxisSpacing: 3 * SizeConfig.heightMultiplier,
           childAspectRatio: 700 / 1370,
+          // childAspectRatio: 150/200,
           // Generate 100 widgets that display their index in the List.
           children: List.generate(blogsModel.length, (index) {
             return Container(
@@ -64,8 +65,8 @@ class BlogContent extends StatelessWidget {
                     child: Text(
                       blogsModel[index].body["text"].toString().trimLeft(),
                       overflow: TextOverflow.ellipsis,
-
-                      maxLines: 10,
+                      softWrap:true,
+                      maxLines: 8,
                       style: TextStyle(
                           fontSize: 1.30 * SizeConfig.textMultiplier,
                           fontFamily: robot
@@ -80,6 +81,8 @@ class BlogContent extends StatelessWidget {
                         Navigator.pushNamed(
                             context, BlogArticleRoute,
                           arguments: {
+                              'image':blogsModel[index].image,
+                              'title':blogsModel[index].title,
                               'data': blogsModel[index].body["text"]
                           }
                         );
@@ -176,7 +179,14 @@ class TabBlogContent extends StatelessWidget {
                       top: 0.65 * SizeConfig.heightMultiplier),
                   child: InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, BlogArticleRoute);
+                      Navigator.pushNamed(
+                          context, BlogArticleRoute,
+                          arguments: {
+                            'image':blogsModel[index].image,
+                            'title':blogsModel[index].title,
+                            'data': blogsModel[index].body["text"]
+                          }
+                      );
                     },
                     child: Text(
                       "Read More>",
@@ -270,23 +280,14 @@ class MobileBlogContent extends StatelessWidget {
                       top: 0.65 * SizeConfig.heightMultiplier),
                   child: GestureDetector(
                     onTap: () {
-                      print("CODE HERE ");
-                      print("CODE HERE ");
-                      print("CODE HERE ");
-                      print("CODE HERE ");
-                     /* print("INDEX $index");
-                      print("1 #######################");
-                      print(blogsModel[index].body["text"]);
-                      print("2 #######################");
-                      // Navigator.pushNamed(context, BlogArticleRoute);
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context)=>
-                              WebArticle(
-                                blogBody:blogsModel[index].body["text"]
-                                )
-                          )
+                      Navigator.pushNamed(
+                          context, BlogArticleRoute,
+                          arguments: {
+                            'image':blogsModel[index].image,
+                            'title':blogsModel[index].title,
+                            'data': blogsModel[index].body["text"]
+                          }
                       );
-                      print("3 #######################");*/
                     },
                     child: Text(
                       "Read More>",

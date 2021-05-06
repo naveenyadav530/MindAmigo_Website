@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindamigo/core/cookie/cookiesAccept.dart';
 import 'package:mindamigo/pages/about.dart';
 import 'package:mindamigo/pages/blogArticle.dart';
 import 'package:mindamigo/pages/blogPage.dart';
@@ -11,12 +12,11 @@ import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/utils/size_config.dart';
 import 'package:mindamigo/pages/cookiePolicy.dart';
 
-//to remove # from url
-import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 
-void main() {
-  // setPathUrlStrategy();
-  // configureApp();
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await CookiesSharedPreference.init();
   runApp(MyApp());
 }
 

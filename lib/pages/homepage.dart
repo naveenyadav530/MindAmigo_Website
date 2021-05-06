@@ -12,7 +12,7 @@ import 'package:mindamigo/widgets/homeMsgSection.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/titleSection.dart';
 import 'package:mindamigo/widgets/videoAndDisc.dart';
-import 'package:mindamigo/pages/cookiePolicy.dart';
+import 'package:mindamigo/core/cookie/cookiesAccept.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -25,6 +25,8 @@ class HomePage extends StatelessWidget {
   }
 }
 
+
+
 //websiteHomePage
 class WebHomePage extends StatefulWidget {
   @override
@@ -33,21 +35,24 @@ class WebHomePage extends StatefulWidget {
 
 class _WebHomePageState extends State<WebHomePage> {
   ScrollController _controller;
-  bool isVisible=true;
+  bool isVisible;
 
   @override
   void initState() {
     //Initialize the  scrollController
     _controller = ScrollController();
+    isVisible=CookiesSharedPreference.getCookiePolicy()??true;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      isVisible==true?showModalBottomSheet(
+
+    isVisible==true?WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      // ignore: unrelated_type_equality_checks
+      showModalBottomSheet(
         elevation: 0,
-        // isDismissible: true,
+          isDismissible: true,
           backgroundColor: Colors.transparent,
           context: context,
           isScrollControlled: false,
@@ -103,9 +108,7 @@ class _WebHomePageState extends State<WebHomePage> {
                     ),
                    GestureDetector(
                      onTap: (){
-                       setState(() {
-                         isVisible=false;
-                       });
+                       CookiesSharedPreference.setCookiePolicy(false);
                        Navigator.pop(context);
                      },
                      child: Container(
@@ -123,8 +126,8 @@ class _WebHomePageState extends State<WebHomePage> {
               ),
             );
           }
-      ):Container();
-    });
+      );
+    }):Container();
     return Stack(
       children: [
         SafeArea(
@@ -666,7 +669,18 @@ class TabHomePage extends StatefulWidget {
 }
 
 class _TabHomePageState extends State<TabHomePage> {
-  bool isVisible=true;
+  ScrollController _controller;
+  bool isVisible;
+
+  @override
+  void initState() {
+    //Initialize the  scrollController
+    _controller = ScrollController();
+    isVisible=CookiesSharedPreference.getCookiePolicy()??true;
+    super.initState();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -728,9 +742,7 @@ class _TabHomePageState extends State<TabHomePage> {
                     ),
                     GestureDetector(
                       onTap: (){
-                        setState(() {
-                          isVisible=false;
-                        });
+                        CookiesSharedPreference.setCookiePolicy(false);
                         Navigator.pop(context);
                       },
                       child: Container(
@@ -752,6 +764,7 @@ class _TabHomePageState extends State<TabHomePage> {
     });
     return Container(
       child: SingleChildScrollView(
+          controller: _controller,
         child: Container(
           child: Column(
             children: [
@@ -1218,7 +1231,17 @@ class MobileHomePage extends StatefulWidget {
 }
 
 class _MobileHomePageState extends State<MobileHomePage> {
-  bool isVisible=true;
+  ScrollController _controller;
+  bool isVisible;
+
+  @override
+  void initState() {
+    //Initialize the  scrollController
+    _controller = ScrollController();
+    isVisible=CookiesSharedPreference.getCookiePolicy()??true;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -1283,6 +1306,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                         setState(() {
                           isVisible=false;
                         });
+                        CookiesSharedPreference.setCookiePolicy(false);
                         Navigator.pop(context);
                       },
                       child: Container(

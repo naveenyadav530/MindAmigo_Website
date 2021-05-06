@@ -120,7 +120,7 @@ class _WebArticleState extends State<WebArticle> {
                                   Padding(
                                     padding: const EdgeInsets.only(top: 50),
                                     child: Text(
-                                      Strings.blogTitle,
+                                      blogData["title"],
                                       style: TextStyle(
                                           color: AmigoColors.orange,
                                           fontSize: 56,
@@ -130,7 +130,7 @@ class _WebArticleState extends State<WebArticle> {
                                   //image
                                   Padding(
                                     padding: const EdgeInsets.only(top: 20),
-                                    child: Image.asset(blogImage4),
+                                    child: Image.network(blogData["image"]),
                                   ),
                                   //heading
                                   Padding(
@@ -188,7 +188,7 @@ class _WebArticleState extends State<WebArticle> {
                           ],
                         ),
                       ),
-                      Container(
+                      /*Container(
                           color: AmigoColors.lightWhite,
                           width: MediaQuery.of(context).size.width,
                           child: Stack(
@@ -334,13 +334,13 @@ class _WebArticleState extends State<WebArticle> {
                                 circleAmigoOpacity: [0.1, 0.1],
                               ),
 
-                              Container(
+                              *//*Container(
                                 margin: EdgeInsets.only(
                                     bottom: 9.76 * SizeConfig.heightMultiplier),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
+                                  children: [*//*
+                                    *//*Container(
                                       margin: EdgeInsets.only(
                                           top: 6.51 *
                                               SizeConfig.heightMultiplier),
@@ -352,8 +352,8 @@ class _WebArticleState extends State<WebArticle> {
                                             fontFamily: robot,
                                             color: AmigoColors.lightBlack),
                                       ),
-                                    ),
-                                   /* BlogContent(
+                                    ),*//*
+                                   *//* BlogContent(
                                       title: [
                                         Strings.blogTitle,
                                         Strings.blogTitle,
@@ -374,12 +374,13 @@ class _WebArticleState extends State<WebArticle> {
                                         Strings.blogDate,
                                         Strings.blogDate,
                                       ],
-                                    ),*/
+                                    ),*//*
                                   ],
                                 ),
                               ),
                             ],
-                          )),
+                          )
+                      ),*/
                       BottomNav(),
                     ],
                   ),
@@ -401,6 +402,7 @@ class TabArticle extends StatefulWidget {
 class _TabArticleState extends State<TabArticle> {
   @override
   Widget build(BuildContext context) {
+    final Map blogData=ModalRoute.of(context).settings.arguments;
     return Container(
       child: SingleChildScrollView(
         child: Container(
@@ -416,75 +418,70 @@ class _TabArticleState extends State<TabArticle> {
                   children: [
                     Container(
                       color: Colors.white,
-                      width: MediaQuery.of(context).size.width / 1.5,
+                      width: MediaQuery.of(context).size.width / 2,
                       child: Column(
                         children: [
                           //title
                           Padding(
-                            padding: EdgeInsets.only(
-                                top: 3.25 * SizeConfig.heightMultiplier),
+                            padding: const EdgeInsets.only(top: 50),
                             child: Text(
-                              Strings.blogTitle,
+                              blogData["title"],
                               style: TextStyle(
                                   color: AmigoColors.orange,
-                                  fontSize: 3.25 * SizeConfig.textMultiplier,
+                                  fontSize: 56,
                                   fontFamily: robot),
                             ),
                           ),
                           //image
                           Padding(
-                            padding: EdgeInsets.only(
-                                top: 1.30 * SizeConfig.heightMultiplier),
-                            child: Image.asset(blogImage4),
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Image.network(blogData["image"]),
                           ),
                           //heading
                           Padding(
-                            padding: EdgeInsets.only(
-                                top: 1.95 * SizeConfig.heightMultiplier),
+                            padding: EdgeInsets.only(top: 30),
                             child: Container(
-                              padding: EdgeInsets.only(
-                                  bottom: 6.51 * SizeConfig.heightMultiplier),
+                              padding: EdgeInsets.only(bottom: 100),
                               child: Text(
-                                Strings.blogContent,
+                                // Strings.blogContent,
+                                blogData["data"],
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: 1.62 * SizeConfig.textMultiplier,
-                                    fontFamily: robot),
+                                    fontSize: 25, fontFamily: robot),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 1.95 * SizeConfig.heightMultiplier),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 30),
                             child: Container(
                               alignment: Alignment.center,
-                              width: 16.27 * SizeConfig.heightMultiplier,
+                              width: 250,
                               child: Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
+                                MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Text(
                                     "Share",
                                     style: TextStyle(
                                         color: AmigoColors.lightblue1,
-                                        fontSize:
-                                            1.62 * SizeConfig.textMultiplier,
+                                        fontSize: 24,
                                         fontFamily: robot),
                                   ),
                                   Image.asset(
                                     facebookShare,
-                                    height: 2.40 * SizeConfig.heightMultiplier,
-                                    width: 2.40 * SizeConfig.heightMultiplier,
+                                    height: 37,
+                                    width: 37,
                                   ),
                                   Image.asset(
                                     twitterShare,
-                                    height: 2.40 * SizeConfig.heightMultiplier,
-                                    width: 2.40 * SizeConfig.heightMultiplier,
+                                    height: 37,
+                                    width: 37,
                                   ),
                                   Image.asset(
                                     mailShare,
-                                    height: 2.40 * SizeConfig.heightMultiplier,
-                                    width: 2.40 * SizeConfig.heightMultiplier,
+                                    height: 37,
+                                    width: 37,
                                   )
                                 ],
                               ),
@@ -535,7 +532,7 @@ class _TabArticleState extends State<TabArticle> {
                   ],
                 ),
               ),
-              Container(
+              /*Container(
                   color: AmigoColors.lightWhite,
                   width: MediaQuery.of(context).size.width,
                   child: Stack(
@@ -547,7 +544,7 @@ class _TabArticleState extends State<TabArticle> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
+                           *//* Container(
                               margin: EdgeInsets.only(
                                   top: 6.51 * SizeConfig.heightMultiplier),
                               child: Text(
@@ -557,8 +554,8 @@ class _TabArticleState extends State<TabArticle> {
                                     fontFamily: robot,
                                     color: AmigoColors.lightBlack),
                               ),
-                            ),
-                            /*TabBlogContent(
+                            ),*//*
+                            *//*TabBlogContent(
                               title: [
                                 Strings.blogTitle,
                                 Strings.blogTitle,
@@ -579,7 +576,7 @@ class _TabArticleState extends State<TabArticle> {
                                 Strings.blogDate,
                                 Strings.blogDate,
                               ],
-                            ),*/
+                            ),*//*
                           ],
                         ),
                       ),
@@ -705,7 +702,8 @@ class _TabArticleState extends State<TabArticle> {
                         circleAmigoOpacity: [0.1, 0.1],
                       ),
                     ],
-                  )),
+                  )
+              ),*/
               BottomNav(),
             ],
           ),
@@ -723,6 +721,7 @@ class MobileArticle extends StatefulWidget {
 class _MobileArticleState extends State<MobileArticle> {
   @override
   Widget build(BuildContext context) {
+    final Map blogData=ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: AmigoColors.lightBlue),
@@ -876,76 +875,70 @@ class _MobileArticleState extends State<MobileArticle> {
                   children: [
                     Container(
                       color: Colors.white,
-                      width: MediaQuery.of(context).size.width / 1.5,
+                      width: MediaQuery.of(context).size.width / 2,
                       child: Column(
                         children: [
                           //title
                           Padding(
-                            padding: EdgeInsets.only(
-                                top: 3 * SizeConfig.heightMultiplier),
+                            padding: const EdgeInsets.only(top: 50),
                             child: Text(
-                              Strings.blogTitle,
-                              textAlign: TextAlign.center,
+                              blogData["title"],
                               style: TextStyle(
                                   color: AmigoColors.orange,
-                                  fontSize: 2.8 * SizeConfig.textMultiplier,
+                                  fontSize: 56,
                                   fontFamily: robot),
                             ),
                           ),
                           //image
                           Padding(
-                            padding: EdgeInsets.only(
-                                top: 1 * SizeConfig.heightMultiplier),
-                            child: Image.asset(blogImage4),
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Image.network(blogData["image"]),
                           ),
                           //heading
                           Padding(
-                            padding: EdgeInsets.only(
-                                top: 1 * SizeConfig.heightMultiplier),
+                            padding: EdgeInsets.only(top: 30),
                             child: Container(
-                              padding: EdgeInsets.only(
-                                  bottom: 6 * SizeConfig.heightMultiplier),
+                              padding: EdgeInsets.only(bottom: 100),
                               child: Text(
-                                Strings.blogContent,
-                                textAlign: TextAlign.justify,
+                                // Strings.blogContent,
+                                blogData["data"],
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: 1.62 * SizeConfig.textMultiplier,
-                                    fontFamily: robot),
+                                    fontSize: 25, fontFamily: robot),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 1 * SizeConfig.heightMultiplier),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 30),
                             child: Container(
                               alignment: Alignment.center,
-                              width: 16.27 * SizeConfig.heightMultiplier,
+                              width: 250,
                               child: Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
+                                MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Text(
                                     "Share",
                                     style: TextStyle(
                                         color: AmigoColors.lightblue1,
-                                        fontSize:
-                                            1.62 * SizeConfig.textMultiplier,
+                                        fontSize: 24,
                                         fontFamily: robot),
                                   ),
                                   Image.asset(
                                     facebookShare,
-                                    height: 2.40 * SizeConfig.heightMultiplier,
-                                    width: 2.40 * SizeConfig.heightMultiplier,
+                                    height: 37,
+                                    width: 37,
                                   ),
                                   Image.asset(
                                     twitterShare,
-                                    height: 2.40 * SizeConfig.heightMultiplier,
-                                    width: 2.40 * SizeConfig.heightMultiplier,
+                                    height: 37,
+                                    width: 37,
                                   ),
                                   Image.asset(
                                     mailShare,
-                                    height: 2.40 * SizeConfig.heightMultiplier,
-                                    width: 2.40 * SizeConfig.heightMultiplier,
+                                    height: 37,
+                                    width: 37,
                                   )
                                 ],
                               ),
@@ -996,7 +989,7 @@ class _MobileArticleState extends State<MobileArticle> {
                   ],
                 ),
               ),
-              Container(
+             /* Container(
                   color: AmigoColors.lightWhite,
                   width: MediaQuery.of(context).size.width,
                   child: Stack(
@@ -1019,7 +1012,7 @@ class _MobileArticleState extends State<MobileArticle> {
                                     color: AmigoColors.lightBlack),
                               ),
                             ),
-                            /*MobileBlogContent(
+                            *//*MobileBlogContent(
                               title: [
                                 Strings.blogTitle,
                                 Strings.blogTitle,
@@ -1036,7 +1029,7 @@ class _MobileArticleState extends State<MobileArticle> {
                                 Strings.blogDate,
                                 Strings.blogDate,
                               ],
-                            ),*/
+                            ),*//*
                           ],
                         ),
                       ),
@@ -1162,7 +1155,8 @@ class _MobileArticleState extends State<MobileArticle> {
                         circleAmigoOpacity: [0.1, 0.1],
                       ),
                     ],
-                  )),
+                  )
+                ),*/
               BottomNav(),
             ],
           ),
