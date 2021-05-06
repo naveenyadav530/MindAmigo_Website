@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mindamigo/core/blog/blog.dart';
+import 'package:mindamigo/models/blogsModel.dart';
 import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/styles/strings.dart';
@@ -11,6 +13,7 @@ import 'package:mindamigo/widgets/circles.dart';
 import 'package:mindamigo/widgets/gradientLine.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:delayed_display/delayed_display.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class BlogArticle extends StatelessWidget {
   @override
@@ -40,6 +43,7 @@ class _WebArticleState extends State<WebArticle> {
     _controller = ScrollController();
     super.initState();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -112,6 +116,7 @@ class _WebArticleState extends State<WebArticle> {
                               ],
                               circleAmigoOpacity: [0.1, 0.1],
                             ),
+
                             Container(
                               color: Colors.white,
                               width: MediaQuery.of(context).size.width / 2,
@@ -208,6 +213,303 @@ class _WebArticleState extends State<WebArticle> {
                             ),
                           ],
                         ),
+                      ),
+                      Container(
+                          color: AmigoColors.lightWhite,
+                          width: MediaQuery.of(context).size.width,
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              //right
+                              CircleAmigo(
+                                topCircleAmigoPosition:
+                                -1.20 * SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition:
+                                -15.16 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                20.02 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                20.02 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+                              CircleAmigo(
+                                topCircleAmigoPosition:
+                                -4.46 * SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition:
+                                -18.41 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                26.53 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                26.53 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+                              CircleAmigo(
+                                topCircleAmigoPosition:
+                                -7.71 * SizeConfig.heightMultiplier,
+                                rightCircleAmigoPosition:
+                                -21.67 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                34.04 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                34.04 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+                              //left
+                              CircleAmigo(
+                                topCircleAmigoPosition:
+                                -1.20 * SizeConfig.heightMultiplier,
+                                leftCircleAmigoPosition:
+                                -15.16 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                20.02 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                20.02 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+                              CircleAmigo(
+                                topCircleAmigoPosition:
+                                -4.46 * SizeConfig.heightMultiplier,
+                                leftCircleAmigoPosition:
+                                -18.41 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                26.53 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                26.53 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+                              CircleAmigo(
+                                topCircleAmigoPosition:
+                                -7.71 * SizeConfig.heightMultiplier,
+                                leftCircleAmigoPosition:
+                                -21.67 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                34.04 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                34.04 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+
+                              //bottom
+                              CircleAmigo(
+                                rightCircleAmigoPosition:
+                                -1.20 * SizeConfig.heightMultiplier,
+                                bottomCircleAmigoPosition:
+                                -15.16 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                20.02 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                20.02 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+                              CircleAmigo(
+                                rightCircleAmigoPosition:
+                                -4.46 * SizeConfig.heightMultiplier,
+                                bottomCircleAmigoPosition:
+                                -18.41 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                26.53 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                26.53 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+                              CircleAmigo(
+                                rightCircleAmigoPosition:
+                                -7.71 * SizeConfig.heightMultiplier,
+                                bottomCircleAmigoPosition:
+                                -21.67 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                34.04 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                34.04 * SizeConfig.heightMultiplier,
+                                circleAmigoGradient: [
+                                  AmigoColors.orange,
+                                  AmigoColors.lightRed2
+                                ],
+                                circleAmigoOpacity: [0.1, 0.1],
+                              ),
+
+                              Center(
+                                child: Container(
+                                  width:MediaQuery.of(context).size.width*0.6,
+                                  margin: EdgeInsets.only(bottom: 9.76 * SizeConfig.heightMultiplier),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        alignment: Alignment.topLeft,
+                                        margin: EdgeInsets.only(top: 6.51 * SizeConfig.heightMultiplier),
+                                        child: Text(
+                                          "Related Article",
+                                          style: TextStyle(
+                                              fontSize:3.25 * SizeConfig.textMultiplier,
+                                              fontFamily: robot,
+                                              color: AmigoColors.lightBlack
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.center,
+                                        height: 800,
+                                        child: FutureBuilder(
+                                          future: Blog().getBlogData(),
+                                          builder: (context,snapshot){
+                                            if(snapshot.connectionState==ConnectionState.done){
+                                              if (snapshot.hasData){
+                                                return ListView.builder(
+                                                    scrollDirection: Axis.horizontal,
+                                                    itemCount: 3,
+                                                    itemBuilder: (context,index) {
+                                                      BlogModel blog=snapshot.data[index];
+                                                      return Container(
+                                                        alignment: Alignment.center,
+                                                        width:MediaQuery.of(context).size.width*0.18,
+                                                        margin: EdgeInsets.only(left: 10),
+                                                        child: Column(
+                                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                                          mainAxisAlignment: MainAxisAlignment.center,
+                                                          children: [
+                                                            InkWell(
+                                                              onTap: (){
+                                                                Navigator.pushNamed(
+                                                                    context, BlogArticleRoute,
+                                                                    arguments: {
+                                                                      'image':blog.image,
+                                                                      'title':blog.title,
+                                                                      'data':blog.body["text"]
+                                                                    }
+                                                                );
+                                                              },
+                                                              child: Container(
+                                                                child: FadeInImage.memoryNetwork(
+                                                                  width: MediaQuery.of(context).size.width/5,
+                                                                  placeholder: kTransparentImage,
+                                                                  image: blog.image,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              margin: EdgeInsets.only(top: 1.93 * SizeConfig.heightMultiplier),
+                                                              child: Text(
+                                                                blog.title,
+                                                                maxLines: 2,
+                                                                overflow: TextOverflow.ellipsis,
+                                                                style: TextStyle(
+                                                                    color: AmigoColors.orange,
+                                                                    fontSize: 1.4 * SizeConfig.textMultiplier,
+                                                                    fontFamily: robot,
+                                                                    fontWeight: FontWeight.bold
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              alignment:Alignment.topLeft,
+                                                              margin: EdgeInsets.only(
+                                                                  top: 0.65 * SizeConfig.heightMultiplier),
+                                                              child: Text(
+                                                                blog.createdAt,
+                                                                style: TextStyle(
+                                                                    color: AmigoColors.orange,
+                                                                    fontSize: 1.30 * SizeConfig.textMultiplier,
+                                                                    fontFamily: robot),
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              child: Text(
+                                                               blog.body["text"].toString().trimLeft(),
+                                                                overflow: TextOverflow.ellipsis,
+                                                                softWrap:true,
+                                                                maxLines: 8,
+                                                                style: TextStyle(
+                                                                    fontSize: 1.30 * SizeConfig.textMultiplier,
+                                                                    fontFamily: robot
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              margin: EdgeInsets.only(
+                                                                  top: 0.65 * SizeConfig.heightMultiplier),
+                                                                child: InkWell(
+                                                                  onTap: () {
+                                                                    Navigator.pushNamed(
+                                                                    context, BlogArticleRoute,
+                                                                      arguments: {
+                                                                        'image':blog.image,
+                                                                        'title':blog.title,
+                                                                        'data': blog.body["text"]
+                                                                      }
+                                                                  );
+                                                                },
+
+                                                                child: Row(
+                                                                  children: [
+                                                                    Text(
+                                                                      "Read More ",
+                                                                      style: TextStyle(
+                                                                          fontFamily: robot,
+                                                                          fontWeight: FontWeight.bold,
+                                                                          fontSize: 1.30 * SizeConfig.textMultiplier
+                                                                      ),
+                                                                    ),
+                                                                    Icon(Icons.arrow_forward_ios_rounded)
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      );
+                                                    }
+                                                );
+                                              }
+                                            }
+                                            return Center(
+                                              child: CircularProgressIndicator(
+                                                valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Colors.blue),
+                                              ),
+                                            );
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
                       ),
                       BottomNav(),
                     ],
@@ -367,6 +669,304 @@ class _TabArticleState extends State<TabArticle> {
                     ),
                   ],
                 ),
+              ),
+
+              Container(
+                  color: AmigoColors.lightWhite,
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      //right
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -1.20 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                        -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -4.46 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                        -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -7.71 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                        -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      //left
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -1.20 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                        -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -4.46 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                        -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -7.71 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                        -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+
+                      //bottom
+                      CircleAmigo(
+                        rightCircleAmigoPosition:
+                        -1.20 * SizeConfig.heightMultiplier,
+                        bottomCircleAmigoPosition:
+                        -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        rightCircleAmigoPosition:
+                        -4.46 * SizeConfig.heightMultiplier,
+                        bottomCircleAmigoPosition:
+                        -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        rightCircleAmigoPosition:
+                        -7.71 * SizeConfig.heightMultiplier,
+                        bottomCircleAmigoPosition:
+                        -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+
+                      Center(
+                        child: Container(
+                          width:MediaQuery.of(context).size.width*0.6,
+                          // margin: EdgeInsets.only(bottom: 9.76 * SizeConfig.heightMultiplier),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.only(top: 6.51 * SizeConfig.heightMultiplier),
+                                child: Text(
+                                  "Related Article",
+                                  style: TextStyle(
+                                      fontSize:3.25 * SizeConfig.textMultiplier,
+                                      fontFamily: robot,
+                                      color: AmigoColors.lightBlack
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                alignment: Alignment.center,
+                                height: 500,
+                                child: FutureBuilder(
+                                  future: Blog().getBlogData(),
+                                  builder: (context,snapshot){
+                                    if(snapshot.connectionState==ConnectionState.done){
+                                      if (snapshot.hasData){
+                                        return ListView.builder(
+                                            scrollDirection: Axis.horizontal,
+                                            itemCount: 3,
+                                            itemBuilder: (context,index) {
+                                              BlogModel blog=snapshot.data[index];
+                                              return Container(
+                                                alignment: Alignment.center,
+                                                width:MediaQuery.of(context).size.width*0.18,
+                                                margin: EdgeInsets.only(left: 10),
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    InkWell(
+                                                      onTap: (){
+                                                        Navigator.pushNamed(
+                                                            context, BlogArticleRoute,
+                                                            arguments: {
+                                                              'image':blog.image,
+                                                              'title':blog.title,
+                                                              'data':blog.body["text"]
+                                                            }
+                                                        );
+                                                      },
+                                                      child: Container(
+                                                        child: FadeInImage.memoryNetwork(
+                                                          width: MediaQuery.of(context).size.width/5,
+                                                          placeholder: kTransparentImage,
+                                                          image: blog.image,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      margin: EdgeInsets.only(top: 1.93 * SizeConfig.heightMultiplier),
+                                                      child: Text(
+                                                        blog.title,
+                                                        maxLines: 2,
+                                                        overflow: TextOverflow.ellipsis,
+                                                        style: TextStyle(
+                                                            color: AmigoColors.orange,
+                                                            fontSize: 1.4 * SizeConfig.textMultiplier,
+                                                            fontFamily: robot,
+                                                            fontWeight: FontWeight.bold
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment:Alignment.topLeft,
+                                                      margin: EdgeInsets.only(
+                                                          top: 0.65 * SizeConfig.heightMultiplier),
+                                                      child: Text(
+                                                        blog.createdAt,
+                                                        style: TextStyle(
+                                                            color: AmigoColors.orange,
+                                                            fontSize: 1.30 * SizeConfig.textMultiplier,
+                                                            fontFamily: robot),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        blog.body["text"].toString().trimLeft(),
+                                                        overflow: TextOverflow.ellipsis,
+                                                        softWrap:true,
+                                                        maxLines: 8,
+                                                        style: TextStyle(
+                                                            fontSize: 1.30 * SizeConfig.textMultiplier,
+                                                            fontFamily: robot
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      margin: EdgeInsets.only(
+                                                          top: 0.65 * SizeConfig.heightMultiplier),
+                                                      child: InkWell(
+                                                        onTap: () {
+                                                          Navigator.pushNamed(
+                                                              context, BlogArticleRoute,
+                                                              arguments: {
+                                                                'image':blog.image,
+                                                                'title':blog.title,
+                                                                'data': blog.body["text"]
+                                                              }
+                                                          );
+                                                        },
+
+                                                        child: Row(
+                                                          children: [
+                                                            Text(
+                                                              "Read More ",
+                                                              style: TextStyle(
+                                                                  fontFamily: robot,
+                                                                  fontWeight: FontWeight.bold,
+                                                                  fontSize: 1.30 * SizeConfig.textMultiplier
+                                                              ),
+                                                            ),
+                                                            Icon(Icons.arrow_forward_ios_rounded,size: 15,)
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              );
+                                            }
+                                        );
+                                      }
+                                    }
+                                    return Center(
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                        AlwaysStoppedAnimation<Color>(
+                                            Colors.blue),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
               ),
               BottomNav(),
             ],
@@ -619,6 +1219,303 @@ class _MobileArticleState extends State<MobileArticle> {
                     ),
                   ],
                 ),
+              ),
+              Container(
+                  color: AmigoColors.lightWhite,
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      //right
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -1.20 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                        -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -4.46 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                        -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -7.71 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                        -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      //left
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -1.20 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                        -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -4.46 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                        -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                        -7.71 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                        -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+
+                      //bottom
+                      CircleAmigo(
+                        rightCircleAmigoPosition:
+                        -1.20 * SizeConfig.heightMultiplier,
+                        bottomCircleAmigoPosition:
+                        -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        rightCircleAmigoPosition:
+                        -4.46 * SizeConfig.heightMultiplier,
+                        bottomCircleAmigoPosition:
+                        -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        rightCircleAmigoPosition:
+                        -7.71 * SizeConfig.heightMultiplier,
+                        bottomCircleAmigoPosition:
+                        -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth:
+                        34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+
+                      Center(
+                        child: Container(
+                          width:MediaQuery.of(context).size.width*0.9,
+                          margin: EdgeInsets.only(bottom: 9.76 * SizeConfig.heightMultiplier),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.only(top: 6.51 * SizeConfig.heightMultiplier),
+                                child: Text(
+                                  "Related Article",
+                                  style: TextStyle(
+                                      fontSize:3.25 * SizeConfig.textMultiplier,
+                                      fontFamily: robot,
+                                      color: AmigoColors.lightBlack
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                alignment: Alignment.center,
+                                height: 300,
+                                child: FutureBuilder(
+                                  future: Blog().getBlogData(),
+                                  builder: (context,snapshot){
+                                    if(snapshot.connectionState==ConnectionState.done){
+                                      if (snapshot.hasData){
+                                        return ListView.builder(
+                                            scrollDirection: Axis.horizontal,
+                                            itemCount: 3,
+                                            itemBuilder: (context,index) {
+                                              BlogModel blog=snapshot.data[index];
+                                              return Container(
+                                                alignment: Alignment.center,
+                                                width:MediaQuery.of(context).size.width*0.25,
+                                                margin: EdgeInsets.only(left: 10),
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    InkWell(
+                                                      onTap: (){
+                                                        Navigator.pushNamed(
+                                                            context, BlogArticleRoute,
+                                                            arguments: {
+                                                              'image':blog.image,
+                                                              'title':blog.title,
+                                                              'data':blog.body["text"]
+                                                            }
+                                                        );
+                                                      },
+                                                      child: Container(
+                                                        child: FadeInImage.memoryNetwork(
+                                                          width: MediaQuery.of(context).size.width/4,
+                                                          placeholder: kTransparentImage,
+                                                          image: blog.image,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      margin: EdgeInsets.only(top: 1.93 * SizeConfig.heightMultiplier),
+                                                      child: Text(
+                                                        blog.title,
+                                                        maxLines: 2,
+                                                        overflow: TextOverflow.ellipsis,
+                                                        style: TextStyle(
+                                                            color: AmigoColors.orange,
+                                                            fontSize: 1.4 * SizeConfig.textMultiplier,
+                                                            fontFamily: robot,
+                                                            fontWeight: FontWeight.bold
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment:Alignment.topLeft,
+                                                      margin: EdgeInsets.only(
+                                                          top: 0.65 * SizeConfig.heightMultiplier),
+                                                      child: Text(
+                                                        blog.createdAt,
+                                                        style: TextStyle(
+                                                            color: AmigoColors.orange,
+                                                            fontSize: 1.30 * SizeConfig.textMultiplier,
+                                                            fontFamily: robot),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        blog.body["text"].toString().trimLeft(),
+                                                        overflow: TextOverflow.ellipsis,
+                                                        softWrap:true,
+                                                        maxLines: 8,
+                                                        style: TextStyle(
+                                                            fontSize: 1.30 * SizeConfig.textMultiplier,
+                                                            fontFamily: robot
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      margin: EdgeInsets.only(
+                                                          top: 0.65 * SizeConfig.heightMultiplier),
+                                                      child: InkWell(
+                                                        onTap: () {
+                                                          Navigator.pushNamed(
+                                                              context, BlogArticleRoute,
+                                                              arguments: {
+                                                                'image':blog.image,
+                                                                'title':blog.title,
+                                                                'data': blog.body["text"]
+                                                              }
+                                                          );
+                                                        },
+
+                                                        child: Row(
+                                                          children: [
+                                                            Text(
+                                                              "Read More ",
+                                                              style: TextStyle(
+                                                                  fontFamily: robot,
+                                                                  fontWeight: FontWeight.bold,
+                                                                  fontSize: 1.30 * SizeConfig.textMultiplier
+                                                              ),
+                                                            ),
+                                                            Icon(Icons.arrow_forward_ios_rounded,size: 10,)
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              );
+                                            }
+                                        );
+                                      }
+                                    }
+                                    return Center(
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                        AlwaysStoppedAnimation<Color>(
+                                            Colors.blue),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
               ),
               BottomNav(),
             ],
