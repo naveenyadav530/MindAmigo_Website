@@ -394,7 +394,7 @@ class _MobileArticleState extends State<MobileArticle> {
           height: 3.18 * SizeConfig.heightMultiplier,
         ),
       ),
-      drawer: Container(
+      endDrawer: Container(
         width: MediaQuery.of(context).size.width,
         child: Drawer(
             child: ListView(padding: EdgeInsets.zero, children: <Widget>[
