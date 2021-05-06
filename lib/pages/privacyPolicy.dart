@@ -9,6 +9,8 @@ import 'package:mindamigo/widgets/circles.dart';
 import 'package:mindamigo/widgets/gradientLine.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 
+import 'package:delayed_display/delayed_display.dart';
+
 class PrivacyPolicy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -545,18 +547,22 @@ class _MobilePrivacyState extends State<MobilePrivacy> {
         child: Drawer(
             child: ListView(padding: EdgeInsets.zero, children: <Widget>[
           ListTile(
-            trailing: FlatButton(
-              child: Icon(
-                Icons.close,
-                color: AmigoColors.gray,
+            trailing: DelayedDisplay(
+              delay: Duration(milliseconds: 30),
+              slidingBeginOffset: const Offset(0.0, 0),
+              child: InkWell(
+                child: Icon(
+                  Icons.close,
+                  color: Colors.grey,
+                ),
+                onTap: () => Navigator.pop(context),
               ),
-              onPressed: () => Navigator.pop(context),
             ),
             title: Text(
               'Mindamigo',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.gray,
+                  color: Colors.grey,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),
@@ -572,7 +578,7 @@ class _MobilePrivacyState extends State<MobilePrivacy> {
               'Meet Adam',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.gray,
+                  color: Colors.grey,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),
@@ -587,7 +593,7 @@ class _MobilePrivacyState extends State<MobilePrivacy> {
               'About Us',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.gray,
+                  color: Colors.grey,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),
@@ -601,7 +607,7 @@ class _MobilePrivacyState extends State<MobilePrivacy> {
               'PodCast',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.gray,
+                  color: Colors.grey,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),
@@ -615,7 +621,7 @@ class _MobilePrivacyState extends State<MobilePrivacy> {
               'Blog',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.gray,
+                  color: Colors.grey,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),

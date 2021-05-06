@@ -10,6 +10,8 @@ import 'package:mindamigo/widgets/gradientLine.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/newsletter.dart';
 
+import 'package:delayed_display/delayed_display.dart';
+
 //for podcast
 
 import 'package:easy_web_view/easy_web_view.dart';
@@ -306,18 +308,22 @@ class _MobilePodcastState extends State<MobilePodcast> {
             elevation: 10,
             child: ListView(padding: EdgeInsets.zero, children: <Widget>[
               ListTile(
-                trailing: FlatButton(
-                  child: Icon(
-                    Icons.close,
-                    color: AmigoColors.gray,
+                trailing: DelayedDisplay(
+                  delay: Duration(milliseconds: 30),
+                  slidingBeginOffset: const Offset(0.0, 0),
+                  child: InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.grey,
+                    ),
+                    onTap: () => Navigator.pop(context),
                   ),
-                  onPressed: () => Navigator.pop(context),
                 ),
                 title: Text(
                   'Mindamigo',
                   style: TextStyle(
                       fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.gray,
+                      color: Colors.grey,
                       fontFamily: robot,
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.bold),
@@ -333,7 +339,7 @@ class _MobilePodcastState extends State<MobilePodcast> {
                   'Meet Adam',
                   style: TextStyle(
                       fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.gray,
+                      color: Colors.grey,
                       fontFamily: robot,
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.bold),
@@ -348,7 +354,7 @@ class _MobilePodcastState extends State<MobilePodcast> {
                   'About Us',
                   style: TextStyle(
                       fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.gray,
+                      color: Colors.grey,
                       fontFamily: robot,
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.bold),
@@ -373,7 +379,7 @@ class _MobilePodcastState extends State<MobilePodcast> {
                   'Blog',
                   style: TextStyle(
                       fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.gray,
+                      color: Colors.grey,
                       fontFamily: robot,
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.bold),
