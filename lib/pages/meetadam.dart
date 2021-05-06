@@ -83,137 +83,92 @@ class _MobileMeetAdamState extends State<MobileMeetAdam> {
           "assets/images/logo.png",
           height: 3.18 * SizeConfig.heightMultiplier,
         ),
-        actions: [
-          Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  showModalBottomSheet(
-                      backgroundColor: Colors.transparent,
-                      context: context,
-                      elevation: 10,
-                      isScrollControlled: true,
-                      isDismissible: true,
-                      builder: (BuildContext context) {
-                        return DraggableScrollableSheet(
-                            initialChildSize: 0.75, //set this as you want
-                            maxChildSize: 0.75, //set this as you want
-                            minChildSize: 0.75, //set this as you want
-                            expand: true,
-                            builder: (context, scrollController) {
-                              return Container(
-                                color: Colors.white,
-                                height: MediaQuery.of(context).size.height,
-                                child: Stack(
-                                  children: [
-                                    Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Meet Adam',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, MeetAdamRoute);
-                                            },
-                                          ),
-                                        ),
-                                        //meet adam
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'About Us',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, AboutUsRoute);
-                                            },
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Podcast',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, PodcastRoute);
-                                            },
-                                          ),
-                                        ),
+      ),
+      endDrawer: Container(
+        width: MediaQuery.of(context).size.width,
+        child: Drawer(
+            child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+          ListTile(
+            trailing: FlatButton(
+              child: Icon(
+                Icons.close,
+                color: AmigoColors.gray,
+              ),
+              onPressed: () => Navigator.pop(context),
+            ),
+            title: Text(
+              'Mindamigo',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, HomeRoute);
+            },
+          ),
 
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Blog',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, BlogPageRoute);
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Positioned(
-                                      right: 0,
-                                      child: FlatButton(
-                                        child: Icon(Icons.close),
-                                        onPressed: () => Navigator.pop(context),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ); //whatever you're returning, does not have to be a Container
-                            });
-                      });
-                },
-                child: Icon(
-                  Icons.menu,
-                  size: 26.0,
-                ),
-              )),
-        ],
+          //meet adam
+          ListTile(
+            title: Text(
+              'Meet Adam',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.lightRed,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          //about us
+          ListTile(
+            title: Text(
+              'About Us',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              // Update the state of the app
+              // ...
+              // Then close the drawer
+              Navigator.pushNamed(context, AboutUsRoute);
+            },
+          ),
+          ListTile(
+            title: Text(
+              'PodCast',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, PodcastRoute);
+            },
+          ),
+          ListTile(
+            title: Text(
+              'Blog',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, BlogPageRoute);
+            },
+          ),
+        ])),
       ),
       body: SingleChildScrollView(
         child: Container(

@@ -35,7 +35,9 @@ class WebHomePage extends StatefulWidget {
 
 class _WebHomePageState extends State<WebHomePage> {
   ScrollController _controller;
+
   bool isVisible;
+
 
   @override
   void initState() {
@@ -47,6 +49,7 @@ class _WebHomePageState extends State<WebHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
 
     isVisible==true?WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       // ignore: unrelated_type_equality_checks
@@ -69,43 +72,51 @@ class _WebHomePageState extends State<WebHomePage> {
                 boxShadow: [],
                 color: Colors.white,
               ),
-              height: 150,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      width:MediaQuery.of(context).size.width*0.6,
-                      child: RichText(
-                        textAlign: TextAlign.justify,
-                        text: TextSpan(
-                            text:"We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
-                                "on your device all the technologies described in our",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Colors.black,
-                                wordSpacing: 3
-                            ),
-                          children: [
-                            TextSpan(
-                              style: TextStyle(
-                                  color: Colors.blue,
-                                fontWeight: FontWeight.w700
-                              ),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap=(){
-                                  Navigator.pushNamed(
-                                     context, CookiePolicyRoute,
-                                  );
-                                },
-                                text: " View Cookie Policy.",
-                            )
-                          ]
+              builder: (BuildContext context) {
+                return Container(
+                  margin: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    boxShadow: [],
+                    color: Colors.white,
+                  ),
+                  height: 150,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          child: RichText(
+                            textAlign: TextAlign.justify,
+                            text: TextSpan(
+                                text:
+                                    "We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
+                                    "on your device all the technologies described in our",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    wordSpacing: 3),
+                                children: [
+                                  TextSpan(
+                                    style: TextStyle(
+                                        color: Colors.blue,
+                                        fontWeight: FontWeight.w700),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        Navigator.pushNamed(
+                                          context,
+                                          CookiePolicyRoute,
+                                        );
+                                      },
+                                    text: " View Cookie Policy.",
+                                  )
+                                ]),
+                          ),
                         ),
-                      ),
-                    ),
+                        
                    GestureDetector(
                      onTap: (){
                        CookiesSharedPreference.setCookiePolicy(false);
@@ -669,6 +680,7 @@ class TabHomePage extends StatefulWidget {
 }
 
 class _TabHomePageState extends State<TabHomePage> {
+
   ScrollController _controller;
   bool isVisible;
 
@@ -680,66 +692,64 @@ class _TabHomePageState extends State<TabHomePage> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      isVisible==true?showModalBottomSheet(
-          elevation: 0,
-          // isDismissible: true,
-          backgroundColor: Colors.transparent,
-          context: context,
-          isScrollControlled: false,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)
-            ),
-          ),
-
-          builder: (BuildContext context) {
-            return Container(
-              margin: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(8)),
-                boxShadow: [],
-                color: Colors.white,
+      isVisible == true
+          ? showModalBottomSheet(
+              elevation: 0,
+              // isDismissible: true,
+              backgroundColor: Colors.transparent,
+              context: context,
+              isScrollControlled: false,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
               ),
-              height: 150,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      width:MediaQuery.of(context).size.width*0.6,
-                      child: RichText(
-                        textAlign: TextAlign.justify,
-                        text: TextSpan(
-                            text:"We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
-                                "on your device all the technologies described in our",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Colors.black,
-                                wordSpacing: 3
-                            ),
-                            children: [
-                              TextSpan(
+              builder: (BuildContext context) {
+                return Container(
+                  margin: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    boxShadow: [],
+                    color: Colors.white,
+                  ),
+                  height: 150,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          child: RichText(
+                            textAlign: TextAlign.justify,
+                            text: TextSpan(
+                                text:
+                                    "We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
+                                    "on your device all the technologies described in our",
                                 style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w700
-                                ),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap=(){
-                                    Navigator.pushNamed(
-                                      context, CookiePolicyRoute,
-                                    );
-                                  },
-                                text: " View Cookie Policy.",
-                              )
-                            ]
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    wordSpacing: 3),
+                                children: [
+                                  TextSpan(
+                                    style: TextStyle(
+                                        color: Colors.blue,
+                                        fontWeight: FontWeight.w700),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        Navigator.pushNamed(
+                                          context,
+                                          CookiePolicyRoute,
+                                        );
+                                      },
+                                    text: " View Cookie Policy.",
+                                  )
+                                ]),
+                          ),
                         ),
-                      ),
-                    ),
+            
                     GestureDetector(
                       onTap: (){
                         CookiesSharedPreference.setCookiePolicy(false);
@@ -1231,6 +1241,7 @@ class MobileHomePage extends StatefulWidget {
 }
 
 class _MobileHomePageState extends State<MobileHomePage> {
+
   ScrollController _controller;
   bool isVisible;
 
@@ -1242,65 +1253,66 @@ class _MobileHomePageState extends State<MobileHomePage> {
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      isVisible==true?showModalBottomSheet(
-          elevation: 0,
-          // isDismissible: true,
-          backgroundColor: Colors.transparent,
-          context: context,
-          isScrollControlled: false,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)
-            ),
-          ),
-
-          builder: (BuildContext context) {
-            return Container(
-              margin: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(8)),
-                boxShadow: [],
-                color: Colors.white,
+      isVisible == true
+          ? showModalBottomSheet(
+              elevation: 0,
+              // isDismissible: true,
+              backgroundColor: Colors.transparent,
+              context: context,
+              isScrollControlled: false,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
               ),
-              height: 220,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      width:MediaQuery.of(context).size.width*0.6,
-                      child: RichText(
-                        textAlign: TextAlign.justify,
-                        text: TextSpan(
-                            text:"We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
-                                "on your device all the technologies described in our",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Colors.black,
-                                wordSpacing: 3
-                            ),
-                            children: [
-                              TextSpan(
+              builder: (BuildContext context) {
+                return Container(
+                  margin: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    boxShadow: [],
+                    color: Colors.white,
+                  ),
+                  height: 220,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          child: RichText(
+                            textAlign: TextAlign.justify,
+                            text: TextSpan(
+                                text:
+                                    "We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
+                                    "on your device all the technologies described in our",
                                 style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w700
-                                ),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap=(){
-                                    Navigator.pushNamed(
-                                      context, CookiePolicyRoute,
-                                    );
-                                  },
-                                text: " View Cookie Policy.",
-                              )
-                            ]
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    wordSpacing: 3),
+                                children: [
+                                  TextSpan(
+                                    style: TextStyle(
+                                        color: Colors.blue,
+                                        fontWeight: FontWeight.w700),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        Navigator.pushNamed(
+                                          context,
+                                          CookiePolicyRoute,
+                                        );
+                                      },
+                                    text: " View Cookie Policy.",
+                                  )
+                                ]),
+                          ),
                         ),
-                      ),
-                    ),
+                      
+
                     GestureDetector(
                       onTap: (){
                         setState(() {
@@ -1334,137 +1346,89 @@ class _MobileHomePageState extends State<MobileHomePage> {
           "assets/images/logo.png",
           height: 3.18 * SizeConfig.heightMultiplier,
         ),
-        actions: [
-          Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  showModalBottomSheet(
-                      backgroundColor: Colors.transparent,
-                      context: context,
-                      elevation: 10,
-                      isScrollControlled: true,
-                      isDismissible: true,
-                      builder: (BuildContext context) {
-                        return DraggableScrollableSheet(
-                            initialChildSize: 0.75, //set this as you want
-                            maxChildSize: 0.75, //set this as you want
-                            minChildSize: 0.75, //set this as you want
-                            expand: true,
-                            builder: (context, scrollController) {
-                              return Container(
-                                color: Colors.white,
-                                height: MediaQuery.of(context).size.height,
-                                child: Stack(
-                                  children: [
-                                    Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Meet Adam',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, MeetAdamRoute);
-                                            },
-                                          ),
-                                        ),
-                                        //meet adam
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'About Us',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, AboutUsRoute);
-                                            },
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Podcast',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, PodcastRoute);
-                                            },
-                                          ),
-                                        ),
+      ),
+      endDrawer: Container(
+        width: MediaQuery.of(context).size.width,
+        child: Drawer(
+            child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+          ListTile(
+            trailing: FlatButton(
+              child: Icon(
+                Icons.close,
+                color: AmigoColors.lightBlue,
+              ),
+              onPressed: () => Navigator.pop(context),
+            ),
+            title: Text(
+              'Mindamigo',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.lightRed,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
 
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Blog',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, BlogPageRoute);
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Positioned(
-                                      right: 0,
-                                      child: FlatButton(
-                                        child: Icon(Icons.close),
-                                        onPressed: () => Navigator.pop(context),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ); //whatever you're returning, does not have to be a Container
-                            });
-                      });
-                },
-                child: Icon(
-                  Icons.menu,
-                  size: 26.0,
-                ),
-              )),
-        ],
+          //meet adam
+          ListTile(
+            title: Text(
+              'Meet Adam',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, MeetAdamRoute);
+            },
+          ),
+          //about us
+          ListTile(
+            title: Text(
+              'About Us',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, AboutUsRoute);
+            },
+          ),
+          ListTile(
+            title: Text(
+              'PodCast',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, PodcastRoute);
+            },
+          ),
+          ListTile(
+            title: Text(
+              'Blog',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, BlogPageRoute);
+            },
+          ),
+        ])),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -1589,7 +1553,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                 child: Stack(
                   children: [
                     MobileHomeSection(
-                      sectionColor: AmigoColors.cream,
+                      sectionColor: AmigoColors.white,
                       sectionText: Strings.homeSection2,
                       sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                       sectionTextColor: AmigoColors.lightBlack,
@@ -1597,7 +1561,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                     ),
                     //bottom
                     CircleAmigo(
-                      bottomCircleAmigoPosition:
+                      topCircleAmigoPosition:
                           -5.20 * SizeConfig.heightMultiplier,
                       leftCircleAmigoPosition:
                           -7.16 * SizeConfig.heightMultiplier,
@@ -1610,7 +1574,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                       circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition:
+                      topCircleAmigoPosition:
                           -8.46 * SizeConfig.heightMultiplier,
                       leftCircleAmigoPosition:
                           -10.41 * SizeConfig.heightMultiplier,
@@ -1623,7 +1587,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                       circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      bottomCircleAmigoPosition:
+                      topCircleAmigoPosition:
                           -11.71 * SizeConfig.heightMultiplier,
                       leftCircleAmigoPosition:
                           -13.67 * SizeConfig.heightMultiplier,
@@ -1638,7 +1602,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
 
                     //top
                     CircleAmigo(
-                      topCircleAmigoPosition:
+                      bottomCircleAmigoPosition:
                           -5.20 * SizeConfig.heightMultiplier,
                       rightCircleAmigoPosition:
                           -7.16 * SizeConfig.heightMultiplier,
@@ -1651,7 +1615,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                       circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition:
+                      bottomCircleAmigoPosition:
                           -8.46 * SizeConfig.heightMultiplier,
                       rightCircleAmigoPosition:
                           -10.41 * SizeConfig.heightMultiplier,
@@ -1664,7 +1628,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                       circleAmigoOpacity: [0.1, 0.1],
                     ),
                     CircleAmigo(
-                      topCircleAmigoPosition:
+                      bottomCircleAmigoPosition:
                           -11.71 * SizeConfig.heightMultiplier,
                       rightCircleAmigoPosition:
                           -13.67 * SizeConfig.heightMultiplier,
@@ -1837,58 +1801,18 @@ class _MobileHomePageState extends State<MobileHomePage> {
                 child: Stack(
                   children: [
                     MobileHomeSection(
-                      sectionColor: AmigoColors.cream,
+                      sectionColor: AmigoColors.white,
                       sectionText: Strings.homeSection4,
                       sectionFontSize: 2.4 * SizeConfig.textMultiplier,
                       sectionTextColor: AmigoColors.lightBlack,
                       image: homeImage4,
-                    ),
-                    //bottom
-                    CircleAmigo(
-                      bottomCircleAmigoPosition:
-                          -5.20 * SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition:
-                          -7.16 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
-                    ),
-                    CircleAmigo(
-                      bottomCircleAmigoPosition:
-                          -8.46 * SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition:
-                          -10.41 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
-                    ),
-                    CircleAmigo(
-                      bottomCircleAmigoPosition:
-                          -11.71 * SizeConfig.heightMultiplier,
-                      leftCircleAmigoPosition:
-                          -13.67 * SizeConfig.heightMultiplier,
-                      circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
-                      circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
-                      circleAmigoGradient: [
-                        AmigoColors.orange,
-                        AmigoColors.lightRed2
-                      ],
-                      circleAmigoOpacity: [0.1, 0.1],
                     ),
 
                     //top
                     CircleAmigo(
                       topCircleAmigoPosition:
                           -5.20 * SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition:
+                      leftCircleAmigoPosition:
                           -7.16 * SizeConfig.heightMultiplier,
                       circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
                       circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
@@ -1901,7 +1825,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                     CircleAmigo(
                       topCircleAmigoPosition:
                           -8.46 * SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition:
+                      leftCircleAmigoPosition:
                           -10.41 * SizeConfig.heightMultiplier,
                       circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
                       circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
@@ -1914,7 +1838,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                     CircleAmigo(
                       topCircleAmigoPosition:
                           -11.71 * SizeConfig.heightMultiplier,
-                      rightCircleAmigoPosition:
+                      leftCircleAmigoPosition:
                           -13.67 * SizeConfig.heightMultiplier,
                       circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
                       circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,

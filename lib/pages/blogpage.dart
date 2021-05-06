@@ -12,8 +12,6 @@ import 'package:mindamigo/widgets/gradientLine.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/newsletter.dart';
 
-
-
 class BlogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,6 @@ class BlogPage extends StatelessWidget {
     );
   }
 }
-
 
 class WebBlogPage extends StatefulWidget {
   @override
@@ -72,20 +69,32 @@ class _WebBlogPageState extends State<WebBlogPage> {
                                   Container(
                                     child: FutureBuilder(
                                       future: Blog().getBlogData(),
-                                      builder: (context,snapshot){
-                                        if(snapshot.connectionState==ConnectionState.done){
-                                          if(snapshot.hasData){
+                                      builder: (context, snapshot) {
+                                        if (snapshot.connectionState ==
+                                            ConnectionState.done) {
+                                          if (snapshot.hasData) {
                                             return Container(
                                               child: BlogContent(
                                                 blogsModel: snapshot.data,
                                               ),
                                             );
+                                          } else {
+                                            return Center(
+                                              child: CircularProgressIndicator(
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(Colors.blue),
+                                              ),
+                                            );
                                           }
-                                          else{
-                                            return Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),);
-                                          }
-                                        }else{
-                                          return Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),);
+                                        } else {
+                                          return Center(
+                                            child: CircularProgressIndicator(
+                                              valueColor:
+                                                  AlwaysStoppedAnimation<Color>(
+                                                      Colors.blue),
+                                            ),
+                                          );
                                         }
                                       },
                                     ),
@@ -333,20 +342,32 @@ class _TabBlogPageState extends State<TabBlogPage> {
                                   Container(
                                     child: FutureBuilder(
                                       future: Blog().getBlogData(),
-                                      builder: (context,snapshot){
-                                        if(snapshot.connectionState==ConnectionState.done){
-                                          if(snapshot.hasData){
+                                      builder: (context, snapshot) {
+                                        if (snapshot.connectionState ==
+                                            ConnectionState.done) {
+                                          if (snapshot.hasData) {
                                             return Container(
                                               child: TabBlogContent(
                                                 blogsModel: snapshot.data,
                                               ),
                                             );
+                                          } else {
+                                            return Center(
+                                              child: CircularProgressIndicator(
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(Colors.blue),
+                                              ),
+                                            );
                                           }
-                                          else{
-                                            return Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),);
-                                          }
-                                        }else{
-                                          return Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),);
+                                        } else {
+                                          return Center(
+                                            child: CircularProgressIndicator(
+                                              valueColor:
+                                                  AlwaysStoppedAnimation<Color>(
+                                                      Colors.blue),
+                                            ),
+                                          );
                                         }
                                       },
                                     ),
@@ -360,10 +381,10 @@ class _TabBlogPageState extends State<TabBlogPage> {
                                           0,
                                           5.20 * SizeConfig.heightMultiplier),
                                       width:
-                                      19.53 * SizeConfig.heightMultiplier,
+                                          19.53 * SizeConfig.heightMultiplier,
                                       child: Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
                                             "More recent posts",
@@ -393,11 +414,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               //left
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -5.20 * SizeConfig.heightMultiplier,
+                                    -5.20 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -10.16 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 15.02 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 15.02 * SizeConfig.heightMultiplier,
+                                    -10.16 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    15.02 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    15.02 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -406,11 +429,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               ),
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -8.46 * SizeConfig.heightMultiplier,
+                                    -8.46 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -13.41 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 21.53 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 21.53 * SizeConfig.heightMultiplier,
+                                    -13.41 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    21.53 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    21.53 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -419,11 +444,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               ),
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -11.71 * SizeConfig.heightMultiplier,
+                                    -11.71 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -16.67 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 28.04 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 28.04 * SizeConfig.heightMultiplier,
+                                    -16.67 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    28.04 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    28.04 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -434,11 +461,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               //left
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                42.2 * SizeConfig.heightMultiplier,
+                                    42.2 * SizeConfig.heightMultiplier,
                                 leftCircleAmigoPosition:
-                                -10.16 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                                    -10.16 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    13.02 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    13.02 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -447,11 +476,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               ),
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                38 * SizeConfig.heightMultiplier,
+                                    38 * SizeConfig.heightMultiplier,
                                 leftCircleAmigoPosition:
-                                -13.41 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                                    -13.41 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    19.53 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    19.53 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -460,11 +491,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               ),
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                34.71 * SizeConfig.heightMultiplier,
+                                    34.71 * SizeConfig.heightMultiplier,
                                 leftCircleAmigoPosition:
-                                -16.67 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                                    -16.67 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    26.04 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    26.04 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -475,11 +508,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               //right
                               CircleAmigo(
                                 bottomCircleAmigoPosition:
-                                -2.20 * SizeConfig.heightMultiplier,
+                                    -2.20 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -7.16 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+                                    -7.16 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    13.02 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    13.02 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -488,11 +523,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               ),
                               CircleAmigo(
                                 bottomCircleAmigoPosition:
-                                -5.46 * SizeConfig.heightMultiplier,
+                                    -5.46 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -10.41 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+                                    -10.41 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    19.53 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    19.53 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -501,11 +538,13 @@ class _TabBlogPageState extends State<TabBlogPage> {
                               ),
                               CircleAmigo(
                                 bottomCircleAmigoPosition:
-                                -8.71 * SizeConfig.heightMultiplier,
+                                    -8.71 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -13.67 * SizeConfig.heightMultiplier,
-                                circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
-                                circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+                                    -13.67 * SizeConfig.heightMultiplier,
+                                circleAmigoHeight:
+                                    26.04 * SizeConfig.heightMultiplier,
+                                circleAmigoWidth:
+                                    26.04 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -556,144 +595,95 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
           "assets/images/logo.png",
           height: 3.18 * SizeConfig.heightMultiplier,
         ),
-        actions: [
-          Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  showModalBottomSheet(
-                      backgroundColor: Colors.transparent,
-                      context: context,
-                      elevation: 10,
-                      isScrollControlled: true,
-                      isDismissible: true,
-                      builder: (BuildContext context) {
-                        return DraggableScrollableSheet(
-                            initialChildSize: 0.75, //set this as you want
-                            maxChildSize: 0.75, //set this as you want
-                            minChildSize: 0.75, //set this as you want
-                            expand: true,
-                            builder: (context, scrollController) {
-                              return Container(
-                                color: Colors.white,
-                                height: MediaQuery.of(context).size.height,
-                                child: Stack(
-                                  children: [
-                                    Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Meet Adam',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, MeetAdamRoute);
-                                            },
-                                          ),
-                                        ),
-                                        //meet adam
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'About Us',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, AboutUsRoute);
-                                            },
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Podcast',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, PodcastRoute);
-                                            },
-                                          ),
-                                        ),
+      ),
+      endDrawer: Container(
+        width: MediaQuery.of(context).size.width,
+        child: Drawer(
+            child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+          ListTile(
+            trailing: FlatButton(
+              child: Icon(
+                Icons.close,
+                color: AmigoColors.gray,
+              ),
+              onPressed: () => Navigator.pop(context),
+            ),
+            title: Text(
+              'Mindamigo',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, HomeRoute);
+            },
+          ),
 
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: InkWell(
-                                            child: Text(
-                                              'Blog',
-                                              style: TextStyle(
-                                                  fontSize: 4.27 *
-                                                      SizeConfig.textMultiplier,
-                                                  color: AmigoColors.lightBlack,
-                                                  fontFamily: robot,
-                                                  decoration:
-                                                      TextDecoration.none,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, BlogPageRoute);
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Positioned(
-                                      right: 0,
-                                      child: FlatButton(
-                                        child: Icon(Icons.close),
-                                        onPressed: () => Navigator.pop(context),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ); //whatever you're returning, does not have to be a Container
-                            });
-                      });
-                },
-                child: Icon(
-                  Icons.menu,
-                  size: 26.0,
-                ),
-              )),
-        ],
+          //meet adam
+          ListTile(
+            title: Text(
+              'Meet Adam',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, MeetAdamRoute);
+            },
+          ),
+          //about us
+          ListTile(
+            title: Text(
+              'About Us',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, AboutUsRoute);
+            },
+          ),
+          ListTile(
+            title: Text(
+              'PodCast',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.gray,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, PodcastRoute);
+            },
+          ),
+          ListTile(
+            title: Text(
+              'Blog',
+              style: TextStyle(
+                  fontSize: 4.27 * SizeConfig.textMultiplier,
+                  color: AmigoColors.lightRed,
+                  fontFamily: robot,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+        ])),
       ),
       body: SingleChildScrollView(
         controller: _controller,
         child: Container(
           child: Column(
             children: [
-
               GradientLine(),
               Container(
                   color: AmigoColors.lightWhite,
@@ -706,20 +696,31 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                           Container(
                             child: FutureBuilder(
                               future: Blog().getBlogData(),
-                              builder: (context,snapshot){
-                                if(snapshot.connectionState==ConnectionState.done){
-                                  if(snapshot.hasData){
+                              builder: (context, snapshot) {
+                                if (snapshot.connectionState ==
+                                    ConnectionState.done) {
+                                  if (snapshot.hasData) {
                                     return Container(
                                       child: MobileBlogContent(
                                         blogsModel: snapshot.data,
                                       ),
                                     );
+                                  } else {
+                                    return Center(
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.blue),
+                                      ),
+                                    );
                                   }
-                                  else{
-                                    return Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),);
-                                  }
-                                }else{
-                                  return Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),);
+                                } else {
+                                  return Center(
+                                    child: CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                          Colors.blue),
+                                    ),
+                                  );
                                 }
                               },
                             ),
@@ -732,17 +733,16 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                                   1.30 * SizeConfig.heightMultiplier,
                                   0,
                                   5.20 * SizeConfig.heightMultiplier),
-                              width:
-                              19.53 * SizeConfig.heightMultiplier,
+                              width: 19.53 * SizeConfig.heightMultiplier,
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     "More recent posts",
                                     style: TextStyle(
-                                        fontSize: 1.95 *
-                                            SizeConfig.textMultiplier,
+                                        fontSize:
+                                            1.95 * SizeConfig.textMultiplier,
                                         fontFamily: robot,
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -750,10 +750,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                                     onTap: () {},
                                     child: Image.asset(
                                       blogDropDown,
-                                      height: 3.25 *
-                                          SizeConfig.heightMultiplier,
-                                      width: 3.25 *
-                                          SizeConfig.heightMultiplier,
+                                      height:
+                                          3.25 * SizeConfig.heightMultiplier,
+                                      width: 3.25 * SizeConfig.heightMultiplier,
                                     ),
                                   ),
                                 ],
@@ -766,9 +765,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       //left
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -5.20 * SizeConfig.heightMultiplier,
+                            -5.20 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -10.16 * SizeConfig.heightMultiplier,
+                            -10.16 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 10.02 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 10.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
@@ -779,9 +778,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -8.46 * SizeConfig.heightMultiplier,
+                            -8.46 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -13.41 * SizeConfig.heightMultiplier,
+                            -13.41 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 16.53 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 16.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
@@ -792,9 +791,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -11.71 * SizeConfig.heightMultiplier,
+                            -11.71 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -16.67 * SizeConfig.heightMultiplier,
+                            -16.67 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 23.04 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 23.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
@@ -807,9 +806,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       //left
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        42.2 * SizeConfig.heightMultiplier,
+                            42.2 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -10.16 * SizeConfig.heightMultiplier,
+                            -10.16 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 8.02 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 8.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
@@ -820,9 +819,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        38 * SizeConfig.heightMultiplier,
+                            38 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -13.41 * SizeConfig.heightMultiplier,
+                            -13.41 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 14.53 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 14.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
@@ -833,9 +832,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        34.71 * SizeConfig.heightMultiplier,
+                            34.71 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -16.67 * SizeConfig.heightMultiplier,
+                            -16.67 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 21.04 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 21.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
@@ -848,9 +847,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       //right
                       CircleAmigo(
                         bottomCircleAmigoPosition:
-                        -2.20 * SizeConfig.heightMultiplier,
+                            -2.20 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -7.16 * SizeConfig.heightMultiplier,
+                            -7.16 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 8.02 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 8.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
@@ -861,9 +860,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       ),
                       CircleAmigo(
                         bottomCircleAmigoPosition:
-                        -5.46 * SizeConfig.heightMultiplier,
+                            -5.46 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -10.41 * SizeConfig.heightMultiplier,
+                            -10.41 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 14.53 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 14.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
@@ -874,9 +873,9 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                       ),
                       CircleAmigo(
                         bottomCircleAmigoPosition:
-                        -8.71 * SizeConfig.heightMultiplier,
+                            -8.71 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -13.67 * SizeConfig.heightMultiplier,
+                            -13.67 * SizeConfig.heightMultiplier,
                         circleAmigoHeight: 21.04 * SizeConfig.heightMultiplier,
                         circleAmigoWidth: 21.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [

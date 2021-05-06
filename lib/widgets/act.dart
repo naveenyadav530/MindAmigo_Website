@@ -161,6 +161,7 @@ class tabAct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width,
+        height: 38.06 * SizeConfig.heightMultiplier,
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
@@ -213,67 +214,83 @@ class tabAct extends StatelessWidget {
               circleAmigoOpacity: [0.3, 0.5],
             ),
 
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 50),
+            Positioned(
+                bottom: -7.5 * SizeConfig.heightMultiplier,
+                left: 3.34 * SizeConfig.heightMultiplier,
+                child: Image.asset(
+                  aboutActPhone,
+                  height: 37.74 * SizeConfig.heightMultiplier,
+                )),
+            Positioned(
+              bottom: -1.89 * SizeConfig.heightMultiplier,
+              left: 11.16 * SizeConfig.heightMultiplier,
               child: Container(
-                width: MediaQuery.of(context).size.width / 1.5,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "ACT",
+                child: Image.asset(
+                  actDoll,
+                  height: 20.74 * SizeConfig.heightMultiplier,
+                ),
+              ),
+            ),
+            Positioned(
+              right: 4.53 * SizeConfig.heightMultiplier,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                    vertical: 5.58 * SizeConfig.heightMultiplier),
+                child: Container(
+                  width: MediaQuery.of(context).size.width / 1.8,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "ACT",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 4.6 * SizeConfig.textMultiplier,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Fredoka"),
+                        ),
+                      ),
+                      Text(
+                        Strings.act1,
+                        textAlign: TextAlign.justify,
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 4.6 * SizeConfig.textMultiplier,
                             fontWeight: FontWeight.bold,
-                            fontFamily: "Fredoka"),
+                            fontSize: 1.55 * SizeConfig.textMultiplier,
+                            height: 1.5,
+                            fontFamily: "Robot"),
                       ),
-                    ),
-                    Text(
-                      Strings.act1,
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 1.55 * SizeConfig.textMultiplier,
-                          height: 1.5,
-                          fontFamily: "Robot"),
-                    ),
-                    Text(
-                      Strings.act2,
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 1.55 * SizeConfig.textMultiplier,
-                          height: 1.5,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Robot"),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 10),
-                      child: Text(
-                        Strings.act3,
+                      Text(
+                        Strings.act2,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 1.55 * SizeConfig.textMultiplier,
                             height: 1.5,
                             fontWeight: FontWeight.bold,
-                            decoration: TextDecoration.none,
                             fontFamily: "Robot"),
                       ),
-                    )
-                  ],
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 10),
+                        child: Text(
+                          Strings.act3,
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 1.55 * SizeConfig.textMultiplier,
+                              height: 1.5,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              fontFamily: "Robot"),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-            /*Positioned(
-                bottom: 0,
-                child: Image.asset(aboutActPhone,height: 37.74*SizeConfig.heightMultiplier,)
-            ),
-            Image.asset(aboutActDoll),*/
           ],
         ));
   }
@@ -283,6 +300,7 @@ class mobileAct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        height: 63.06 * SizeConfig.heightMultiplier,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -292,6 +310,38 @@ class mobileAct extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
+            //corner circle
+            CircleAmigo(
+              rightCircleAmigoPosition: -3.51 * SizeConfig.heightMultiplier,
+              topCircleAmigoPosition: -6.25 * SizeConfig.heightMultiplier,
+              circleAmigoWidth: 15.7 * SizeConfig.heightMultiplier,
+              circleAmigoHeight: 15.7 * SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
+              circleAmigoOpacity: [0.8, 0.7],
+            ),
+            CircleAmigo(
+              rightCircleAmigoPosition: -5.81 * SizeConfig.heightMultiplier,
+              topCircleAmigoPosition: -8.55 * SizeConfig.heightMultiplier,
+              circleAmigoWidth: 22.02 * SizeConfig.heightMultiplier,
+              circleAmigoHeight: 22.02 * SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
+              circleAmigoOpacity: [0.5, 0.7],
+            ),
+
+            Positioned(
+                left: 12.28 * SizeConfig.heightMultiplier,
+                bottom: -8.77 * SizeConfig.heightMultiplier,
+                child: Image.asset(
+                  aboutActPhone,
+                  height: 37.74 * SizeConfig.heightMultiplier,
+                )),
+            Positioned(
+                left: 22.80 * SizeConfig.heightMultiplier,
+                bottom: -1.75 * SizeConfig.heightMultiplier,
+                child: Image.asset(
+                  actDoll,
+                  height: 17.74 * SizeConfig.heightMultiplier,
+                )),
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Container(
@@ -347,29 +397,6 @@ class mobileAct extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-            /*Positioned(
-                bottom: 0,
-                child: Image.asset(aboutActPhone,height: 37.74*SizeConfig.heightMultiplier,)
-            ),
-            Image.asset(aboutActDoll),*/
-
-            //corner circle
-            CircleAmigo(
-              rightCircleAmigoPosition: -3.51 * SizeConfig.heightMultiplier,
-              topCircleAmigoPosition: -6.25 * SizeConfig.heightMultiplier,
-              circleAmigoWidth: 15.7 * SizeConfig.heightMultiplier,
-              circleAmigoHeight: 15.7 * SizeConfig.heightMultiplier,
-              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
-              circleAmigoOpacity: [0.8, 0.7],
-            ),
-            CircleAmigo(
-              rightCircleAmigoPosition: -5.81 * SizeConfig.heightMultiplier,
-              topCircleAmigoPosition: -8.55 * SizeConfig.heightMultiplier,
-              circleAmigoWidth: 22.02 * SizeConfig.heightMultiplier,
-              circleAmigoHeight: 22.02 * SizeConfig.heightMultiplier,
-              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
-              circleAmigoOpacity: [0.5, 0.7],
             ),
           ],
         ));
