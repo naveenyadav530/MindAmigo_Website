@@ -64,14 +64,6 @@ class _WebHomePageState extends State<WebHomePage> {
             ),
           ),
 
-          builder: (BuildContext context) {
-            return Container(
-              margin: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(8)),
-                boxShadow: [],
-                color: Colors.white,
-              ),
               builder: (BuildContext context) {
                 return Container(
                   margin: EdgeInsets.all(20),
