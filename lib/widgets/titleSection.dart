@@ -245,30 +245,39 @@ class mobileTitleSection extends StatelessWidget {
               color: Color(0xff707070),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: EdgeInsets.only(right: 8.0),
-                child: Text(
-                  "Coming Soon...",
-                  style: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 2.25 * SizeConfig.textMultiplier,
-                    color: Color(0xff707070),
+          Container(
+            color: Colors.white12,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(right: 8.0),
+                  child: Text(
+                    "Coming Soon...",
+                    style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 2.25 * SizeConfig.textMultiplier,
+                      color: Color(0xff707070),
+                    ),
                   ),
                 ),
-              ),
-              Image.asset(
-                bottomAppStore,
-                height: 3.0 * SizeConfig.heightMultiplier,
-              ),
-              Image.asset(
-                bottomPlayStore,
-                height: 4.5 * SizeConfig.heightMultiplier,
-              ),
-            ],
+                Opacity(
+                  opacity: 0.5,
+                  child: Image.asset(
+                    bottomAppStore,
+                    height: 3.0 * SizeConfig.heightMultiplier,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.5,
+                  child: Image.asset(
+                    bottomPlayStore,
+                    height: 4.5 * SizeConfig.heightMultiplier,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

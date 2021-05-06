@@ -300,6 +300,7 @@ class _MobilePodcastState extends State<MobilePodcast> {
         ),
       ),
       endDrawer: Container(
+        color: Colors.white,
         width: MediaQuery.of(context).size.width,
         child: Drawer(
             elevation: 10,
