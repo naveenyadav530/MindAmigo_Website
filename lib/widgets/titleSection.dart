@@ -16,11 +16,11 @@ class TitleSection extends StatelessWidget {
         children: [
           Expanded(
               child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 32),
-                  child: Text(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 32),
+                child: Text(
                   Strings.mindhelp,
                   style: TextStyle(
                     decoration: TextDecoration.none,
@@ -245,44 +245,39 @@ class mobileTitleSection extends StatelessWidget {
               color: Color(0xff707070),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: EdgeInsets.only(right: 8.0),
-                child: Text(
-                  "Coming Soon...",
-                  style: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 2.25 * SizeConfig.textMultiplier,
-                    color: Color(0xff707070),
+          Container(
+            color: Colors.white12,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(right: 8.0),
+                  child: Text(
+                    "Coming Soon...",
+                    style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 2.25 * SizeConfig.textMultiplier,
+                      color: Color(0xff707070),
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                width: 9.6 * SizeConfig.heightMultiplier,
-                height: 3.0 * SizeConfig.heightMultiplier,
-                decoration: BoxDecoration(
-                    image: new DecorationImage(
-                        image: new AssetImage(bottomAppStore),
-                        fit: BoxFit.cover,
-                        colorFilter: ColorFilter.mode(
-                            Colors.white12.withOpacity(0.8),
-                            BlendMode.srcOver))),
-              ),
-              Container(
-                width: 11.06 * SizeConfig.heightMultiplier,
-                height: 4.5 * SizeConfig.heightMultiplier,
-                decoration: BoxDecoration(
-                    image: new DecorationImage(
-                        image: new AssetImage(bottomPlayStore),
-                        fit: BoxFit.cover,
-                        colorFilter: ColorFilter.mode(
-                            Colors.white12.withOpacity(0.8),
-                            BlendMode.srcOver))),
-              )
-            ],
+                Opacity(
+                  opacity: 0.5,
+                  child: Image.asset(
+                    bottomAppStore,
+                    height: 3.0 * SizeConfig.heightMultiplier,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.5,
+                  child: Image.asset(
+                    bottomPlayStore,
+                    height: 4.5 * SizeConfig.heightMultiplier,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

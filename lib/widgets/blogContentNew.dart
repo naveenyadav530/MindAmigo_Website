@@ -7,6 +7,7 @@ import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/utils/size_config.dart';
 import 'package:transparent_image/transparent_image.dart';
 
+
 class BlogContent extends StatefulWidget {
 
   final List<BlogModel> blogsModel;
@@ -187,10 +188,7 @@ class _BlogContentState extends State<BlogContent> {
 class TabBlogContent extends StatefulWidget {
   final List<BlogModel> blogsModel;
 
-  const TabBlogContent({
-    Key key,
-    this.blogsModel
-  }) : super(key: key);
+  const TabBlogContent({Key key, this.blogsModel}) : super(key: key);
 
   @override
   _TabBlogContentState createState() => _TabBlogContentState();

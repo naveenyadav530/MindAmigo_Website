@@ -123,41 +123,53 @@ class _WebArticleState extends State<WebArticle> {
                                 children: [
                                   //title
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 50),
+                                    padding: EdgeInsets.only(
+                                        top:
+                                            3.66 * SizeConfig.heightMultiplier),
                                     child: Text(
                                       blogData["title"],
                                       style: TextStyle(
                                           color: AmigoColors.orange,
-                                          fontSize: 56,
+                                          fontSize:
+                                              4 * SizeConfig.heightMultiplier,
                                           fontFamily: robot),
                                       textAlign: TextAlign.center,
                                     ),
                                   ),
                                   //image
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 20),
+                                    padding: EdgeInsets.only(
+                                        top:
+                                            1.46 * SizeConfig.heightMultiplier),
                                     child: Image.network(blogData["image"]),
                                   ),
                                   //heading
                                   Padding(
-                                    padding: EdgeInsets.only(top: 30),
+                                    padding: EdgeInsets.only(
+                                        top: 2.3 * SizeConfig.heightMultiplier),
                                     child: Container(
-                                      padding: EdgeInsets.only(bottom: 100),
+                                      padding: EdgeInsets.only(
+                                          bottom: 7.2 *
+                                              SizeConfig.heightMultiplier),
                                       child: Text(
                                         // Strings.blogContent,
                                         blogData["data"],
                                         textAlign: TextAlign.justify,
                                         style: TextStyle(
-                                            fontSize: 25, fontFamily: robot),
+                                            fontSize: 1.83 *
+                                                SizeConfig.heightMultiplier,
+                                            fontFamily: robot),
                                       ),
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 30),
+                                    padding: EdgeInsets.symmetric(
+                                        vertical:
+                                            3.66 * SizeConfig.heightMultiplier),
                                     child: Container(
                                       alignment: Alignment.center,
-                                      width: 250,
+                                      width:
+                                          18.30 * SizeConfig.heightMultiplier,
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
@@ -166,23 +178,30 @@ class _WebArticleState extends State<WebArticle> {
                                             "Share",
                                             style: TextStyle(
                                                 color: AmigoColors.lightblue1,
-                                                fontSize: 24,
+                                                fontSize: 1.75 *
+                                                    SizeConfig.heightMultiplier,
                                                 fontFamily: robot),
                                           ),
                                           Image.asset(
                                             facebookShare,
-                                            height: 37,
-                                            width: 37,
+                                            height: 2.70 *
+                                                SizeConfig.heightMultiplier,
+                                            width: 2.70 *
+                                                SizeConfig.heightMultiplier,
                                           ),
                                           Image.asset(
                                             twitterShare,
-                                            height: 37,
-                                            width: 37,
+                                            height: 2.70 *
+                                                SizeConfig.heightMultiplier,
+                                            width: 2.70 *
+                                                SizeConfig.heightMultiplier,
                                           ),
                                           Image.asset(
                                             mailShare,
-                                            height: 37,
-                                            width: 37,
+                                            height: 2.70 *
+                                                SizeConfig.heightMultiplier,
+                                            width: 2.70 *
+                                                SizeConfig.heightMultiplier,
                                           )
                                         ],
                                       ),
@@ -512,7 +531,7 @@ class TabArticle extends StatefulWidget {
 class _TabArticleState extends State<TabArticle> {
   @override
   Widget build(BuildContext context) {
-    final Map blogData=ModalRoute.of(context).settings.arguments;
+    final Map blogData = ModalRoute.of(context).settings.arguments;
     return Container(
       child: SingleChildScrollView(
         child: Container(
@@ -526,80 +545,6 @@ class _TabArticleState extends State<TabArticle> {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    Container(
-                      color: Colors.white,
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: Column(
-                        children: [
-                          //title
-                          Padding(
-                            padding: const EdgeInsets.only(top: 50),
-                            child: Text(
-                              blogData["title"],
-                              style: TextStyle(
-                                  color: AmigoColors.orange,
-                                  fontSize: 56,
-                                  fontFamily: robot),
-                            ),
-                          ),
-                          //image
-                          Padding(
-                            padding: const EdgeInsets.only(top: 20),
-                            child: Image.network(blogData["image"]),
-                          ),
-                          //heading
-                          Padding(
-                            padding: EdgeInsets.only(top: 30),
-                            child: Container(
-                              padding: EdgeInsets.only(bottom: 100),
-                              child: Text(
-                                // Strings.blogContent,
-                                blogData["data"],
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 25, fontFamily: robot),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 30),
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 250,
-                              child: Row(
-                                mainAxisAlignment:
-                                MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Text(
-                                    "Share",
-                                    style: TextStyle(
-                                        color: AmigoColors.lightblue1,
-                                        fontSize: 24,
-                                        fontFamily: robot),
-                                  ),
-                                  Image.asset(
-                                    facebookShare,
-                                    height: 37,
-                                    width: 37,
-                                  ),
-                                  Image.asset(
-                                    twitterShare,
-                                    height: 37,
-                                    width: 37,
-                                  ),
-                                  Image.asset(
-                                    mailShare,
-                                    height: 37,
-                                    width: 37,
-                                  )
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
                     CircleAmigo(
                       topCircleAmigoPosition:
                           -7.20 * SizeConfig.heightMultiplier,
@@ -639,9 +584,92 @@ class _TabArticleState extends State<TabArticle> {
                       ],
                       circleAmigoOpacity: [0.1, 0.1],
                     ),
+                    Container(
+                      color: Colors.white,
+                      width: MediaQuery.of(context).size.width / 2,
+                      child: Column(
+                        children: [
+                          //title
+                          Padding(
+                            padding: EdgeInsets.only(
+                                top: 3.66 * SizeConfig.heightMultiplier),
+                            child: Text(
+                              blogData["title"],
+                              style: TextStyle(
+                                  color: AmigoColors.orange,
+                                  fontSize: 4 * SizeConfig.heightMultiplier,
+                                  fontFamily: robot),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          //image
+                          Padding(
+                            padding: EdgeInsets.only(
+                                top: 1.46 * SizeConfig.heightMultiplier),
+                            child: Image.network(blogData["image"]),
+                          ),
+                          //heading
+                          Padding(
+                            padding: EdgeInsets.only(
+                                top: 2.3 * SizeConfig.heightMultiplier),
+                            child: Container(
+                              padding: EdgeInsets.only(
+                                  bottom: 7.2 * SizeConfig.heightMultiplier),
+                              child: Text(
+                                // Strings.blogContent,
+                                blogData["data"],
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                    fontSize:
+                                        1.83 * SizeConfig.heightMultiplier,
+                                    fontFamily: robot),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 3.66 * SizeConfig.heightMultiplier),
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 18.30 * SizeConfig.heightMultiplier,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Text(
+                                    "Share",
+                                    style: TextStyle(
+                                        color: AmigoColors.lightblue1,
+                                        fontSize:
+                                            1.75 * SizeConfig.heightMultiplier,
+                                        fontFamily: robot),
+                                  ),
+                                  Image.asset(facebookShare,
+                                      height:
+                                          2.70 * SizeConfig.heightMultiplier,
+                                      width:
+                                          2.70 * SizeConfig.heightMultiplier),
+                                  Image.asset(
+                                    twitterShare,
+                                    height: 2.70 * SizeConfig.heightMultiplier,
+                                    width: 2.70 * SizeConfig.heightMultiplier,
+                                  ),
+                                  Image.asset(
+                                    mailShare,
+                                    height: 2.70 * SizeConfig.heightMultiplier,
+                                    width: 2.70 * SizeConfig.heightMultiplier,
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
+
               Container(
                   color: AmigoColors.lightWhite,
                   width: MediaQuery.of(context).size.width,
@@ -956,7 +984,7 @@ class MobileArticle extends StatefulWidget {
 class _MobileArticleState extends State<MobileArticle> {
   @override
   Widget build(BuildContext context) {
-    final Map blogData=ModalRoute.of(context).settings.arguments;
+    final Map blogData = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: AmigoColors.lightBlue),
@@ -966,7 +994,7 @@ class _MobileArticleState extends State<MobileArticle> {
           height: 3.18 * SizeConfig.heightMultiplier,
         ),
       ),
-      endDrawer: Container(
+      drawer: Container(
         width: MediaQuery.of(context).size.width,
         child: Drawer(
             child: ListView(padding: EdgeInsets.zero, children: <Widget>[
@@ -1065,70 +1093,78 @@ class _MobileArticleState extends State<MobileArticle> {
                   children: [
                     Container(
                       color: Colors.white,
-                      width: MediaQuery.of(context).size.width / 2,
+                      width: MediaQuery.of(context).size.width / 1.2,
                       child: Column(
                         children: [
                           //title
                           Padding(
-                            padding: const EdgeInsets.only(top: 50),
+                            padding: EdgeInsets.only(
+                                top: 3.66 * SizeConfig.heightMultiplier),
                             child: Text(
                               blogData["title"],
                               style: TextStyle(
                                   color: AmigoColors.orange,
-                                  fontSize: 56,
+                                  fontSize: 3.8 * SizeConfig.heightMultiplier,
                                   fontFamily: robot),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                           //image
                           Padding(
-                            padding: const EdgeInsets.only(top: 20),
+                            padding: EdgeInsets.only(
+                                top: 1.46 * SizeConfig.heightMultiplier),
                             child: Image.network(blogData["image"]),
                           ),
                           //heading
                           Padding(
-                            padding: EdgeInsets.only(top: 30),
+                            padding: EdgeInsets.only(
+                                top: 2.3 * SizeConfig.heightMultiplier),
                             child: Container(
-                              padding: EdgeInsets.only(bottom: 100),
+                              padding: EdgeInsets.only(
+                                  bottom: 7.2 * SizeConfig.heightMultiplier),
                               child: Text(
                                 // Strings.blogContent,
                                 blogData["data"],
-                                textAlign: TextAlign.center,
+                                textAlign: TextAlign.justify,
                                 style: TextStyle(
-                                    fontSize: 25, fontFamily: robot),
+                                    fontSize:
+                                        1.83 * SizeConfig.heightMultiplier,
+                                    fontFamily: robot),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 30),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 3.66 * SizeConfig.heightMultiplier),
                             child: Container(
                               alignment: Alignment.center,
-                              width: 250,
+                              width: 18.30 * SizeConfig.heightMultiplier,
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceEvenly,
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Text(
                                     "Share",
                                     style: TextStyle(
                                         color: AmigoColors.lightblue1,
-                                        fontSize: 24,
+                                        fontSize:
+                                            1.75 * SizeConfig.heightMultiplier,
                                         fontFamily: robot),
                                   ),
-                                  Image.asset(
-                                    facebookShare,
-                                    height: 37,
-                                    width: 37,
-                                  ),
+                                  Image.asset(facebookShare,
+                                      height:
+                                          2.70 * SizeConfig.heightMultiplier,
+                                      width:
+                                          2.70 * SizeConfig.heightMultiplier),
                                   Image.asset(
                                     twitterShare,
-                                    height: 37,
-                                    width: 37,
+                                    height: 2.70 * SizeConfig.heightMultiplier,
+                                    width: 2.70 * SizeConfig.heightMultiplier,
                                   ),
                                   Image.asset(
                                     mailShare,
-                                    height: 37,
-                                    width: 37,
+                                    height: 2.70 * SizeConfig.heightMultiplier,
+                                    width: 2.70 * SizeConfig.heightMultiplier,
                                   )
                                 ],
                               ),
