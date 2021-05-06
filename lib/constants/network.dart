@@ -1,11 +1,5 @@
 class NetworkInfo {
-  //Dev Mode
-/*
-  static final String protocol= r"http://";
-  static final String subDomain = r"dev.";
-  static final String domain = r"mindamigo.com";
-  static final String networkInfo=NetworkInfo.protocol+NetworkInfo.subDomain+NetworkInfo.domain;
-*/
+
   // http://localhost:3000/blog/blogs
 
 

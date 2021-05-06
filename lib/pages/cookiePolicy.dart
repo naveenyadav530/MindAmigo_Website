@@ -168,35 +168,8 @@ class _WebCookiePageState extends State<WebCookiePage> {
                                         )
                                       ],
                                     ),
-                                Container(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Icon(Icons.fiber_manual_record,size: 20,),
-                                      SizedBox(width: 50,),
-                                      RichText(
-                                        text: TextSpan(
-                                            text: "Network Advertising Initiative:",
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                fontFamily: robot,
-                                                fontSize: 1.2 *SizeConfig.textMultiplier
-                                            ),
-                                            children: [
-                                              TextSpan(
-                                                  text: "http://www.networkadvertising.org/",
-                                                style: TextStyle(fontWeight: FontWeight.w600,color: Colors.blue),
-                                                recognizer: new TapGestureRecognizer()
-                                                  ..onTap = () { launch('http://www.networkadvertising.org/');
-                                                  },
-                                              )
-                                            ]
-                                        ),
-
-                                      )
-                                    ],
                                   ),
-                                ),
+
 
                                     SizedBox(height: 50,),
                                 Container(
@@ -1261,7 +1234,7 @@ class _MobileCookiePageState extends State<MobileCookiePage> {
                                   ],
                                 ),
                               ),
-                            ),
+
                             SizedBox(height: 50,),
                             Container(
                               child: Column(
