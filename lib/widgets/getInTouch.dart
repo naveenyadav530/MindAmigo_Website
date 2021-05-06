@@ -5,6 +5,9 @@ import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
 
+import 'package:mailto/mailto.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import 'circles.dart';
 
 class GetInTouch extends StatelessWidget {
@@ -28,6 +31,22 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
   TextEditingController emailController = new TextEditingController();
 
   TextEditingController messageController = new TextEditingController();
+
+  launchMailto() async {
+    final mailtoLink = Mailto(
+        to: ['info@mindamigo.com'],
+        cc: [],
+        subject: 'Mindamgio Website Query',
+        body: 'Hi, I am ' +
+            nameController.text +
+            "\n I would like to get in touch regarding " +
+            messageController.text);
+    await launch('$mailtoLink');
+
+    nameController.clear();
+    emailController.clear();
+    messageController.clear();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -165,19 +184,20 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
                                           enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                   color: Colors.black26),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(0.65 *
-                                                      SizeConfig
-                                                          .heightMultiplier))),
+                                              borderRadius: BorderRadius.all(Radius.circular(0.65 *
+                                                  SizeConfig
+                                                      .heightMultiplier))),
                                           focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                   color: Colors.transparent),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(0.65 *
-                                                      SizeConfig
-                                                          .heightMultiplier))),
-                                          hintText: 'adam.chadwick221@gmail.com',
-                                          hintStyle: TextStyle(fontSize: 1.1 * SizeConfig.textMultiplier, fontFamily: robot, color: Colors.black)),
+                                              borderRadius: BorderRadius.all(Radius.circular(0.65 *
+                                                  SizeConfig
+                                                      .heightMultiplier))),
+                                          hintText: 'example@abcd.com',
+                                          hintStyle: TextStyle(
+                                              fontSize: 1.1 * SizeConfig.textMultiplier,
+                                              fontFamily: robot,
+                                              color: Colors.black)),
                                     ),
                                   )
                                 ],
@@ -241,11 +261,9 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
                             style: TextStyle(
                                 fontSize: 1.3 * SizeConfig.textMultiplier),
                           ),
-                          onPressed: () => print(nameController.text +
-                              " " +
-                              emailController.text +
-                              " " +
-                              messageController.text),
+                          onPressed: () {
+                            launchMailto();
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: AmigoColors.lightBlack,
                             onPrimary: Colors.white,

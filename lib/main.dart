@@ -12,9 +12,7 @@ import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/utils/size_config.dart';
 import 'package:mindamigo/pages/cookiePolicy.dart';
 
-
-
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CookiesSharedPreference.init();
   runApp(MyApp());
@@ -54,9 +52,9 @@ class MyApp extends StatelessWidget {
             BlogArticleRoute: (context) => Scaffold(
                   body: BlogArticle(),
                 ),
-            CookiePolicyRoute:(context)=>Scaffold(
-              body: CookiePolicy(),
-            )
+            CookiePolicyRoute: (context) => Scaffold(
+                  body: CookiePolicy(),
+                )
           },
         );
       });
