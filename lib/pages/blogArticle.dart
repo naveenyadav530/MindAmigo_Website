@@ -738,14 +738,10 @@ class _MobileArticleState extends State<MobileArticle> {
         child: Drawer(
             child: ListView(padding: EdgeInsets.zero, children: <Widget>[
           ListTile(
-            leading: Icon(
-              Icons.home,
-              color: AmigoColors.lightBlue,
-            ),
             trailing: FlatButton(
               child: Icon(
                 Icons.close,
-                color: AmigoColors.lightBlue,
+                color: AmigoColors.gray,
               ),
               onPressed: () => Navigator.pop(context),
             ),
@@ -753,7 +749,7 @@ class _MobileArticleState extends State<MobileArticle> {
               'Mindamigo',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.lightBlue,
+                  color: AmigoColors.gray,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),
@@ -765,15 +761,11 @@ class _MobileArticleState extends State<MobileArticle> {
 
           //meet adam
           ListTile(
-            leading: Icon(
-              Icons.person,
-              color: AmigoColors.lightBlue,
-            ),
             title: Text(
               'Meet Adam',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.lightBlue,
+                  color: AmigoColors.gray,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),
@@ -784,15 +776,11 @@ class _MobileArticleState extends State<MobileArticle> {
           ),
           //about us
           ListTile(
-            leading: Icon(
-              Icons.people,
-              color: AmigoColors.lightBlue,
-            ),
             title: Text(
               'About Us',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.lightBlue,
+                  color: AmigoColors.gray,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),
@@ -802,15 +790,11 @@ class _MobileArticleState extends State<MobileArticle> {
             },
           ),
           ListTile(
-            leading: Icon(
-              Icons.mic,
-              color: AmigoColors.lightBlue,
-            ),
             title: Text(
               'PodCast',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.lightBlue,
+                  color: AmigoColors.gray,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),
@@ -820,15 +804,11 @@ class _MobileArticleState extends State<MobileArticle> {
             },
           ),
           ListTile(
-            leading: Icon(
-              Icons.article_outlined,
-              color: AmigoColors.lightBlue,
-            ),
             title: Text(
               'Blog',
               style: TextStyle(
                   fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.lightBlue,
+                  color: AmigoColors.gray,
                   fontFamily: robot,
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.bold),

@@ -305,14 +305,10 @@ class _MobilePodcastState extends State<MobilePodcast> {
             elevation: 10,
             child: ListView(padding: EdgeInsets.zero, children: <Widget>[
               ListTile(
-                leading: Icon(
-                  Icons.home,
-                  color: AmigoColors.lightBlue,
-                ),
                 trailing: FlatButton(
                   child: Icon(
                     Icons.close,
-                    color: AmigoColors.lightBlue,
+                    color: AmigoColors.gray,
                   ),
                   onPressed: () => Navigator.pop(context),
                 ),
@@ -320,7 +316,7 @@ class _MobilePodcastState extends State<MobilePodcast> {
                   'Mindamigo',
                   style: TextStyle(
                       fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.lightBlue,
+                      color: AmigoColors.gray,
                       fontFamily: robot,
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.bold),
@@ -332,15 +328,11 @@ class _MobilePodcastState extends State<MobilePodcast> {
 
               //meet adam
               ListTile(
-                leading: Icon(
-                  Icons.person,
-                  color: AmigoColors.lightBlue,
-                ),
                 title: Text(
                   'Meet Adam',
                   style: TextStyle(
                       fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.lightBlue,
+                      color: AmigoColors.gray,
                       fontFamily: robot,
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.bold),
@@ -351,15 +343,11 @@ class _MobilePodcastState extends State<MobilePodcast> {
               ),
               //about us
               ListTile(
-                leading: Icon(
-                  Icons.people,
-                  color: AmigoColors.lightBlue,
-                ),
                 title: Text(
                   'About Us',
                   style: TextStyle(
                       fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.lightBlue,
+                      color: AmigoColors.gray,
                       fontFamily: robot,
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.bold),
@@ -369,10 +357,6 @@ class _MobilePodcastState extends State<MobilePodcast> {
                 },
               ),
               ListTile(
-                leading: Icon(
-                  Icons.mic,
-                  color: AmigoColors.lightRed,
-                ),
                 title: Text(
                   'PodCast',
                   style: TextStyle(
@@ -384,15 +368,11 @@ class _MobilePodcastState extends State<MobilePodcast> {
                 ),
               ),
               ListTile(
-                leading: Icon(
-                  Icons.article_outlined,
-                  color: AmigoColors.lightBlue,
-                ),
                 title: Text(
                   'Blog',
                   style: TextStyle(
                       fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.lightBlue,
+                      color: AmigoColors.gray,
                       fontFamily: robot,
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.bold),
@@ -410,11 +390,78 @@ class _MobilePodcastState extends State<MobilePodcast> {
               GradientLine(),
               Container(
                   color: AmigoColors.cream,
-                  height: 58.59 * SizeConfig.heightMultiplier,
+                  height: 90.59 * SizeConfig.heightMultiplier,
                   width: MediaQuery.of(context).size.width,
                   child: Stack(
                     alignment: Alignment.topCenter,
                     children: [
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                            -0.40 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                            -13.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 15.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 15.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                            -4.41 * SizeConfig.heightMultiplier,
+                        leftCircleAmigoPosition:
+                            -18.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 25.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 25.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+
+                      //right
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                            -2.20 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                            -7.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 7.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 7.02 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                            -5.46 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                            -10.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 14.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 14.53 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
+                      CircleAmigo(
+                        topCircleAmigoPosition:
+                            -8.71 * SizeConfig.heightMultiplier,
+                        rightCircleAmigoPosition:
+                            -13.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 22.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 22.04 * SizeConfig.heightMultiplier,
+                        circleAmigoGradient: [
+                          AmigoColors.orange,
+                          AmigoColors.lightRed2
+                        ],
+                        circleAmigoOpacity: [0.1, 0.1],
+                      ),
                       Positioned(
                         top: 5.20 * SizeConfig.heightMultiplier,
                         child: Container(
@@ -423,7 +470,7 @@ class _MobilePodcastState extends State<MobilePodcast> {
                               borderRadius: BorderRadius.all(Radius.circular(
                                   0.65 * SizeConfig.heightMultiplier))),
                           alignment: Alignment.center,
-                          height: 25.06 * SizeConfig.heightMultiplier,
+                          height: 67 * SizeConfig.heightMultiplier,
                           width: MediaQuery.of(context).size.width / 1,
                           child: Container(
                               height: MediaQuery.of(context).size.height,
@@ -501,74 +548,6 @@ class _MobilePodcastState extends State<MobilePodcast> {
                             ),
                       ),
                       //left
-
-                      CircleAmigo(
-                        topCircleAmigoPosition:
-                            -0.40 * SizeConfig.heightMultiplier,
-                        leftCircleAmigoPosition:
-                            -13.41 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 15.53 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 15.53 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.1, 0.1],
-                      ),
-                      CircleAmigo(
-                        topCircleAmigoPosition:
-                            -4.41 * SizeConfig.heightMultiplier,
-                        leftCircleAmigoPosition:
-                            -18.67 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 25.04 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 25.04 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.1, 0.1],
-                      ),
-
-                      //right
-                      CircleAmigo(
-                        topCircleAmigoPosition:
-                            -2.20 * SizeConfig.heightMultiplier,
-                        rightCircleAmigoPosition:
-                            -7.16 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 7.02 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 7.02 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.1, 0.1],
-                      ),
-                      CircleAmigo(
-                        topCircleAmigoPosition:
-                            -5.46 * SizeConfig.heightMultiplier,
-                        rightCircleAmigoPosition:
-                            -10.41 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 14.53 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 14.53 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.1, 0.1],
-                      ),
-                      CircleAmigo(
-                        topCircleAmigoPosition:
-                            -8.71 * SizeConfig.heightMultiplier,
-                        rightCircleAmigoPosition:
-                            -13.67 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 22.04 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 22.04 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.1, 0.1],
-                      ),
                     ],
                   )),
               GetInTouch(),

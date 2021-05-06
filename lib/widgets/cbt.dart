@@ -347,7 +347,7 @@ class mobileCbt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 60.06 * SizeConfig.heightMultiplier,
+        height: 63.06 * SizeConfig.heightMultiplier,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -411,6 +411,21 @@ class mobileCbt extends StatelessWidget {
               circleAmigoOpacity: [0.5, 0.5],
             ),
 
+            Positioned(
+                left: 12.28 * SizeConfig.heightMultiplier,
+                bottom: -8.77 * SizeConfig.heightMultiplier,
+                child: Image.asset(
+                  aboutCbtPhone,
+                  height: 37.74 * SizeConfig.heightMultiplier,
+                )),
+            Positioned(
+                left: 28.80 * SizeConfig.heightMultiplier,
+                bottom: -1.75 * SizeConfig.heightMultiplier,
+                child: Image.asset(
+                  cbtDoll,
+                  height: 17.74 * SizeConfig.heightMultiplier,
+                )),
+
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Container(
@@ -467,21 +482,6 @@ class mobileCbt extends StatelessWidget {
                 ),
               ),
             ),
-
-            Positioned(
-                left: 12.28 * SizeConfig.heightMultiplier,
-                bottom: -8.77 * SizeConfig.heightMultiplier,
-                child: Image.asset(
-                  aboutCbtPhone,
-                  height: 37.74 * SizeConfig.heightMultiplier,
-                )),
-            Positioned(
-                left: 28.80 * SizeConfig.heightMultiplier,
-                bottom: -1.75 * SizeConfig.heightMultiplier,
-                child: Image.asset(
-                  cbtDoll,
-                  height: 17.74 * SizeConfig.heightMultiplier,
-                )),
           ],
         ));
   }
