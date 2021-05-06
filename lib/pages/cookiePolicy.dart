@@ -142,6 +142,7 @@ class _WebCookiePageState extends State<WebCookiePage> {
                                           text: TextSpan(
                                               text:
                                                   "Network Advertising Initiative:",
+
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontFamily: robot,
@@ -168,11 +169,118 @@ class _WebCookiePageState extends State<WebCookiePage> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 50,
+
+
+                                    SizedBox(height: 50,),
+                                Container(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        child: Text("These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontFamily: robot,
+                                            fontSize: 1.2 *SizeConfig.textMultiplier
+                                        ),
+                                        ),
+                                      ),
+                                      SizedBox(height: 50,),
+                                      Center(
+                                        child: Container(
+                                          alignment: Alignment.center,
+                                          width:MediaQuery.of(context).size.width*0.6,
+                                          child: Table(
+                                            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+
+                                            columnWidths: {
+                                              0: FlexColumnWidth(1),
+                                              1: FlexColumnWidth(4),
+                                            },
+                                            border: TableBorder.all(
+                                              color: Colors.black45,
+                                              style: BorderStyle.solid,
+                                              width:1
+                                            ),
+                                            children: [
+                                              TableRow(
+                                                  children: [
+                                                Column(children:
+                                                [
+                                                  Text('Name:',
+                                                    style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontFamily: robot,
+                                                    fontSize: 1 *SizeConfig.textMultiplier
+                                                ),
+                                                )
+                                                ]),
+                                                Column(
+                                                    mainAxisAlignment:MainAxisAlignment.start,
+                                                    children:[Text(' connect.sid',
+                                                      style: TextStyle(
+                                                        color: Colors.black,
+                                                        fontFamily: robot,
+                                                        fontSize: 1 *SizeConfig.textMultiplier
+                                                    ),)]),
+                                              ]),
+                                              TableRow(
+                                                  children: [
+                                                    Column(children:[Text('Purpose:', style: TextStyle(
+                                                        color: Colors.black,
+                                                        fontFamily: robot,
+                                                        fontSize: 1 *SizeConfig.textMultiplier
+                                                    ),)]),
+                                                    Column(
+                                                        mainAxisAlignment:MainAxisAlignment.start,
+                                                        children:[Text('Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days', style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontFamily: robot,
+                                                            fontSize: 1 *SizeConfig.textMultiplier
+                                                        ),)]),
+                                                  ]),
+                                              TableRow(
+                                                  children: [
+                                                    Column(children:[Text('Provider :', style: TextStyle(
+                                                        color: Colors.black,
+                                                        fontFamily: robot,
+                                                        fontSize: 1 *SizeConfig.textMultiplier
+                                                    ),)]),
+                                                    Column(
+                                                        mainAxisAlignment:MainAxisAlignment.start,
+                                                        children:[Text('mindamigo.com', style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontFamily: robot,
+                                                            fontSize: 1 *SizeConfig.textMultiplier
+                                                        ),)]),
+                                                  ]),
+                                              TableRow(
+                                                  children: [
+                                                    Column(children:[Text('Service:', style: TextStyle(
+                                                        color: Colors.black,
+                                                        fontFamily: robot,
+                                                        fontSize: 1 *SizeConfig.textMultiplier
+                                                    ),)]),
+                                                    Column(
+                                                        mainAxisAlignment:MainAxisAlignment.start,
+                                                        children:[Text('Node Js', style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontFamily: robot,
+                                                            fontSize: 1 *SizeConfig.textMultiplier
+                                                        ),)]),
+                                                  ]),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              )),
+                                ),
+                                SizedBox(height: 50,),
+                                  ],
+                                )
+                            ),
 
                           //left
                           CircleAmigo(
@@ -427,9 +535,113 @@ class _TabCookiePageState extends State<TabCookiePage> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 50,
+                                  SizedBox(height: 50,),
+                                  Container(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          child: Text("These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontFamily: robot,
+                                                fontSize: 1.2 *SizeConfig.textMultiplier
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 50,),
+                                        Center(
+                                          child: Container(
+                                            alignment: Alignment.center,
+                                            width:MediaQuery.of(context).size.width*0.6,
+                                            child: Table(
+                                              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+
+                                              columnWidths: {
+                                                0: FlexColumnWidth(1),
+                                                1: FlexColumnWidth(4),
+                                              },
+                                              border: TableBorder.all(
+                                                  color: Colors.black45,
+                                                  style: BorderStyle.solid,
+                                                  width:1
+                                              ),
+                                              children: [
+                                                TableRow(
+                                                    children: [
+                                                      Column(children:
+                                                      [
+                                                        Text('Name:',
+                                                          style: TextStyle(
+                                                              color: Colors.black,
+                                                              fontFamily: robot,
+                                                              fontSize: 1 *SizeConfig.textMultiplier
+                                                          ),
+                                                        )
+                                                      ]),
+                                                      Column(
+                                                          mainAxisAlignment:MainAxisAlignment.start,
+                                                          children:[Text(' connect.sid',
+                                                            style: TextStyle(
+                                                                color: Colors.black,
+                                                                fontFamily: robot,
+                                                                fontSize: 1 *SizeConfig.textMultiplier
+                                                            ),)]),
+                                                    ]),
+                                                TableRow(
+                                                    children: [
+                                                      Column(children:[Text('Purpose:', style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *SizeConfig.textMultiplier
+                                                      ),)]),
+                                                      Column(
+                                                          mainAxisAlignment:MainAxisAlignment.start,
+                                                          children:[Text('Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days', style: TextStyle(
+                                                              color: Colors.black,
+                                                              fontFamily: robot,
+                                                              fontSize: 1 *SizeConfig.textMultiplier
+                                                          ),)]),
+                                                    ]),
+                                                TableRow(
+                                                    children: [
+                                                      Column(children:[Text('Provider :', style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *SizeConfig.textMultiplier
+                                                      ),)]),
+                                                      Column(
+                                                          mainAxisAlignment:MainAxisAlignment.start,
+                                                          children:[Text('mindamigo.com', style: TextStyle(
+                                                              color: Colors.black,
+                                                              fontFamily: robot,
+                                                              fontSize: 1 *SizeConfig.textMultiplier
+                                                          ),)]),
+                                                    ]),
+                                                TableRow(
+                                                    children: [
+                                                      Column(children:[Text('Service:', style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *SizeConfig.textMultiplier
+                                                      ),)]),
+                                                      Column(
+                                                          mainAxisAlignment:MainAxisAlignment.start,
+                                                          children:[Text('Node Js', style: TextStyle(
+                                                              color: Colors.black,
+                                                              fontFamily: robot,
+                                                              fontSize: 1 *SizeConfig.textMultiplier
+                                                          ),)]),
+                                                    ]),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
+                                  SizedBox(height: 50,),
                                 ],
                               )),
 
@@ -1022,12 +1234,117 @@ class _MobileCookiePageState extends State<MobileCookiePage> {
                                   ],
                                 ),
                               ),
-                              SizedBox(
-                                height: 50,
-                              ),
-                            ],
-                          )),
 
+                            SizedBox(height: 50,),
+                            Container(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    child: Text("These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontFamily: robot,
+                                          fontSize: 1.2 *SizeConfig.textMultiplier
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 50,),
+                                  Center(
+                                    child: Container(
+                                      alignment: Alignment.center,
+                                      width:MediaQuery.of(context).size.width*0.6,
+                                      child: Table(
+                                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+
+                                        columnWidths: {
+                                          0: FlexColumnWidth(1),
+                                          1: FlexColumnWidth(4),
+                                        },
+                                        border: TableBorder.all(
+                                            color: Colors.black45,
+                                            style: BorderStyle.solid,
+                                            width:1
+                                        ),
+                                        children: [
+                                          TableRow(
+                                              children: [
+                                                Column(children:
+                                                [
+                                                  Text('Name:',
+                                                    style: TextStyle(
+                                                        color: Colors.black,
+                                                        fontFamily: robot,
+                                                        fontSize: 1 *SizeConfig.textMultiplier
+                                                    ),
+                                                  )
+                                                ]),
+                                                Column(
+                                                    mainAxisAlignment:MainAxisAlignment.start,
+                                                    children:[Text(' connect.sid',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *SizeConfig.textMultiplier
+                                                      ),)]),
+                                              ]),
+                                          TableRow(
+                                              children: [
+                                                Column(children:[Text('Purpose:', style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontFamily: robot,
+                                                    fontSize: 1 *SizeConfig.textMultiplier
+                                                ),)]),
+                                                Column(
+                                                    mainAxisAlignment:MainAxisAlignment.start,
+                                                    children:[Text('Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days', style: TextStyle(
+                                                        color: Colors.black,
+                                                        fontFamily: robot,
+                                                        fontSize: 1 *SizeConfig.textMultiplier
+                                                    ),)]),
+                                              ]),
+                                          TableRow(
+                                              children: [
+                                                Column(children:[Text('Provider :', style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontFamily: robot,
+                                                    fontSize: 1 *SizeConfig.textMultiplier
+                                                ),)]),
+                                                Column(
+                                                    mainAxisAlignment:MainAxisAlignment.start,
+                                                    children:[Text('mindamigo.com', style: TextStyle(
+                                                        color: Colors.black,
+                                                        fontFamily: robot,
+                                                        fontSize: 1 *SizeConfig.textMultiplier
+                                                    ),)]),
+                                              ]),
+                                          TableRow(
+                                              children: [
+                                                Column(children:[Text('Service:', style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontFamily: robot,
+                                                    fontSize: 1 *SizeConfig.textMultiplier
+                                                ),)]),
+                                                Column(
+                                                    mainAxisAlignment:MainAxisAlignment.start,
+                                                    children:[Text('Node Js', style: TextStyle(
+                                                        color: Colors.black,
+                                                        fontFamily: robot,
+                                                        fontSize: 1 *SizeConfig.textMultiplier
+                                                    ),)]),
+                                              ]),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 50,),
+                          ],
+                        )
+                    ),
                       //left
                       CircleAmigo(
                         bottomCircleAmigoPosition:

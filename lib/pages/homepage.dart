@@ -12,7 +12,7 @@ import 'package:mindamigo/widgets/homeMsgSection.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/titleSection.dart';
 import 'package:mindamigo/widgets/videoAndDisc.dart';
-import 'package:mindamigo/pages/cookiePolicy.dart';
+import 'package:mindamigo/core/cookie/cookiesAccept.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -25,6 +25,8 @@ class HomePage extends StatelessWidget {
   }
 }
 
+
+
 //websiteHomePage
 class WebHomePage extends StatefulWidget {
   @override
@@ -33,28 +35,35 @@ class WebHomePage extends StatefulWidget {
 
 class _WebHomePageState extends State<WebHomePage> {
   ScrollController _controller;
-  bool isVisible = true;
+
+  bool isVisible;
+
 
   @override
   void initState() {
     //Initialize the  scrollController
     _controller = ScrollController();
+    isVisible=CookiesSharedPreference.getCookiePolicy()??true;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      isVisible == true
-          ? showModalBottomSheet(
-              elevation: 0,
-              // isDismissible: true,
-              backgroundColor: Colors.transparent,
-              context: context,
-              isScrollControlled: false,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
-              ),
+
+
+    isVisible==true?WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      // ignore: unrelated_type_equality_checks
+      showModalBottomSheet(
+        elevation: 0,
+          isDismissible: true,
+          backgroundColor: Colors.transparent,
+          context: context,
+          isScrollControlled: false,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)
+            ),
+          ),
+
               builder: (BuildContext context) {
                 return Container(
                   margin: EdgeInsets.all(20),
@@ -99,33 +108,29 @@ class _WebHomePageState extends State<WebHomePage> {
                                 ]),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isVisible = false;
-                            });
-                            Navigator.pop(context);
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5)),
-                                color: Colors.green),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 40),
-                            child: Text(
-                              'Accept',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                );
-              })
-          : Container();
-    });
+                        
+                   GestureDetector(
+                     onTap: (){
+                       CookiesSharedPreference.setCookiePolicy(false);
+                       Navigator.pop(context);
+                     },
+                     child: Container(
+                       decoration: BoxDecoration(
+                         borderRadius: BorderRadius.all(Radius.circular(5)),
+                         color: Colors.green
+                       ),
+                       padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                       child: Text('Accept',style: TextStyle(color: Colors.white),),
+                     ),
+                   )
+
+                  ],
+                ),
+              ),
+            );
+          }
+      );
+    }):Container();
     return Stack(
       children: [
         SafeArea(
@@ -667,7 +672,18 @@ class TabHomePage extends StatefulWidget {
 }
 
 class _TabHomePageState extends State<TabHomePage> {
-  bool isVisible = true;
+
+  ScrollController _controller;
+  bool isVisible;
+
+  @override
+  void initState() {
+    //Initialize the  scrollController
+    _controller = ScrollController();
+    isVisible=CookiesSharedPreference.getCookiePolicy()??true;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -725,35 +741,32 @@ class _TabHomePageState extends State<TabHomePage> {
                                 ]),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isVisible = false;
-                            });
-                            Navigator.pop(context);
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5)),
-                                color: Colors.green),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 40),
-                            child: Text(
-                              'Accept',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                );
-              })
-          : Container();
+            
+                    GestureDetector(
+                      onTap: (){
+                        CookiesSharedPreference.setCookiePolicy(false);
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                            color: Colors.green
+                        ),
+                        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                        child: Text('Accept',style: TextStyle(color: Colors.white),),
+                      ),
+                    )
+
+                  ],
+                ),
+              ),
+            );
+          }
+      ):Container();
     });
     return Container(
       child: SingleChildScrollView(
+          controller: _controller,
         child: Container(
           child: Column(
             children: [
@@ -1220,7 +1233,19 @@ class MobileHomePage extends StatefulWidget {
 }
 
 class _MobileHomePageState extends State<MobileHomePage> {
-  bool isVisible = true;
+
+  ScrollController _controller;
+  bool isVisible;
+
+  @override
+  void initState() {
+    //Initialize the  scrollController
+    _controller = ScrollController();
+    isVisible=CookiesSharedPreference.getCookiePolicy()??true;
+    super.initState();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -1278,32 +1303,32 @@ class _MobileHomePageState extends State<MobileHomePage> {
                                 ]),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isVisible = false;
-                            });
-                            Navigator.pop(context);
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5)),
-                                color: Colors.green),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 40),
-                            child: Text(
-                              'Accept',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                );
-              })
-          : Container();
+                      
+
+                    GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          isVisible=false;
+                        });
+                        CookiesSharedPreference.setCookiePolicy(false);
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                            color: Colors.green
+                        ),
+                        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                        child: Text('Accept',style: TextStyle(color: Colors.white),),
+                      ),
+                    )
+
+                  ],
+                ),
+              ),
+            );
+          }
+      ):Container();
     });
     return Scaffold(
       appBar: AppBar(

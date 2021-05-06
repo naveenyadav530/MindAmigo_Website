@@ -701,7 +701,7 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                                     ConnectionState.done) {
                                   if (snapshot.hasData) {
                                     return Container(
-                                      child: TabBlogContent(
+                                      child: MobileBlogContent(
                                         blogsModel: snapshot.data,
                                       ),
                                     );
