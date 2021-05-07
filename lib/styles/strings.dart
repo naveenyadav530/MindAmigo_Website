@@ -1,10 +1,85 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
 
-
 class Strings {
   Strings._();
+  //privacy policy
+  static const String privacyPolicy16 =
+      '''Many of our external third parties are based outside the EEA so their processing of your personal data will involve a transfer of data outside the EEA.
 
+Whenever we transfer your personal data out of the EEA, we ensure a similar degree of protection is afforded to it by ensuring at least one of the following safeguards is implemented:
+
+We will only transfer your personal data to countries that have been deemed to provide an adequate level of protection for personal data by the European Commission.
+ 
+Where we use certain service providers, we may use specific contracts approved by the European Commission which give personal data the same protection it has in Europe. Where we use providers based in the US, we may transfer data to them if they are part of the Privacy Shield which requires them to provide similar protection to personal data shared between Europe and the US.
+
+Please contact us if you want further information on the specific mechanism used by us when transferring your personal data out of the EEA.''';
+  static const String privacyPolicy15 =
+      '''When you consent to providing us with your personal data, we will also ask you for your consent to share your personal data with the third parties set out below for the purposes set out in the table: 
+
+External Third Parties as set out in the Glossary.
+
+Third parties to whom we may choose to sell, transfer or merge parts of our business or our assets. Alternatively, we may seek to acquire other businesses or merge with them. If a change happens to our business, then the new owners may use your personal data in the same way as set out in this privacy policy.''';
+  static const String privacyPolicy14 =
+      '''We will only use your personal data when the law allows us to do so. Most commonly we will use your personal data in the following circumstances:
+
+Where you have consented before the processing.
+
+Where we need to perform a contract we are about to enter or have entered with you.
+
+Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.
+
+Where we need to comply with a legal or regulatory obligation.
+
+We will only send you direct marketing communications by email or text if we have your consent. You have the right to withdraw that consent at any time by contacting us.
+
+We will get your express opt-in consent before we share your personal data with any third party for marketing purposes.''';
+  static const String privacyPolicy13 =
+      '''We use cookies and/or other tracking technologies to distinguish you from other users of the App, App Site, the distribution platform (Appstore) or Services Sites and to remember your preferences. This helps us to provide you with a good experience when you use the App or browse any of Our Sites and also allows us to improve the App and Our Sites. For detailed information on the cookies we use, the purposes for which we use them and how you can exercise your choices regarding our use of your cookies, see our cookie policy [LINK].''';
+  static const String privacyPolicy12 =
+      '''We may collect, use, store and transfer different kinds of personal data about you as follows:
+
+Identity Data.
+
+Contact Data.
+
+Transaction Data.
+
+Device Data.
+
+Content Data.
+
+Profile Data.
+
+Usage Data.
+
+Marketing and Communications Data.
+
+We also collect, use and share Aggregated Data such as statistical or demographic data for any purpose. Aggregated Data could be derived from your personal data but is not considered personal data in law as this data will not directly or indirectly reveal your identity. For example, we may aggregate your Usage Data to calculate the percentage of users accessing a specific App feature. However, if we combine or connect Aggregated Data with your personal data so that it can directly or indirectly identify you, we treat the combined data as personal data which will be used in accordance with this privacy policy.
+
+We do not collect any Special Categories of Personal Data about you (this includes details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership, and genetic and biometric data). Nor do we collect any information about criminal convictions and offences.''';
+  static const String privacyPolicy11 =
+      '''Our Sites may, from time to time, contain links to and from the websites of our partner networks, advertisers and affiliates. Please note that these websites and any services that may be accessible through them have their own privacy policies and that we do not accept any responsibility or liability for these policies or for any personal data that may be collected through these websites or services, such as Contact data. Please check these policies before you submit any personal data to these websites or use these services.''';
+  static const String privacyPolicy10 =
+      '''We keep our privacy policy under regular review.
+
+This version was last updated on 27 th March 2019. It may change and if it does, these changes will be posted on this page and, where appropriate, notified to you when you next start the App or log onto one of the Services Sites. The new policy may be displayed on-screen and you may be required to read and accept the changes to continue your use of the App or the Services.
+
+It is important that the personal data we hold about you is accurate and current. Please keep us informed if your personal data changes during our relationship with you.''';
+  static const String privacyPolicy = '''
+Our full details are:
+
+Full name of legal entity: Mindamigo Limited
+
+Name or title of data privacy manager: Adam Chadwick
+
+Email address: info@mindamgio.com
+
+Postal address: 16 Commerce Square, Lace Market, Nottingham, NG1 1HS
+
+Telephone number: 0115 772 0215
+
+You have the right to make a complaint at any time to the Information Commissioner&#39;s Office (ICO), the UK supervisory authority for data protection issues or other competent supervisory authority of an EU member state if the App is downloaded outside the UK.''';
   //advisory bord
   static const String Bridgitte =
       '''Bridgitte is a Forensic Psychologist registered with the Health and Care Professionals Council. In 2019 Bridgitte started working across two high dependency complex care hospitals for men and women with learning disabilities, autism spectrum disorder and other complex mental health needs. Recently, Bridgitte moved into a new role setting up an acute inpatient hospital for young people with mental health issues. 
@@ -76,7 +151,6 @@ Discover their techniques and insights to put you back in control of your life a
   static String adamSubTitle = '''Many people ask me, what qualifies you
        to talk about mental health? ''';
   static String adamPara =
-
       '''The short answer is I’m not medically qualified and I don’t claim to be a psychologist, a psychiatrist or a neuroscientist, I’m just somebody who’s experienced poor mental health and come out the other end,
 having learnt a lot about myself along the way.
 
@@ -108,7 +182,6 @@ As I said previously, Mindamigo is not a magic bullet, but I guarantee there wil
 here that can help you get back on track and to focus on what really matters most to you.
 ''';
 
-
   static String adamDiscription1 = '''Description''';
   static String privacyPolicy1 =
       '''Under data protection laws, we are required to provide you with certain information about who we are, how we process your personal data and for what purposes, and your rights in relation to your personal data. This information is provided in the ''';
@@ -132,14 +205,7 @@ back to normality. Mindamigo may not be your miracle cure, but what it can do, i
 of your life. 
 To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other, back to normality. Mindamigo may not be your miracle cure, but what it can do, is provide you with enough techniques and insights to help put you back in control of your life. To move steadily, but surely, one foot in front of the other, back to normality.''';
 
-
-
-
-
-
-
-  
-  static String cookiesPolicy="""
+  static String cookiesPolicy = """
 Last updated: 16/04/2021
 
 Mindamigo ("us", "we", or "our") uses cookies on www.mindamgio.com (the "Service"). By using the Service, you consent to the use of cookies.
@@ -179,4 +245,3 @@ You can learn more about cookies and the following third-party websites:
 
     """;
 }
-
