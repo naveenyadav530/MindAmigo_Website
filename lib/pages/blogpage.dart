@@ -71,8 +71,7 @@ class _WebBlogPageState extends State<WebBlogPage> {
                                     child: FutureBuilder(
                                       future: Blog().getBlogData(),
                                       builder: (context, snapshot) {
-                                        if (snapshot.connectionState ==
-                                            ConnectionState.done) {
+                                        if (snapshot.connectionState == ConnectionState.done) {
                                           if (snapshot.hasData) {
                                             return Container(
                                               child: BlogContent(
@@ -83,8 +82,7 @@ class _WebBlogPageState extends State<WebBlogPage> {
                                             return Center(
                                               child: CircularProgressIndicator(
                                                 valueColor:
-                                                    AlwaysStoppedAnimation<
-                                                        Color>(Colors.blue),
+                                                    AlwaysStoppedAnimation<Color>(Colors.blue),
                                               ),
                                             );
                                           }
@@ -92,48 +90,11 @@ class _WebBlogPageState extends State<WebBlogPage> {
                                           return Center(
                                             child: CircularProgressIndicator(
                                               valueColor:
-                                                  AlwaysStoppedAnimation<Color>(
-                                                      Colors.blue),
+                                                  AlwaysStoppedAnimation<Color>(Colors.blue),
                                             ),
                                           );
                                         }
                                       },
-                                    ),
-                                  ),
-                                  Opacity(
-                                    opacity: visiblity,
-                                    child: Container(
-                                      margin: EdgeInsets.fromLTRB(
-                                          0,
-                                          1.30 * SizeConfig.heightMultiplier,
-                                          0,
-                                          5.20 * SizeConfig.heightMultiplier),
-                                      width:
-                                          19.53 * SizeConfig.heightMultiplier,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            "More recent posts",
-                                            style: TextStyle(
-                                                fontSize: 1.95 *
-                                                    SizeConfig.textMultiplier,
-                                                fontFamily: robot,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          InkWell(
-                                            onTap: () {},
-                                            child: Image.asset(
-                                              blogDropDown,
-                                              height: 3.25 *
-                                                  SizeConfig.heightMultiplier,
-                                              width: 3.25 *
-                                                  SizeConfig.heightMultiplier,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
                                     ),
                                   ),
                                 ],
@@ -371,42 +332,6 @@ class _TabBlogPageState extends State<TabBlogPage> {
                                           );
                                         }
                                       },
-                                    ),
-                                  ),
-                                  Opacity(
-                                    opacity: visiblity,
-                                    child: Container(
-                                      margin: EdgeInsets.fromLTRB(
-                                          0,
-                                          1.30 * SizeConfig.heightMultiplier,
-                                          0,
-                                          5.20 * SizeConfig.heightMultiplier),
-                                      width:
-                                          19.53 * SizeConfig.heightMultiplier,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            "More recent posts",
-                                            style: TextStyle(
-                                                fontSize: 1.95 *
-                                                    SizeConfig.textMultiplier,
-                                                fontFamily: robot,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          InkWell(
-                                            onTap: () {},
-                                            child: Image.asset(
-                                              blogDropDown,
-                                              height: 3.25 *
-                                                  SizeConfig.heightMultiplier,
-                                              width: 3.25 *
-                                                  SizeConfig.heightMultiplier,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
                                     ),
                                   ),
                                 ],
@@ -671,7 +596,7 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
               Navigator.pushNamed(context, PodcastRoute);
             },
           ),
-          ListTile(
+            ListTile(
             title: Text(
               'Blog',
               style: TextStyle(
@@ -730,43 +655,8 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
                               },
                             ),
                           ),
-                          Opacity(
-                            opacity: visiblity,
-                            child: Container(
-                              margin: EdgeInsets.fromLTRB(
-                                  0,
-                                  1.30 * SizeConfig.heightMultiplier,
-                                  0,
-                                  5.20 * SizeConfig.heightMultiplier),
-                              width: 19.53 * SizeConfig.heightMultiplier,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "More recent posts",
-                                    style: TextStyle(
-                                        fontSize:
-                                            1.95 * SizeConfig.textMultiplier,
-                                        fontFamily: robot,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  InkWell(
-                                    onTap: () {},
-                                    child: Image.asset(
-                                      blogDropDown,
-                                      height:
-                                          3.25 * SizeConfig.heightMultiplier,
-                                      width: 3.25 * SizeConfig.heightMultiplier,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
                         ],
                       ),
-
                       //left
                       CircleAmigo(
                         topCircleAmigoPosition:
