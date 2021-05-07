@@ -3,6 +3,18 @@ import 'package:flutter/material.dart';
 
 class Strings {
   Strings._();
+  static const String termsPage1 =
+      '''This is a summary of your key legal rights. These are subject to certain exceptions. For detailed information please visit the Citizens Advice website www.adviceguide.org.uk or call 03454 04 05 06.
+
+The Consumer Rights Act 2015 says digital content (including the App) must be as described, fit for purpose and of satisfactory quality:
+
+b) If your digital content (the App) is faulty, you&#39;re entitled to a repair or a replacement.
+
+c) If the fault can't be fixed, or if it hasn't been fixed within a reasonable time and without significant inconvenience, you can get some or all of your money back.
+
+d) If you can show the fault has damaged your device and we haven't used reasonable care and skill, you may be entitled to a repair or compensation
+
+See also clause 7.3 .''';
   //privacy policy
   static const String privacyPolicy21 =
       '''Service providers acting as processors based in the UK who provide IT and system administration services.
