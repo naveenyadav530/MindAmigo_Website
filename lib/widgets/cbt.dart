@@ -413,7 +413,7 @@ class mobileCbt extends StatelessWidget {
 
             Positioned(
                 left: 12.28 * SizeConfig.heightMultiplier,
-                bottom: -8.77 * SizeConfig.heightMultiplier,
+                bottom: -9.77 * SizeConfig.heightMultiplier,
                 child: Image.asset(
                   aboutCbtPhone,
                   height: 37.74 * SizeConfig.heightMultiplier,
