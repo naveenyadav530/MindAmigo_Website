@@ -289,7 +289,6 @@ class _MobileAboutState extends State<MobileAbout> {
               GradientLine(),
               Container(
                   color: AmigoColors.cream,
-                  height: 32.55 * SizeConfig.heightMultiplier,
                   width: MediaQuery.of(context).size.width,
                   child: Stack(
                     alignment: Alignment.center,

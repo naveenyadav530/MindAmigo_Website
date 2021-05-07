@@ -337,7 +337,34 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
   }
 }
 
-class MobileGetInTouch extends StatelessWidget {
+class MobileGetInTouch extends StatefulWidget {
+  @override
+  _MobileGetInTouchState createState() => _MobileGetInTouchState();
+}
+
+class _MobileGetInTouchState extends State<MobileGetInTouch> {
+  TextEditingController nameController = new TextEditingController();
+
+  TextEditingController emailController = new TextEditingController();
+
+  TextEditingController messageController = new TextEditingController();
+
+  launchMailto() async {
+    final mailtoLink = Mailto(
+        to: ['info@mindamigo.com'],
+        cc: [],
+        subject: 'Mindamgio Website Query',
+        body: 'Hi, I am ' +
+            nameController.text +
+            "\n I would like to get in touch regarding " +
+            messageController.text);
+    await launch('$mailtoLink');
+
+    nameController.clear();
+    emailController.clear();
+    messageController.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -349,7 +376,6 @@ class MobileGetInTouch extends StatelessWidget {
           Container(
             margin:
                 EdgeInsets.symmetric(vertical: 3 * SizeConfig.heightMultiplier),
-            height: 25 * SizeConfig.heightMultiplier,
             width: MediaQuery.of(context).size.width / 1.8,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -385,128 +411,116 @@ class MobileGetInTouch extends StatelessWidget {
                         ],
                       ),
                     )),
-                //name and email
+                //name
                 Container(
-                    margin: EdgeInsets.symmetric(vertical: 8.0),
-                    width: MediaQuery.of(context).size.width / 2.5,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                    margin: EdgeInsets.only(top: 10),
+                    alignment: Alignment.topLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(
-                          child: Container(
-                              alignment: Alignment.topLeft,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        left:
-                                            0.65 * SizeConfig.heightMultiplier),
-                                    child: Text("Name",
-                                        style: TextStyle(
-                                            fontSize:
-                                                1.2 * SizeConfig.textMultiplier,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: robot)),
-                                  ),
-                                  Container(
-                                    height: 3.60 * SizeConfig.heightMultiplier,
-                                    child: TextField(
-                                      decoration: InputDecoration(
-                                          isDense: true,
-                                          filled: true,
-                                          fillColor: Colors.white,
-                                          enabledBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
-                                                  color: Colors.black26),
-                                              borderRadius: BorderRadius.all(Radius.circular(0.65 *
-                                                  SizeConfig
-                                                      .heightMultiplier))),
-                                          focusedBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
-                                                  color: Colors.transparent),
-                                              borderRadius: BorderRadius.all(Radius.circular(0.65 *
-                                                  SizeConfig
-                                                      .heightMultiplier))),
-                                          hintText: 'Adam Chadwick',
-                                          hintStyle: TextStyle(
-                                              fontSize: 1.1 * SizeConfig.textMultiplier,
-                                              fontFamily: robot,
-                                              fontWeight: FontWeight.bold)),
-                                    ),
-                                  )
-                                ],
-                              )),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 0.65 * SizeConfig.heightMultiplier),
+                          child: Text("Name",
+                              style: TextStyle(
+                                  fontSize: 1.2 * SizeConfig.textMultiplier,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: robot)),
                         ),
-                        SizedBox(
-                          width: 1.5 * SizeConfig.heightMultiplier,
-                        ),
-                        Expanded(
-                          child: Container(
-                              alignment: Alignment.topLeft,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        left:
-                                            0.65 * SizeConfig.heightMultiplier),
-                                    child: Text("Email",
-                                        style: TextStyle(
-                                            fontSize:
-                                                1.2 * SizeConfig.textMultiplier,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: robot)),
-                                  ),
-                                  Container(
-                                    height: 3.60 * SizeConfig.heightMultiplier,
-                                    child: TextField(
-                                      decoration: InputDecoration(
-                                          isDense: true,
-                                          filled: true,
-                                          fillColor: Colors.white,
-                                          enabledBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
-                                                  color: Colors.black26),
-                                              borderRadius: BorderRadius.all(Radius.circular(0.65 *
-                                                  SizeConfig
-                                                      .heightMultiplier))),
-                                          focusedBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
-                                                  color: Colors.transparent),
-                                              borderRadius: BorderRadius.all(Radius.circular(0.65 *
-                                                  SizeConfig
-                                                      .heightMultiplier))),
-                                          hintText: 'Adam Chadwick',
-                                          hintStyle: TextStyle(
-                                              fontSize: 1.1 * SizeConfig.textMultiplier,
-                                              fontFamily: robot,
-                                              fontWeight: FontWeight.bold)),
-                                    ),
-                                  )
-                                ],
-                              )),
+                        Container(
+                          height: 3.60 * SizeConfig.heightMultiplier,
+                          child: TextField(
+                            controller: nameController,
+                            decoration: InputDecoration(
+                                isDense: true,
+                                filled: true,
+                                fillColor: Colors.white,
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.black26),
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(0.65 *
+                                            SizeConfig.heightMultiplier))),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.transparent),
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(0.65 *
+                                            SizeConfig.heightMultiplier))),
+                                hintText: 'Adam Chadwick',
+                                hintStyle: TextStyle(
+                                    fontSize: 1.1 * SizeConfig.textMultiplier,
+                                    fontFamily: robot,
+                                    fontWeight: FontWeight.bold)),
+                          ),
                         )
                       ],
                     )),
-
+                //email
                 Container(
-                    margin: EdgeInsets.only(
-                        left: 0.65 * SizeConfig.heightMultiplier),
-                    child: Text("Message",
-                        style: TextStyle(
-                            fontSize: 1.2 * SizeConfig.textMultiplier,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: robot))),
+                    margin: EdgeInsets.only(top: 5),
+                    alignment: Alignment.topLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 0.65 * SizeConfig.heightMultiplier),
+                          child: Text("Email",
+                              style: TextStyle(
+                                  fontSize: 1.2 * SizeConfig.textMultiplier,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: robot)),
+                        ),
+                        Container(
+                          height: 3.60 * SizeConfig.heightMultiplier,
+                          child: TextField(
+                            controller: emailController,
+                            decoration: InputDecoration(
+                                isDense: true,
+                                filled: true,
+                                fillColor: Colors.white,
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.black26),
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(0.65 *
+                                            SizeConfig.heightMultiplier))),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.transparent),
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(0.65 *
+                                            SizeConfig.heightMultiplier))),
+                                hintText: 'example@abcd.com',
+                                hintStyle: TextStyle(
+                                    fontSize: 1.1 * SizeConfig.textMultiplier,
+                                    fontFamily: robot,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        )
+                      ],
+                    )),
+                //message
                 Container(
-                  child: Row(
-                    children: [
-                      Expanded(
-                          child: Container(
-                        height: 3.60 * SizeConfig.heightMultiplier,
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        alignment: Alignment.center,
-                        child: TextField(
+                    margin: EdgeInsets.only(top: 5),
+                    alignment: Alignment.topLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 0.65 * SizeConfig.heightMultiplier),
+                          child: Text("Message",
+                              style: TextStyle(
+                                  fontSize: 1.2 * SizeConfig.textMultiplier,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: robot)),
+                        ),
+                        Container(
+                          height: 3.60 * SizeConfig.heightMultiplier,
+                          child: TextField(
+                            controller: messageController,
                             decoration: InputDecoration(
                                 isDense: true,
                                 filled: true,
@@ -527,34 +541,36 @@ class MobileGetInTouch extends StatelessWidget {
                                 hintStyle: TextStyle(
                                     fontSize: 1.1 * SizeConfig.textMultiplier,
                                     fontFamily: robot,
-                                    fontWeight: FontWeight.bold))),
-                      )),
-                      SizedBox(
-                        width: 1.3 * SizeConfig.heightMultiplier,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        )
+                      ],
+                    )),
+                Center(
+                  child: Container(
+                    height: 2.90 * SizeConfig.heightMultiplier,
+                    width: 8.65 * SizeConfig.heightMultiplier,
+                    margin: EdgeInsets.only(top: 10),
+                    child: ElevatedButton(
+                      child: Text(
+                        "Send",
+                        style: TextStyle(
+                            fontSize: 1.3 * SizeConfig.textMultiplier),
                       ),
-                      Container(
-                        height: 2.90 * SizeConfig.heightMultiplier,
-                        width: 8.65 * SizeConfig.heightMultiplier,
-                        child: ElevatedButton(
-                          child: Text(
-                            "Send",
-                            style: TextStyle(
-                                fontSize: 1.3 * SizeConfig.textMultiplier),
-                          ),
-                          onPressed: () => print("it's pressed"),
-                          style: ElevatedButton.styleFrom(
-                            primary: AmigoColors.lightBlack,
-                            onPrimary: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                  0.65 * SizeConfig.heightMultiplier),
-                            ),
-                          ),
+                      onPressed: () {
+                        launchMailto();
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: AmigoColors.lightBlack,
+                        onPrimary: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                              0.65 * SizeConfig.heightMultiplier),
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),

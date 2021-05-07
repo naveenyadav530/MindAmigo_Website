@@ -107,7 +107,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                       ),
                                   Container(
                                       margin: EdgeInsets.only(
-                                          top: 0.65 *
+                                          top: 1.65 *
                                               SizeConfig.heightMultiplier),
                                       child: RichText(
                                         text: TextSpan(
@@ -132,7 +132,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                       )),
                                   Container(
                                       margin: EdgeInsets.only(
-                                          top: 0.65 *
+                                          top: 1.65 *
                                               SizeConfig.heightMultiplier),
                                       child: RichText(
                                         text: TextSpan(
@@ -157,7 +157,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                       )),
                                   Container(
                                       margin: EdgeInsets.only(
-                                          top: 0.65 *
+                                          top: 1.65 *
                                               SizeConfig.heightMultiplier),
                                       child: RichText(
                                         text: TextSpan(
@@ -185,11 +185,12 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                   Container(
                                     margin: EdgeInsets.only(
                                         top:
-                                            0.65 * SizeConfig.heightMultiplier),
+                                            1.65 * SizeConfig.heightMultiplier),
                                     child: Text(
                                       "How you can withdraw consent",
                                       style: TextStyle(
                                           fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
                                           fontSize:
                                               1.62 * SizeConfig.textMultiplier),
                                     ),
@@ -197,7 +198,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                   Container(
                                     margin: EdgeInsets.only(
                                         top:
-                                            0.65 * SizeConfig.heightMultiplier),
+                                            1.65 * SizeConfig.heightMultiplier),
                                     child: Text(
                                       Strings.privacyPolicy3,
                                       style: TextStyle(
@@ -209,7 +210,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                   Container(
                                     margin: EdgeInsets.only(
                                         top:
-                                            1.30 * SizeConfig.heightMultiplier),
+                                            1.65 * SizeConfig.heightMultiplier),
                                     child: Text(
                                       "Introduction",
                                       style: TextStyle(
@@ -221,7 +222,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                   ),
                                   Container(
                                       margin: EdgeInsets.only(
-                                          top: 0.65 *
+                                          top: 1.65 *
                                               SizeConfig.heightMultiplier),
                                       child: RichText(
                                         text: TextSpan(
@@ -389,10 +390,11 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                   ),
                                   Container(
                                       margin: EdgeInsets.fromLTRB(
-                                          0,
-                                          0.65 * SizeConfig.heightMultiplier,
-                                          0,
-                                          5.20 * SizeConfig.heightMultiplier),
+                                        0,
+                                        0.65 * SizeConfig.heightMultiplier,
+                                        0,
+                                        0.65 * SizeConfig.heightMultiplier,
+                                      ),
                                       child: RichText(
                                         text: TextSpan(
                                           text:
@@ -415,6 +417,479 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                           ],
                                         ),
                                       )),
+                                  //sdfsddf
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            0.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "Important information and who we are",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            0.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      '''Mindamigo Limited is the controller and is responsible for your personal data (collectively referred to as "Company", "we", "us" or "our" in this policy).''',
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            0.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "We have appointed a data privacy manager. If you have any questions about this privacy policy, please contact them using the details set out below.",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "Contact details",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            0.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      Strings.privacyPolicy,
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "Changes to the privacy policy and your duty to inform us of changes",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            0.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      Strings.privacyPolicy10,
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "Third party links",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      Strings.privacyPolicy11,
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "The data we collect about you",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      Strings.privacyPolicy12,
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "How is your personal data collected?",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "We will collect and process the following data about you:",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+
+                                  Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.65 *
+                                              SizeConfig.heightMultiplier),
+                                      child: RichText(
+                                        text: TextSpan(
+                                          text: "Information you give us. ",
+                                          style: TextStyle(
+                                              fontFamily: robot,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 1.62 *
+                                                  SizeConfig.textMultiplier),
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                                text:
+                                                    '''This is information (including Identity, Contact, and Marketing and Communications Data) you consent to giving us about you by filling in forms on the App Site and the Services Sites (together''',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                    fontSize: 1.62 *
+                                                        SizeConfig
+                                                            .textMultiplier,
+                                                    fontFamily: robot)),
+                                            TextSpan(
+                                                text: " Our Sites), ",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 1.62 *
+                                                        SizeConfig
+                                                            .textMultiplier,
+                                                    fontFamily: robot)),
+                                            TextSpan(
+                                                text:
+                                                    '''or by corresponding with us (for example, by email or chat). It includes information you provide when you register to use the App Site, download or register an App, subscribe to any of our Services, search for an App or Service, make an in-App purchase, share data via an App&#39;s social media functions, enter a competition, promotion or survey, and when you report a problem with an App, our Services, or any of Our Sites. If you contact us, we will keep a record of that correspondence.''',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                    fontSize: 1.62 *
+                                                        SizeConfig
+                                                            .textMultiplier,
+                                                    fontFamily: robot)),
+                                          ],
+                                        ),
+                                      )),
+                                  Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.65 *
+                                              SizeConfig.heightMultiplier),
+                                      child: RichText(
+                                        text: TextSpan(
+                                          text:
+                                              "Information we collect about you and your device. ",
+                                          style: TextStyle(
+                                              fontFamily: robot,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 1.62 *
+                                                  SizeConfig.textMultiplier),
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                                text:
+                                                    '''Each time you visit one of Our Sites or use one of our Apps we will automatically collect personal data including Device, Content and Usage Data. We collect this data using cookies and other similar technologies. Please see our cookie policy [LINK] for further details. ''',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                    fontSize: 1.62 *
+                                                        SizeConfig
+                                                            .textMultiplier,
+                                                    fontFamily: robot)),
+                                          ],
+                                        ),
+                                      )),
+
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "Cookies",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      Strings.privacyPolicy13,
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "How we use your personal data",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      Strings.privacyPolicy14,
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "Purposes for which we will use your personal data",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  //table
+                                  Container(
+                                    margin: EdgeInsets.all(20),
+                                    child: Table(
+                                      defaultColumnWidth:
+                                          FixedColumnWidth(300.0),
+                                      border: TableBorder.all(
+                                          color: Colors.grey,
+                                          style: BorderStyle.solid,
+                                          width: 1),
+                                      children: [
+                                        TableRow(children: [
+                                          Column(children: [
+                                            Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  0, 2, 0, 5),
+                                              child: Text('Purpose/activity',
+                                                  style: TextStyle(
+                                                      fontSize: 20.0)),
+                                            )
+                                          ]),
+                                          Column(children: [
+                                            Text('Type of data',
+                                                style:
+                                                    TextStyle(fontSize: 20.0))
+                                          ]),
+                                          Column(children: [
+                                            Text('Lawful basis for processing',
+                                                style:
+                                                    TextStyle(fontSize: 20.0))
+                                          ]),
+                                        ]),
+                                        TableRow(children: [
+                                          Column(children: [
+                                            Text(
+                                                '''To install the App and register you as a new App user''')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                'Identity \n Contact \n Device')
+                                          ]),
+                                          Column(
+                                              children: [Text('Your consent')]),
+                                        ]),
+                                        TableRow(children: [
+                                          Column(children: [
+                                            Text(
+                                                'To process in-App purchases and deliver Services including managing payments and collecting money owed to us')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                'Identity \n\n Contact \n\n Transaction \n\n Device \n\n Marketing and Communications')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                '''Your consent Performance of a contract with you Necessary for our legitimate  interests (to recover debts due to us) ) This would not be necessary since service will not continue unless money has been received''')
+                                          ]),
+                                        ]),
+                                        TableRow(children: [
+                                          Column(children: [
+                                            Text(
+                                                '''To manage our relationship with you including notifying you of changes to the App or any Services''')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                '''Identity \n\n Contact \n\n Profile \n\n Marketing and Communications''')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                '''Your consent Performance of a contract with you Necessary for our legitimate interests (to keep records updated and to analyse how customers use our products/ Services) Necessary to comply with legal obligations (to inform you of any changes to our terms and conditions)''')
+                                          ]),
+                                        ]),
+                                        TableRow(children: [
+                                          Column(children: [
+                                            Text(
+                                                '''To enable you to participate in a prize draw, competition or complete a survey''')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                '''Identity \n\n Contact\n\nDevice\n\n Profile\n\nMarketing and Communications''')
+                                          ]),
+                                          Column(children: [
+                                            Padding(
+                                              padding: EdgeInsets.all(20.0),
+                                              child: Text(
+                                                  '''Your consent Performance of a contract with you Necessary for our legitimate interests (to analyse how customers use our products/Services and to develop them and grow our business)'''),
+                                            )
+                                          ]),
+                                        ]),
+                                        TableRow(children: [
+                                          Column(children: [
+                                            Text(
+                                                '''To administer and protect our business and this App  including troubleshooting, data analysis and system testing''')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                '''Identity \n\n Contact \n\n Device''')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                '''Necessary for our legitimate interests (for running our business, provision of administration and IT services, network security)''')
+                                          ]),
+                                        ]),
+                                        TableRow(children: [
+                                          Column(children: [
+                                            Text(
+                                                '''To deliver content and advertisements to you To make recommendations to you about goods or services which may interest you To measure and analyse the effectiveness of the advertising we serve you To monitor trends so we can improve the App''')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                '''Identity \n\n Contact \n\n Device \n\n Profile \n\nUsage \n\n Marketing and Communications''')
+                                          ]),
+                                          Column(children: [
+                                            Text(
+                                                '''Consent Necessary for our legitimate interests (to develop our products/Services and grow our business)''')
+                                          ]),
+                                        ]),
+                                      ],
+                                    ),
+                                  ),
+
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "Disclosures of your personal data",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      Strings.privacyPolicy15,
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      "International transfers",
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            1.65 * SizeConfig.heightMultiplier),
+                                    child: Text(
+                                      Strings.privacyPolicy16,
+                                      style: TextStyle(
+                                          fontFamily: robot,
+                                          fontSize:
+                                              1.62 * SizeConfig.textMultiplier),
+                                    ),
+                                  ),
                                 ],
                               )),
                           //left
