@@ -4,6 +4,37 @@ import 'package:flutter/material.dart';
 class Strings {
   Strings._();
   //privacy policy
+  static const String privacyPolicy21 =
+      '''Service providers acting as processors based in the UK who provide IT and system administration services.
+
+Professional advisers acting as processors or joint controllers including lawyers, bankers, auditors and insurers based in in UK who provide consultancy, banking, legal, insurance and accounting services.
+
+HM Revenue and Customs, regulators and other authorities acting as processors or joint controllers based in the UK who require reporting of processing activities in certain circumstances.
+
+Marketing agents acting as processors based in the UK who provide marketing services''';
+  static const String privacyPolicy20 =
+      '''means the interest of our business in conducting and managing our business to enable us to give you the best service/product and the best and most secure experience. We make sure we consider and balance any potential impact on you (both positive and negative) and your rights before we process your personal data for our legitimate interests. We do not use your personal data for activities where our interests  are overridden by the impact on you (unless we have your consent or are otherwise required or permitted to by law). You can obtain further information about how we assess our legitimate interests against any potential impact on you in respect of specific activities by contacting us.''';
+  static const String privacyPolicy19 =
+      '''Under certain circumstances you have the following rights under data protection laws in relation to your personal data. Please see these rights set out in the Glossary.
+
+You also have the right to ask us not to continue to process your personal data for marketing purposes.
+
+You can exercise any of these rights at any time by contacting us at info@mindamigo.com.''';
+  static const String privacyPolicy18 =
+      '''By law we have to keep basic information about our customers (including Contact, Identity and Transaction Data) for six years after they cease being customers for tax purposes.
+
+In some circumstances you can ask us to delete your data: see ‘Your legal rights’ below for further information.
+
+In some circumstances we will anonymise your personal data (so that it can no longer be associated with you) for research or statistical purposes, in which case we may use this information indefinitely without further notice to you.''';
+  static const String privacyPolicy17 =
+      '''All information you provide to us is stored on our secure servers. Any payment transactions carried out by us or our chosen third-party provider of payment processing services will be encrypted using Secured Sockets Layer technology. Where we have given you (or where you have chosen) a password that enables you to access certain parts of Our Sites, you are responsible for keeping this password confidential. We ask you not to share a password with anyone.
+
+Once we have received your information, we will use strict procedures and security features to try to prevent your personal data from being accidentally lost, used or accessed in an unauthorised way.
+
+We will collect and store personal data on your Device using application data caches and browser web storage (including HTML5) and other technology.
+
+Certain Services include social networking, chat room or forum features. Ensure when using these features that you do not submit any personal data that you do not want to be seen, collected or used by other users.
+We have put in place procedures to deal with any suspected personal data breach and will notify you and any applicable regulator when we are legally required to do so.''';
   static const String privacyPolicy16 =
       '''Many of our external third parties are based outside the EEA so their processing of your personal data will involve a transfer of data outside the EEA.
 
