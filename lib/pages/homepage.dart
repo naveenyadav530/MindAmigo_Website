@@ -15,6 +15,7 @@ import 'package:mindamigo/widgets/videoAndDisc.dart';
 import 'package:mindamigo/core/cookie/cookiesAccept.dart';
 
 import 'package:delayed_display/delayed_display.dart';
+import 'package:pointer_interceptor/pointer_interceptor.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -1338,93 +1339,95 @@ class _MobileHomePageState extends State<MobileHomePage> {
           height: 3.18 * SizeConfig.heightMultiplier,
         ),
       ),
-      endDrawer: Container(
-        color: AmigoColors.white,
-        width: MediaQuery.of(context).size.width,
-        child: Drawer(
-            child: ListView(padding: EdgeInsets.zero, children: <Widget>[
-          ListTile(
-            trailing: DelayedDisplay(
-              delay: Duration(milliseconds: 30),
-              slidingBeginOffset: const Offset(0.0, 0),
-              child: InkWell(
-                child: Icon(
-                  Icons.close,
-                  color: Colors.grey,
+      endDrawer: PointerInterceptor(
+        child: Container(
+          color: AmigoColors.white,
+          width: MediaQuery.of(context).size.width,
+          child: Drawer(
+              child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+            ListTile(
+              trailing: DelayedDisplay(
+                delay: Duration(milliseconds: 30),
+                slidingBeginOffset: const Offset(0.0, 0),
+                child: InkWell(
+                  child: Icon(
+                    Icons.close,
+                    color: Colors.grey,
+                  ),
+                  onTap: () => Navigator.pop(context),
                 ),
-                onTap: () => Navigator.pop(context),
+              ),
+              title: Text(
+                'Mindamigo',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: AmigoColors.lightRed,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
               ),
             ),
-            title: Text(
-              'Mindamigo',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: AmigoColors.lightRed,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
 
-          //meet adam
-          ListTile(
-            title: Text(
-              'Meet Adam',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
+            //meet adam
+            ListTile(
+              title: Text(
+                'Meet Adam',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, MeetAdamRoute);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, MeetAdamRoute);
-            },
-          ),
-          //about us
-          ListTile(
-            title: Text(
-              'About Us',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
+            //about us
+            ListTile(
+              title: Text(
+                'About Us',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, AboutUsRoute);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, AboutUsRoute);
-            },
-          ),
-          ListTile(
-            title: Text(
-              'PodCast',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
+            ListTile(
+              title: Text(
+                'PodCast',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, PodcastRoute);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, PodcastRoute);
-            },
-          ),
-          ListTile(
-            title: Text(
-              'Blog',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
+            ListTile(
+              title: Text(
+                'Blog',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, BlogPageRoute);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, BlogPageRoute);
-            },
-          ),
-        ])),
+          ])),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(

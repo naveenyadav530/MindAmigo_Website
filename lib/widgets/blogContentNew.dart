@@ -35,110 +35,113 @@ class _BlogContentState extends State<BlogContent> {
               width: MediaQuery.of(context).size.width *0.75,
               height: 80 * SizeConfig.heightMultiplier,
               margin: EdgeInsets.only(top: 5.20 * SizeConfig.heightMultiplier),
-              child: GridView.count(
+              child:GridView.count(
                 controller: _gridViewScroll,
-                physics:BouncingScrollPhysics(),
-                shrinkWrap:false ,
-                crossAxisCount: 3,
-                mainAxisSpacing: 3*SizeConfig.heightMultiplier,
-                crossAxisSpacing: 3 * SizeConfig.heightMultiplier,
-                childAspectRatio: 700 / 1200,
-                // Generate 100 widgets that display their index in the List.
-                children: List.generate(widget.blogsModel.length, (index) {
-                  return Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        InkWell(
-                          onTap: (){
-                            Navigator.pushNamed(
-                                context, BlogArticleRoute,
-                                arguments: {
-                                  'image':widget.blogsModel[index].image,
-                                  'title':widget.blogsModel[index].title,
-                                  'data': widget.blogsModel[index].body["text"]
-                                }
-                            );
-                          },
-                          child: Container(
-                            child: FadeInImage.memoryNetwork(
-                              placeholder: kTransparentImage,
-                              image: widget.blogsModel[index].image,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 1.93 * SizeConfig.heightMultiplier),
-                          child: Text(
-                           widget.blogsModel[index].title,
-                           maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                                color: AmigoColors.orange,
-                                fontSize: 1.4 * SizeConfig.textMultiplier,
-                                fontFamily: robot,
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(
-                              top: 0.65 * SizeConfig.heightMultiplier),
-                          child: Text(
-                            widget.blogsModel[index].createdAt,
-                            style: TextStyle(
-                                color: AmigoColors.orange,
-                                fontSize: 1.30 * SizeConfig.textMultiplier,
-                                fontFamily: robot),
-                          ),
-                        ),
-                        Container(
-                          child: Text(
-                            widget.blogsModel[index].body["text"].toString().trimLeft(),
-                            overflow: TextOverflow.ellipsis,
-                            softWrap:true,
-                            maxLines: 8,
-                            style: TextStyle(
-                                fontSize: 1.30 * SizeConfig.textMultiplier,
-                                fontFamily: robot
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(
-                              top: 0.65 * SizeConfig.heightMultiplier),
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(
-                                  context, BlogArticleRoute,
-                                arguments: {
-                                    'image':widget.blogsModel[index].image,
-                                    'title':widget.blogsModel[index].title,
-                                    'data': widget.blogsModel[index].body["text"]
-                                }
-                              );
-                            },
-                            child: Row(
+                  crossAxisCount: 3,
+                  physics:BouncingScrollPhysics(),
+                  shrinkWrap:false ,
+                  mainAxisSpacing: 3*SizeConfig.heightMultiplier,
+                  crossAxisSpacing: 3 * SizeConfig.heightMultiplier,
+                  childAspectRatio: 80 / 120,
+                  children: List.generate(
+                        widget.blogsModel.length,
+                        (index) {
+                          return Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Read More ",
-                                  style: TextStyle(
-                                      fontFamily: robot,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 1.30 * SizeConfig.textMultiplier
+                                InkWell(
+                                  onTap: (){
+                                    Navigator.pushNamed(
+                                        context, BlogArticleRoute,
+                                        arguments: {
+                                          'image':widget.blogsModel[index].image,
+                                          'title':widget.blogsModel[index].title,
+                                          'data': widget.blogsModel[index].body["text"]
+                                        }
+                                    );
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.all(Radius.circular(50))
+                                    ),
+                                    child: FadeInImage.memoryNetwork(
+                                      placeholder: kTransparentImage,
+                                      image: widget.blogsModel[index].image,
+                                    ),
                                   ),
                                 ),
-                                Icon(Icons.arrow_forward_ios_rounded)
+                                SizedBox(height: 3,),
+                                Container(
+                                  child: Text(
+                                    widget.blogsModel[index].title,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                        color: AmigoColors.orange,
+                                        fontSize: 1.4 * SizeConfig.textMultiplier,
+                                        fontFamily: robot,
+                                        fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: 3,),
+                                Container(
+                                  child: Text(
+                                    widget.blogsModel[index].createdAt,
+                                    style: TextStyle(
+                                        color: AmigoColors.orange,
+                                        fontSize: 1.30 * SizeConfig.textMultiplier,
+                                        fontFamily: robot,
+                                    fontWeight: FontWeight.w500),
+                                  ),
+                                ),
+
+                                Expanded(
+                                  child: Text(
+                                    widget.blogsModel[index].body["text"].toString().trimLeft(),
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 8,
+                                    style: TextStyle(
+                                        fontSize: 1.30 * SizeConfig.textMultiplier,
+                                        fontFamily: robot
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: 3,),
+                                Container(
+                                  child: InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, BlogArticleRoute,
+                                          arguments: {
+                                            'image':widget.blogsModel[index].image,
+                                            'title':widget.blogsModel[index].title,
+                                            'data': widget.blogsModel[index].body["text"]
+                                          }
+                                      );
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          "Read More ",
+                                          style: TextStyle(
+                                              fontFamily: robot,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 1.30 * SizeConfig.textMultiplier
+                                          ),
+                                        ),
+                                        Icon(Icons.arrow_forward_ios_rounded)
+                                      ],
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                }),
+                          );
+                        }),
               )
+
           ),
           InkWell(
             onTap: () {
@@ -217,107 +220,106 @@ class _TabBlogContentState extends State<TabBlogContent> {
               crossAxisCount: 3,
               physics:BouncingScrollPhysics(),
               shrinkWrap:false ,
-              mainAxisSpacing: 100,
+              mainAxisSpacing: 3*SizeConfig.heightMultiplier,
               crossAxisSpacing: 3 * SizeConfig.heightMultiplier,
-              childAspectRatio: 700 / 1370,
-              // Generate 100 widgets that display their index in the List.
-              children: List.generate(widget.blogsModel.length, (index) {
-
-                return Container(
-                  //color: Colors.blue,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      InkWell(
-                        onTap: (){
-                          Navigator.pushNamed(
-                              context, BlogArticleRoute,
-                              arguments: {
-                                'image':widget.blogsModel[index].image,
-                                'title':widget.blogsModel[index].title,
-                                'data': widget.blogsModel[index].body["text"]
-                              }
-                          );
-                        },
-                        child: Container(
-                          child: FadeInImage.memoryNetwork(
-                            placeholder: kTransparentImage,
-                            image: widget.blogsModel[index].image,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(
-                            top: 1.93 * SizeConfig.heightMultiplier),
-                        child: Text(
-
-                          widget.blogsModel[index].title,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                              color: AmigoColors.orange,
-                              fontSize: 1.5 * SizeConfig.textMultiplier,
-                              fontFamily: robot
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(
-                            top: 0.65 * SizeConfig.heightMultiplier),
-                        child: Text(
-                          widget.blogsModel[index].createdAt,
-                          style: TextStyle(
-                              color: AmigoColors.orange,
-                              fontSize: 1.30 * SizeConfig.textMultiplier,
-                              fontFamily: robot),
-                        ),
-                      ),
-                      Container(
-                        child: Text(
-                          widget.blogsModel[index].body["text"].toString().trimLeft(),
-                          overflow: TextOverflow.ellipsis,
-
-                          maxLines: 10,
-                          style: TextStyle(
-                              fontSize: 1.30 * SizeConfig.textMultiplier,
-                              fontFamily: robot
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(
-                            top: 0.65 * SizeConfig.heightMultiplier),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(
-                                context, BlogArticleRoute,
-                                arguments: {
-                                  'image':widget.blogsModel[index].image,
-                                  'title':widget.blogsModel[index].title,
-                                  'data': widget.blogsModel[index].body["text"]
-                                }
-                            );
-                          },
-                          child: Row(
-                            children: [
-                              Text(
-                                "Read More ",
-                                style: TextStyle(
-                                    fontFamily: robot,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 1.30 * SizeConfig.textMultiplier
-                                ),
+              childAspectRatio: 80 / 120,
+              children: List.generate(
+                  widget.blogsModel.length,
+                      (index) {
+                    return Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          InkWell(
+                            onTap: (){
+                              Navigator.pushNamed(
+                                  context, BlogArticleRoute,
+                                  arguments: {
+                                    'image':widget.blogsModel[index].image,
+                                    'title':widget.blogsModel[index].title,
+                                    'data': widget.blogsModel[index].body["text"]
+                                  }
+                              );
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(10))
                               ),
-                              Icon(Icons.arrow_forward_ios_rounded,size: 15,)
-                            ],
+                              child: FadeInImage.memoryNetwork(
+                                placeholder: kTransparentImage,
+                                image: widget.blogsModel[index].image,
+                              ),
+                            ),
                           ),
-                        ),
+                          SizedBox(height: 3,),
+                          Container(
+                            child: Text(
+                              widget.blogsModel[index].title,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  color: AmigoColors.orange,
+                                  fontSize: 1.4 * SizeConfig.textMultiplier,
+                                  fontFamily: robot,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 3,),
+                          Container(
+                            child: Text(
+                              widget.blogsModel[index].createdAt,
+                              style: TextStyle(
+                                  color: AmigoColors.orange,
+                                  fontSize: 1.30 * SizeConfig.textMultiplier,
+                                  fontFamily: robot,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ),
+
+                          Expanded(
+                            child: Text(
+                              widget.blogsModel[index].body["text"].toString().trimLeft(),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 8,
+                              style: TextStyle(
+                                  fontSize: 1.30 * SizeConfig.textMultiplier,
+                                  fontFamily: robot
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 3,),
+                          Container(
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, BlogArticleRoute,
+                                    arguments: {
+                                      'image':widget.blogsModel[index].image,
+                                      'title':widget.blogsModel[index].title,
+                                      'data': widget.blogsModel[index].body["text"]
+                                    }
+                                );
+                              },
+                              child: Row(
+                                children: [
+                                  Text(
+                                    "Read More ",
+                                    style: TextStyle(
+                                        fontFamily: robot,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 1.30 * SizeConfig.textMultiplier
+                                    ),
+                                  ),
+                                  Icon(Icons.arrow_forward_ios_rounded)
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                );
-              }),
+                    );
+                  }),
             )
           ),
           InkWell(
@@ -397,111 +399,110 @@ class _MobileBlogContentState extends State<MobileBlogContent> {
             width: MediaQuery.of(context).size.width / 1.2,
             height: 45.57 * SizeConfig.heightMultiplier,
             margin: EdgeInsets.only(top: 5.20 * SizeConfig.heightMultiplier),
-            child: GridView.count(
+            child:GridView.count(
               controller: _gridViewScroll,
+              crossAxisCount: 2,
               physics:BouncingScrollPhysics(),
               shrinkWrap:false ,
-              crossAxisCount: 2,
-              mainAxisSpacing: 100,
+              mainAxisSpacing: 3*SizeConfig.heightMultiplier,
               crossAxisSpacing: 3 * SizeConfig.heightMultiplier,
-              childAspectRatio: 700 / 1370,
-              // Generate 100 widgets that display their index in the List.
-              children: List.generate(widget.blogsModel.length, (index) {
+              childAspectRatio: 80 / 120,
+              children: List.generate(
+                  widget.blogsModel.length,
+                      (index) {
+                    return Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          InkWell(
+                            onTap: (){
+                              Navigator.pushNamed(
+                                  context, BlogArticleRoute,
+                                  arguments: {
+                                    'image':widget.blogsModel[index].image,
+                                    'title':widget.blogsModel[index].title,
+                                    'data': widget.blogsModel[index].body["text"]
+                                  }
+                              );
+                            },
+                            child: Container(
 
-                return Container(
-                  //color: Colors.blue,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      InkWell(
-                        onTap: (){
-                          Navigator.pushNamed(
-                              context, BlogArticleRoute,
-                              arguments: {
-                                'image':widget.blogsModel[index].image,
-                                'title':widget.blogsModel[index].title,
-                                'data': widget.blogsModel[index].body["text"]
-                              }
-                          );
-                        },
-                        child: Container(
-                          child: FadeInImage.memoryNetwork(
-                            placeholder: kTransparentImage,
-                            image: widget.blogsModel[index].image,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(
-                            top: 1.93 * SizeConfig.heightMultiplier),
-                        child: Text(
-                          widget.blogsModel[index].title,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                              color: AmigoColors.orange,
-                              fontSize: 1.5 * SizeConfig.textMultiplier,
-                              fontFamily: robot
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(
-                            top: 0.65 * SizeConfig.heightMultiplier),
-                        child: Text(
-                          widget.blogsModel[index].createdAt,
-                          style: TextStyle(
-                              color: AmigoColors.orange,
-                              fontSize: 1.30 * SizeConfig.textMultiplier,
-                              fontFamily: robot),
-                        ),
-                      ),
-                      Container(
-                        child: Text(
-                          widget.blogsModel[index].body["text"],
-                          overflow: TextOverflow.ellipsis,
 
-                          maxLines: 10,
-                          style: TextStyle(
-                              fontSize: 1.30 * SizeConfig.textMultiplier,
-                              fontFamily: robot
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(
-                            top: 0.65 * SizeConfig.heightMultiplier),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pushNamed(
-                                context, BlogArticleRoute,
-                                arguments: {
-                                  'image':widget.blogsModel[index].image,
-                                  'title':widget.blogsModel[index].title,
-                                  'data': widget.blogsModel[index].body["text"]
-                                }
-                            );
-                          },
-                          child: Row(
-                            children: [
-                              Text(
-                                "Read More ",
-                                style: TextStyle(
-                                    fontFamily: robot,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 1.30 * SizeConfig.textMultiplier
-                                ),
+                              child: FadeInImage.memoryNetwork(
+                                placeholder: kTransparentImage,
+                                image: widget.blogsModel[index].image,
                               ),
-                              Icon(Icons.arrow_forward_ios_rounded,size: 15,)
-                            ],
+                            ),
                           ),
-                        ),
+                          SizedBox(height: 3,),
+                          Container(
+                            child: Text(
+                              widget.blogsModel[index].title,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  color: AmigoColors.orange,
+                                  fontSize: 1.4 * SizeConfig.textMultiplier,
+                                  fontFamily: robot,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 3,),
+                          Container(
+                            child: Text(
+                              widget.blogsModel[index].createdAt,
+                              style: TextStyle(
+                                  color: AmigoColors.orange,
+                                  fontSize: 1.30 * SizeConfig.textMultiplier,
+                                  fontFamily: robot,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ),
+
+                          Expanded(
+                            child: Text(
+                              widget.blogsModel[index].body["text"].toString().trimLeft(),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 8,
+                              style: TextStyle(
+                                  fontSize: 1.30 * SizeConfig.textMultiplier,
+                                  fontFamily: robot
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 3,),
+                          Container(
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, BlogArticleRoute,
+                                    arguments: {
+                                      'image':widget.blogsModel[index].image,
+                                      'title':widget.blogsModel[index].title,
+                                      'data': widget.blogsModel[index].body["text"]
+                                    }
+                                );
+                              },
+                              child: Row(
+                                children: [
+                                  Text(
+                                    "Read More ",
+                                    style: TextStyle(
+                                        fontFamily: robot,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 1.30 * SizeConfig.textMultiplier
+                                    ),
+                                  ),
+                                  Icon(Icons.arrow_forward_ios_rounded,size: 10,)
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                );
-              }),
+                    );
+                  }),
             )
           ),
           InkWell(
