@@ -1885,6 +1885,7 @@ class _WidePrivacyState extends State<WidePrivacy> {
                                           ),
                                         )),
                                     Container(
+                                            padding:EdgeInsets.only(bottom:7.65*SizeConfig.heightMultiplier),
                                         margin: EdgeInsets.only(
                                             top: 1.65 *
                                                 SizeConfig.heightMultiplier),
@@ -3883,6 +3884,7 @@ class _WebPrivacyState extends State<WebPrivacy> {
                                         ),
                                       )),
                                   Container(
+                                    padding:EdgeInsets.only(bottom: 7.65*SizeConfig.heightMultiplier),
                                       margin: EdgeInsets.only(
                                           top: 1.65 *
                                               SizeConfig.heightMultiplier),

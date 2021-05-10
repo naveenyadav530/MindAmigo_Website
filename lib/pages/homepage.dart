@@ -64,68 +64,71 @@ class _WideHomePageState extends State<WideHomePage> {
             BorderRadius.vertical(top: Radius.circular(25.0)),
           ),
           builder: (BuildContext context) {
-            return Container(
-              margin: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(8)),
-                boxShadow: [],
-                color: Colors.white,
-              ),
-              height: 150,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      child: RichText(
-                        textAlign: TextAlign.justify,
-                        text: TextSpan(
-                            text:
-                            "We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
-                                "on your device all the technologies described in our",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Colors.black,
-                                wordSpacing: 3),
-                            children: [
-                              TextSpan(
-                                style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w700),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    Navigator.pushNamed(
-                                      context,
-                                      CookiePolicyRoute,
-                                    );
-                                  },
-                                text: " View Cookie Policy.",
-                              )
-                            ]),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        CookiesSharedPreference.setCookiePolicy(false);
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius:
-                            BorderRadius.all(Radius.circular(5)),
-                            color: Colors.green),
-                        padding: EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 40),
-                        child: Text(
-                          'Accept',
-                          style: TextStyle(color: Colors.white),
+            return Center(
+              child: Container(
+                  width:1440.0,
+                margin: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                  boxShadow: [],
+                  color: Colors.white,
+                ),
+                height: 150,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: RichText(
+                          textAlign: TextAlign.justify,
+                          text: TextSpan(
+                              text:
+                              "We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” you consent to store "
+                                  "on your device all the technologies described in our",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  color: Colors.black,
+                                  wordSpacing: 3),
+                              children: [
+                                TextSpan(
+                                  style: TextStyle(
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.w700),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        CookiePolicyRoute,
+                                      );
+                                    },
+                                  text: " View Cookie Policy.",
+                                )
+                              ]),
                         ),
                       ),
-                    )
-                  ],
+                      GestureDetector(
+                        onTap: () {
+                          CookiesSharedPreference.setCookiePolicy(false);
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(5)),
+                              color: Colors.green),
+                          padding: EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 40),
+                          child: Text(
+                            'Accept',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             );
