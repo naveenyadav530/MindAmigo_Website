@@ -142,8 +142,10 @@ In 2019 Katie joined Nottingham Trent University as a researcher and lecturer in
   static const String podcast = 'Podcast';
   static const String blog = 'Blog';
 
+
   static const String mindhelp = '''Mindamigo is an app that's here to''';
   static const String therapist = '''help you become your own therapist.''';
+
 
   static const String act1 =
       '''Acceptance and Commitment Therapy was developed by Steven C. Hayes and it's about how to open up and reconcile ourselves to difficult thoughts and emotions''';

@@ -9,7 +9,7 @@ import 'package:mindamigo/widgets/getInTouch.dart';
 import 'package:mindamigo/widgets/gradientLine.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/newsletter.dart';
-
+import 'package:pointer_interceptor/pointer_interceptor.dart';
 import 'package:delayed_display/delayed_display.dart';
 
 //for podcast
@@ -38,7 +38,6 @@ class _WebPodCastState extends State<WebPodCast> {
   String src = '''
     <html>
     <head>
-      
     </head>
     <body>
       <div id='buzzsprout-large-player-1324327' ></div>
@@ -58,7 +57,8 @@ class _WebPodCastState extends State<WebPodCast> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
+    return Stack(
+        children: [
       SafeArea(
         child: RawScrollbar(
           radius: Radius.circular(15),
@@ -78,7 +78,7 @@ class _WebPodCastState extends State<WebPodCast> {
                         // border: Border.all(color: Colors.black),
                         color: AmigoColors.cream,
                       ),
-                      height: 50.59 * SizeConfig.heightMultiplier,
+                      height: 45.59 * SizeConfig.heightMultiplier,
                       width: MediaQuery.of(context).size.width,
                       child: Stack(
                         alignment: Alignment.topCenter,
@@ -281,12 +281,7 @@ class _MobilePodcastState extends State<MobilePodcast> {
       <div id='buzzsprout-large-player-1324327' class="buzz"></div>
     </body>
     <script type='text/javascript' charset='utf-8'  src='https://www.buzzsprout.com/1324327.js?container_id=buzzsprout-large-player-1324327&player=large'></script>
-    <style>
-      #episode_playlist{
-        background:red !important;
-        height:500px !important;
-      }
-      </style>
+    
     </html>
   
   ''';
@@ -301,94 +296,96 @@ class _MobilePodcastState extends State<MobilePodcast> {
           height: 3.18 * SizeConfig.heightMultiplier,
         ),
       ),
-      endDrawer: Container(
-        color: Colors.white,
-        width: MediaQuery.of(context).size.width,
-        child: Drawer(
-            elevation: 10,
-            child: ListView(padding: EdgeInsets.zero, children: <Widget>[
-              ListTile(
-                trailing: DelayedDisplay(
-                  delay: Duration(milliseconds: 30),
-                  slidingBeginOffset: const Offset(0.0, 0),
-                  child: InkWell(
-                    child: Icon(
-                      Icons.close,
-                      color: Colors.grey,
+      endDrawer: PointerInterceptor(
+        child: Container(
+          color: Colors.white,
+          width: MediaQuery.of(context).size.width,
+          child: Drawer(
+              elevation: 10,
+              child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+                ListTile(
+                  trailing: DelayedDisplay(
+                    delay: Duration(milliseconds: 30),
+                    slidingBeginOffset: const Offset(0.0, 0),
+                    child: InkWell(
+                      child: Icon(
+                        Icons.close,
+                        color: Colors.grey,
+                      ),
+                      onTap: () => Navigator.pop(context),
                     ),
-                    onTap: () => Navigator.pop(context),
+                  ),
+                  title: Text(
+                    'Mindamigo',
+                    style: TextStyle(
+                        fontSize: 4.27 * SizeConfig.textMultiplier,
+                        color: Colors.grey,
+                        fontFamily: robot,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, HomeRoute);
+                  },
+                ),
+
+                //meet adam
+                ListTile(
+                  title: Text(
+                    'Meet Adam',
+                    style: TextStyle(
+                        fontSize: 4.27 * SizeConfig.textMultiplier,
+                        color: Colors.grey,
+                        fontFamily: robot,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, MeetAdamRoute);
+                  },
+                ),
+                //about us
+                ListTile(
+                  title: Text(
+                    'About Us',
+                    style: TextStyle(
+                        fontSize: 4.27 * SizeConfig.textMultiplier,
+                        color: Colors.grey,
+                        fontFamily: robot,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, AboutUsRoute);
+                  },
+                ),
+                ListTile(
+                  title: Text(
+                    'PodCast',
+                    style: TextStyle(
+                        fontSize: 4.27 * SizeConfig.textMultiplier,
+                        color: AmigoColors.lightRed,
+                        fontFamily: robot,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
-                title: Text(
-                  'Mindamigo',
-                  style: TextStyle(
-                      fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: Colors.grey,
-                      fontFamily: robot,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.bold),
+                ListTile(
+                  title: Text(
+                    'Blog',
+                    style: TextStyle(
+                        fontSize: 4.27 * SizeConfig.textMultiplier,
+                        color: Colors.grey,
+                        fontFamily: robot,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, BlogPageRoute);
+                  },
                 ),
-                onTap: () {
-                  Navigator.pushNamed(context, HomeRoute);
-                },
-              ),
-
-              //meet adam
-              ListTile(
-                title: Text(
-                  'Meet Adam',
-                  style: TextStyle(
-                      fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: Colors.grey,
-                      fontFamily: robot,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.bold),
-                ),
-                onTap: () {
-                  Navigator.pushNamed(context, MeetAdamRoute);
-                },
-              ),
-              //about us
-              ListTile(
-                title: Text(
-                  'About Us',
-                  style: TextStyle(
-                      fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: Colors.grey,
-                      fontFamily: robot,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.bold),
-                ),
-                onTap: () {
-                  Navigator.pushNamed(context, AboutUsRoute);
-                },
-              ),
-              ListTile(
-                title: Text(
-                  'PodCast',
-                  style: TextStyle(
-                      fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: AmigoColors.lightRed,
-                      fontFamily: robot,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              ListTile(
-                title: Text(
-                  'Blog',
-                  style: TextStyle(
-                      fontSize: 4.27 * SizeConfig.textMultiplier,
-                      color: Colors.grey,
-                      fontFamily: robot,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.bold),
-                ),
-                onTap: () {
-                  Navigator.pushNamed(context, BlogPageRoute);
-                },
-              ),
-            ])),
+              ])),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -479,18 +476,21 @@ class _MobilePodcastState extends State<MobilePodcast> {
                           alignment: Alignment.center,
                           height: 67 * SizeConfig.heightMultiplier,
                           width: MediaQuery.of(context).size.width / 1,
-                          child: Container(
-                              height: MediaQuery.of(context).size.height,
-                              child: EasyWebView(
-                                src: src,
-                                onLoaded: () {},
-                                isHtml: true,
-                                webAllowFullScreen: true,
-                                isMarkdown: false,
-                                convertToWidgets: false,
-                                key: key,
-                                widgetsTextSelectable: false,
-                              )),
+                          child: IgnorePointer(
+                            ignoring: true,
+                            child: Container(
+                                height: MediaQuery.of(context).size.height,
+                                child: EasyWebView(
+                                  src: src,
+                                  onLoaded: () {},
+                                  isHtml: true,
+                                  webAllowFullScreen: true,
+                                  isMarkdown: false,
+                                  convertToWidgets: false,
+                                  key: key,
+                                  widgetsTextSelectable: false,
+                                )),
+                          ),
                         ),
                       ),
                       Positioned(

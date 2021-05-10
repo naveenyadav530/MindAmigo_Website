@@ -51,22 +51,7 @@ class WebNewsLetter extends StatelessWidget {
                           fontFamily: robot),
                     ),
                   ),
-                  Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(
-                            0.5 * SizeConfig.heightMultiplier,
-                            0.7 * SizeConfig.heightMultiplier,
-                            0,
-                            0.1 * SizeConfig.heightMultiplier),
-                        child: FittedBox(
-                            fit: BoxFit.fill,
-                            child: Text("Email",
-                                style: TextStyle(
-                                    fontSize: 1.2 * SizeConfig.textMultiplier,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: robot))),
-                      )),
+                  SizedBox(height: 3.30 * SizeConfig.heightMultiplier,),
                   Row(
                     children: [
                       Container(
@@ -89,8 +74,9 @@ class WebNewsLetter extends StatelessWidget {
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(
                                           0.65 * SizeConfig.heightMultiplier))),
-                              hintText: 'adam.chadwick221@gmail.com',
+                              hintText: 'Email',
                               hintStyle: TextStyle(
+
                                   fontSize: 1.1 * SizeConfig.textMultiplier,
                                   fontFamily: robot,
                                   fontWeight: FontWeight.bold)),
@@ -188,22 +174,7 @@ class MobileNewsLetter extends StatelessWidget {
                           fontFamily: robot),
                     ),
                   ),
-                  Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(
-                            0.5 * SizeConfig.heightMultiplier,
-                            10,
-                            0,
-                            0.5 * SizeConfig.heightMultiplier),
-                        child: FittedBox(
-                            fit: BoxFit.fill,
-                            child: Text("Email",
-                                style: TextStyle(
-                                    fontSize: 1.2 * SizeConfig.textMultiplier,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: robot))),
-                      )),
+                  SizedBox(height: 3.30 * SizeConfig.heightMultiplier,),
                   Container(
                     height: 3 * SizeConfig.heightMultiplier,
                     alignment: Alignment.center,
@@ -220,11 +191,12 @@ class MobileNewsLetter extends StatelessWidget {
                               borderSide: BorderSide(color: Colors.transparent),
                               borderRadius: BorderRadius.all(Radius.circular(
                                   0.65 * SizeConfig.heightMultiplier))),
-                          hintText: 'adam.chadwick221@gmail.com',
+                          hintText: 'Email',
                           hintStyle: TextStyle(
                               fontSize: 1.1 * SizeConfig.textMultiplier,
                               fontFamily: robot,
-                              fontWeight: FontWeight.bold)),
+                              fontWeight: FontWeight.bold)
+                      ),
                     ),
                   ),
                   Container(
