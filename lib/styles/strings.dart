@@ -142,8 +142,8 @@ In 2019 Katie joined Nottingham Trent University as a researcher and lecturer in
   static const String podcast = 'Podcast';
   static const String blog = 'Blog';
 
-  static const String mindhelp = '''Mindamgio is here to help you''';
-  static const String therapist = '''become your own therapist.''';
+  static const String mindhelp = '''Mindamigo is an app that's here to''';
+  static const String therapist = '''help you become your own therapist.''';
 
   static const String act1 =
       '''Acceptance and Commitment Therapy was developed by Steven C. Hayes and it's about how to open up and reconcile ourselves to difficult thoughts and emotions''';
@@ -151,7 +151,7 @@ In 2019 Katie joined Nottingham Trent University as a researcher and lecturer in
   static const String act2 =
       '''Now although this may seem counteractive, much of our struggle with poor mental health stems from avoidance. All too often we treat our negative thoughts and emotions as the enemy. which drives a constant battle that goes on in our mind.''';
   static const String act3 =
-      '''So wit ACT, instead of this reactionary approach, we learn to live in spite of the difficult, by developing a radical new perspective of acceptance, helping us move towards what we value most in our lives.''';
+      '''So with ACT, instead of this reactionary approach, we learn to live in spite of the difficult, by developing a radical new perspective of acceptance, helping us move towards what we value most in our lives.''';
 
   static const String cbt1 =
       '''Pioneered by Aaron T. Beck, Cognitive Behavioural Therapy is based on the idea that our thoughts, emotions and behaviours all affect one another.''';
@@ -165,7 +165,7 @@ In 2019 Katie joined Nottingham Trent University as a researcher and lecturer in
   static String homeSection1 = '''Be empowered to take back control
 of your mental health by learning
 what the therapists know.''';
-  static String homeSection2 = '''Tune in the ACT and CBT therapy
+  static String homeSection2 = '''Tune in to the ACT and CBT therapy
 course library along with
 mindfulness meditation''';
   static String homeSection3 = '''Explore an array of techniques
@@ -175,10 +175,10 @@ well being and resilience''';
 to help understand your mental
 health better''';
   static String videDesc =
-      '''Think of Mindamigo as a bit like an all-you-can-eat buffet of different techniques and insights that you can apply to your own mental health…''';
+      '''Think of the Mindamigo app as a bit like an all-you-can-eat buffet of different techniques and insights that you can apply to your own mental health…''';
 
   static String aboutus =
-      '''Mindamigo is here to guide you through the key lessons from two of the world’s leading therapies: Acceptance and Commitment Therapy (ACT) and Cognitive Behavioural therapy (CBT).
+      '''Mindamigo is an app that's here to guide you through the key lessons from two of the world’s leading therapies: Acceptance and Commitment Therapy (ACT) and Cognitive Behavioural therapy (CBT).
   
 Discover their techniques and insights to put you back in control of your life and ultimately, help you move steadily, but surely, to a more calm, centred and happier state of mind.
 ''';
