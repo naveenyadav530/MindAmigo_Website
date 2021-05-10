@@ -20,9 +20,252 @@ class PodCast extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
+      largeScreen: WidePodCast(),
       webBody: WebPodCast(),
       mobileBody: MobilePodcast(),
     );
+  }
+}
+
+class WidePodCast extends StatefulWidget {
+  const WidePodCast({Key key}) : super(key: key);
+
+  @override
+  _WidePodCastState createState() => _WidePodCastState();
+}
+
+class _WidePodCastState extends State<WidePodCast> {
+  ScrollController _controller;
+  static ValueKey key = ValueKey('key_0');
+
+  String src = '''
+    <html>
+    <head>
+    </head>
+    <body>
+      <div id='buzzsprout-large-player-1324327' ></div>
+    </body>
+    <script type='text/javascript' charset='utf-8'  src='https://www.buzzsprout.com/1324327.js?container_id=buzzsprout-large-player-1324327&player=large'></script>
+    
+    </html>
+  
+  ''';
+
+  @override
+  void initState() {
+    super.initState();
+    //Initialize the  scrollController
+    _controller = ScrollController();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+        children: [
+          SafeArea(
+            child: RawScrollbar(
+              radius: Radius.circular(15),
+              controller: _controller,
+              thickness: 15,
+              thumbColor: Colors.lightBlueAccent.shade100,
+              isAlwaysShown: true,
+              child: SingleChildScrollView(
+                controller: _controller,
+                child: Center(
+                  child: Container(
+                    width: 1440.0,
+                    child: Column(
+                      children: [
+                        NavBar(),
+                        GradientLine(),
+                        Container(
+                            decoration: BoxDecoration(
+                              // border: Border.all(color: Colors.black),
+                              color: AmigoColors.cream,
+                            ),
+                            height: 45.59 * SizeConfig.heightMultiplier,
+                            width: MediaQuery.of(context).size.width,
+                            child: Stack(
+                              alignment: Alignment.topCenter,
+                              children: [
+                                Positioned(
+                                  top: 5 * SizeConfig.heightMultiplier,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.transparent,
+                                        // border: Border.all(color: Colors.black),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(
+                                                0.65 * SizeConfig.heightMultiplier))),
+                                    alignment: Alignment.center,
+                                    height: 28 * SizeConfig.heightMultiplier,
+                                    width: MediaQuery.of(context).size.width / 1.5,
+                                    child: EasyWebView(
+                                      src: src,
+                                      onLoaded: () {
+                                        print('LOADED');
+                                      },
+                                      isHtml: true,
+                                      webAllowFullScreen: true,
+                                      isMarkdown: false,
+                                      convertToWidgets: false,
+                                      key: key,
+                                      widgetsTextSelectable: false,
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 6.51 * SizeConfig.heightMultiplier,
+                                  child: Container(
+                                      alignment: Alignment.topCenter,
+                                      width: MediaQuery.of(context).size.width / 1.8,
+                                      child: RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          text: 'Available to listen on ',
+                                          style: TextStyle(
+                                              fontSize:
+                                              1.69 * SizeConfig.heightMultiplier,
+                                              fontFamily: robot,
+                                              color: AmigoColors.lightBlack),
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                                text: 'Spotify,',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 1.69 *
+                                                        SizeConfig.heightMultiplier,
+                                                    fontFamily: robot,
+                                                    decoration:
+                                                    TextDecoration.underline)),
+                                            TextSpan(text: ' '),
+                                            TextSpan(
+                                                text: 'Apple Podcasts, ',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 1.69 *
+                                                        SizeConfig.heightMultiplier,
+                                                    fontFamily: robot,
+                                                    decoration:
+                                                    TextDecoration.underline)),
+                                            TextSpan(text: ' '),
+                                            TextSpan(
+                                                text: 'Google Podcasts ',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 1.69 *
+                                                        SizeConfig.heightMultiplier,
+                                                    fontFamily: robot,
+                                                    decoration:
+                                                    TextDecoration.underline)),
+                                            TextSpan(text: ' '),
+                                            TextSpan(text: 'and '),
+                                            TextSpan(text: ' '),
+                                            TextSpan(
+                                                text: 'RSS Feed',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 1.69 *
+                                                        SizeConfig.heightMultiplier,
+                                                    fontFamily: robot,
+                                                    decoration:
+                                                    TextDecoration.underline)),
+                                          ],
+                                        ),
+                                      ) /*Text(Strings.podcastBottom,textAlign: TextAlign.center,style: TextStyle(fontSize: 26, fontFamily: robot, fontWeight: FontWeight.bold))*/
+                                  ),
+                                ),
+                                //left
+
+                                CircleAmigo(
+                                  topCircleAmigoPosition:
+                                  -0.40 * SizeConfig.heightMultiplier,
+                                  leftCircleAmigoPosition:
+                                  -13.41 * SizeConfig.heightMultiplier,
+                                  circleAmigoHeight:
+                                  20.53 * SizeConfig.heightMultiplier,
+                                  circleAmigoWidth:
+                                  20.53 * SizeConfig.heightMultiplier,
+                                  circleAmigoGradient: [
+                                    AmigoColors.orange,
+                                    AmigoColors.lightRed2
+                                  ],
+                                  circleAmigoOpacity: [0.1, 0.1],
+                                ),
+                                CircleAmigo(
+                                  topCircleAmigoPosition:
+                                  -4.41 * SizeConfig.heightMultiplier,
+                                  leftCircleAmigoPosition:
+                                  -18.67 * SizeConfig.heightMultiplier,
+                                  circleAmigoHeight:
+                                  30.04 * SizeConfig.heightMultiplier,
+                                  circleAmigoWidth:
+                                  30.04 * SizeConfig.heightMultiplier,
+                                  circleAmigoGradient: [
+                                    AmigoColors.orange,
+                                    AmigoColors.lightRed2
+                                  ],
+                                  circleAmigoOpacity: [0.1, 0.1],
+                                ),
+
+                                //right
+                                CircleAmigo(
+                                  topCircleAmigoPosition:
+                                  -2.20 * SizeConfig.heightMultiplier,
+                                  rightCircleAmigoPosition:
+                                  -7.16 * SizeConfig.heightMultiplier,
+                                  circleAmigoHeight:
+                                  12.02 * SizeConfig.heightMultiplier,
+                                  circleAmigoWidth:
+                                  12.02 * SizeConfig.heightMultiplier,
+                                  circleAmigoGradient: [
+                                    AmigoColors.orange,
+                                    AmigoColors.lightRed2
+                                  ],
+                                  circleAmigoOpacity: [0.1, 0.1],
+                                ),
+                                CircleAmigo(
+                                  topCircleAmigoPosition:
+                                  -5.46 * SizeConfig.heightMultiplier,
+                                  rightCircleAmigoPosition:
+                                  -10.41 * SizeConfig.heightMultiplier,
+                                  circleAmigoHeight:
+                                  20.53 * SizeConfig.heightMultiplier,
+                                  circleAmigoWidth:
+                                  20.53 * SizeConfig.heightMultiplier,
+                                  circleAmigoGradient: [
+                                    AmigoColors.orange,
+                                    AmigoColors.lightRed2
+                                  ],
+                                  circleAmigoOpacity: [0.1, 0.1],
+                                ),
+                                CircleAmigo(
+                                  topCircleAmigoPosition:
+                                  -8.71 * SizeConfig.heightMultiplier,
+                                  rightCircleAmigoPosition:
+                                  -13.67 * SizeConfig.heightMultiplier,
+                                  circleAmigoHeight:
+                                  28.04 * SizeConfig.heightMultiplier,
+                                  circleAmigoWidth:
+                                  28.04 * SizeConfig.heightMultiplier,
+                                  circleAmigoGradient: [
+                                    AmigoColors.orange,
+                                    AmigoColors.lightRed2
+                                  ],
+                                  circleAmigoOpacity: [0.1, 0.1],
+                                ),
+                              ],
+                            )),
+                        GetInTouch(),
+                        NewsLetter(),
+                        BottomNav(),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ]);
   }
 }
 

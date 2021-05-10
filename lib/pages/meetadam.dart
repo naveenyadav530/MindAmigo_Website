@@ -16,9 +16,61 @@ class MeetAdam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
+      largeScreen: WideMeetAdam(),
       webBody: WebMeetAdam(),
       mobileBody: MobileMeetAdam(),
     );
+  }
+}
+
+
+class WideMeetAdam extends StatefulWidget {
+  const WideMeetAdam({Key key}) : super(key: key);
+
+  @override
+  _WideMeetAdamState createState() => _WideMeetAdamState();
+}
+
+class _WideMeetAdamState extends State<WideMeetAdam> {
+  ScrollController _controller;
+
+  @override
+  void initState() {
+    //Initialize the  scrollController
+    _controller = ScrollController();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(children: [
+      SafeArea(
+        child: RawScrollbar(
+          radius: Radius.circular(15),
+          controller: _controller,
+          thickness: 15,
+          thumbColor: Colors.lightBlueAccent.shade100,
+          isAlwaysShown: true,
+          child: SingleChildScrollView(
+            controller: _controller,
+            child: Center(
+              child: Container(
+                width: 1440.0,
+                child: Column(
+                  children: [
+                    NavBar(),
+                    GradientLine(),
+                    AdamBlog(),
+                    AdamAdvisory(),
+                    BottomNav(),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ]);
   }
 }
 

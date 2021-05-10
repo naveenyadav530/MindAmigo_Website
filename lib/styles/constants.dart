@@ -1,6 +1,7 @@
 const tabletBreakpoint = 720.0;
 const webBreakpoint = 1080.0;
 const mobileBreakpoint = 480.0;
+const largeBreakpoint = 1440.0;
 
 //font style
 const String robot = "Robot";

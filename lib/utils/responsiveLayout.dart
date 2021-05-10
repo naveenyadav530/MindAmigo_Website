@@ -6,6 +6,7 @@ import 'package:mindamigo/styles/constants.dart';
 class ResponsiveLayout extends StatelessWidget {
   const ResponsiveLayout({
     Key key,
+    this.largeScreen,
     this.mobileBody,
     this.tabletBody,
     @required this.webBody,
@@ -13,6 +14,7 @@ class ResponsiveLayout extends StatelessWidget {
 
   final Widget mobileBody;
   final Widget tabletBody;
+  final Widget largeScreen;
   final Widget webBody;
 
 
@@ -21,7 +23,10 @@ class ResponsiveLayout extends StatelessWidget {
     return LayoutBuilder(
 
       builder: (context, dimens){
-        if(dimens.maxWidth >webBreakpoint){
+        if(dimens.maxWidth > largeBreakpoint){
+          print("helo World");
+          return largeScreen;
+        }else if(dimens.maxWidth >webBreakpoint && dimens.maxWidth < largeBreakpoint){
           return webBody;
         }else if(dimens.maxWidth < webBreakpoint&& dimens.maxWidth > mobileBreakpoint){
           return tabletBody??webBody;
