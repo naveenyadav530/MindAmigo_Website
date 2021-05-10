@@ -142,7 +142,7 @@ In 2019 Katie joined Nottingham Trent University as a researcher and lecturer in
   static const String podcast = 'Podcast';
   static const String blog = 'Blog';
 
-  static const String mindhelp = '''Mindamgio is here to help you''';
+  static const String mindhelp = '''Mindamigo is here to help you''';
   static const String therapist = '''become your own therapist.''';
 
   static const String act1 =
@@ -151,7 +151,7 @@ In 2019 Katie joined Nottingham Trent University as a researcher and lecturer in
   static const String act2 =
       '''Now although this may seem counteractive, much of our struggle with poor mental health stems from avoidance. All too often we treat our negative thoughts and emotions as the enemy. which drives a constant battle that goes on in our mind.''';
   static const String act3 =
-      '''So wit ACT, instead of this reactionary approach, we learn to live in spite of the difficult, by developing a radical new perspective of acceptance, helping us move towards what we value most in our lives.''';
+      '''So with ACT, instead of this reactionary approach, we learn to live in spite of the difficult, by developing a radical new perspective of acceptance, helping us move towards what we value most in our lives.''';
 
   static const String cbt1 =
       '''Pioneered by Aaron T. Beck, Cognitive Behavioural Therapy is based on the idea that our thoughts, emotions and behaviours all affect one another.''';

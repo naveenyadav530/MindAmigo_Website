@@ -4,11 +4,10 @@ import 'package:mindamigo/styles/colors.dart';
 import 'package:mindamigo/styles/constants.dart';
 import 'package:mindamigo/utils/responsiveLayout.dart';
 import 'package:mindamigo/utils/size_config.dart';
-
 import 'package:mailto/mailto.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'circles.dart';
+
 
 class GetInTouch extends StatelessWidget {
   @override
@@ -108,19 +107,8 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(
-                                        0.65 * SizeConfig.heightMultiplier,
-                                        0.65 * SizeConfig.heightMultiplier,
-                                        0,
-                                        0.4 * SizeConfig.heightMultiplier),
-                                    child: Text("Name",
-                                        style: TextStyle(
-                                            fontSize:
-                                                1.2 * SizeConfig.textMultiplier,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: robot)),
-                                  ),
+
+                                  SizedBox(height: 3 * SizeConfig.heightMultiplier,),
                                   Container(
                                     height: 3.60 * SizeConfig.heightMultiplier,
                                     child: TextField(
@@ -140,7 +128,7 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
                                               borderRadius: BorderRadius.all(Radius.circular(0.65 *
                                                   SizeConfig
                                                       .heightMultiplier))),
-                                          hintText: 'Adam Chadwick',
+                                          hintText: 'Name',
                                           hintStyle: TextStyle(
                                               fontSize: 1.1 * SizeConfig.textMultiplier,
                                               fontFamily: robot,
@@ -160,19 +148,7 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(
-                                        0.65 * SizeConfig.heightMultiplier,
-                                        0.65 * SizeConfig.heightMultiplier,
-                                        0,
-                                        0.4 * SizeConfig.heightMultiplier),
-                                    child: Text("Email",
-                                        style: TextStyle(
-                                            fontSize:
-                                                1.2 * SizeConfig.textMultiplier,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: robot)),
-                                  ),
+                                  SizedBox(height: 3 * SizeConfig.heightMultiplier,),
                                   Container(
                                     height: 3.60 * SizeConfig.heightMultiplier,
                                     child: TextField(
@@ -193,7 +169,7 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
                                               borderRadius: BorderRadius.all(Radius.circular(0.65 *
                                                   SizeConfig
                                                       .heightMultiplier))),
-                                          hintText: 'example@abcd.com',
+                                          hintText: 'Email',
                                           hintStyle: TextStyle(
                                               fontSize: 1.1 * SizeConfig.textMultiplier,
                                               fontFamily: robot,
@@ -205,35 +181,23 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
                         )
                       ],
                     )),
-
-                Container(
-                    margin: EdgeInsets.fromLTRB(
-                        0.65 * SizeConfig.heightMultiplier,
-                        0,
-                        0,
-                        0.4 * SizeConfig.heightMultiplier),
-                    child: Text("Message",
-                        style: TextStyle(
-                            fontSize: 1.2 * SizeConfig.textMultiplier,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: robot))),
                 Container(
                   child: Row(
                     children: [
-                      Expanded(
-                          child: Container(
-                        height: 3.60 * SizeConfig.heightMultiplier,
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        alignment: Alignment.center,
-                        child: TextField(
-                            controller: messageController,
-                            decoration: InputDecoration(
-                                isDense: true,
-                                filled: true,
-                                fillColor: Colors.white,
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide:
-                                        BorderSide(color: Colors.black26),
+                        Expanded(
+                            child: Container(
+                              height: 3.60 * SizeConfig.heightMultiplier,
+                              width: MediaQuery.of(context).size.width / 2.5,
+                              alignment: Alignment.center,
+                              child: TextField(
+                                  controller: messageController,
+                                  decoration: InputDecoration(
+                                      isDense: true,
+                                      filled: true,
+                                      fillColor: Colors.white,
+                                      enabledBorder: OutlineInputBorder(
+                                          borderSide:
+                                          BorderSide(color: Colors.black26),
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(0.65 *
                                             SizeConfig.heightMultiplier))),
@@ -243,11 +207,13 @@ class _WebGetInTouchState extends State<WebGetInTouch> {
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(0.65 *
                                             SizeConfig.heightMultiplier))),
-                                hintText: 'I would like to get in touch...',
+                                hintText: 'Message',
                                 hintStyle: TextStyle(
                                     fontSize: 1.1 * SizeConfig.textMultiplier,
                                     fontFamily: robot,
-                                    fontWeight: FontWeight.bold))),
+                                    fontWeight: FontWeight.bold)
+                                  )
+                              ),
                       )),
                       SizedBox(
                         width: 1.3 * SizeConfig.heightMultiplier,
@@ -418,15 +384,7 @@ class _MobileGetInTouchState extends State<MobileGetInTouch> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(
-                              left: 0.65 * SizeConfig.heightMultiplier),
-                          child: Text("Name",
-                              style: TextStyle(
-                                  fontSize: 1.2 * SizeConfig.textMultiplier,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: robot)),
-                        ),
+                        SizedBox(height:1.5 * SizeConfig.heightMultiplier,),
                         Container(
                           height: 3.60 * SizeConfig.heightMultiplier,
                           child: TextField(
@@ -447,7 +405,7 @@ class _MobileGetInTouchState extends State<MobileGetInTouch> {
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(0.65 *
                                             SizeConfig.heightMultiplier))),
-                                hintText: 'Adam Chadwick',
+                                hintText: 'Name',
                                 hintStyle: TextStyle(
                                     fontSize: 1.1 * SizeConfig.textMultiplier,
                                     fontFamily: robot,
@@ -463,15 +421,7 @@ class _MobileGetInTouchState extends State<MobileGetInTouch> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(
-                              left: 0.65 * SizeConfig.heightMultiplier),
-                          child: Text("Email",
-                              style: TextStyle(
-                                  fontSize: 1.2 * SizeConfig.textMultiplier,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: robot)),
-                        ),
+                        SizedBox(height: 1.5 * SizeConfig.heightMultiplier,),
                         Container(
                           height: 3.60 * SizeConfig.heightMultiplier,
                           child: TextField(
@@ -492,7 +442,7 @@ class _MobileGetInTouchState extends State<MobileGetInTouch> {
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(0.65 *
                                             SizeConfig.heightMultiplier))),
-                                hintText: 'example@abcd.com',
+                                hintText: 'Email',
                                 hintStyle: TextStyle(
                                     fontSize: 1.1 * SizeConfig.textMultiplier,
                                     fontFamily: robot,
@@ -508,15 +458,7 @@ class _MobileGetInTouchState extends State<MobileGetInTouch> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(
-                              left: 0.65 * SizeConfig.heightMultiplier),
-                          child: Text("Message",
-                              style: TextStyle(
-                                  fontSize: 1.2 * SizeConfig.textMultiplier,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: robot)),
-                        ),
+                        SizedBox(height: 1.5 * SizeConfig.heightMultiplier,),
                         Container(
                           height: 3.60 * SizeConfig.heightMultiplier,
                           child: TextField(
@@ -537,7 +479,7 @@ class _MobileGetInTouchState extends State<MobileGetInTouch> {
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(0.65 *
                                             SizeConfig.heightMultiplier))),
-                                hintText: 'I would like to get in touch...',
+                                hintText: 'Message',
                                 hintStyle: TextStyle(
                                     fontSize: 1.1 * SizeConfig.textMultiplier,
                                     fontFamily: robot,
