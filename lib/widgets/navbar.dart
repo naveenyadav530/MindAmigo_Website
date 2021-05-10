@@ -7,7 +7,13 @@ import 'package:mindamigo/utils/size_config.dart';
 
 
 
-class NavBar extends StatelessWidget {
+class NavBar extends StatefulWidget {
+  @override
+  _NavBarState createState() => _NavBarState();
+}
+
+class _NavBarState extends State<NavBar> {
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,6 +33,7 @@ class NavBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+
                   InkWell(
                     onTap: (){
                       Navigator.pushNamed(context, MeetAdamRoute);
@@ -79,7 +86,6 @@ class NavBar extends StatelessWidget {
                           color: AmigoColors.lightBlue,
                           fontFamily: robot,
                           fontSize: 2.27*SizeConfig.textMultiplier,
-
                         ),
                       )
                   ),
