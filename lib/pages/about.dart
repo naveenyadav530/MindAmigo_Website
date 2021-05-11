@@ -13,6 +13,7 @@ import 'package:mindamigo/widgets/circles.dart';
 import 'package:mindamigo/widgets/gradientLine.dart';
 import 'package:mindamigo/widgets/navbar.dart';
 import 'package:mindamigo/widgets/newsletter.dart';
+import 'package:zoom_widget/zoom_widget.dart';
 
 class AboutUs extends StatelessWidget {
   @override
@@ -24,6 +25,7 @@ class AboutUs extends StatelessWidget {
     );
   }
 }
+
 class wideAbout extends StatefulWidget {
   const wideAbout({Key key}) : super(key: key);
 
@@ -40,9 +42,10 @@ class _wideAboutState extends State<wideAbout> {
     _controller = ScrollController();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Stack(children: [
+    return Stack(children: [
       Container(
         child: SafeArea(
           child: RawScrollbar(
@@ -75,17 +78,18 @@ class _wideAboutState extends State<wideAbout> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontFamily: robot,
-                                      fontSize: 2.08 * SizeConfig.textMultiplier),
+                                      fontSize:
+                                          2.08 * SizeConfig.textMultiplier),
                                 ),
                               ),
                               //left circle
                               CircleAmigo(
                                 leftCircleAmigoPosition:
-                                -6.51 * SizeConfig.heightMultiplier,
+                                    -6.51 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                8.7 * SizeConfig.heightMultiplier,
+                                    8.7 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                8.7 * SizeConfig.heightMultiplier,
+                                    8.7 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -94,11 +98,11 @@ class _wideAboutState extends State<wideAbout> {
                               ),
                               CircleAmigo(
                                 leftCircleAmigoPosition:
-                                -8.81 * SizeConfig.heightMultiplier,
+                                    -8.81 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                14.02 * SizeConfig.heightMultiplier,
+                                    14.02 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                14.02 * SizeConfig.heightMultiplier,
+                                    14.02 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -107,11 +111,11 @@ class _wideAboutState extends State<wideAbout> {
                               ),
                               CircleAmigo(
                                 leftCircleAmigoPosition:
-                                -12.11 * SizeConfig.heightMultiplier,
+                                    -12.11 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                20.27 * SizeConfig.heightMultiplier,
+                                    20.27 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                20.27 * SizeConfig.heightMultiplier,
+                                    20.27 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -121,13 +125,13 @@ class _wideAboutState extends State<wideAbout> {
                               //corner circle
                               CircleAmigo(
                                 rightCircleAmigoPosition:
-                                -6.51 * SizeConfig.heightMultiplier,
+                                    -6.51 * SizeConfig.heightMultiplier,
                                 topCircleAmigoPosition:
-                                -3.25 * SizeConfig.heightMultiplier,
+                                    -3.25 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                10.7 * SizeConfig.heightMultiplier,
+                                    10.7 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                10.7 * SizeConfig.heightMultiplier,
+                                    10.7 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -136,13 +140,13 @@ class _wideAboutState extends State<wideAbout> {
                               ),
                               CircleAmigo(
                                 rightCircleAmigoPosition:
-                                -7.81 * SizeConfig.heightMultiplier,
+                                    -7.81 * SizeConfig.heightMultiplier,
                                 topCircleAmigoPosition:
-                                -4.55 * SizeConfig.heightMultiplier,
+                                    -4.55 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                15.02 * SizeConfig.heightMultiplier,
+                                    15.02 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                15.02 * SizeConfig.heightMultiplier,
+                                    15.02 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -151,13 +155,13 @@ class _wideAboutState extends State<wideAbout> {
                               ),
                               CircleAmigo(
                                 rightCircleAmigoPosition:
-                                -9.11 * SizeConfig.heightMultiplier,
+                                    -9.11 * SizeConfig.heightMultiplier,
                                 topCircleAmigoPosition:
-                                -5.85 * SizeConfig.heightMultiplier,
+                                    -5.85 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                19.27 * SizeConfig.heightMultiplier,
+                                    19.27 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                19.27 * SizeConfig.heightMultiplier,
+                                    19.27 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -181,7 +185,6 @@ class _wideAboutState extends State<wideAbout> {
     ]);
   }
 }
-
 
 class WebAbout extends StatefulWidget {
   @override
@@ -442,111 +445,125 @@ class _MobileAboutState extends State<MobileAbout> {
         ])),
       ),
       body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: [
-              GradientLine(),
-              Container(
-                  color: AmigoColors.cream,
-                  width: MediaQuery.of(context).size.width,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width / 2,
-                          child: Text(
-                            Strings.aboutus,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontFamily: robot,
-                                fontSize: 2.08 * SizeConfig.textMultiplier),
+        child: Zoom(
+          width: 1800,
+          height: 1800,
+          onPositionUpdate: (Offset position) {
+            print(position);
+          },
+          onScaleUpdate: (double scale, double zoom) {
+            print("$scale  $zoom");
+          },
+          child: Container(
+            child: Column(
+              children: [
+                GradientLine(),
+                Container(
+                    color: AmigoColors.cream,
+                    width: MediaQuery.of(context).size.width,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 10),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              Strings.aboutus,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: robot,
+                                  fontSize: 2.08 * SizeConfig.textMultiplier),
+                            ),
                           ),
                         ),
-                      ),
-                      //left circle
-                      CircleAmigo(
-                        leftCircleAmigoPosition:
-                            -6.51 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 7.7 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 7.7 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.5, 0.5],
-                      ),
-                      CircleAmigo(
-                        leftCircleAmigoPosition:
-                            -8.81 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 14.02 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 14.02 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.4, 0.4],
-                      ),
-                      CircleAmigo(
-                        leftCircleAmigoPosition:
-                            -12.11 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 22.27 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 22.27 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.3, 0.3],
-                      ),
-                      //corner circle
-                      CircleAmigo(
-                        rightCircleAmigoPosition:
-                            -6.51 * SizeConfig.heightMultiplier,
-                        topCircleAmigoPosition:
-                            -3.25 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 10.7 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 10.7 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.3, 0.3],
-                      ),
-                      CircleAmigo(
-                        rightCircleAmigoPosition:
-                            -7.81 * SizeConfig.heightMultiplier,
-                        topCircleAmigoPosition:
-                            -4.55 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 15.02 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 15.02 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.3, 0.3],
-                      ),
-                      CircleAmigo(
-                        rightCircleAmigoPosition:
-                            -9.11 * SizeConfig.heightMultiplier,
-                        topCircleAmigoPosition:
-                            -5.85 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth: 19.27 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight: 19.27 * SizeConfig.heightMultiplier,
-                        circleAmigoGradient: [
-                          AmigoColors.orange,
-                          AmigoColors.lightRed2
-                        ],
-                        circleAmigoOpacity: [0.3, 0.3],
-                      )
-                    ],
-                  )),
-              ACT(),
-              CBT(),
-              NewsLetter(),
-              BottomNav(),
-            ],
+                        //left circle
+                        CircleAmigo(
+                          leftCircleAmigoPosition:
+                              -6.51 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 7.7 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight: 7.7 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.5, 0.5],
+                        ),
+                        CircleAmigo(
+                          leftCircleAmigoPosition:
+                              -8.81 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 14.02 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight:
+                              14.02 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.4, 0.4],
+                        ),
+                        CircleAmigo(
+                          leftCircleAmigoPosition:
+                              -12.11 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 22.27 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight:
+                              22.27 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.3, 0.3],
+                        ),
+                        //corner circle
+                        CircleAmigo(
+                          rightCircleAmigoPosition:
+                              -6.51 * SizeConfig.heightMultiplier,
+                          topCircleAmigoPosition:
+                              -3.25 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 10.7 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight: 10.7 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.3, 0.3],
+                        ),
+                        CircleAmigo(
+                          rightCircleAmigoPosition:
+                              -7.81 * SizeConfig.heightMultiplier,
+                          topCircleAmigoPosition:
+                              -4.55 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 15.02 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight:
+                              15.02 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.3, 0.3],
+                        ),
+                        CircleAmigo(
+                          rightCircleAmigoPosition:
+                              -9.11 * SizeConfig.heightMultiplier,
+                          topCircleAmigoPosition:
+                              -5.85 * SizeConfig.heightMultiplier,
+                          circleAmigoWidth: 19.27 * SizeConfig.heightMultiplier,
+                          circleAmigoHeight:
+                              19.27 * SizeConfig.heightMultiplier,
+                          circleAmigoGradient: [
+                            AmigoColors.orange,
+                            AmigoColors.lightRed2
+                          ],
+                          circleAmigoOpacity: [0.3, 0.3],
+                        )
+                      ],
+                    )),
+                ACT(),
+                CBT(),
+                NewsLetter(),
+                BottomNav(),
+              ],
+            ),
           ),
         ),
       ),
