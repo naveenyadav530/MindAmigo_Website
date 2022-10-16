@@ -11,8 +11,151 @@ class AdamBlog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
+      largeScreen: WideBlog(),
       webBody: WebBlog(),
       mobileBody: MobileBlog(),
+    );
+  }
+}
+
+class WideBlog extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      color: AmigoColors.cream,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            constraints: BoxConstraints(maxWidth: 1920 / 1.5),
+            child: Column(
+              children: [
+                Container(
+                    margin: EdgeInsets.only(top: 54.52),
+                    child: CircleAvatar(
+                      radius: 85.24,
+                      backgroundImage: AssetImage(adamImage),
+                    )),
+                Container(
+                  width: MediaQuery.of(context).size.width / 1.5,
+                  margin: EdgeInsets.only(top: 60),
+                  child: Text(
+                    Strings.adamTitle,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: AmigoColors.orange,
+                        fontFamily: robot,
+                        fontSize: 35.32),
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width / 1.5,
+                  margin: EdgeInsets.only(top: 10),
+                  child: Text(
+                    Strings.adamSubTitle,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: AmigoColors.orange,
+                        fontFamily: robot,
+                        fontSize: 36.86,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  width: MediaQuery.of(context).size.width / 1.4,
+                  child: Text(
+                    Strings.adamPara,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 21.50),
+                  ),
+                ),
+                SizedBox(
+                  height: 65.28,
+                )
+              ],
+            ),
+          ),
+          //left
+          CircleAmigo(
+            topCircleAmigoPosition: -7.20 * SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -4.16 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+          CircleAmigo(
+            topCircleAmigoPosition: -9.46 * SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -7.41 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+          CircleAmigo(
+            topCircleAmigoPosition: -12.71 * SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -10.67 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+
+          //right
+          CircleAmigo(
+            topCircleAmigoPosition: 45.20 * SizeConfig.heightMultiplier,
+            rightCircleAmigoPosition: -10.16 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+          CircleAmigo(
+            topCircleAmigoPosition: 42.20 * SizeConfig.heightMultiplier,
+            rightCircleAmigoPosition: -13.41 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+          CircleAmigo(
+            topCircleAmigoPosition: 39.20 * SizeConfig.heightMultiplier,
+            rightCircleAmigoPosition: -16.67 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+
+          //left
+          CircleAmigo(
+            bottomCircleAmigoPosition: -7.20 * SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -10.16 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 13.02 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 13.02 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+          CircleAmigo(
+            bottomCircleAmigoPosition: -9.46 * SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -13.41 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+          CircleAmigo(
+            bottomCircleAmigoPosition: -12.71 * SizeConfig.heightMultiplier,
+            leftCircleAmigoPosition: -16.67 * SizeConfig.heightMultiplier,
+            circleAmigoHeight: 26.04 * SizeConfig.heightMultiplier,
+            circleAmigoWidth: 26.04 * SizeConfig.heightMultiplier,
+            circleAmigoGradient: [AmigoColors.orange, AmigoColors.lightRed2],
+            circleAmigoOpacity: [0.1, 0.1],
+          ),
+        ],
+      ),
     );
   }
 }

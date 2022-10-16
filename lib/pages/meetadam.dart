@@ -23,7 +23,6 @@ class MeetAdam extends StatelessWidget {
   }
 }
 
-
 class WideMeetAdam extends StatefulWidget {
   const WideMeetAdam({Key key}) : super(key: key);
 
@@ -55,10 +54,10 @@ class _WideMeetAdamState extends State<WideMeetAdam> {
             controller: _controller,
             child: Center(
               child: Container(
-                width: 1440.0,
+                // width: 1440.0,
                 child: Column(
                   children: [
-                    NavBar(),
+                    WideNavBar(),
                     GradientLine(),
                     AdamBlog(),
                     AdamAdvisory(),

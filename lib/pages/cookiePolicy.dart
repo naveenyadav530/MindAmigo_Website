@@ -25,6 +25,7 @@ class CookiePolicy extends StatelessWidget {
     );
   }
 }
+
 //large screen
 class WideCookiePage extends StatefulWidget {
   const WideCookiePage({Key key}) : super(key: key);
@@ -42,6 +43,7 @@ class _WideCookiePageState extends State<WideCookiePage> {
     _controller = ScrollController();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -57,50 +59,139 @@ class _WideCookiePageState extends State<WideCookiePage> {
               controller: _controller,
               child: Center(
                 child: Container(
-                  width: 1440.0,
+                  //width: 1440.0,
                   child: Column(
                     children: [
-                      NavBar(),
+                      WideNavBar(),
                       GradientLine(),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         child: Stack(
                           alignment: Alignment.center,
                           children: [
+                            //left
+                            CircleAmigo(
+                              bottomCircleAmigoPosition:
+                                  18.2 * SizeConfig.heightMultiplier,
+                              leftCircleAmigoPosition:
+                                  -10.16 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  13.02 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  13.02 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+                            CircleAmigo(
+                              bottomCircleAmigoPosition:
+                                  15 * SizeConfig.heightMultiplier,
+                              leftCircleAmigoPosition:
+                                  -13.41 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  19.53 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  19.53 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+                            CircleAmigo(
+                              bottomCircleAmigoPosition:
+                                  11.71 * SizeConfig.heightMultiplier,
+                              leftCircleAmigoPosition:
+                                  -16.67 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  26.04 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  26.04 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+
+                            //right
+                            CircleAmigo(
+                              topCircleAmigoPosition:
+                                  -2.20 * SizeConfig.heightMultiplier,
+                              rightCircleAmigoPosition:
+                                  -7.16 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  15.02 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  15.02 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+                            CircleAmigo(
+                              topCircleAmigoPosition:
+                                  -5.46 * SizeConfig.heightMultiplier,
+                              rightCircleAmigoPosition:
+                                  -10.41 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  22.53 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  22.53 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+                            CircleAmigo(
+                              topCircleAmigoPosition:
+                                  -8.71 * SizeConfig.heightMultiplier,
+                              rightCircleAmigoPosition:
+                                  -13.67 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  30.04 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  30.04 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
                             Container(
-                                margin: EdgeInsets.only(
-                                    top: 6.51 * SizeConfig.heightMultiplier),
-                                width: MediaQuery.of(context).size.width / 1.4,
+                                margin: EdgeInsets.only(top: 100),
+                                constraints:
+                                    BoxConstraints(maxWidth: 1920 / 1.4),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       "Cookies Policy",
                                       style: TextStyle(
-                                          fontSize:
-                                          2.40 * SizeConfig.textMultiplier,
+                                          fontSize: 36.86,
                                           color: Colors.orange,
                                           fontFamily: robot,
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Container(
-                                        margin: EdgeInsets.only(
-                                            top: 1.95 *
-                                                SizeConfig.heightMultiplier),
+                                        margin: EdgeInsets.only(top: 30),
                                         child: RichText(
                                           text: TextSpan(
                                             text: Strings.cookiesPolicy,
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontFamily: robot,
-                                                fontSize: 1.2 *
-                                                    SizeConfig.textMultiplier),
+                                                fontSize: 18.43),
                                           ),
                                         )),
                                     Container(
                                       child: Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.start,
+                                            MainAxisAlignment.start,
                                         children: [
                                           Icon(Icons.fiber_manual_record),
                                           SizedBox(
@@ -112,23 +203,21 @@ class _WideCookiePageState extends State<WideCookiePage> {
                                                 style: TextStyle(
                                                     color: Colors.black,
                                                     fontFamily: robot,
-                                                    fontSize: 1.2 *
-                                                        SizeConfig
-                                                            .textMultiplier),
+                                                    fontSize: 18.43),
                                                 children: [
                                                   TextSpan(
                                                     text:
-                                                    "http://www.allaboutcookies.org/",
+                                                        "http://www.allaboutcookies.org/",
                                                     style: TextStyle(
                                                         fontWeight:
-                                                        FontWeight.w600,
+                                                            FontWeight.w600,
                                                         color: Colors.blue),
                                                     recognizer:
-                                                    new TapGestureRecognizer()
-                                                      ..onTap = () {
-                                                        launch(
-                                                            'http://www.allaboutcookies.org/');
-                                                      },
+                                                        new TapGestureRecognizer()
+                                                          ..onTap = () {
+                                                            launch(
+                                                                'http://www.allaboutcookies.org/');
+                                                          },
                                                   )
                                                 ]),
                                           )
@@ -138,7 +227,7 @@ class _WideCookiePageState extends State<WideCookiePage> {
                                     Container(
                                       child: Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.start,
+                                            MainAxisAlignment.start,
                                         children: [
                                           Icon(Icons.fiber_manual_record),
                                           SizedBox(
@@ -147,59 +236,62 @@ class _WideCookiePageState extends State<WideCookiePage> {
                                           RichText(
                                             text: TextSpan(
                                                 text:
-                                                "Network Advertising Initiative:",
-
+                                                    "Network Advertising Initiative:",
                                                 style: TextStyle(
                                                     color: Colors.black,
                                                     fontFamily: robot,
-                                                    fontSize: 1.2 *
-                                                        SizeConfig
-                                                            .textMultiplier),
+                                                    fontSize: 18.43),
                                                 children: [
                                                   TextSpan(
                                                     text:
-                                                    "http://www.networkadvertising.org/",
+                                                        "http://www.networkadvertising.org/",
                                                     style: TextStyle(
                                                         fontWeight:
-                                                        FontWeight.w600,
+                                                            FontWeight.w600,
                                                         color: Colors.blue),
                                                     recognizer:
-                                                    new TapGestureRecognizer()
-                                                      ..onTap = () {
-                                                        launch(
-                                                            'http://www.networkadvertising.org/');
-                                                      },
+                                                        new TapGestureRecognizer()
+                                                          ..onTap = () {
+                                                            launch(
+                                                                'http://www.networkadvertising.org/');
+                                                          },
                                                   )
                                                 ]),
                                           )
                                         ],
                                       ),
                                     ),
-
-
-                                    SizedBox(height: 50,),
+                                    SizedBox(
+                                      height: 50,
+                                    ),
                                     Container(
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Container(
-                                            child: Text("These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
+                                            child: Text(
+                                              "These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontFamily: robot,
-                                                  fontSize: 1.2 *SizeConfig.textMultiplier
-                                              ),
+                                                  fontSize: 18.43),
                                             ),
                                           ),
-                                          SizedBox(height: 50,),
+                                          SizedBox(
+                                            height: 50,
+                                          ),
                                           Center(
                                             child: Container(
                                               alignment: Alignment.center,
-                                              width:MediaQuery.of(context).size.width*0.6,
+                                              //last work
+                                              width: 1152,
                                               child: Table(
-                                                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-
+                                                defaultVerticalAlignment:
+                                                    TableCellVerticalAlignment
+                                                        .middle,
                                                 columnWidths: {
                                                   0: FlexColumnWidth(1),
                                                   1: FlexColumnWidth(4),
@@ -207,75 +299,128 @@ class _WideCookiePageState extends State<WideCookiePage> {
                                                 border: TableBorder.all(
                                                     color: Colors.black45,
                                                     style: BorderStyle.solid,
-                                                    width:1
-                                                ),
+                                                    width: 1),
                                                 children: [
-                                                  TableRow(
-                                                      children: [
-                                                        Column(children:
-                                                        [
-                                                          Text('Name:',
+                                                  TableRow(children: [
+                                                    Column(children: [
+                                                      Text(
+                                                        'Name:',
+                                                        style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontFamily: robot,
+                                                            fontSize: 1 *
+                                                                SizeConfig
+                                                                    .textMultiplier),
+                                                      )
+                                                    ]),
+                                                    Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Text(
+                                                            ' connect.sid',
                                                             style: TextStyle(
-                                                                color: Colors.black,
-                                                                fontFamily: robot,
-                                                                fontSize: 1 *SizeConfig.textMultiplier
-                                                            ),
+                                                                color: Colors
+                                                                    .black,
+                                                                fontFamily:
+                                                                    robot,
+                                                                fontSize: 1 *
+                                                                    SizeConfig
+                                                                        .textMultiplier),
                                                           )
                                                         ]),
-                                                        Column(
-                                                            mainAxisAlignment:MainAxisAlignment.start,
-                                                            children:[Text(' connect.sid',
-                                                              style: TextStyle(
-                                                                  color: Colors.black,
-                                                                  fontFamily: robot,
-                                                                  fontSize: 1 *SizeConfig.textMultiplier
-                                                              ),)]),
-                                                      ]),
-                                                  TableRow(
-                                                      children: [
-                                                        Column(children:[Text('Purpose:', style: TextStyle(
+                                                  ]),
+                                                  TableRow(children: [
+                                                    Column(children: [
+                                                      Text(
+                                                        'Purpose:',
+                                                        style: TextStyle(
                                                             color: Colors.black,
                                                             fontFamily: robot,
-                                                            fontSize: 1 *SizeConfig.textMultiplier
-                                                        ),)]),
-                                                        Column(
-                                                            mainAxisAlignment:MainAxisAlignment.start,
-                                                            children:[Text('Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days', style: TextStyle(
-                                                                color: Colors.black,
-                                                                fontFamily: robot,
-                                                                fontSize: 1 *SizeConfig.textMultiplier
-                                                            ),)]),
-                                                      ]),
-                                                  TableRow(
-                                                      children: [
-                                                        Column(children:[Text('Provider :', style: TextStyle(
+                                                            fontSize: 1 *
+                                                                SizeConfig
+                                                                    .textMultiplier),
+                                                      )
+                                                    ]),
+                                                    Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Text(
+                                                            'Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days',
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .black,
+                                                                fontFamily:
+                                                                    robot,
+                                                                fontSize: 1 *
+                                                                    SizeConfig
+                                                                        .textMultiplier),
+                                                          )
+                                                        ]),
+                                                  ]),
+                                                  TableRow(children: [
+                                                    Column(children: [
+                                                      Text(
+                                                        'Provider :',
+                                                        style: TextStyle(
                                                             color: Colors.black,
                                                             fontFamily: robot,
-                                                            fontSize: 1 *SizeConfig.textMultiplier
-                                                        ),)]),
-                                                        Column(
-                                                            mainAxisAlignment:MainAxisAlignment.start,
-                                                            children:[Text('mindamigo.com', style: TextStyle(
-                                                                color: Colors.black,
-                                                                fontFamily: robot,
-                                                                fontSize: 1 *SizeConfig.textMultiplier
-                                                            ),)]),
-                                                      ]),
-                                                  TableRow(
-                                                      children: [
-                                                        Column(children:[Text('Service:', style: TextStyle(
+                                                            fontSize: 1 *
+                                                                SizeConfig
+                                                                    .textMultiplier),
+                                                      )
+                                                    ]),
+                                                    Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Text(
+                                                            'mindamigo.com',
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .black,
+                                                                fontFamily:
+                                                                    robot,
+                                                                fontSize: 1 *
+                                                                    SizeConfig
+                                                                        .textMultiplier),
+                                                          )
+                                                        ]),
+                                                  ]),
+                                                  TableRow(children: [
+                                                    Column(children: [
+                                                      Text(
+                                                        'Service:',
+                                                        style: TextStyle(
                                                             color: Colors.black,
                                                             fontFamily: robot,
-                                                            fontSize: 1 *SizeConfig.textMultiplier
-                                                        ),)]),
-                                                        Column(
-                                                            mainAxisAlignment:MainAxisAlignment.start,
-                                                            children:[Text('Node Js', style: TextStyle(
-                                                                color: Colors.black,
-                                                                fontFamily: robot,
-                                                                fontSize: 1 *SizeConfig.textMultiplier
-                                                            ),)]),
-                                                      ]),
+                                                            fontSize: 1 *
+                                                                SizeConfig
+                                                                    .textMultiplier),
+                                                      )
+                                                    ]),
+                                                    Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Text(
+                                                            'Node Js',
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .black,
+                                                                fontFamily:
+                                                                    robot,
+                                                                fontSize: 1 *
+                                                                    SizeConfig
+                                                                        .textMultiplier),
+                                                          )
+                                                        ]),
+                                                  ]),
                                                 ],
                                               ),
                                             ),
@@ -283,104 +428,11 @@ class _WideCookiePageState extends State<WideCookiePage> {
                                         ],
                                       ),
                                     ),
-                                    SizedBox(height: 50,),
+                                    SizedBox(
+                                      height: 50,
+                                    ),
                                   ],
-                                )
-                            ),
-
-                            //left
-                            CircleAmigo(
-                              bottomCircleAmigoPosition:
-                              18.2 * SizeConfig.heightMultiplier,
-                              leftCircleAmigoPosition:
-                              -10.16 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              13.02 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              13.02 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                            CircleAmigo(
-                              bottomCircleAmigoPosition:
-                              15 * SizeConfig.heightMultiplier,
-                              leftCircleAmigoPosition:
-                              -13.41 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              19.53 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              19.53 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                            CircleAmigo(
-                              bottomCircleAmigoPosition:
-                              11.71 * SizeConfig.heightMultiplier,
-                              leftCircleAmigoPosition:
-                              -16.67 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              26.04 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              26.04 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-
-                            //right
-                            CircleAmigo(
-                              topCircleAmigoPosition:
-                              -2.20 * SizeConfig.heightMultiplier,
-                              rightCircleAmigoPosition:
-                              -7.16 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              15.02 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              15.02 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                            CircleAmigo(
-                              topCircleAmigoPosition:
-                              -5.46 * SizeConfig.heightMultiplier,
-                              rightCircleAmigoPosition:
-                              -10.41 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              22.53 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              22.53 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
-                            CircleAmigo(
-                              topCircleAmigoPosition:
-                              -8.71 * SizeConfig.heightMultiplier,
-                              rightCircleAmigoPosition:
-                              -13.67 * SizeConfig.heightMultiplier,
-                              circleAmigoHeight:
-                              30.04 * SizeConfig.heightMultiplier,
-                              circleAmigoWidth:
-                              30.04 * SizeConfig.heightMultiplier,
-                              circleAmigoGradient: [
-                                AmigoColors.orange,
-                                AmigoColors.lightRed2
-                              ],
-                              circleAmigoOpacity: [0.1, 0.1],
-                            ),
+                                )),
                           ],
                         ),
                       ),
@@ -517,7 +569,6 @@ class _WebCookiePageState extends State<WebCookiePage> {
                                           text: TextSpan(
                                               text:
                                                   "Network Advertising Initiative:",
-
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontFamily: robot,
@@ -544,118 +595,177 @@ class _WebCookiePageState extends State<WebCookiePage> {
                                       ],
                                     ),
                                   ),
-
-
-                                    SizedBox(height: 50,),
-                                Container(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        child: Text("These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontFamily: robot,
-                                            fontSize: 1.2 *SizeConfig.textMultiplier
-                                        ),
-                                        ),
-                                      ),
-                                      SizedBox(height: 50,),
-                                      Center(
-                                        child: Container(
-                                          alignment: Alignment.center,
-                                          width:MediaQuery.of(context).size.width*0.6,
-                                          child: Table(
-                                            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-
-                                            columnWidths: {
-                                              0: FlexColumnWidth(1),
-                                              1: FlexColumnWidth(4),
-                                            },
-                                            border: TableBorder.all(
-                                              color: Colors.black45,
-                                              style: BorderStyle.solid,
-                                              width:1
-                                            ),
-                                            children: [
-                                              TableRow(
-                                                  children: [
-                                                Column(children:
-                                                [
-                                                  Text('Name:',
-                                                    style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontFamily: robot,
-                                                    fontSize: 1 *SizeConfig.textMultiplier
-                                                ),
-                                                )
-                                                ]),
-                                                Column(
-                                                    mainAxisAlignment:MainAxisAlignment.start,
-                                                    children:[Text(' connect.sid',
-                                                      style: TextStyle(
-                                                        color: Colors.black,
-                                                        fontFamily: robot,
-                                                        fontSize: 1 *SizeConfig.textMultiplier
-                                                    ),)]),
-                                              ]),
-                                              TableRow(
-                                                  children: [
-                                                    Column(children:[Text('Purpose:', style: TextStyle(
-                                                        color: Colors.black,
-                                                        fontFamily: robot,
-                                                        fontSize: 1 *SizeConfig.textMultiplier
-                                                    ),)]),
-                                                    Column(
-                                                        mainAxisAlignment:MainAxisAlignment.start,
-                                                        children:[Text('Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days', style: TextStyle(
-                                                            color: Colors.black,
-                                                            fontFamily: robot,
-                                                            fontSize: 1 *SizeConfig.textMultiplier
-                                                        ),)]),
-                                                  ]),
-                                              TableRow(
-                                                  children: [
-                                                    Column(children:[Text('Provider :', style: TextStyle(
-                                                        color: Colors.black,
-                                                        fontFamily: robot,
-                                                        fontSize: 1 *SizeConfig.textMultiplier
-                                                    ),)]),
-                                                    Column(
-                                                        mainAxisAlignment:MainAxisAlignment.start,
-                                                        children:[Text('mindamigo.com', style: TextStyle(
-                                                            color: Colors.black,
-                                                            fontFamily: robot,
-                                                            fontSize: 1 *SizeConfig.textMultiplier
-                                                        ),)]),
-                                                  ]),
-                                              TableRow(
-                                                  children: [
-                                                    Column(children:[Text('Service:', style: TextStyle(
-                                                        color: Colors.black,
-                                                        fontFamily: robot,
-                                                        fontSize: 1 *SizeConfig.textMultiplier
-                                                    ),)]),
-                                                    Column(
-                                                        mainAxisAlignment:MainAxisAlignment.start,
-                                                        children:[Text('Node Js', style: TextStyle(
-                                                            color: Colors.black,
-                                                            fontFamily: robot,
-                                                            fontSize: 1 *SizeConfig.textMultiplier
-                                                        ),)]),
-                                                  ]),
-                                            ],
+                                  SizedBox(
+                                    height: 50,
+                                  ),
+                                  Container(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          child: Text(
+                                            "These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontFamily: robot,
+                                                fontSize: 1.2 *
+                                                    SizeConfig.textMultiplier),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                        SizedBox(
+                                          height: 50,
+                                        ),
+                                        Center(
+                                          child: Container(
+                                            alignment: Alignment.center,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.6,
+                                            child: Table(
+                                              defaultVerticalAlignment:
+                                                  TableCellVerticalAlignment
+                                                      .middle,
+                                              columnWidths: {
+                                                0: FlexColumnWidth(1),
+                                                1: FlexColumnWidth(4),
+                                              },
+                                              border: TableBorder.all(
+                                                  color: Colors.black45,
+                                                  style: BorderStyle.solid,
+                                                  width: 1),
+                                              children: [
+                                                TableRow(children: [
+                                                  Column(children: [
+                                                    Text(
+                                                      'Name:',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                                  Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          ' connect.sid',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontFamily: robot,
+                                                              fontSize: 1 *
+                                                                  SizeConfig
+                                                                      .textMultiplier),
+                                                        )
+                                                      ]),
+                                                ]),
+                                                TableRow(children: [
+                                                  Column(children: [
+                                                    Text(
+                                                      'Purpose:',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                                  Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          'Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontFamily: robot,
+                                                              fontSize: 1 *
+                                                                  SizeConfig
+                                                                      .textMultiplier),
+                                                        )
+                                                      ]),
+                                                ]),
+                                                TableRow(children: [
+                                                  Column(children: [
+                                                    Text(
+                                                      'Provider :',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                                  Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          'mindamigo.com',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontFamily: robot,
+                                                              fontSize: 1 *
+                                                                  SizeConfig
+                                                                      .textMultiplier),
+                                                        )
+                                                      ]),
+                                                ]),
+                                                TableRow(children: [
+                                                  Column(children: [
+                                                    Text(
+                                                      'Service:',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                                  Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          'Node Js',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontFamily: robot,
+                                                              fontSize: 1 *
+                                                                  SizeConfig
+                                                                      .textMultiplier),
+                                                        )
+                                                      ]),
+                                                ]),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                SizedBox(height: 50,),
-                                  ],
-                                )
-                            ),
+                                  SizedBox(
+                                    height: 50,
+                                  ),
+                                ],
+                              )),
 
                           //left
                           CircleAmigo(
@@ -911,29 +1021,40 @@ class _TabCookiePageState extends State<TabCookiePage> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 50,),
+                                  SizedBox(
+                                    height: 50,
+                                  ),
                                   Container(
                                     child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Container(
-                                          child: Text("These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
+                                          child: Text(
+                                            "These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontFamily: robot,
-                                                fontSize: 1.2 *SizeConfig.textMultiplier
-                                            ),
+                                                fontSize: 1.2 *
+                                                    SizeConfig.textMultiplier),
                                           ),
                                         ),
-                                        SizedBox(height: 50,),
+                                        SizedBox(
+                                          height: 50,
+                                        ),
                                         Center(
                                           child: Container(
                                             alignment: Alignment.center,
-                                            width:MediaQuery.of(context).size.width*0.6,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.6,
                                             child: Table(
-                                              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-
+                                              defaultVerticalAlignment:
+                                                  TableCellVerticalAlignment
+                                                      .middle,
                                               columnWidths: {
                                                 0: FlexColumnWidth(1),
                                                 1: FlexColumnWidth(4),
@@ -941,75 +1062,124 @@ class _TabCookiePageState extends State<TabCookiePage> {
                                               border: TableBorder.all(
                                                   color: Colors.black45,
                                                   style: BorderStyle.solid,
-                                                  width:1
-                                              ),
+                                                  width: 1),
                                               children: [
-                                                TableRow(
-                                                    children: [
-                                                      Column(children:
-                                                      [
-                                                        Text('Name:',
+                                                TableRow(children: [
+                                                  Column(children: [
+                                                    Text(
+                                                      'Name:',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                                  Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          ' connect.sid',
                                                           style: TextStyle(
-                                                              color: Colors.black,
+                                                              color:
+                                                                  Colors.black,
                                                               fontFamily: robot,
-                                                              fontSize: 1 *SizeConfig.textMultiplier
-                                                          ),
+                                                              fontSize: 1 *
+                                                                  SizeConfig
+                                                                      .textMultiplier),
                                                         )
                                                       ]),
-                                                      Column(
-                                                          mainAxisAlignment:MainAxisAlignment.start,
-                                                          children:[Text(' connect.sid',
-                                                            style: TextStyle(
-                                                                color: Colors.black,
-                                                                fontFamily: robot,
-                                                                fontSize: 1 *SizeConfig.textMultiplier
-                                                            ),)]),
-                                                    ]),
-                                                TableRow(
-                                                    children: [
-                                                      Column(children:[Text('Purpose:', style: TextStyle(
+                                                ]),
+                                                TableRow(children: [
+                                                  Column(children: [
+                                                    Text(
+                                                      'Purpose:',
+                                                      style: TextStyle(
                                                           color: Colors.black,
                                                           fontFamily: robot,
-                                                          fontSize: 1 *SizeConfig.textMultiplier
-                                                      ),)]),
-                                                      Column(
-                                                          mainAxisAlignment:MainAxisAlignment.start,
-                                                          children:[Text('Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days', style: TextStyle(
-                                                              color: Colors.black,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                                  Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          'Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.black,
                                                               fontFamily: robot,
-                                                              fontSize: 1 *SizeConfig.textMultiplier
-                                                          ),)]),
-                                                    ]),
-                                                TableRow(
-                                                    children: [
-                                                      Column(children:[Text('Provider :', style: TextStyle(
+                                                              fontSize: 1 *
+                                                                  SizeConfig
+                                                                      .textMultiplier),
+                                                        )
+                                                      ]),
+                                                ]),
+                                                TableRow(children: [
+                                                  Column(children: [
+                                                    Text(
+                                                      'Provider :',
+                                                      style: TextStyle(
                                                           color: Colors.black,
                                                           fontFamily: robot,
-                                                          fontSize: 1 *SizeConfig.textMultiplier
-                                                      ),)]),
-                                                      Column(
-                                                          mainAxisAlignment:MainAxisAlignment.start,
-                                                          children:[Text('mindamigo.com', style: TextStyle(
-                                                              color: Colors.black,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                                  Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          'mindamigo.com',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.black,
                                                               fontFamily: robot,
-                                                              fontSize: 1 *SizeConfig.textMultiplier
-                                                          ),)]),
-                                                    ]),
-                                                TableRow(
-                                                    children: [
-                                                      Column(children:[Text('Service:', style: TextStyle(
+                                                              fontSize: 1 *
+                                                                  SizeConfig
+                                                                      .textMultiplier),
+                                                        )
+                                                      ]),
+                                                ]),
+                                                TableRow(children: [
+                                                  Column(children: [
+                                                    Text(
+                                                      'Service:',
+                                                      style: TextStyle(
                                                           color: Colors.black,
                                                           fontFamily: robot,
-                                                          fontSize: 1 *SizeConfig.textMultiplier
-                                                      ),)]),
-                                                      Column(
-                                                          mainAxisAlignment:MainAxisAlignment.start,
-                                                          children:[Text('Node Js', style: TextStyle(
-                                                              color: Colors.black,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                                  Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          'Node Js',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.black,
                                                               fontFamily: robot,
-                                                              fontSize: 1 *SizeConfig.textMultiplier
-                                                          ),)]),
-                                                    ]),
+                                                              fontSize: 1 *
+                                                                  SizeConfig
+                                                                      .textMultiplier),
+                                                        )
+                                                      ]),
+                                                ]),
                                               ],
                                             ),
                                           ),
@@ -1017,7 +1187,9 @@ class _TabCookiePageState extends State<TabCookiePage> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 50,),
+                                  SizedBox(
+                                    height: 50,
+                                  ),
                                 ],
                               )),
 
@@ -1129,7 +1301,6 @@ class _TabCookiePageState extends State<TabCookiePage> {
   }
 }
 
-
 class MobileCookiePage extends StatefulWidget {
   @override
   _MobileCookiePageState createState() => _MobileCookiePageState();
@@ -1157,96 +1328,96 @@ class _MobileCookiePageState extends State<MobileCookiePage> {
           ),
         ),
         endDrawer: Container(
-        width: MediaQuery.of(context).size.width,
-        child: Drawer(
-            child: ListView(padding: EdgeInsets.zero, children: <Widget>[
-          ListTile(
-            trailing: DelayedDisplay(
-              delay: Duration(milliseconds: 30),
-              slidingBeginOffset: const Offset(0.0, 0),
-              child: InkWell(
-                child: Icon(
-                  Icons.close,
-                  color: Colors.grey,
+          width: MediaQuery.of(context).size.width,
+          child: Drawer(
+              child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+            ListTile(
+              trailing: DelayedDisplay(
+                delay: Duration(milliseconds: 30),
+                slidingBeginOffset: const Offset(0.0, 0),
+                child: InkWell(
+                  child: Icon(
+                    Icons.close,
+                    color: Colors.grey,
+                  ),
+                  onTap: () => Navigator.pop(context),
                 ),
-                onTap: () => Navigator.pop(context),
               ),
+              title: Text(
+                'Mindamigo',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, HomeRoute);
+              },
             ),
-            title: Text(
-              'Mindamigo',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
-            ),
-            onTap: () {
-              Navigator.pushNamed(context, HomeRoute);
-            },
-          ),
 
-          //meet adam
-          ListTile(
-            title: Text(
-              'Meet Adam',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
+            //meet adam
+            ListTile(
+              title: Text(
+                'Meet Adam',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, MeetAdamRoute);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, MeetAdamRoute);
-            },
-          ),
-          //about us
-          ListTile(
-            title: Text(
-              'About Us',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
+            //about us
+            ListTile(
+              title: Text(
+                'About Us',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, AboutUsRoute);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, AboutUsRoute);
-            },
-          ),
-          ListTile(
-            title: Text(
-              'PodCast',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
+            ListTile(
+              title: Text(
+                'PodCast',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, PodcastRoute);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, PodcastRoute);
-            },
-          ),
-          ListTile(
-            title: Text(
-              'Blog',
-              style: TextStyle(
-                  fontSize: 4.27 * SizeConfig.textMultiplier,
-                  color: Colors.grey,
-                  fontFamily: robot,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.bold),
+            ListTile(
+              title: Text(
+                'Blog',
+                style: TextStyle(
+                    fontSize: 4.27 * SizeConfig.textMultiplier,
+                    color: Colors.grey,
+                    fontFamily: robot,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, BlogPageRoute);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, BlogPageRoute);
-            },
-          ),
-        ])),
-      ),
-      body: SingleChildScrollView(
+          ])),
+        ),
+        body: SingleChildScrollView(
           controller: _controller,
           child: Container(
             child: Column(
@@ -1356,117 +1527,165 @@ class _MobileCookiePageState extends State<MobileCookiePage> {
                                   ],
                                 ),
                               ),
-
-                            SizedBox(height: 50,),
-                            Container(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    child: Text("These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: robot,
-                                          fontSize: 1.2 *SizeConfig.textMultiplier
+                              SizedBox(
+                                height: 50,
+                              ),
+                              Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      child: Text(
+                                        "These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.",
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontFamily: robot,
+                                            fontSize: 1.2 *
+                                                SizeConfig.textMultiplier),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(height: 50,),
-                                  Center(
-                                    child: Container(
-                                      alignment: Alignment.center,
-                                      width:MediaQuery.of(context).size.width*0.6,
-                                      child: Table(
-                                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-
-                                        columnWidths: {
-                                          0: FlexColumnWidth(1),
-                                          1: FlexColumnWidth(4),
-                                        },
-                                        border: TableBorder.all(
-                                            color: Colors.black45,
-                                            style: BorderStyle.solid,
-                                            width:1
-                                        ),
-                                        children: [
-                                          TableRow(
-                                              children: [
-                                                Column(children:
-                                                [
-                                                  Text('Name:',
-                                                    style: TextStyle(
-                                                        color: Colors.black,
-                                                        fontFamily: robot,
-                                                        fontSize: 1 *SizeConfig.textMultiplier
-                                                    ),
-                                                  )
-                                                ]),
-                                                Column(
-                                                    mainAxisAlignment:MainAxisAlignment.start,
-                                                    children:[Text(' connect.sid',
+                                    SizedBox(
+                                      height: 50,
+                                    ),
+                                    Center(
+                                      child: Container(
+                                        alignment: Alignment.center,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.6,
+                                        child: Table(
+                                          defaultVerticalAlignment:
+                                              TableCellVerticalAlignment.middle,
+                                          columnWidths: {
+                                            0: FlexColumnWidth(1),
+                                            1: FlexColumnWidth(4),
+                                          },
+                                          border: TableBorder.all(
+                                              color: Colors.black45,
+                                              style: BorderStyle.solid,
+                                              width: 1),
+                                          children: [
+                                            TableRow(children: [
+                                              Column(children: [
+                                                Text(
+                                                  'Name:',
+                                                  style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontFamily: robot,
+                                                      fontSize: 1 *
+                                                          SizeConfig
+                                                              .textMultiplier),
+                                                )
+                                              ]),
+                                              Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      ' connect.sid',
                                                       style: TextStyle(
                                                           color: Colors.black,
                                                           fontFamily: robot,
-                                                          fontSize: 1 *SizeConfig.textMultiplier
-                                                      ),)]),
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                            ]),
+                                            TableRow(children: [
+                                              Column(children: [
+                                                Text(
+                                                  'Purpose:',
+                                                  style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontFamily: robot,
+                                                      fontSize: 1 *
+                                                          SizeConfig
+                                                              .textMultiplier),
+                                                )
                                               ]),
-                                          TableRow(
-                                              children: [
-                                                Column(children:[Text('Purpose:', style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontFamily: robot,
-                                                    fontSize: 1 *SizeConfig.textMultiplier
-                                                ),)]),
-                                                Column(
-                                                    mainAxisAlignment:MainAxisAlignment.start,
-                                                    children:[Text('Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days', style: TextStyle(
-                                                        color: Colors.black,
-                                                        fontFamily: robot,
-                                                        fontSize: 1 *SizeConfig.textMultiplier
-                                                    ),)]),
+                                              Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'Used to maintain an anonymous user session by the server in Node Js ( Express ) Web Application. It is a necessary cookie that expires in 4days',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                            ]),
+                                            TableRow(children: [
+                                              Column(children: [
+                                                Text(
+                                                  'Provider :',
+                                                  style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontFamily: robot,
+                                                      fontSize: 1 *
+                                                          SizeConfig
+                                                              .textMultiplier),
+                                                )
                                               ]),
-                                          TableRow(
-                                              children: [
-                                                Column(children:[Text('Provider :', style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontFamily: robot,
-                                                    fontSize: 1 *SizeConfig.textMultiplier
-                                                ),)]),
-                                                Column(
-                                                    mainAxisAlignment:MainAxisAlignment.start,
-                                                    children:[Text('mindamigo.com', style: TextStyle(
-                                                        color: Colors.black,
-                                                        fontFamily: robot,
-                                                        fontSize: 1 *SizeConfig.textMultiplier
-                                                    ),)]),
+                                              Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'mindamigo.com',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                            ]),
+                                            TableRow(children: [
+                                              Column(children: [
+                                                Text(
+                                                  'Service:',
+                                                  style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontFamily: robot,
+                                                      fontSize: 1 *
+                                                          SizeConfig
+                                                              .textMultiplier),
+                                                )
                                               ]),
-                                          TableRow(
-                                              children: [
-                                                Column(children:[Text('Service:', style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontFamily: robot,
-                                                    fontSize: 1 *SizeConfig.textMultiplier
-                                                ),)]),
-                                                Column(
-                                                    mainAxisAlignment:MainAxisAlignment.start,
-                                                    children:[Text('Node Js', style: TextStyle(
-                                                        color: Colors.black,
-                                                        fontFamily: robot,
-                                                        fontSize: 1 *SizeConfig.textMultiplier
-                                                    ),)]),
-                                              ]),
-                                        ],
+                                              Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'Node Js',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontFamily: robot,
+                                                          fontSize: 1 *
+                                                              SizeConfig
+                                                                  .textMultiplier),
+                                                    )
+                                                  ]),
+                                            ]),
+                                          ],
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                            SizedBox(height: 50,),
-                          ],
-                        )
-                    ),
+                              SizedBox(
+                                height: 50,
+                              ),
+                            ],
+                          )),
                       //left
                       CircleAmigo(
                         bottomCircleAmigoPosition:

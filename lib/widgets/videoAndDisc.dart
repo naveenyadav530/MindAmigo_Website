@@ -12,6 +12,7 @@ class VideoDisc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
+      largeScreen: WideVideoDisc(),
       webBody: WebVideoDisc(),
       tabletBody: TabVideoDisc(),
       mobileBody: MobileVideoDisc(),
@@ -19,6 +20,109 @@ class VideoDisc extends StatelessWidget {
   }
 }
 
+class WideVideoDisc extends StatefulWidget {
+  @override
+  _WideVideoDiscState createState() => _WideVideoDiscState();
+}
+
+class _WideVideoDiscState extends State<WideVideoDisc> {
+  YoutubePlayerController _controller;
+  @override
+  void initState() {
+    _controller = YoutubePlayerController(
+      initialVideoId: 'qNCC4yweBrU',
+      params: YoutubePlayerParams(
+        playlist: [], // Defining custom playlist
+        startAt: Duration(seconds: 30),
+        showControls: true,
+        showFullscreenButton: true,
+      ),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: AmigoColors.lightPink3,
+      child: Center(
+        child: Container(
+          height: 500,
+          constraints: BoxConstraints(maxWidth: 1920),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Positioned(
+                left: 70,
+                top: 70,
+                bottom: 70,
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 400,
+                  width: 600,
+                  child: YoutubePlayerControllerProvider(
+                      controller: _controller,
+                      child: YoutubePlayerIFrame(
+                        aspectRatio: 16 / 9,
+                      )),
+                ),
+
+                //child: IndexVideoPlayer(MediaQuery.of(context).size)
+              ),
+              Positioned(
+                  right: 70,
+                  top: 70,
+                  bottom: 70,
+                  //main container
+                  child: Container(
+                    height: 400,
+                    width: 600,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: Image.asset(
+                            commaUpper,
+                            height: 100,
+                            width: 50,
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Image.asset(
+                            commaLower,
+                            height: 100,
+                            width: 50,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Container(
+                            child: Text(
+                              Strings.videDesc,
+                              style: TextStyle(
+                                  fontFamily: robot,
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.bold,
+                                  color: AmigoColors.lightBrown),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ))
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//web view
 class WebVideoDisc extends StatefulWidget {
   @override
   _WebVideoDiscState createState() => _WebVideoDiscState();
@@ -44,78 +148,84 @@ class _WebVideoDiscState extends State<WebVideoDisc> {
   Widget build(BuildContext context) {
     return Container(
       color: AmigoColors.lightPink3,
-      height: 32.55 * SizeConfig.heightMultiplier,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Positioned(
-            left: 70,
-            top: 70,
-            bottom: 70,
-            child: Container(
-              alignment: Alignment.center,
-              height: 26.04 * SizeConfig.heightMultiplier,
-              width: 39.06 * SizeConfig.heightMultiplier,
-              child: YoutubePlayerControllerProvider(
-                  controller: _controller,
-                  child: YoutubePlayerIFrame(
-                    aspectRatio: 16 / 9,
-                  )),
-            ),
-
-            //child: IndexVideoPlayer(MediaQuery.of(context).size)
-          ),
-          Positioned(
-              right: 70,
-              top: 70,
-              bottom: 70,
-              //main container
-              child: Container(
-                height: 26.04 * SizeConfig.heightMultiplier,
-                width: 39.06 * SizeConfig.heightMultiplier,
-                child: Stack(
+      child: Center(
+        child: Container(
+          height: 32.55 * SizeConfig.heightMultiplier,
+          //constraints: BoxConstraints(maxWidth: 1920),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Positioned(
+                left: 70,
+                top: 70,
+                bottom: 70,
+                child: Container(
                   alignment: Alignment.center,
-                  children: [
-                    Positioned(
-                      bottom: 0,
-                      right: 0,
-                      child: Image.asset(
-                        commaUpper,
-                        height: 6.5 * SizeConfig.heightMultiplier,
-                        width: 3.25 * SizeConfig.heightMultiplier,
-                      ),
-                    ),
-                    Positioned(
-                      left: 0,
-                      top: 0,
-                      child: Image.asset(
-                        commaLower,
-                        height: 6.5 * SizeConfig.heightMultiplier,
-                        width: 3.25 * SizeConfig.heightMultiplier,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Container(
-                        child: Text(
-                          Strings.videDesc,
-                          style: TextStyle(
-                              fontFamily: robot,
-                              fontSize: 2.0 * SizeConfig.heightMultiplier,
-                              fontWeight: FontWeight.bold,
-                              color: AmigoColors.lightBrown),
-                        ),
-                      ),
-                    ),
-                  ],
+                  height: 26.04 * SizeConfig.heightMultiplier,
+                  width: 39.06 * SizeConfig.heightMultiplier,
+                  child: YoutubePlayerControllerProvider(
+                      controller: _controller,
+                      child: YoutubePlayerIFrame(
+                        aspectRatio: 16 / 9,
+                      )),
                 ),
-              ))
-        ],
+
+                //child: IndexVideoPlayer(MediaQuery.of(context).size)
+              ),
+              Positioned(
+                  right: 70,
+                  top: 70,
+                  bottom: 70,
+                  //main container
+                  child: Container(
+                    height: 26.04 * SizeConfig.heightMultiplier,
+                    width: 39.06 * SizeConfig.heightMultiplier,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: Image.asset(
+                            commaUpper,
+                            height: 6.5 * SizeConfig.heightMultiplier,
+                            width: 3.25 * SizeConfig.heightMultiplier,
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Image.asset(
+                            commaLower,
+                            height: 6.5 * SizeConfig.heightMultiplier,
+                            width: 3.25 * SizeConfig.heightMultiplier,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Container(
+                            child: Text(
+                              Strings.videDesc,
+                              style: TextStyle(
+                                  fontFamily: robot,
+                                  fontSize: 2.0 * SizeConfig.heightMultiplier,
+                                  fontWeight: FontWeight.bold,
+                                  color: AmigoColors.lightBrown),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ))
+            ],
+          ),
+        ),
       ),
     );
   }
 }
 
+//tab View
 class TabVideoDisc extends StatefulWidget {
   @override
   _TabVideoDiscState createState() => _TabVideoDiscState();
@@ -205,6 +315,7 @@ class _TabVideoDiscState extends State<TabVideoDisc> {
   }
 }
 
+//mobileview
 class MobileVideoDisc extends StatefulWidget {
   @override
   _MobileVideoDiscState createState() => _MobileVideoDiscState();

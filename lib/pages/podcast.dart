@@ -57,215 +57,211 @@ class _WidePodCastState extends State<WidePodCast> {
     //Initialize the  scrollController
     _controller = ScrollController();
   }
+
   @override
   Widget build(BuildContext context) {
-    return Stack(
-        children: [
-          SafeArea(
-            child: RawScrollbar(
-              radius: Radius.circular(15),
-              controller: _controller,
-              thickness: 15,
-              thumbColor: Colors.lightBlueAccent.shade100,
-              isAlwaysShown: true,
-              child: SingleChildScrollView(
-                controller: _controller,
-                child: Center(
-                  child: Container(
-                    width: 1440.0,
-                    child: Column(
-                      children: [
-                        NavBar(),
-                        GradientLine(),
-                        Container(
-                            decoration: BoxDecoration(
-                              // border: Border.all(color: Colors.black),
-                              color: AmigoColors.cream,
+    return Stack(children: [
+      SafeArea(
+        child: RawScrollbar(
+          radius: Radius.circular(15),
+          controller: _controller,
+          thickness: 15,
+          thumbColor: Colors.lightBlueAccent.shade100,
+          isAlwaysShown: true,
+          child: SingleChildScrollView(
+            controller: _controller,
+            child: Center(
+              child: Container(
+                child: Column(
+                  children: [
+                    WideNavBar(),
+                    GradientLine(),
+                    Container(
+                        decoration: BoxDecoration(
+                          // border: Border.all(color: Colors.black),
+                          color: AmigoColors.cream,
+                        ),
+                        height: 700.26,
+                        width: MediaQuery.of(context).size.width,
+                        child: Stack(
+                          alignment: Alignment.topCenter,
+                          children: [
+                            Positioned(
+                              top: 77,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.transparent,
+                                    // border: Border.all(color: Colors.black),
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(9.98))),
+                                alignment: Alignment.center,
+                                height: 430.08,
+                                width: MediaQuery.of(context).size.width / 1.5,
+                                constraints:
+                                    BoxConstraints(maxWidth: 1920 / 1.5),
+                                child: EasyWebView(
+                                  src: src,
+                                  onLoaded: () {
+                                    print('LOADED');
+                                  },
+                                  isHtml: true,
+                                  webAllowFullScreen: true,
+                                  isMarkdown: false,
+                                  convertToWidgets: false,
+                                  key: key,
+                                  widgetsTextSelectable: false,
+                                ),
+                              ),
                             ),
-                            height: 45.59 * SizeConfig.heightMultiplier,
-                            width: MediaQuery.of(context).size.width,
-                            child: Stack(
-                              alignment: Alignment.topCenter,
-                              children: [
-                                Positioned(
-                                  top: 5 * SizeConfig.heightMultiplier,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.transparent,
-                                        // border: Border.all(color: Colors.black),
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(
-                                                0.65 * SizeConfig.heightMultiplier))),
-                                    alignment: Alignment.center,
-                                    height: 28 * SizeConfig.heightMultiplier,
-                                    width: MediaQuery.of(context).size.width / 1.5,
-                                    child: EasyWebView(
-                                      src: src,
-                                      onLoaded: () {
-                                        print('LOADED');
-                                      },
-                                      isHtml: true,
-                                      webAllowFullScreen: true,
-                                      isMarkdown: false,
-                                      convertToWidgets: false,
-                                      key: key,
-                                      widgetsTextSelectable: false,
+                            Positioned(
+                              bottom: 100,
+                              child: Container(
+                                  alignment: Alignment.topCenter,
+                                  width:
+                                      MediaQuery.of(context).size.width / 1.8,
+                                  child: RichText(
+                                    textAlign: TextAlign.center,
+                                    text: TextSpan(
+                                      text: 'Available to listen on ',
+                                      style: TextStyle(
+                                          fontSize: 26,
+                                          fontFamily: robot,
+                                          color: AmigoColors.lightBlack),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                            text: 'Spotify,',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 26,
+                                                fontFamily: robot,
+                                                decoration:
+                                                    TextDecoration.underline)),
+                                        TextSpan(text: ' '),
+                                        TextSpan(
+                                            text: 'Apple Podcasts, ',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 26,
+                                                fontFamily: robot,
+                                                decoration:
+                                                    TextDecoration.underline)),
+                                        TextSpan(text: ' '),
+                                        TextSpan(
+                                            text: 'Google Podcasts ',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 26,
+                                                fontFamily: robot,
+                                                decoration:
+                                                    TextDecoration.underline)),
+                                        TextSpan(text: ' '),
+                                        TextSpan(text: 'and '),
+                                        TextSpan(text: ' '),
+                                        TextSpan(
+                                            text: 'RSS Feed',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 26,
+                                                fontFamily: robot,
+                                                decoration:
+                                                    TextDecoration.underline)),
+                                      ],
                                     ),
+                                  ) /*Text(Strings.podcastBottom,textAlign: TextAlign.center,style: TextStyle(fontSize: 26, fontFamily: robot, fontWeight: FontWeight.bold))*/
                                   ),
-                                ),
-                                Positioned(
-                                  bottom: 6.51 * SizeConfig.heightMultiplier,
-                                  child: Container(
-                                      alignment: Alignment.topCenter,
-                                      width: MediaQuery.of(context).size.width / 1.8,
-                                      child: RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text: 'Available to listen on ',
-                                          style: TextStyle(
-                                              fontSize:
-                                              1.69 * SizeConfig.heightMultiplier,
-                                              fontFamily: robot,
-                                              color: AmigoColors.lightBlack),
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                                text: 'Spotify,',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 1.69 *
-                                                        SizeConfig.heightMultiplier,
-                                                    fontFamily: robot,
-                                                    decoration:
-                                                    TextDecoration.underline)),
-                                            TextSpan(text: ' '),
-                                            TextSpan(
-                                                text: 'Apple Podcasts, ',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 1.69 *
-                                                        SizeConfig.heightMultiplier,
-                                                    fontFamily: robot,
-                                                    decoration:
-                                                    TextDecoration.underline)),
-                                            TextSpan(text: ' '),
-                                            TextSpan(
-                                                text: 'Google Podcasts ',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 1.69 *
-                                                        SizeConfig.heightMultiplier,
-                                                    fontFamily: robot,
-                                                    decoration:
-                                                    TextDecoration.underline)),
-                                            TextSpan(text: ' '),
-                                            TextSpan(text: 'and '),
-                                            TextSpan(text: ' '),
-                                            TextSpan(
-                                                text: 'RSS Feed',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 1.69 *
-                                                        SizeConfig.heightMultiplier,
-                                                    fontFamily: robot,
-                                                    decoration:
-                                                    TextDecoration.underline)),
-                                          ],
-                                        ),
-                                      ) /*Text(Strings.podcastBottom,textAlign: TextAlign.center,style: TextStyle(fontSize: 26, fontFamily: robot, fontWeight: FontWeight.bold))*/
-                                  ),
-                                ),
-                                //left
+                            ),
+                            //left
 
-                                CircleAmigo(
-                                  topCircleAmigoPosition:
+                            CircleAmigo(
+                              topCircleAmigoPosition:
                                   -0.40 * SizeConfig.heightMultiplier,
-                                  leftCircleAmigoPosition:
+                              leftCircleAmigoPosition:
                                   -13.41 * SizeConfig.heightMultiplier,
-                                  circleAmigoHeight:
+                              circleAmigoHeight:
                                   20.53 * SizeConfig.heightMultiplier,
-                                  circleAmigoWidth:
+                              circleAmigoWidth:
                                   20.53 * SizeConfig.heightMultiplier,
-                                  circleAmigoGradient: [
-                                    AmigoColors.orange,
-                                    AmigoColors.lightRed2
-                                  ],
-                                  circleAmigoOpacity: [0.1, 0.1],
-                                ),
-                                CircleAmigo(
-                                  topCircleAmigoPosition:
-                                  -4.41 * SizeConfig.heightMultiplier,
-                                  leftCircleAmigoPosition:
-                                  -18.67 * SizeConfig.heightMultiplier,
-                                  circleAmigoHeight:
-                                  30.04 * SizeConfig.heightMultiplier,
-                                  circleAmigoWidth:
-                                  30.04 * SizeConfig.heightMultiplier,
-                                  circleAmigoGradient: [
-                                    AmigoColors.orange,
-                                    AmigoColors.lightRed2
-                                  ],
-                                  circleAmigoOpacity: [0.1, 0.1],
-                                ),
-
-                                //right
-                                CircleAmigo(
-                                  topCircleAmigoPosition:
-                                  -2.20 * SizeConfig.heightMultiplier,
-                                  rightCircleAmigoPosition:
-                                  -7.16 * SizeConfig.heightMultiplier,
-                                  circleAmigoHeight:
-                                  12.02 * SizeConfig.heightMultiplier,
-                                  circleAmigoWidth:
-                                  12.02 * SizeConfig.heightMultiplier,
-                                  circleAmigoGradient: [
-                                    AmigoColors.orange,
-                                    AmigoColors.lightRed2
-                                  ],
-                                  circleAmigoOpacity: [0.1, 0.1],
-                                ),
-                                CircleAmigo(
-                                  topCircleAmigoPosition:
-                                  -5.46 * SizeConfig.heightMultiplier,
-                                  rightCircleAmigoPosition:
-                                  -10.41 * SizeConfig.heightMultiplier,
-                                  circleAmigoHeight:
-                                  20.53 * SizeConfig.heightMultiplier,
-                                  circleAmigoWidth:
-                                  20.53 * SizeConfig.heightMultiplier,
-                                  circleAmigoGradient: [
-                                    AmigoColors.orange,
-                                    AmigoColors.lightRed2
-                                  ],
-                                  circleAmigoOpacity: [0.1, 0.1],
-                                ),
-                                CircleAmigo(
-                                  topCircleAmigoPosition:
-                                  -8.71 * SizeConfig.heightMultiplier,
-                                  rightCircleAmigoPosition:
-                                  -13.67 * SizeConfig.heightMultiplier,
-                                  circleAmigoHeight:
-                                  28.04 * SizeConfig.heightMultiplier,
-                                  circleAmigoWidth:
-                                  28.04 * SizeConfig.heightMultiplier,
-                                  circleAmigoGradient: [
-                                    AmigoColors.orange,
-                                    AmigoColors.lightRed2
-                                  ],
-                                  circleAmigoOpacity: [0.1, 0.1],
-                                ),
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
                               ],
-                            )),
-                        GetInTouch(),
-                        NewsLetter(),
-                        BottomNav(),
-                      ],
-                    ),
-                  ),
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+                            CircleAmigo(
+                              topCircleAmigoPosition:
+                                  -4.41 * SizeConfig.heightMultiplier,
+                              leftCircleAmigoPosition:
+                                  -18.67 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  30.04 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  30.04 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+
+                            //right
+                            CircleAmigo(
+                              topCircleAmigoPosition:
+                                  -2.20 * SizeConfig.heightMultiplier,
+                              rightCircleAmigoPosition:
+                                  -7.16 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  12.02 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  12.02 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+                            CircleAmigo(
+                              topCircleAmigoPosition:
+                                  -5.46 * SizeConfig.heightMultiplier,
+                              rightCircleAmigoPosition:
+                                  -10.41 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  20.53 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  20.53 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+                            CircleAmigo(
+                              topCircleAmigoPosition:
+                                  -8.71 * SizeConfig.heightMultiplier,
+                              rightCircleAmigoPosition:
+                                  -13.67 * SizeConfig.heightMultiplier,
+                              circleAmigoHeight:
+                                  28.04 * SizeConfig.heightMultiplier,
+                              circleAmigoWidth:
+                                  28.04 * SizeConfig.heightMultiplier,
+                              circleAmigoGradient: [
+                                AmigoColors.orange,
+                                AmigoColors.lightRed2
+                              ],
+                              circleAmigoOpacity: [0.1, 0.1],
+                            ),
+                          ],
+                        )),
+                    GetInTouch(),
+                    NewsLetter(),
+                    BottomNav(),
+                  ],
                 ),
               ),
             ),
           ),
-        ]);
+        ),
+      ),
+    ]);
   }
 }
 
@@ -300,8 +296,7 @@ class _WebPodCastState extends State<WebPodCast> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-        children: [
+    return Stack(children: [
       SafeArea(
         child: RawScrollbar(
           radius: Radius.circular(15),

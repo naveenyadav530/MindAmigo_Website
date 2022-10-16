@@ -12,10 +12,155 @@ class ACT extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
+      largeScreen: WideAct(),
       webBody: webAct(),
       tabletBody: tabAct(),
       mobileBody: mobileAct(),
     );
+  }
+}
+
+class WideAct extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: MediaQuery.of(context).size.width,
+        height: 600,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomLeft,
+                colors: [AmigoColors.lightblue1, AmigoColors.green])),
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            //left circle
+            CircleAmigo(
+              leftCircleAmigoPosition: -7.8 * SizeConfig.heightMultiplier,
+              bottomCircleAmigoPosition: 9.11 * SizeConfig.heightMultiplier,
+              circleAmigoWidth: 9.7 * SizeConfig.heightMultiplier,
+              circleAmigoHeight: 9.7 * SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
+              circleAmigoOpacity: [0.5, 0.5],
+            ),
+            CircleAmigo(
+              leftCircleAmigoPosition: -7.8 * SizeConfig.heightMultiplier,
+              bottomCircleAmigoPosition: 7.8 * SizeConfig.heightMultiplier,
+              circleAmigoWidth: 16.27 * SizeConfig.heightMultiplier,
+              circleAmigoHeight: 16.27 * SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightblue1, AmigoColors.green],
+              circleAmigoOpacity: [0.4, 0.5],
+            ),
+            CircleAmigo(
+              leftCircleAmigoPosition: -9.11 * SizeConfig.heightMultiplier,
+              bottomCircleAmigoPosition: 6.51 * SizeConfig.heightMultiplier,
+              circleAmigoWidth: 19.53 * SizeConfig.heightMultiplier,
+              circleAmigoHeight: 19.53 * SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightblue1, AmigoColors.green],
+              circleAmigoOpacity: [0.3, 0.5],
+            ),
+
+            //corner circle
+            CircleAmigo(
+              rightCircleAmigoPosition: -3.51 * SizeConfig.heightMultiplier,
+              topCircleAmigoPosition: -6.25 * SizeConfig.heightMultiplier,
+              circleAmigoWidth: 15.7 * SizeConfig.heightMultiplier,
+              circleAmigoHeight: 15.7 * SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
+              circleAmigoOpacity: [0.8, 0.7],
+            ),
+            CircleAmigo(
+              rightCircleAmigoPosition: -5.81 * SizeConfig.heightMultiplier,
+              topCircleAmigoPosition: -8.55 * SizeConfig.heightMultiplier,
+              circleAmigoWidth: 22.02 * SizeConfig.heightMultiplier,
+              circleAmigoHeight: 22.02 * SizeConfig.heightMultiplier,
+              circleAmigoGradient: [AmigoColors.lightBlue, AmigoColors.green],
+              circleAmigoOpacity: [0.5, 0.7],
+            ),
+
+            Container(
+              constraints: BoxConstraints(maxWidth: 1920),
+              child: Stack(
+                children: [
+                  Positioned(
+                    bottom: 0,
+                    right: 200,
+                    child: Container(
+                      height: 515.32,
+                      width: 515.32,
+                      child: Column(
+                        children: [
+                          Container(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              "ACT",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 70.65,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.none,
+                                  fontFamily: "Fredoka"),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 10),
+                            child: Text(
+                              Strings.act1,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17.66,
+                                  height: 1.5,
+                                  decoration: TextDecoration.none,
+                                  fontFamily: "Robot"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Text(
+                              Strings.act2,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17.66,
+                                  height: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.none,
+                                  fontFamily: "Robot"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Text(
+                              Strings.act3,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17.66,
+                                  height: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.none,
+                                  fontFamily: "Robot"),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                      bottom: -115.2,
+                      left: 245.76,
+                      child: Image.asset(
+                        aboutActPhone,
+                        height: 614.4,
+                      )),
+                  Image.asset(aboutActDoll),
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 }
 

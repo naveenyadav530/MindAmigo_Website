@@ -43,6 +43,7 @@ class _WideArticleState extends State<WideArticle> {
     _controller = ScrollController();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     final Map blogData = ModalRoute.of(context).settings.arguments;
@@ -58,10 +59,10 @@ class _WideArticleState extends State<WideArticle> {
             controller: _controller,
             child: Center(
               child: Container(
-                width: 1440.0,
                 child: Column(
+                  //constrant
                   children: [
-                    NavBar(),
+                    WideNavBar(),
                     GradientLine(),
                     Container(
                       color: Colors.white,
@@ -71,13 +72,13 @@ class _WideArticleState extends State<WideArticle> {
                         children: [
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -7.20 * SizeConfig.heightMultiplier,
+                                -7.20 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -4.16 * SizeConfig.heightMultiplier,
+                                -4.16 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            13.02 * SizeConfig.heightMultiplier,
+                                13.02 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            13.02 * SizeConfig.heightMultiplier,
+                                13.02 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -86,13 +87,13 @@ class _WideArticleState extends State<WideArticle> {
                           ),
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -9.46 * SizeConfig.heightMultiplier,
+                                -9.46 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -7.41 * SizeConfig.heightMultiplier,
+                                -7.41 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            19.53 * SizeConfig.heightMultiplier,
+                                19.53 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            19.53 * SizeConfig.heightMultiplier,
+                                19.53 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
@@ -101,106 +102,87 @@ class _WideArticleState extends State<WideArticle> {
                           ),
                           CircleAmigo(
                             topCircleAmigoPosition:
-                            -12.71 * SizeConfig.heightMultiplier,
+                                -12.71 * SizeConfig.heightMultiplier,
                             leftCircleAmigoPosition:
-                            -10.67 * SizeConfig.heightMultiplier,
+                                -10.67 * SizeConfig.heightMultiplier,
                             circleAmigoHeight:
-                            26.04 * SizeConfig.heightMultiplier,
+                                26.04 * SizeConfig.heightMultiplier,
                             circleAmigoWidth:
-                            26.04 * SizeConfig.heightMultiplier,
+                                26.04 * SizeConfig.heightMultiplier,
                             circleAmigoGradient: [
                               AmigoColors.orange,
                               AmigoColors.lightRed2
                             ],
                             circleAmigoOpacity: [0.1, 0.1],
                           ),
-
                           Container(
                             color: Colors.white,
+                            constraints: BoxConstraints(maxWidth: 1920 / 2),
                             width: MediaQuery.of(context).size.width / 2,
                             child: Column(
                               children: [
                                 //title
                                 Padding(
-                                  padding: EdgeInsets.only(
-                                      top:
-                                      3.66 * SizeConfig.heightMultiplier),
+                                  padding: EdgeInsets.only(top: 56.21),
                                   child: Text(
                                     blogData["title"],
                                     style: TextStyle(
                                         color: AmigoColors.orange,
-                                        fontSize:
-                                        4 * SizeConfig.heightMultiplier,
+                                        fontSize: 61.44,
                                         fontFamily: robot),
                                     textAlign: TextAlign.center,
                                   ),
                                 ),
                                 //image
                                 Padding(
-                                  padding: EdgeInsets.only(
-                                      top:
-                                      1.46 * SizeConfig.heightMultiplier),
+                                  padding: EdgeInsets.only(top: 22.42),
                                   child: Image.network(blogData["image"]),
                                 ),
                                 //heading
                                 Padding(
-                                  padding: EdgeInsets.only(
-                                      top: 2.3 * SizeConfig.heightMultiplier),
+                                  padding: EdgeInsets.only(top: 35.32),
                                   child: Container(
-                                    padding: EdgeInsets.only(
-                                        bottom: 7.2 *
-                                            SizeConfig.heightMultiplier),
+                                    padding: EdgeInsets.only(bottom: 110.59),
                                     child: Text(
                                       // Strings.blogContent,
                                       blogData["data"],
                                       textAlign: TextAlign.justify,
                                       style: TextStyle(
-                                          fontSize: 1.83 *
-                                              SizeConfig.heightMultiplier,
-                                          fontFamily: robot),
+                                          fontSize: 28.10, fontFamily: robot),
                                     ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
-                                      vertical:
-                                      3.66 * SizeConfig.heightMultiplier),
+                                  padding:
+                                      EdgeInsets.symmetric(vertical: 56.21),
                                   child: Container(
                                     alignment: Alignment.center,
-                                    width:
-                                    18.30 * SizeConfig.heightMultiplier,
+                                    width: 281.08,
                                     child: Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
+                                          MainAxisAlignment.spaceEvenly,
                                       children: [
                                         Text(
                                           "Share",
                                           style: TextStyle(
                                               color: AmigoColors.lightblue1,
-                                              fontSize: 1.75 *
-                                                  SizeConfig.heightMultiplier,
+                                              fontSize: 26.88,
                                               fontFamily: robot),
                                         ),
                                         Image.asset(
                                           facebookShare,
-                                          height: 2.70 *
-                                              SizeConfig.heightMultiplier,
-                                          width: 2.70 *
-                                              SizeConfig.heightMultiplier,
+                                          height: 41.47,
+                                          width: 41.47,
                                         ),
                                         Image.asset(
                                           twitterShare,
-                                          height: 2.70 *
-                                              SizeConfig.heightMultiplier,
-                                          width: 2.70 *
-                                              SizeConfig.heightMultiplier,
+                                          height: 41.47,
+                                          width: 41.47,
                                         ),
                                         Image.asset(
                                           mailShare,
-                                          height: 2.70 *
-                                              SizeConfig.heightMultiplier,
-                                          width: 2.70 *
-                                              SizeConfig.heightMultiplier,
+                                          height: 41.47,
+                                          width: 41.47,
                                         )
                                       ],
                                     ),
@@ -221,13 +203,13 @@ class _WideArticleState extends State<WideArticle> {
                             //right
                             CircleAmigo(
                               topCircleAmigoPosition:
-                              -1.20 * SizeConfig.heightMultiplier,
+                                  -1.20 * SizeConfig.heightMultiplier,
                               rightCircleAmigoPosition:
-                              -15.16 * SizeConfig.heightMultiplier,
+                                  -15.16 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              20.02 * SizeConfig.heightMultiplier,
+                                  20.02 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              20.02 * SizeConfig.heightMultiplier,
+                                  20.02 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -236,13 +218,13 @@ class _WideArticleState extends State<WideArticle> {
                             ),
                             CircleAmigo(
                               topCircleAmigoPosition:
-                              -4.46 * SizeConfig.heightMultiplier,
+                                  -4.46 * SizeConfig.heightMultiplier,
                               rightCircleAmigoPosition:
-                              -18.41 * SizeConfig.heightMultiplier,
+                                  -18.41 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              26.53 * SizeConfig.heightMultiplier,
+                                  26.53 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              26.53 * SizeConfig.heightMultiplier,
+                                  26.53 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -251,13 +233,13 @@ class _WideArticleState extends State<WideArticle> {
                             ),
                             CircleAmigo(
                               topCircleAmigoPosition:
-                              -7.71 * SizeConfig.heightMultiplier,
+                                  -7.71 * SizeConfig.heightMultiplier,
                               rightCircleAmigoPosition:
-                              -21.67 * SizeConfig.heightMultiplier,
+                                  -21.67 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              34.04 * SizeConfig.heightMultiplier,
+                                  34.04 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              34.04 * SizeConfig.heightMultiplier,
+                                  34.04 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -267,13 +249,13 @@ class _WideArticleState extends State<WideArticle> {
                             //left
                             CircleAmigo(
                               topCircleAmigoPosition:
-                              -1.20 * SizeConfig.heightMultiplier,
+                                  -1.20 * SizeConfig.heightMultiplier,
                               leftCircleAmigoPosition:
-                              -15.16 * SizeConfig.heightMultiplier,
+                                  -15.16 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              20.02 * SizeConfig.heightMultiplier,
+                                  20.02 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              20.02 * SizeConfig.heightMultiplier,
+                                  20.02 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -282,13 +264,13 @@ class _WideArticleState extends State<WideArticle> {
                             ),
                             CircleAmigo(
                               topCircleAmigoPosition:
-                              -4.46 * SizeConfig.heightMultiplier,
+                                  -4.46 * SizeConfig.heightMultiplier,
                               leftCircleAmigoPosition:
-                              -18.41 * SizeConfig.heightMultiplier,
+                                  -18.41 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              26.53 * SizeConfig.heightMultiplier,
+                                  26.53 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              26.53 * SizeConfig.heightMultiplier,
+                                  26.53 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -297,13 +279,13 @@ class _WideArticleState extends State<WideArticle> {
                             ),
                             CircleAmigo(
                               topCircleAmigoPosition:
-                              -7.71 * SizeConfig.heightMultiplier,
+                                  -7.71 * SizeConfig.heightMultiplier,
                               leftCircleAmigoPosition:
-                              -21.67 * SizeConfig.heightMultiplier,
+                                  -21.67 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              34.04 * SizeConfig.heightMultiplier,
+                                  34.04 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              34.04 * SizeConfig.heightMultiplier,
+                                  34.04 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -314,13 +296,13 @@ class _WideArticleState extends State<WideArticle> {
                             //bottom
                             CircleAmigo(
                               rightCircleAmigoPosition:
-                              -1.20 * SizeConfig.heightMultiplier,
+                                  -1.20 * SizeConfig.heightMultiplier,
                               bottomCircleAmigoPosition:
-                              -15.16 * SizeConfig.heightMultiplier,
+                                  -15.16 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              20.02 * SizeConfig.heightMultiplier,
+                                  20.02 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              20.02 * SizeConfig.heightMultiplier,
+                                  20.02 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -329,13 +311,13 @@ class _WideArticleState extends State<WideArticle> {
                             ),
                             CircleAmigo(
                               rightCircleAmigoPosition:
-                              -4.46 * SizeConfig.heightMultiplier,
+                                  -4.46 * SizeConfig.heightMultiplier,
                               bottomCircleAmigoPosition:
-                              -18.41 * SizeConfig.heightMultiplier,
+                                  -18.41 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              26.53 * SizeConfig.heightMultiplier,
+                                  26.53 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              26.53 * SizeConfig.heightMultiplier,
+                                  26.53 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -344,13 +326,13 @@ class _WideArticleState extends State<WideArticle> {
                             ),
                             CircleAmigo(
                               rightCircleAmigoPosition:
-                              -7.71 * SizeConfig.heightMultiplier,
+                                  -7.71 * SizeConfig.heightMultiplier,
                               bottomCircleAmigoPosition:
-                              -21.67 * SizeConfig.heightMultiplier,
+                                  -21.67 * SizeConfig.heightMultiplier,
                               circleAmigoHeight:
-                              34.04 * SizeConfig.heightMultiplier,
+                                  34.04 * SizeConfig.heightMultiplier,
                               circleAmigoWidth:
-                              34.04 * SizeConfig.heightMultiplier,
+                                  34.04 * SizeConfig.heightMultiplier,
                               circleAmigoGradient: [
                                 AmigoColors.orange,
                                 AmigoColors.lightRed2
@@ -358,157 +340,192 @@ class _WideArticleState extends State<WideArticle> {
                               circleAmigoOpacity: [0.1, 0.1],
                             ),
 
-                            Center(
-                              child: Container(
-                                width:MediaQuery.of(context).size.width*0.6,
-                                margin: EdgeInsets.only(bottom: 9.76 * SizeConfig.heightMultiplier),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      alignment: Alignment.topLeft,
-                                      margin: EdgeInsets.only(top: 6.51 * SizeConfig.heightMultiplier),
-                                      child: Text(
-                                        "Related Article",
-                                        style: TextStyle(
-                                            fontSize:3.25 * SizeConfig.textMultiplier,
-                                            fontFamily: robot,
-                                            color: AmigoColors.lightBlack
-                                        ),
-                                      ),
+                            Container(
+                              constraints: BoxConstraints(maxWidth: 1920 / 1.7),
+                              margin: EdgeInsets.only(bottom: 150),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  //related Article
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    margin: EdgeInsets.only(top: 100),
+                                    child: Text(
+                                      "Related Article",
+                                      style: TextStyle(
+                                          fontSize: 50,
+                                          fontFamily: robot,
+                                          color: AmigoColors.lightBlack),
                                     ),
-                                    Container(
-                                      alignment: Alignment.center,
-                                      height: 800,
-                                      child: FutureBuilder(
-                                        future: Blog().getBlogData(),
-                                        builder: (context,snapshot){
-                                          if(snapshot.connectionState==ConnectionState.done){
-                                            if (snapshot.hasData){
-                                              return ListView.builder(
-                                                  scrollDirection: Axis.horizontal,
-                                                  itemCount: 3,
-                                                  itemBuilder: (context,index) {
-                                                    BlogModel blog=snapshot.data[index];
-                                                    return Container(
-                                                      alignment: Alignment.center,
-                                                      width:MediaQuery.of(context).size.width*0.18,
-                                                      margin: EdgeInsets.only(left: 10),
-                                                      child: Column(
-                                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                                        mainAxisAlignment: MainAxisAlignment.center,
-                                                        children: [
-                                                          InkWell(
-                                                            onTap: (){
+                                  ),
+                                  Container(
+                                    alignment: Alignment.center,
+                                    height: 800,
+                                    child: FutureBuilder(
+                                      future: Blog().getBlogData(),
+                                      builder: (context, snapshot) {
+                                        if (snapshot.connectionState ==
+                                            ConnectionState.done) {
+                                          if (snapshot.hasData) {
+                                            return ListView.builder(
+                                                scrollDirection:
+                                                    Axis.horizontal,
+                                                itemCount: 3,
+                                                itemBuilder: (context, index) {
+                                                  BlogModel blog =
+                                                      snapshot.data[index];
+                                                  return Container(
+                                                    alignment: Alignment.center,
+                                                    width: 350,
+                                                    margin: EdgeInsets.only(
+                                                        left: 10),
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        InkWell(
+                                                          onTap: () {
+                                                            Navigator.pushNamed(
+                                                                context,
+                                                                BlogArticleRoute,
+                                                                arguments: {
+                                                                  'image': blog
+                                                                      .image,
+                                                                  'title': blog
+                                                                      .title,
+                                                                  'data': blog
+                                                                          .body[
+                                                                      "text"]
+                                                                });
+                                                          },
+                                                          child: Container(
+                                                            child: FadeInImage
+                                                                .memoryNetwork(
+                                                              width: 350,
+                                                              placeholder:
+                                                                  kTransparentImage,
+                                                              image: blog.image,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Container(
+                                                          margin:
+                                                              EdgeInsets.only(
+                                                                  top: 30),
+                                                          child: Text(
+                                                            blog.title,
+                                                            maxLines: 2,
+                                                            overflow:
+                                                                TextOverflow
+                                                                    .ellipsis,
+                                                            style: TextStyle(
+                                                                color:
+                                                                    AmigoColors
+                                                                        .orange,
+                                                                fontSize: 21.50,
+                                                                fontFamily:
+                                                                    robot,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                          ),
+                                                        ),
+                                                        Container(
+                                                          alignment:
+                                                              Alignment.topLeft,
+                                                          margin:
+                                                              EdgeInsets.only(
+                                                                  top: 10),
+                                                          child: Text(
+                                                            blog.createdAt,
+                                                            style: TextStyle(
+                                                                color:
+                                                                    AmigoColors
+                                                                        .orange,
+                                                                fontSize: 20,
+                                                                fontFamily:
+                                                                    robot),
+                                                          ),
+                                                        ),
+                                                        Container(
+                                                          child: Text(
+                                                            blog.body["text"]
+                                                                .toString()
+                                                                .trimLeft(),
+                                                            overflow:
+                                                                TextOverflow
+                                                                    .ellipsis,
+                                                            softWrap: true,
+                                                            maxLines: 8,
+                                                            style: TextStyle(
+                                                                fontSize: 20,
+                                                                fontFamily:
+                                                                    robot),
+                                                          ),
+                                                        ),
+                                                        Container(
+                                                          margin:
+                                                              EdgeInsets.only(
+                                                                  top: 10),
+                                                          child: InkWell(
+                                                            onTap: () {
                                                               Navigator.pushNamed(
-                                                                  context, BlogArticleRoute,
+                                                                  context,
+                                                                  BlogArticleRoute,
                                                                   arguments: {
-                                                                    'image':blog.image,
-                                                                    'title':blog.title,
-                                                                    'data':blog.body["text"]
-                                                                  }
-                                                              );
+                                                                    'image': blog
+                                                                        .image,
+                                                                    'title': blog
+                                                                        .title,
+                                                                    'data': blog
+                                                                            .body[
+                                                                        "text"]
+                                                                  });
                                                             },
-                                                            child: Container(
-                                                              child: FadeInImage.memoryNetwork(
-                                                                width: MediaQuery.of(context).size.width/5,
-                                                                placeholder: kTransparentImage,
-                                                                image: blog.image,
-                                                              ),
+                                                            child: Row(
+                                                              children: [
+                                                                Text(
+                                                                  "Read More ",
+                                                                  style: TextStyle(
+                                                                      fontFamily:
+                                                                          robot,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold,
+                                                                      fontSize:
+                                                                          20),
+                                                                ),
+                                                                Icon(Icons
+                                                                    .arrow_forward_ios_rounded)
+                                                              ],
                                                             ),
                                                           ),
-                                                          Container(
-                                                            margin: EdgeInsets.only(top: 1.93 * SizeConfig.heightMultiplier),
-                                                            child: Text(
-                                                              blog.title,
-                                                              maxLines: 2,
-                                                              overflow: TextOverflow.ellipsis,
-                                                              style: TextStyle(
-                                                                  color: AmigoColors.orange,
-                                                                  fontSize: 1.4 * SizeConfig.textMultiplier,
-                                                                  fontFamily: robot,
-                                                                  fontWeight: FontWeight.bold
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          Container(
-                                                            alignment:Alignment.topLeft,
-                                                            margin: EdgeInsets.only(
-                                                                top: 0.65 * SizeConfig.heightMultiplier),
-                                                            child: Text(
-                                                              blog.createdAt,
-                                                              style: TextStyle(
-                                                                  color: AmigoColors.orange,
-                                                                  fontSize: 1.30 * SizeConfig.textMultiplier,
-                                                                  fontFamily: robot),
-                                                            ),
-                                                          ),
-                                                          Container(
-                                                            child: Text(
-                                                              blog.body["text"].toString().trimLeft(),
-                                                              overflow: TextOverflow.ellipsis,
-                                                              softWrap:true,
-                                                              maxLines: 8,
-                                                              style: TextStyle(
-                                                                  fontSize: 1.30 * SizeConfig.textMultiplier,
-                                                                  fontFamily: robot
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          Container(
-                                                            margin: EdgeInsets.only(
-                                                                top: 0.65 * SizeConfig.heightMultiplier),
-                                                            child: InkWell(
-                                                              onTap: () {
-                                                                Navigator.pushNamed(
-                                                                    context, BlogArticleRoute,
-                                                                    arguments: {
-                                                                      'image':blog.image,
-                                                                      'title':blog.title,
-                                                                      'data': blog.body["text"]
-                                                                    }
-                                                                );
-                                                              },
-
-                                                              child: Row(
-                                                                children: [
-                                                                  Text(
-                                                                    "Read More ",
-                                                                    style: TextStyle(
-                                                                        fontFamily: robot,
-                                                                        fontWeight: FontWeight.bold,
-                                                                        fontSize: 1.30 * SizeConfig.textMultiplier
-                                                                    ),
-                                                                  ),
-                                                                  Icon(Icons.arrow_forward_ios_rounded)
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    );
-                                                  }
-                                              );
-                                            }
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  );
+                                                });
                                           }
-                                          return Center(
-                                            child: CircularProgressIndicator(
-                                              valueColor:
-                                              AlwaysStoppedAnimation<Color>(
-                                                  Colors.blue),
-                                            ),
-                                          );
-                                        },
-                                      ),
-                                    )
-                                  ],
-                                ),
+                                        }
+                                        return Center(
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Colors.blue),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  )
+                                ],
                               ),
                             ),
                           ],
-                        )
-                    ),
+                        )),
                     BottomNav(),
                   ],
                 ),
@@ -520,8 +537,6 @@ class _WideArticleState extends State<WideArticle> {
     );
   }
 }
-
-
 
 class WebArticle extends StatefulWidget {
   final String blogBody;
@@ -540,7 +555,6 @@ class _WebArticleState extends State<WebArticle> {
     _controller = ScrollController();
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -613,7 +627,6 @@ class _WebArticleState extends State<WebArticle> {
                               ],
                               circleAmigoOpacity: [0.1, 0.1],
                             ),
-
                             Container(
                               color: Colors.white,
                               width: MediaQuery.of(context).size.width / 2,
@@ -720,13 +733,13 @@ class _WebArticleState extends State<WebArticle> {
                               //right
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -1.20 * SizeConfig.heightMultiplier,
+                                    -1.20 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -15.16 * SizeConfig.heightMultiplier,
+                                    -15.16 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                20.02 * SizeConfig.heightMultiplier,
+                                    20.02 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                20.02 * SizeConfig.heightMultiplier,
+                                    20.02 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -735,13 +748,13 @@ class _WebArticleState extends State<WebArticle> {
                               ),
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -4.46 * SizeConfig.heightMultiplier,
+                                    -4.46 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -18.41 * SizeConfig.heightMultiplier,
+                                    -18.41 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                26.53 * SizeConfig.heightMultiplier,
+                                    26.53 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                26.53 * SizeConfig.heightMultiplier,
+                                    26.53 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -750,13 +763,13 @@ class _WebArticleState extends State<WebArticle> {
                               ),
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -7.71 * SizeConfig.heightMultiplier,
+                                    -7.71 * SizeConfig.heightMultiplier,
                                 rightCircleAmigoPosition:
-                                -21.67 * SizeConfig.heightMultiplier,
+                                    -21.67 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                34.04 * SizeConfig.heightMultiplier,
+                                    34.04 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                34.04 * SizeConfig.heightMultiplier,
+                                    34.04 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -766,13 +779,13 @@ class _WebArticleState extends State<WebArticle> {
                               //left
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -1.20 * SizeConfig.heightMultiplier,
+                                    -1.20 * SizeConfig.heightMultiplier,
                                 leftCircleAmigoPosition:
-                                -15.16 * SizeConfig.heightMultiplier,
+                                    -15.16 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                20.02 * SizeConfig.heightMultiplier,
+                                    20.02 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                20.02 * SizeConfig.heightMultiplier,
+                                    20.02 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -781,13 +794,13 @@ class _WebArticleState extends State<WebArticle> {
                               ),
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -4.46 * SizeConfig.heightMultiplier,
+                                    -4.46 * SizeConfig.heightMultiplier,
                                 leftCircleAmigoPosition:
-                                -18.41 * SizeConfig.heightMultiplier,
+                                    -18.41 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                26.53 * SizeConfig.heightMultiplier,
+                                    26.53 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                26.53 * SizeConfig.heightMultiplier,
+                                    26.53 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -796,13 +809,13 @@ class _WebArticleState extends State<WebArticle> {
                               ),
                               CircleAmigo(
                                 topCircleAmigoPosition:
-                                -7.71 * SizeConfig.heightMultiplier,
+                                    -7.71 * SizeConfig.heightMultiplier,
                                 leftCircleAmigoPosition:
-                                -21.67 * SizeConfig.heightMultiplier,
+                                    -21.67 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                34.04 * SizeConfig.heightMultiplier,
+                                    34.04 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                34.04 * SizeConfig.heightMultiplier,
+                                    34.04 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -813,13 +826,13 @@ class _WebArticleState extends State<WebArticle> {
                               //bottom
                               CircleAmigo(
                                 rightCircleAmigoPosition:
-                                -1.20 * SizeConfig.heightMultiplier,
+                                    -1.20 * SizeConfig.heightMultiplier,
                                 bottomCircleAmigoPosition:
-                                -15.16 * SizeConfig.heightMultiplier,
+                                    -15.16 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                20.02 * SizeConfig.heightMultiplier,
+                                    20.02 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                20.02 * SizeConfig.heightMultiplier,
+                                    20.02 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -828,13 +841,13 @@ class _WebArticleState extends State<WebArticle> {
                               ),
                               CircleAmigo(
                                 rightCircleAmigoPosition:
-                                -4.46 * SizeConfig.heightMultiplier,
+                                    -4.46 * SizeConfig.heightMultiplier,
                                 bottomCircleAmigoPosition:
-                                -18.41 * SizeConfig.heightMultiplier,
+                                    -18.41 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                26.53 * SizeConfig.heightMultiplier,
+                                    26.53 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                26.53 * SizeConfig.heightMultiplier,
+                                    26.53 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -843,13 +856,13 @@ class _WebArticleState extends State<WebArticle> {
                               ),
                               CircleAmigo(
                                 rightCircleAmigoPosition:
-                                -7.71 * SizeConfig.heightMultiplier,
+                                    -7.71 * SizeConfig.heightMultiplier,
                                 bottomCircleAmigoPosition:
-                                -21.67 * SizeConfig.heightMultiplier,
+                                    -21.67 * SizeConfig.heightMultiplier,
                                 circleAmigoHeight:
-                                34.04 * SizeConfig.heightMultiplier,
+                                    34.04 * SizeConfig.heightMultiplier,
                                 circleAmigoWidth:
-                                34.04 * SizeConfig.heightMultiplier,
+                                    34.04 * SizeConfig.heightMultiplier,
                                 circleAmigoGradient: [
                                   AmigoColors.orange,
                                   AmigoColors.lightRed2
@@ -859,21 +872,27 @@ class _WebArticleState extends State<WebArticle> {
 
                               Center(
                                 child: Container(
-                                  width:MediaQuery.of(context).size.width*0.6,
-                                  margin: EdgeInsets.only(bottom: 9.76 * SizeConfig.heightMultiplier),
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.6,
+                                  margin: EdgeInsets.only(
+                                      bottom:
+                                          9.76 * SizeConfig.heightMultiplier),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       Container(
                                         alignment: Alignment.topLeft,
-                                        margin: EdgeInsets.only(top: 6.51 * SizeConfig.heightMultiplier),
+                                        margin: EdgeInsets.only(
+                                            top: 6.51 *
+                                                SizeConfig.heightMultiplier),
                                         child: Text(
                                           "Related Article",
                                           style: TextStyle(
-                                              fontSize:3.25 * SizeConfig.textMultiplier,
+                                              fontSize: 3.25 *
+                                                  SizeConfig.textMultiplier,
                                               fontFamily: robot,
-                                              color: AmigoColors.lightBlack
-                                          ),
+                                              color: AmigoColors.lightBlack),
                                         ),
                                       ),
                                       Container(
@@ -881,105 +900,162 @@ class _WebArticleState extends State<WebArticle> {
                                         height: 800,
                                         child: FutureBuilder(
                                           future: Blog().getBlogData(),
-                                          builder: (context,snapshot){
-                                            if(snapshot.connectionState==ConnectionState.done){
-                                              if (snapshot.hasData){
+                                          builder: (context, snapshot) {
+                                            if (snapshot.connectionState ==
+                                                ConnectionState.done) {
+                                              if (snapshot.hasData) {
                                                 return ListView.builder(
-                                                    scrollDirection: Axis.horizontal,
+                                                    scrollDirection:
+                                                        Axis.horizontal,
                                                     itemCount: 3,
-                                                    itemBuilder: (context,index) {
-                                                      BlogModel blog=snapshot.data[index];
+                                                    itemBuilder:
+                                                        (context, index) {
+                                                      BlogModel blog =
+                                                          snapshot.data[index];
                                                       return Container(
-                                                        alignment: Alignment.center,
-                                                        width:MediaQuery.of(context).size.width*0.18,
-                                                        margin: EdgeInsets.only(left: 10),
+                                                        alignment:
+                                                            Alignment.center,
+                                                        width: MediaQuery.of(
+                                                                    context)
+                                                                .size
+                                                                .width *
+                                                            0.18,
+                                                        margin: EdgeInsets.only(
+                                                            left: 10),
                                                         child: Column(
-                                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                                          mainAxisAlignment: MainAxisAlignment.center,
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
                                                           children: [
                                                             InkWell(
-                                                              onTap: (){
+                                                              onTap: () {
                                                                 Navigator.pushNamed(
-                                                                    context, BlogArticleRoute,
+                                                                    context,
+                                                                    BlogArticleRoute,
                                                                     arguments: {
-                                                                      'image':blog.image,
-                                                                      'title':blog.title,
-                                                                      'data':blog.body["text"]
-                                                                    }
-                                                                );
+                                                                      'image': blog
+                                                                          .image,
+                                                                      'title': blog
+                                                                          .title,
+                                                                      'data': blog
+                                                                              .body[
+                                                                          "text"]
+                                                                    });
                                                               },
                                                               child: Container(
-                                                                child: FadeInImage.memoryNetwork(
-                                                                  width: MediaQuery.of(context).size.width/5,
-                                                                  placeholder: kTransparentImage,
-                                                                  image: blog.image,
+                                                                child: FadeInImage
+                                                                    .memoryNetwork(
+                                                                  width: MediaQuery.of(
+                                                                              context)
+                                                                          .size
+                                                                          .width /
+                                                                      5,
+                                                                  placeholder:
+                                                                      kTransparentImage,
+                                                                  image: blog
+                                                                      .image,
                                                                 ),
                                                               ),
                                                             ),
                                                             Container(
-                                                              margin: EdgeInsets.only(top: 1.93 * SizeConfig.heightMultiplier),
+                                                              margin: EdgeInsets.only(
+                                                                  top: 1.93 *
+                                                                      SizeConfig
+                                                                          .heightMultiplier),
                                                               child: Text(
                                                                 blog.title,
                                                                 maxLines: 2,
-                                                                overflow: TextOverflow.ellipsis,
+                                                                overflow:
+                                                                    TextOverflow
+                                                                        .ellipsis,
                                                                 style: TextStyle(
-                                                                    color: AmigoColors.orange,
-                                                                    fontSize: 1.4 * SizeConfig.textMultiplier,
-                                                                    fontFamily: robot,
-                                                                    fontWeight: FontWeight.bold
-                                                                ),
+                                                                    color: AmigoColors
+                                                                        .orange,
+                                                                    fontSize: 1.4 *
+                                                                        SizeConfig
+                                                                            .textMultiplier,
+                                                                    fontFamily:
+                                                                        robot,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
                                                               ),
                                                             ),
                                                             Container(
-                                                              alignment:Alignment.topLeft,
+                                                              alignment:
+                                                                  Alignment
+                                                                      .topLeft,
                                                               margin: EdgeInsets.only(
-                                                                  top: 0.65 * SizeConfig.heightMultiplier),
+                                                                  top: 0.65 *
+                                                                      SizeConfig
+                                                                          .heightMultiplier),
                                                               child: Text(
                                                                 blog.createdAt,
                                                                 style: TextStyle(
-                                                                    color: AmigoColors.orange,
-                                                                    fontSize: 1.30 * SizeConfig.textMultiplier,
-                                                                    fontFamily: robot),
+                                                                    color: AmigoColors
+                                                                        .orange,
+                                                                    fontSize: 1.30 *
+                                                                        SizeConfig
+                                                                            .textMultiplier,
+                                                                    fontFamily:
+                                                                        robot),
                                                               ),
                                                             ),
                                                             Container(
                                                               child: Text(
-                                                               blog.body["text"].toString().trimLeft(),
-                                                                overflow: TextOverflow.ellipsis,
-                                                                softWrap:true,
+                                                                blog.body[
+                                                                        "text"]
+                                                                    .toString()
+                                                                    .trimLeft(),
+                                                                overflow:
+                                                                    TextOverflow
+                                                                        .ellipsis,
+                                                                softWrap: true,
                                                                 maxLines: 8,
                                                                 style: TextStyle(
-                                                                    fontSize: 1.30 * SizeConfig.textMultiplier,
-                                                                    fontFamily: robot
-                                                                ),
+                                                                    fontSize: 1.30 *
+                                                                        SizeConfig
+                                                                            .textMultiplier,
+                                                                    fontFamily:
+                                                                        robot),
                                                               ),
                                                             ),
                                                             Container(
                                                               margin: EdgeInsets.only(
-                                                                  top: 0.65 * SizeConfig.heightMultiplier),
-                                                                child: InkWell(
-                                                                  onTap: () {
-                                                                    Navigator.pushNamed(
-                                                                    context, BlogArticleRoute,
+                                                                  top: 0.65 *
+                                                                      SizeConfig
+                                                                          .heightMultiplier),
+                                                              child: InkWell(
+                                                                onTap: () {
+                                                                  Navigator.pushNamed(
+                                                                      context,
+                                                                      BlogArticleRoute,
                                                                       arguments: {
-                                                                        'image':blog.image,
-                                                                        'title':blog.title,
-                                                                        'data': blog.body["text"]
-                                                                      }
-                                                                  );
+                                                                        'image':
+                                                                            blog.image,
+                                                                        'title':
+                                                                            blog.title,
+                                                                        'data':
+                                                                            blog.body["text"]
+                                                                      });
                                                                 },
-
                                                                 child: Row(
                                                                   children: [
                                                                     Text(
                                                                       "Read More ",
                                                                       style: TextStyle(
-                                                                          fontFamily: robot,
-                                                                          fontWeight: FontWeight.bold,
-                                                                          fontSize: 1.30 * SizeConfig.textMultiplier
-                                                                      ),
+                                                                          fontFamily:
+                                                                              robot,
+                                                                          fontWeight: FontWeight
+                                                                              .bold,
+                                                                          fontSize:
+                                                                              1.30 * SizeConfig.textMultiplier),
                                                                     ),
-                                                                    Icon(Icons.arrow_forward_ios_rounded)
+                                                                    Icon(Icons
+                                                                        .arrow_forward_ios_rounded)
                                                                   ],
                                                                 ),
                                                               ),
@@ -987,15 +1063,14 @@ class _WebArticleState extends State<WebArticle> {
                                                           ],
                                                         ),
                                                       );
-                                                    }
-                                                );
+                                                    });
                                               }
                                             }
                                             return Center(
                                               child: CircularProgressIndicator(
                                                 valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                                    Colors.blue),
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(Colors.blue),
                                               ),
                                             );
                                           },
@@ -1006,8 +1081,7 @@ class _WebArticleState extends State<WebArticle> {
                                 ),
                               ),
                             ],
-                          )
-                      ),
+                          )),
                       BottomNav(),
                     ],
                   ),
@@ -1167,7 +1241,6 @@ class _TabArticleState extends State<TabArticle> {
                   ],
                 ),
               ),
-
               Container(
                   color: AmigoColors.lightWhite,
                   width: MediaQuery.of(context).size.width,
@@ -1177,13 +1250,11 @@ class _TabArticleState extends State<TabArticle> {
                       //right
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -1.20 * SizeConfig.heightMultiplier,
+                            -1.20 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -15.16 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        20.02 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        20.02 * SizeConfig.heightMultiplier,
+                            -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 20.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1192,13 +1263,11 @@ class _TabArticleState extends State<TabArticle> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -4.46 * SizeConfig.heightMultiplier,
+                            -4.46 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -18.41 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        26.53 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        26.53 * SizeConfig.heightMultiplier,
+                            -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 26.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1207,13 +1276,11 @@ class _TabArticleState extends State<TabArticle> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -7.71 * SizeConfig.heightMultiplier,
+                            -7.71 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -21.67 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        34.04 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        34.04 * SizeConfig.heightMultiplier,
+                            -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 34.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1223,13 +1290,11 @@ class _TabArticleState extends State<TabArticle> {
                       //left
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -1.20 * SizeConfig.heightMultiplier,
+                            -1.20 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -15.16 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        20.02 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        20.02 * SizeConfig.heightMultiplier,
+                            -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 20.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1238,13 +1303,11 @@ class _TabArticleState extends State<TabArticle> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -4.46 * SizeConfig.heightMultiplier,
+                            -4.46 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -18.41 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        26.53 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        26.53 * SizeConfig.heightMultiplier,
+                            -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 26.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1253,13 +1316,11 @@ class _TabArticleState extends State<TabArticle> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -7.71 * SizeConfig.heightMultiplier,
+                            -7.71 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -21.67 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        34.04 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        34.04 * SizeConfig.heightMultiplier,
+                            -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 34.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1270,13 +1331,11 @@ class _TabArticleState extends State<TabArticle> {
                       //bottom
                       CircleAmigo(
                         rightCircleAmigoPosition:
-                        -1.20 * SizeConfig.heightMultiplier,
+                            -1.20 * SizeConfig.heightMultiplier,
                         bottomCircleAmigoPosition:
-                        -15.16 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        20.02 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        20.02 * SizeConfig.heightMultiplier,
+                            -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 20.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1285,13 +1344,11 @@ class _TabArticleState extends State<TabArticle> {
                       ),
                       CircleAmigo(
                         rightCircleAmigoPosition:
-                        -4.46 * SizeConfig.heightMultiplier,
+                            -4.46 * SizeConfig.heightMultiplier,
                         bottomCircleAmigoPosition:
-                        -18.41 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        26.53 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        26.53 * SizeConfig.heightMultiplier,
+                            -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 26.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1300,13 +1357,11 @@ class _TabArticleState extends State<TabArticle> {
                       ),
                       CircleAmigo(
                         rightCircleAmigoPosition:
-                        -7.71 * SizeConfig.heightMultiplier,
+                            -7.71 * SizeConfig.heightMultiplier,
                         bottomCircleAmigoPosition:
-                        -21.67 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        34.04 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        34.04 * SizeConfig.heightMultiplier,
+                            -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 34.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1316,21 +1371,22 @@ class _TabArticleState extends State<TabArticle> {
 
                       Center(
                         child: Container(
-                          width:MediaQuery.of(context).size.width*0.6,
+                          width: MediaQuery.of(context).size.width * 0.6,
                           // margin: EdgeInsets.only(bottom: 9.76 * SizeConfig.heightMultiplier),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
                                 alignment: Alignment.topLeft,
-                                margin: EdgeInsets.only(top: 6.51 * SizeConfig.heightMultiplier),
+                                margin: EdgeInsets.only(
+                                    top: 6.51 * SizeConfig.heightMultiplier),
                                 child: Text(
                                   "Related Article",
                                   style: TextStyle(
-                                      fontSize:3.25 * SizeConfig.textMultiplier,
+                                      fontSize:
+                                          3.25 * SizeConfig.textMultiplier,
                                       fontFamily: robot,
-                                      color: AmigoColors.lightBlack
-                                  ),
+                                      color: AmigoColors.lightBlack),
                                 ),
                               ),
                               Container(
@@ -1338,105 +1394,153 @@ class _TabArticleState extends State<TabArticle> {
                                 height: 500,
                                 child: FutureBuilder(
                                   future: Blog().getBlogData(),
-                                  builder: (context,snapshot){
-                                    if(snapshot.connectionState==ConnectionState.done){
-                                      if (snapshot.hasData){
+                                  builder: (context, snapshot) {
+                                    if (snapshot.connectionState ==
+                                        ConnectionState.done) {
+                                      if (snapshot.hasData) {
                                         return ListView.builder(
                                             scrollDirection: Axis.horizontal,
                                             itemCount: 3,
-                                            itemBuilder: (context,index) {
-                                              BlogModel blog=snapshot.data[index];
+                                            itemBuilder: (context, index) {
+                                              BlogModel blog =
+                                                  snapshot.data[index];
                                               return Container(
                                                 alignment: Alignment.center,
-                                                width:MediaQuery.of(context).size.width*0.18,
-                                                margin: EdgeInsets.only(left: 10),
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.18,
+                                                margin:
+                                                    EdgeInsets.only(left: 10),
                                                 child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
                                                   children: [
                                                     InkWell(
-                                                      onTap: (){
+                                                      onTap: () {
                                                         Navigator.pushNamed(
-                                                            context, BlogArticleRoute,
+                                                            context,
+                                                            BlogArticleRoute,
                                                             arguments: {
-                                                              'image':blog.image,
-                                                              'title':blog.title,
-                                                              'data':blog.body["text"]
-                                                            }
-                                                        );
+                                                              'image':
+                                                                  blog.image,
+                                                              'title':
+                                                                  blog.title,
+                                                              'data': blog
+                                                                  .body["text"]
+                                                            });
                                                       },
                                                       child: Container(
-                                                        child: FadeInImage.memoryNetwork(
-                                                          width: MediaQuery.of(context).size.width/5,
-                                                          placeholder: kTransparentImage,
+                                                        child: FadeInImage
+                                                            .memoryNetwork(
+                                                          width: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .width /
+                                                              5,
+                                                          placeholder:
+                                                              kTransparentImage,
                                                           image: blog.image,
                                                         ),
                                                       ),
                                                     ),
                                                     Container(
-                                                      margin: EdgeInsets.only(top: 1.93 * SizeConfig.heightMultiplier),
+                                                      margin: EdgeInsets.only(
+                                                          top: 1.93 *
+                                                              SizeConfig
+                                                                  .heightMultiplier),
                                                       child: Text(
                                                         blog.title,
                                                         maxLines: 2,
-                                                        overflow: TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                         style: TextStyle(
-                                                            color: AmigoColors.orange,
-                                                            fontSize: 1.4 * SizeConfig.textMultiplier,
+                                                            color: AmigoColors
+                                                                .orange,
+                                                            fontSize: 1.4 *
+                                                                SizeConfig
+                                                                    .textMultiplier,
                                                             fontFamily: robot,
-                                                            fontWeight: FontWeight.bold
-                                                        ),
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .bold),
                                                       ),
                                                     ),
                                                     Container(
-                                                      alignment:Alignment.topLeft,
+                                                      alignment:
+                                                          Alignment.topLeft,
                                                       margin: EdgeInsets.only(
-                                                          top: 0.65 * SizeConfig.heightMultiplier),
+                                                          top: 0.65 *
+                                                              SizeConfig
+                                                                  .heightMultiplier),
                                                       child: Text(
                                                         blog.createdAt,
                                                         style: TextStyle(
-                                                            color: AmigoColors.orange,
-                                                            fontSize: 1.30 * SizeConfig.textMultiplier,
+                                                            color: AmigoColors
+                                                                .orange,
+                                                            fontSize: 1.30 *
+                                                                SizeConfig
+                                                                    .textMultiplier,
                                                             fontFamily: robot),
                                                       ),
                                                     ),
                                                     Container(
                                                       child: Text(
-                                                        blog.body["text"].toString().trimLeft(),
-                                                        overflow: TextOverflow.ellipsis,
-                                                        softWrap:true,
+                                                        blog.body["text"]
+                                                            .toString()
+                                                            .trimLeft(),
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        softWrap: true,
                                                         maxLines: 8,
                                                         style: TextStyle(
-                                                            fontSize: 1.30 * SizeConfig.textMultiplier,
-                                                            fontFamily: robot
-                                                        ),
+                                                            fontSize: 1.30 *
+                                                                SizeConfig
+                                                                    .textMultiplier,
+                                                            fontFamily: robot),
                                                       ),
                                                     ),
                                                     Container(
                                                       margin: EdgeInsets.only(
-                                                          top: 0.65 * SizeConfig.heightMultiplier),
+                                                          top: 0.65 *
+                                                              SizeConfig
+                                                                  .heightMultiplier),
                                                       child: InkWell(
                                                         onTap: () {
                                                           Navigator.pushNamed(
-                                                              context, BlogArticleRoute,
+                                                              context,
+                                                              BlogArticleRoute,
                                                               arguments: {
-                                                                'image':blog.image,
-                                                                'title':blog.title,
-                                                                'data': blog.body["text"]
-                                                              }
-                                                          );
+                                                                'image':
+                                                                    blog.image,
+                                                                'title':
+                                                                    blog.title,
+                                                                'data':
+                                                                    blog.body[
+                                                                        "text"]
+                                                              });
                                                         },
-
                                                         child: Row(
                                                           children: [
                                                             Text(
                                                               "Read More ",
                                                               style: TextStyle(
-                                                                  fontFamily: robot,
-                                                                  fontWeight: FontWeight.bold,
-                                                                  fontSize: 1.30 * SizeConfig.textMultiplier
-                                                              ),
+                                                                  fontFamily:
+                                                                      robot,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontSize: 1.30 *
+                                                                      SizeConfig
+                                                                          .textMultiplier),
                                                             ),
-                                                            Icon(Icons.arrow_forward_ios_rounded,size: 15,)
+                                                            Icon(
+                                                              Icons
+                                                                  .arrow_forward_ios_rounded,
+                                                              size: 15,
+                                                            )
                                                           ],
                                                         ),
                                                       ),
@@ -1444,15 +1548,14 @@ class _TabArticleState extends State<TabArticle> {
                                                   ],
                                                 ),
                                               );
-                                            }
-                                        );
+                                            });
                                       }
                                     }
                                     return Center(
                                       child: CircularProgressIndicator(
                                         valueColor:
-                                        AlwaysStoppedAnimation<Color>(
-                                            Colors.blue),
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.blue),
                                       ),
                                     );
                                   },
@@ -1463,8 +1566,7 @@ class _TabArticleState extends State<TabArticle> {
                         ),
                       ),
                     ],
-                  )
-              ),
+                  )),
               BottomNav(),
             ],
           ),
@@ -1726,13 +1828,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       //right
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -1.20 * SizeConfig.heightMultiplier,
+                            -1.20 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -15.16 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        20.02 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        20.02 * SizeConfig.heightMultiplier,
+                            -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 20.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1741,13 +1841,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -4.46 * SizeConfig.heightMultiplier,
+                            -4.46 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -18.41 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        26.53 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        26.53 * SizeConfig.heightMultiplier,
+                            -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 26.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1756,13 +1854,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -7.71 * SizeConfig.heightMultiplier,
+                            -7.71 * SizeConfig.heightMultiplier,
                         rightCircleAmigoPosition:
-                        -21.67 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        34.04 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        34.04 * SizeConfig.heightMultiplier,
+                            -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 34.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1772,13 +1868,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       //left
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -1.20 * SizeConfig.heightMultiplier,
+                            -1.20 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -15.16 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        20.02 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        20.02 * SizeConfig.heightMultiplier,
+                            -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 20.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1787,13 +1881,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -4.46 * SizeConfig.heightMultiplier,
+                            -4.46 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -18.41 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        26.53 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        26.53 * SizeConfig.heightMultiplier,
+                            -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 26.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1802,13 +1894,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       ),
                       CircleAmigo(
                         topCircleAmigoPosition:
-                        -7.71 * SizeConfig.heightMultiplier,
+                            -7.71 * SizeConfig.heightMultiplier,
                         leftCircleAmigoPosition:
-                        -21.67 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        34.04 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        34.04 * SizeConfig.heightMultiplier,
+                            -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 34.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1819,13 +1909,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       //bottom
                       CircleAmigo(
                         rightCircleAmigoPosition:
-                        -1.20 * SizeConfig.heightMultiplier,
+                            -1.20 * SizeConfig.heightMultiplier,
                         bottomCircleAmigoPosition:
-                        -15.16 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        20.02 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        20.02 * SizeConfig.heightMultiplier,
+                            -15.16 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 20.02 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 20.02 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1834,13 +1922,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       ),
                       CircleAmigo(
                         rightCircleAmigoPosition:
-                        -4.46 * SizeConfig.heightMultiplier,
+                            -4.46 * SizeConfig.heightMultiplier,
                         bottomCircleAmigoPosition:
-                        -18.41 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        26.53 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        26.53 * SizeConfig.heightMultiplier,
+                            -18.41 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 26.53 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 26.53 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1849,13 +1935,11 @@ class _MobileArticleState extends State<MobileArticle> {
                       ),
                       CircleAmigo(
                         rightCircleAmigoPosition:
-                        -7.71 * SizeConfig.heightMultiplier,
+                            -7.71 * SizeConfig.heightMultiplier,
                         bottomCircleAmigoPosition:
-                        -21.67 * SizeConfig.heightMultiplier,
-                        circleAmigoHeight:
-                        34.04 * SizeConfig.heightMultiplier,
-                        circleAmigoWidth:
-                        34.04 * SizeConfig.heightMultiplier,
+                            -21.67 * SizeConfig.heightMultiplier,
+                        circleAmigoHeight: 34.04 * SizeConfig.heightMultiplier,
+                        circleAmigoWidth: 34.04 * SizeConfig.heightMultiplier,
                         circleAmigoGradient: [
                           AmigoColors.orange,
                           AmigoColors.lightRed2
@@ -1865,21 +1949,23 @@ class _MobileArticleState extends State<MobileArticle> {
 
                       Center(
                         child: Container(
-                          width:MediaQuery.of(context).size.width*0.9,
-                          margin: EdgeInsets.only(bottom: 9.76 * SizeConfig.heightMultiplier),
+                          width: MediaQuery.of(context).size.width * 0.9,
+                          margin: EdgeInsets.only(
+                              bottom: 9.76 * SizeConfig.heightMultiplier),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
                                 alignment: Alignment.topLeft,
-                                margin: EdgeInsets.only(top: 6.51 * SizeConfig.heightMultiplier),
+                                margin: EdgeInsets.only(
+                                    top: 6.51 * SizeConfig.heightMultiplier),
                                 child: Text(
                                   "Related Article",
                                   style: TextStyle(
-                                      fontSize:3.25 * SizeConfig.textMultiplier,
+                                      fontSize:
+                                          3.25 * SizeConfig.textMultiplier,
                                       fontFamily: robot,
-                                      color: AmigoColors.lightBlack
-                                  ),
+                                      color: AmigoColors.lightBlack),
                                 ),
                               ),
                               Container(
@@ -1887,105 +1973,153 @@ class _MobileArticleState extends State<MobileArticle> {
                                 height: 300,
                                 child: FutureBuilder(
                                   future: Blog().getBlogData(),
-                                  builder: (context,snapshot){
-                                    if(snapshot.connectionState==ConnectionState.done){
-                                      if (snapshot.hasData){
+                                  builder: (context, snapshot) {
+                                    if (snapshot.connectionState ==
+                                        ConnectionState.done) {
+                                      if (snapshot.hasData) {
                                         return ListView.builder(
                                             scrollDirection: Axis.horizontal,
                                             itemCount: 3,
-                                            itemBuilder: (context,index) {
-                                              BlogModel blog=snapshot.data[index];
+                                            itemBuilder: (context, index) {
+                                              BlogModel blog =
+                                                  snapshot.data[index];
                                               return Container(
                                                 alignment: Alignment.center,
-                                                width:MediaQuery.of(context).size.width*0.25,
-                                                margin: EdgeInsets.only(left: 10),
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.25,
+                                                margin:
+                                                    EdgeInsets.only(left: 10),
                                                 child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
                                                   children: [
                                                     InkWell(
-                                                      onTap: (){
+                                                      onTap: () {
                                                         Navigator.pushNamed(
-                                                            context, BlogArticleRoute,
+                                                            context,
+                                                            BlogArticleRoute,
                                                             arguments: {
-                                                              'image':blog.image,
-                                                              'title':blog.title,
-                                                              'data':blog.body["text"]
-                                                            }
-                                                        );
+                                                              'image':
+                                                                  blog.image,
+                                                              'title':
+                                                                  blog.title,
+                                                              'data': blog
+                                                                  .body["text"]
+                                                            });
                                                       },
                                                       child: Container(
-                                                        child: FadeInImage.memoryNetwork(
-                                                          width: MediaQuery.of(context).size.width/4,
-                                                          placeholder: kTransparentImage,
+                                                        child: FadeInImage
+                                                            .memoryNetwork(
+                                                          width: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .width /
+                                                              4,
+                                                          placeholder:
+                                                              kTransparentImage,
                                                           image: blog.image,
                                                         ),
                                                       ),
                                                     ),
                                                     Container(
-                                                      margin: EdgeInsets.only(top: 1.93 * SizeConfig.heightMultiplier),
+                                                      margin: EdgeInsets.only(
+                                                          top: 1.93 *
+                                                              SizeConfig
+                                                                  .heightMultiplier),
                                                       child: Text(
                                                         blog.title,
                                                         maxLines: 2,
-                                                        overflow: TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                         style: TextStyle(
-                                                            color: AmigoColors.orange,
-                                                            fontSize: 1.4 * SizeConfig.textMultiplier,
+                                                            color: AmigoColors
+                                                                .orange,
+                                                            fontSize: 1.4 *
+                                                                SizeConfig
+                                                                    .textMultiplier,
                                                             fontFamily: robot,
-                                                            fontWeight: FontWeight.bold
-                                                        ),
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .bold),
                                                       ),
                                                     ),
                                                     Container(
-                                                      alignment:Alignment.topLeft,
+                                                      alignment:
+                                                          Alignment.topLeft,
                                                       margin: EdgeInsets.only(
-                                                          top: 0.65 * SizeConfig.heightMultiplier),
+                                                          top: 0.65 *
+                                                              SizeConfig
+                                                                  .heightMultiplier),
                                                       child: Text(
                                                         blog.createdAt,
                                                         style: TextStyle(
-                                                            color: AmigoColors.orange,
-                                                            fontSize: 1.30 * SizeConfig.textMultiplier,
+                                                            color: AmigoColors
+                                                                .orange,
+                                                            fontSize: 1.30 *
+                                                                SizeConfig
+                                                                    .textMultiplier,
                                                             fontFamily: robot),
                                                       ),
                                                     ),
                                                     Container(
                                                       child: Text(
-                                                        blog.body["text"].toString().trimLeft(),
-                                                        overflow: TextOverflow.ellipsis,
-                                                        softWrap:true,
+                                                        blog.body["text"]
+                                                            .toString()
+                                                            .trimLeft(),
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        softWrap: true,
                                                         maxLines: 8,
                                                         style: TextStyle(
-                                                            fontSize: 1.30 * SizeConfig.textMultiplier,
-                                                            fontFamily: robot
-                                                        ),
+                                                            fontSize: 1.30 *
+                                                                SizeConfig
+                                                                    .textMultiplier,
+                                                            fontFamily: robot),
                                                       ),
                                                     ),
                                                     Container(
                                                       margin: EdgeInsets.only(
-                                                          top: 0.65 * SizeConfig.heightMultiplier),
+                                                          top: 0.65 *
+                                                              SizeConfig
+                                                                  .heightMultiplier),
                                                       child: InkWell(
                                                         onTap: () {
                                                           Navigator.pushNamed(
-                                                              context, BlogArticleRoute,
+                                                              context,
+                                                              BlogArticleRoute,
                                                               arguments: {
-                                                                'image':blog.image,
-                                                                'title':blog.title,
-                                                                'data': blog.body["text"]
-                                                              }
-                                                          );
+                                                                'image':
+                                                                    blog.image,
+                                                                'title':
+                                                                    blog.title,
+                                                                'data':
+                                                                    blog.body[
+                                                                        "text"]
+                                                              });
                                                         },
-
                                                         child: Row(
                                                           children: [
                                                             Text(
                                                               "Read More ",
                                                               style: TextStyle(
-                                                                  fontFamily: robot,
-                                                                  fontWeight: FontWeight.bold,
-                                                                  fontSize: 1.30 * SizeConfig.textMultiplier
-                                                              ),
+                                                                  fontFamily:
+                                                                      robot,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontSize: 1.30 *
+                                                                      SizeConfig
+                                                                          .textMultiplier),
                                                             ),
-                                                            Icon(Icons.arrow_forward_ios_rounded,size: 10,)
+                                                            Icon(
+                                                              Icons
+                                                                  .arrow_forward_ios_rounded,
+                                                              size: 10,
+                                                            )
                                                           ],
                                                         ),
                                                       ),
@@ -1993,15 +2127,14 @@ class _MobileArticleState extends State<MobileArticle> {
                                                   ],
                                                 ),
                                               );
-                                            }
-                                        );
+                                            });
                                       }
                                     }
                                     return Center(
                                       child: CircularProgressIndicator(
                                         valueColor:
-                                        AlwaysStoppedAnimation<Color>(
-                                            Colors.blue),
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.blue),
                                       ),
                                     );
                                   },
@@ -2012,8 +2145,7 @@ class _MobileArticleState extends State<MobileArticle> {
                         ),
                       ),
                     ],
-                  )
-              ),
+                  )),
               BottomNav(),
             ],
           ),

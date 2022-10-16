@@ -1,6 +1,3 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'package:flutter/material.dart';
 import 'package:mindamigo/constants/network.dart';
 import 'package:mindamigo/utils/errorPrinter.dart';
 import 'package:mindamigo/utils/httpClient.dart';

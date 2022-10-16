@@ -25,6 +25,7 @@ class BlogPage extends StatelessWidget {
   }
 }
 
+//large Screen
 class WideBlogPage extends StatefulWidget {
   const WideBlogPage({Key key}) : super(key: key);
 
@@ -42,9 +43,10 @@ class _WideBlogPageState extends State<WideBlogPage> {
     _controller = ScrollController();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Stack(
+    return Stack(
       children: [
         Container(
           child: SafeArea(
@@ -58,10 +60,9 @@ class _WideBlogPageState extends State<WideBlogPage> {
                 controller: _controller,
                 child: Center(
                   child: Container(
-                    width: 1440.0,
                     child: Column(
                       children: [
-                        NavBar(),
+                        WideNavBar(),
                         GradientLine(),
                         Container(
                             color: AmigoColors.lightWhite,
@@ -69,51 +70,16 @@ class _WideBlogPageState extends State<WideBlogPage> {
                             child: Stack(
                               alignment: Alignment.center,
                               children: [
-                                Column(
-                                  children: [
-                                    Container(
-                                      child: FutureBuilder(
-                                        future: Blog().getBlogData(),
-                                        builder: (context, snapshot) {
-                                          if (snapshot.connectionState == ConnectionState.done) {
-                                            if (snapshot.hasData) {
-                                              return Container(
-                                                child: BlogContent(
-                                                  blogsModel: snapshot.data,
-                                                ),
-                                              );
-                                            } else {
-                                              return Center(
-                                                child: CircularProgressIndicator(
-                                                  valueColor:
-                                                  AlwaysStoppedAnimation<Color>(Colors.blue),
-                                                ),
-                                              );
-                                            }
-                                          } else {
-                                            return Center(
-                                              child: CircularProgressIndicator(
-                                                valueColor:
-                                                AlwaysStoppedAnimation<Color>(Colors.blue),
-                                              ),
-                                            );
-                                          }
-                                        },
-                                      ),
-                                    ),
-                                  ],
-                                ),
-
                                 //left
                                 CircleAmigo(
                                   topCircleAmigoPosition:
-                                  -12.20 * SizeConfig.heightMultiplier,
+                                      -12.20 * SizeConfig.heightMultiplier,
                                   rightCircleAmigoPosition:
-                                  -9.16 * SizeConfig.heightMultiplier,
+                                      -9.16 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  15.02 * SizeConfig.heightMultiplier,
+                                      15.02 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  15.02 * SizeConfig.heightMultiplier,
+                                      15.02 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
@@ -122,13 +88,13 @@ class _WideBlogPageState extends State<WideBlogPage> {
                                 ),
                                 CircleAmigo(
                                   topCircleAmigoPosition:
-                                  -15.46 * SizeConfig.heightMultiplier,
+                                      -15.46 * SizeConfig.heightMultiplier,
                                   rightCircleAmigoPosition:
-                                  -12.41 * SizeConfig.heightMultiplier,
+                                      -12.41 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  21.53 * SizeConfig.heightMultiplier,
+                                      21.53 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  21.53 * SizeConfig.heightMultiplier,
+                                      21.53 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
@@ -137,13 +103,13 @@ class _WideBlogPageState extends State<WideBlogPage> {
                                 ),
                                 CircleAmigo(
                                   topCircleAmigoPosition:
-                                  -18.71 * SizeConfig.heightMultiplier,
+                                      -18.71 * SizeConfig.heightMultiplier,
                                   rightCircleAmigoPosition:
-                                  -15.67 * SizeConfig.heightMultiplier,
+                                      -15.67 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  28.04 * SizeConfig.heightMultiplier,
+                                      28.04 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  28.04 * SizeConfig.heightMultiplier,
+                                      28.04 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
@@ -154,13 +120,13 @@ class _WideBlogPageState extends State<WideBlogPage> {
                                 //left
                                 CircleAmigo(
                                   topCircleAmigoPosition:
-                                  42.2 * SizeConfig.heightMultiplier,
+                                      42.2 * SizeConfig.heightMultiplier,
                                   leftCircleAmigoPosition:
-                                  -10.16 * SizeConfig.heightMultiplier,
+                                      -10.16 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  13.02 * SizeConfig.heightMultiplier,
+                                      13.02 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  13.02 * SizeConfig.heightMultiplier,
+                                      13.02 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
@@ -169,13 +135,13 @@ class _WideBlogPageState extends State<WideBlogPage> {
                                 ),
                                 CircleAmigo(
                                   topCircleAmigoPosition:
-                                  38 * SizeConfig.heightMultiplier,
+                                      38 * SizeConfig.heightMultiplier,
                                   leftCircleAmigoPosition:
-                                  -13.41 * SizeConfig.heightMultiplier,
+                                      -13.41 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  19.53 * SizeConfig.heightMultiplier,
+                                      19.53 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  19.53 * SizeConfig.heightMultiplier,
+                                      19.53 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
@@ -184,13 +150,13 @@ class _WideBlogPageState extends State<WideBlogPage> {
                                 ),
                                 CircleAmigo(
                                   topCircleAmigoPosition:
-                                  34.71 * SizeConfig.heightMultiplier,
+                                      34.71 * SizeConfig.heightMultiplier,
                                   leftCircleAmigoPosition:
-                                  -16.67 * SizeConfig.heightMultiplier,
+                                      -16.67 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  26.04 * SizeConfig.heightMultiplier,
+                                      26.04 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  26.04 * SizeConfig.heightMultiplier,
+                                      26.04 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
@@ -201,13 +167,13 @@ class _WideBlogPageState extends State<WideBlogPage> {
                                 //right
                                 CircleAmigo(
                                   bottomCircleAmigoPosition:
-                                  -2.20 * SizeConfig.heightMultiplier,
+                                      -2.20 * SizeConfig.heightMultiplier,
                                   rightCircleAmigoPosition:
-                                  -7.16 * SizeConfig.heightMultiplier,
+                                      -7.16 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  13.02 * SizeConfig.heightMultiplier,
+                                      13.02 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  13.02 * SizeConfig.heightMultiplier,
+                                      13.02 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
@@ -216,13 +182,13 @@ class _WideBlogPageState extends State<WideBlogPage> {
                                 ),
                                 CircleAmigo(
                                   bottomCircleAmigoPosition:
-                                  -5.46 * SizeConfig.heightMultiplier,
+                                      -5.46 * SizeConfig.heightMultiplier,
                                   rightCircleAmigoPosition:
-                                  -10.41 * SizeConfig.heightMultiplier,
+                                      -10.41 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  19.53 * SizeConfig.heightMultiplier,
+                                      19.53 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  19.53 * SizeConfig.heightMultiplier,
+                                      19.53 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
@@ -231,18 +197,52 @@ class _WideBlogPageState extends State<WideBlogPage> {
                                 ),
                                 CircleAmigo(
                                   bottomCircleAmigoPosition:
-                                  -8.71 * SizeConfig.heightMultiplier,
+                                      -8.71 * SizeConfig.heightMultiplier,
                                   rightCircleAmigoPosition:
-                                  -13.67 * SizeConfig.heightMultiplier,
+                                      -13.67 * SizeConfig.heightMultiplier,
                                   circleAmigoHeight:
-                                  26.04 * SizeConfig.heightMultiplier,
+                                      26.04 * SizeConfig.heightMultiplier,
                                   circleAmigoWidth:
-                                  26.04 * SizeConfig.heightMultiplier,
+                                      26.04 * SizeConfig.heightMultiplier,
                                   circleAmigoGradient: [
                                     AmigoColors.orange,
                                     AmigoColors.lightRed2
                                   ],
                                   circleAmigoOpacity: [0.4, 0.1],
+                                ),
+
+                                Container(
+                                  child: FutureBuilder(
+                                    future: Blog().getBlogData(),
+                                    builder: (context, snapshot) {
+                                      if (snapshot.connectionState ==
+                                          ConnectionState.done) {
+                                        if (snapshot.hasData) {
+                                          return Container(
+                                            child: WideBlogContent(
+                                              blogsModel: snapshot.data,
+                                            ),
+                                          );
+                                        } else {
+                                          return Center(
+                                            child: CircularProgressIndicator(
+                                              valueColor:
+                                                  AlwaysStoppedAnimation<Color>(
+                                                      Colors.blue),
+                                            ),
+                                          );
+                                        }
+                                      } else {
+                                        return Center(
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Colors.blue),
+                                          ),
+                                        );
+                                      }
+                                    },
+                                  ),
                                 ),
                               ],
                             )),
@@ -263,6 +263,7 @@ class _WideBlogPageState extends State<WideBlogPage> {
   }
 }
 
+//web page
 class WebBlogPage extends StatefulWidget {
   @override
   _WebBlogPageState createState() => _WebBlogPageState();
@@ -310,7 +311,8 @@ class _WebBlogPageState extends State<WebBlogPage> {
                                     child: FutureBuilder(
                                       future: Blog().getBlogData(),
                                       builder: (context, snapshot) {
-                                        if (snapshot.connectionState == ConnectionState.done) {
+                                        if (snapshot.connectionState ==
+                                            ConnectionState.done) {
                                           if (snapshot.hasData) {
                                             return Container(
                                               child: BlogContent(
@@ -321,7 +323,8 @@ class _WebBlogPageState extends State<WebBlogPage> {
                                             return Center(
                                               child: CircularProgressIndicator(
                                                 valueColor:
-                                                    AlwaysStoppedAnimation<Color>(Colors.blue),
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(Colors.blue),
                                               ),
                                             );
                                           }
@@ -329,7 +332,8 @@ class _WebBlogPageState extends State<WebBlogPage> {
                                           return Center(
                                             child: CircularProgressIndicator(
                                               valueColor:
-                                                  AlwaysStoppedAnimation<Color>(Colors.blue),
+                                                  AlwaysStoppedAnimation<Color>(
+                                                      Colors.blue),
                                             ),
                                           );
                                         }
@@ -497,6 +501,7 @@ class _WebBlogPageState extends State<WebBlogPage> {
   }
 }
 
+//tab page
 class TabBlogPage extends StatefulWidget {
   @override
   _TabBlogPageState createState() => _TabBlogPageState();
@@ -734,6 +739,7 @@ class _TabBlogPageState extends State<TabBlogPage> {
   }
 }
 
+//mobile page
 class MobileBlogPage extends StatefulWidget {
   @override
   _MobileBlogPageState createState() => _MobileBlogPageState();
@@ -835,7 +841,7 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
               Navigator.pushNamed(context, PodcastRoute);
             },
           ),
-            ListTile(
+          ListTile(
             title: Text(
               'Blog',
               style: TextStyle(
